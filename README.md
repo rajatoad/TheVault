@@ -34,14 +34,17 @@ Revature Banking App
 
 - Create a feature branch whenever you are working on something with your team
 
-```Shell Session
+```shell session
+
 //To get the repository on your local machine use git clone with the url
+
 $ git clone git@github.com:DementedTiger/TheVault.git
+
 // or if ssh is not setup 
+
 $ git clone https://github.com/DementedTiger/TheVault.git
 
 // This will create a folder that is initialized with git and the branches that exist on the remote git
-
 // Starting from main branch, first check if your branch already exists that you wish to work on with
 
 $ git branch -a
@@ -54,7 +57,6 @@ $ git branch newFeature
 // Switch to that branch with either git switch or git checkout
 
 $ git switch newFeature  || or || $ git checkout newFeature
-
 
 // Now when you are working on this new feature branch, make sure to tell your team
 // If for example you are working on login with your team and you wish to implement input, create a new feature branch of the login branch
