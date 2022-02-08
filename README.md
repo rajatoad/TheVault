@@ -8,10 +8,14 @@ Revature Banking App
 ---
 
 ## Technologies Used
+
+empty for now
+
 ---
 
 ## Features
 
+empty for now
 
 ---
 
