@@ -34,7 +34,7 @@ Revature Banking App
 
 - Create a feature branch whenever you are working on something with your team
 
-```bash
+```Shell Session
 //To get the repository on your local machine use git clone with the url
 $ git clone git@github.com:DementedTiger/TheVault.git
 // or if ssh is not setup 
