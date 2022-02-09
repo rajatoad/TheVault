@@ -1,6 +1,35 @@
 -- This code is left for creating H2 database
 -- Use this for reference
 
+DROP TABLE login_credential_table;
+
+CREATE TABLE login_credential_table (
+    pk_user_id SERIAL PRIMARY KEY,
+    user_username VARCHAR(15) NOT NULL,
+    user_password VARCHAR(15) NOT NULL
+);
+
+INSERT INTO login_credential_table
+VALUES
+    (default, 'username1', 'password1'),
+    (default, 'username2', 'password2'),
+    (default, 'username3', 'password3'),
+    (default, 'username4', 'password4');
+
+--CREATE SEQUENCE login_credential_table_pk_user_id_seq START WITH 1 INCREMENT BY 1;
+
+
+
+--CREATE TABLE deposit_table (
+--    pk_deposit_id serial PRIMARY KEY,
+--    reference VARCHAR NOT NULL,
+--    date_deposit DATE,
+--    amount DECIMAL(10, 2),
+--    request
+--)
+
+
+
 --create schema project_two;
 --set schema project_two;
 --create table project_two.lfg_user_creds (
@@ -9,7 +38,7 @@
 --userPass varchar not null
 --);
 --create sequence lfg_user_creds_user_id_seq start with 1 increment by 1;
---
+  --
 --create table project_two.lfg_user_profile(
 --columnID serial primary key,
 --userID integer,
