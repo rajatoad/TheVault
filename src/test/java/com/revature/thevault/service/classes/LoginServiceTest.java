@@ -42,7 +42,7 @@ public class LoginServiceTest {
 
         loginCredentialEntity = new LoginCredentialEntity(userId, validUsername, validPassword);
 
-        Mockito.when(loginRepository.findByUser_username(validUsername)).thenReturn(loginCredentialEntity);
+        Mockito.when(loginRepository.findByUsername(validUsername)).thenReturn(loginCredentialEntity);
     }
 
     @Test

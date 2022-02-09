@@ -16,8 +16,8 @@ public class LoginService implements LoginControllerInterface {
 
     @Override
     public LoginResponse checkLogin(LoginRequest loginRequest) {
-        LoginCredentialEntity loginCredentialEntity = loginRepository.findByUser_username(loginRequest.getUsername());
-        if(loginCredentialEntity.getUser_password().contentEquals(loginRequest.getPassword())) {
+        LoginCredentialEntity loginCredentialEntity = loginRepository.findByUsername(loginRequest.getUsername());
+        if(loginCredentialEntity.getPassword().contentEquals(loginRequest.getPassword())) {
             return new LoginResponse(true);
         }else{
             return new LoginResponse(false);

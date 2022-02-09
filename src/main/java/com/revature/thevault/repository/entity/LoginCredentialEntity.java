@@ -21,7 +21,7 @@ public class LoginCredentialEntity {
     @SequenceGenerator(allocationSize = 1, name = "login_credential_table_pk_user_id_seq", sequenceName = "login_credential_table_pk_user_id_seq")
     int pk_user_id;
     @Column(name = "user_username")
-    String user_username;
+    String username;
     @Column(name = "user_password")
-    String user_password;
+    String password;
 }

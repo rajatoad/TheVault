@@ -5,8 +5,8 @@ DROP TABLE login_credential_table;
 
 CREATE TABLE login_credential_table (
     pk_user_id SERIAL PRIMARY KEY,
-    user_username VARCHAR(15) NOT NULL,
-    user_password VARCHAR(15) NOT NULL
+    username VARCHAR(15) NOT NULL,
+    password VARCHAR(15) NOT NULL
 );
 
 INSERT INTO login_credential_table
