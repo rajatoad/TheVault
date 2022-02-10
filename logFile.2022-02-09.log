@@ -1,0 +1,6 @@
+2022-02-09 17:06:56,554 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.LoginService
+Method: checkLogin
+Arguments: [LoginRequest(username=user, password=pass)]
+2022-02-09 17:07:45,748 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.LoginService
+Method: checkLogin
+Arguments: [LoginRequest(username=user, password=pass)]
