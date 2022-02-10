@@ -1,8 +1,5 @@
-
-export class User {
-
+export class NewUser {
     constructor(
-        private _id: number,
         private _username: string,
         private _firstName: string,
         private _lastName: string,
@@ -11,20 +8,12 @@ export class User {
         private _phoneNumber: number
     ) 
     {
-        this._id = _id,
         this._username = _username,
         this._firstName = _firstName,
         this._lastName = _lastName,
         this._email = _email,
         this._address = _address,
         this._phoneNumber = _phoneNumber
-    }
-
-    public get id(): number {
-        return this._id;
-    }
-    public set id(value: number) {
-        this._id = value;
     }
 
     public get username(): string {
