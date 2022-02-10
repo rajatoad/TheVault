@@ -4,12 +4,12 @@ import com.revature.thevault.presentation.model.request.LoginRequest;
 import com.revature.thevault.presentation.model.response.LoginResponse;
 import com.revature.thevault.repository.dao.LoginRepository;
 import com.revature.thevault.repository.entity.LoginCredentialEntity;
-import com.revature.thevault.service.interfaces.LoginControllerInterface;
+import com.revature.thevault.service.interfaces.LoginServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service("loginService")
-public class LoginService implements LoginControllerInterface {
+public class LoginService implements LoginServiceInterface {
 
     @Autowired
     private LoginRepository loginRepository;
