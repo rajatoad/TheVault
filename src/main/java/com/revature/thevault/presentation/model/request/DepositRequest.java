@@ -1,4 +1,4 @@
-package com.revature.thevault.presentation.model.response;
+package com.revature.thevault.presentation.model.request;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;

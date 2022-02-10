@@ -1,6 +1,6 @@
 package com.revature.thevault.service.interfaces;
 
-import com.revature.thevault.presentation.model.response.DepositRequest;
+import com.revature.thevault.presentation.model.request.DepositRequest;
 import com.revature.thevault.presentation.model.response.DepositResponse;
 import com.revature.thevault.repository.entity.DepositEntity;
 
