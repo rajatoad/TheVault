@@ -1,9 +1,9 @@
 package com.revature.thevault.service.interfaces;
 
-import com.revature.thevault.presentation.model.request.UpdateWithdrawRequest;
-import com.revature.thevault.presentation.model.request.WithdrawRequest;
-import com.revature.thevault.presentation.model.response.UpdateWithdrawResponse;
-import com.revature.thevault.presentation.model.response.WithdrawResponse;
+import com.revature.thevault.repository.dao.presentation.model.request.UpdateWithdrawRequest;
+import com.revature.thevault.repository.dao.presentation.model.request.WithdrawRequest;
+import com.revature.thevault.repository.dao.presentation.model.response.UpdateWithdrawResponse;
+import com.revature.thevault.repository.dao.presentation.model.response.WithdrawResponse;
 import com.revature.thevault.repository.entity.WithdrawEntity;
 
 import java.util.List;

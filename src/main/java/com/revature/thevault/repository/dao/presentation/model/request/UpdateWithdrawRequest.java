@@ -1,4 +1,4 @@
-package com.revature.thevault.presentation.model.response;
+package com.revature.thevault.repository.dao.presentation.model.request;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -10,6 +10,8 @@ import lombok.experimental.FieldDefaults;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class WithdrawResponse {
-    boolean success;
+public class UpdateWithdrawRequest {
+    int withdrawId;
+    int accountId;
+    String requestStatus;
 }
