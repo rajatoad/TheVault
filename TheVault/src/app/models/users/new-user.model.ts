@@ -1,11 +1,13 @@
 export class NewUser {
+    
     constructor(
         private _username: string,
         private _firstName: string,
         private _lastName: string,
         private _email: string,
         private _address: string,
-        private _phoneNumber: number
+        private _phoneNumber: number,
+        private _password: string
     ) 
     {
         this._username = _username,
@@ -13,7 +15,8 @@ export class NewUser {
         this._lastName = _lastName,
         this._email = _email,
         this._address = _address,
-        this._phoneNumber = _phoneNumber
+        this._phoneNumber = _phoneNumber,
+        this._password = this._password
     }
 
     public get username(): string {
@@ -56,5 +59,12 @@ export class NewUser {
     }
     public set phoneNumber(value: number) {
         this._phoneNumber = value;
+    }
+    
+    public get password(): string {
+        return this._password;
+    }
+    public set password(value: string) {
+        this._password = value;
     }
 }
