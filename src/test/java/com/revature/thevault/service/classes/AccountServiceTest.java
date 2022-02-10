@@ -8,6 +8,8 @@ import com.revature.thevault.presentation.model.response.AccountResponse;
 import com.revature.thevault.presentation.model.response.GenericResponse;
 import com.revature.thevault.repository.dao.AccountRepository;
 import com.revature.thevault.repository.entity.AccountEntity;
+import com.revature.thevault.repository.entity.AccountTypeEntity;
+import com.revature.thevault.repository.entity.LoginCredentialEntity;
 import com.revature.thevault.utility.enums.ResponseType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -21,6 +23,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
+import javax.persistence.EntityNotFoundException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -53,13 +57,16 @@ class AccountServiceTest {
         userId = 1;
         accountId = 1;
         otherAccountId = 2;
+        accountType = new ArrayList<>();
         accountType.add("Checking");
         accountType.add("Savings");
 
-        storedAccount = new AccountEntity();
-        Optional<AccountEntity> optionalAccount = Optional.of(storedAccount);
-        Mockito.when(accountRepository.findById(accountId)).thenReturn(optionalAccount);
+        LoginCredentialEntity primaryLogin = new LoginCredentialEntity(userId, "username", "password");
+        AccountTypeEntity accountTypeEntity = new AccountTypeEntity(1, "Checking");
 
+        storedAccount = new AccountEntity(accountId, primaryLogin, accountTypeEntity, 100, 120);
+        //Optional<AccountEntity> optionalAccount = Optional.of(storedAccount);
+        Mockito.when(accountRepository.getById(accountId)).thenReturn(storedAccount);
     }
 
     @Test
@@ -97,16 +104,25 @@ class AccountServiceTest {
 
     @Test
     void deleteAccount() {
-        DeleteAccountRequest goodDeleteAccountRequest = new DeleteAccountRequest(1);
+        DeleteAccountRequest goodDeleteAccountRequest = new DeleteAccountRequest(storedAccount.getPk_account_id());
         GenericResponse successfulDeleteAccountResponse = new GenericResponse.GenericResponseBuilder(true)
                 .requestType(ResponseType.DELETE)
-                        .message("Successful Account Deletion: " + 1)
+                        .message("Successful Account Deletion: " + storedAccount.getPk_account_id())
                                 .build();
-
-        AccountEntity storedAccount = new AccountEntity();
-
         assertEquals(successfulDeleteAccountResponse, accountService.deleteAccount(goodDeleteAccountRequest));
     }
+
+    @Test
+    void deleteAccountInvalidAccountIdUserNotFound() {
+        DeleteAccountRequest badAccountDeleteRequest = new DeleteAccountRequest(-1);
+        GenericResponse failedResponse = new GenericResponse.GenericResponseBuilder(false)
+                .requestType(ResponseType.FAIL)
+                .message("Failed to delete account: Entity Not Found")
+                .build();
+        Mockito.when(accountRepository.getById(badAccountDeleteRequest.getAccountId())).thenThrow(EntityNotFoundException.class);
+        assertEquals(failedResponse, accountService.deleteAccount(badAccountDeleteRequest));
+    }
+
 
     @Test
     void getAccounts() {

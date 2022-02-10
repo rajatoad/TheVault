@@ -6,7 +6,7 @@
 --                                  DROP TABLES
 --========================================================================================
 
--- DROP TABLE login_credential_table;
+ DROP TABLE login_credential_table CASCADE;
 
 -- DONT NEED THIS BUT USEFUL FOR RDS DATABASE IN FUTURE
 
@@ -14,7 +14,8 @@
 --DROP TABLE request_type_table;
 --DROP TABLE request_status_table;
 --DROP TABLE deposit_table;
-DROP TABLE account_type_table;
+DROP TABLE account_type_table CASCADE;
+DROP TABLE account_table CASCADE;
 
 --========================================================================================
 --                                  LOOK UP TABLES
@@ -44,12 +45,13 @@ CREATE TABLE account_type_table(
 --                               BRIDGE TABLES FOR USE
 --========================================================================================
 
-CREATE TABLE account_type_bridge_table(
-    fk_account_id INTEGER,
-    fk_account_type_id INTEGER,
-    FOREIGN KEY (fk_account_id) REFERENCES account_table(pk_account_id),
-    FOREIGN KEY (fk_account_type_id) REFERENCES account_type_table(pk_account_type_id)
-);
+--CREATE TABLE account_type_bridge_table(
+--    fk_account_id INTEGER,
+--    fk_account_type_id INTEGER,
+--    FOREIGN KEY (fk_account_id) REFERENCES account_table(pk_account_id),
+--    FOREIGN KEY (fk_account_type_id) REFERENCES account_type_table(pk_account_type_id),
+--    PRIMARY KEY (fk_account_id, fk_account_type_id)
+--);
 
 --========================================================================================
 --                               NORMAL TABLES FOR USE

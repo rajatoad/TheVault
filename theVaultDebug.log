@@ -1,6 +1,15 @@
-2022-02-09 17:06:56,554 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.LoginService
-Method: checkLogin
-Arguments: [LoginRequest(username=user, password=pass)]
-2022-02-09 17:07:45,748 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.LoginService
-Method: checkLogin
-Arguments: [LoginRequest(username=user, password=pass)]
+2022-02-10 16:38:31,795 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: deleteAccount
+Arguments: [DeleteAccountRequest(accountId=1)]
+2022-02-10 16:41:27,917 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: deleteAccount
+Arguments: [DeleteAccountRequest(accountId=-1)]
+2022-02-10 16:45:02,074 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: deleteAccount
+Arguments: [DeleteAccountRequest(accountId=-1)]
+2022-02-10 16:45:02,526 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: deleteAccount
+Arguments: [DeleteAccountRequest(accountId=-1)]
+2022-02-10 16:46:11,094 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: deleteAccount
+Arguments: [DeleteAccountRequest(accountId=-1)]
