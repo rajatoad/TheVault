@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { User } from 'src/app/models/users/user.model';
+import { NewUser } from 'src/app/models/users/new-user.model';
 import Validation from 'src/app/utils/validation';
 import { RoutingAllocatorService } from 'src/app/_services/app_control/routing-allocator.service';
 import { AuthService } from 'src/app/_services/auth/auth.service';
@@ -131,7 +131,7 @@ export class RegisterComponent implements OnInit {
     if (userN != null && firstN != null && lastN != null && email != null && addr != null 
        && phoneN != null && passW != null) {
          
-      let newUser = new User(userN, firstN, lastN, email, addr, phoneN, passW);
+      let newUser = new NewUser(userN, firstN, lastN, email, addr, phoneN, passW);
       this.authService.register(newUser).subscribe(
         (data) => {
           console.log("Profile successfully created!");
