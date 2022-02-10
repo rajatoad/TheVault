@@ -1,4 +1,4 @@
-package com.revature.thevault.presentation.model.response;
+package com.revature.thevault.repository.dao.presentation.model.response;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -10,6 +10,9 @@ import lombok.experimental.FieldDefaults;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class LoginResponse {
-    boolean success;
+public class DepositRequest {
+    String depositType;
+    int accountId;
+    String reference;
+    int amount;
 }

@@ -8,7 +8,7 @@
 
 DROP TABLE login_credential_table;
 
--- DONT NEED THIS BUT USEFUL FOR RDS DATABASE IN FUTURE
+-- DON'T NEED THIS BUT USEFUL FOR RDS DATABASE IN FUTURE
 
 --DROP TABLE deposit_type_table;
 --DROP TABLE request_type_table;
