@@ -6,7 +6,7 @@
 --                                  DROP TABLES
 --========================================================================================
 
-DROP TABLE login_credential_table;
+-- DROP TABLE login_credential_table;
 
 -- DONT NEED THIS BUT USEFUL FOR RDS DATABASE IN FUTURE
 
@@ -14,6 +14,7 @@ DROP TABLE login_credential_table;
 --DROP TABLE request_type_table;
 --DROP TABLE request_status_table;
 --DROP TABLE deposit_table;
+DROP TABLE account_type_table;
 
 --========================================================================================
 --                                  LOOK UP TABLES
@@ -40,6 +41,17 @@ CREATE TABLE account_type_table(
 );
 
 --========================================================================================
+--                               BRIDGE TABLES FOR USE
+--========================================================================================
+
+CREATE TABLE account_type_bridge_table(
+    fk_account_id INTEGER,
+    fk_account_type_id INTEGER,
+    FOREIGN KEY (fk_account_id) REFERENCES account_table(pk_account_id),
+    FOREIGN KEY (fk_account_type_id) REFERENCES account_type_table(pk_account_type_id)
+);
+
+--========================================================================================
 --                               NORMAL TABLES FOR USE
 --========================================================================================
 
@@ -53,8 +65,8 @@ CREATE TABLE account_table(
     pk_account_id SERIAL PRIMARY KEY,
     fk_user_id INTEGER,
     fk_account_type_id INTEGER,
-    available_balance DECIMAL(100, 2),
-    pending_balance DECIMAL(100, 2),
+    available_balance INTEGER,
+    pending_balance INTEGER,
     FOREIGN KEY (fk_user_id) REFERENCES login_credential_table(pk_user_id),
     FOREIGN KEY (fk_account_type_id) REFERENCES account_type_table(pk_account_type_id)
 );
