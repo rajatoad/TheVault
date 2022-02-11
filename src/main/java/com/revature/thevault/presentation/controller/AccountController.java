@@ -2,7 +2,6 @@ package com.revature.thevault.presentation.controller;
 
 import com.revature.thevault.presentation.model.request.GetAccountRequestAll;
 import com.revature.thevault.presentation.model.request.GetAccountRequestSingle;
-import com.revature.thevault.presentation.model.response.builder.GenericResponse;
 import com.revature.thevault.presentation.model.response.builder.GetResponse;
 import com.revature.thevault.service.classes.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +20,7 @@ public class AccountController {
         return accountService.getAccount(getAccountRequestSingle);
     }
 
-    @GetMapping("/find-all")
+    @GetMapping("/users-accounts")
     public GetResponse getAccountList(@RequestBody GetAccountRequestAll getAccountRequestAll){
         return accountService.getAccounts(getAccountRequestAll);
     }

@@ -1,44 +1,41 @@
 package com.revature.thevault.presentation.model.response.builder;
 
-import com.revature.thevault.repository.entity.AccountEntity;
-import com.revature.thevault.utility.enums.ResponseType;
-import lombok.*;
-import lombok.experimental.FieldDefaults;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-@Getter
-@ToString
-@EqualsAndHashCode
-@NoArgsConstructor
+@EqualsAndHashCode(callSuper = true)
+@Data
 @AllArgsConstructor
+@NoArgsConstructor
 @ResponseStatus(HttpStatus.OK)
-@FieldDefaults(level = AccessLevel.PRIVATE)
-public class GetResponse{
-    boolean success;
-    String responseType;
-    String message;
-    AccountEntity gotObject;
+@JsonDeserialize(builder = GetResponse.Builder.class)
+public class GetResponse extends GenericResponse{
 
-    private GetResponse(Builder builder){
-        this.success = builder.success;
-        this.responseType = builder.responseType.toString();
-        this.message = builder.message;
+    private Object gotObject;
+
+    public GetResponse(Builder builder){
+        super(builder);
         this.gotObject = builder.gotObject;
     }
 
-    public static class Builder{
-        private boolean success;
-        private ResponseType responseType;
-        private String message;
-        private AccountEntity gotObject;
+    public static Builder builder(){
+        return new Builder();
+    }
 
-        public Builder(boolean success, ResponseType responseType, String message){
-            this.success = success;
-            this.responseType = responseType;
-            this.message = message;
+    public static class Builder extends GenericResponse.Builder<Builder>{
+        private Object gotObject;
+
+        @Override
+        public Builder getThis(){
+            return this;
         }
-        public Builder gotObject(AccountEntity gotObject){
+
+        public Builder gotObject(Object gotObject){
             this.gotObject = gotObject;
             return this;
         }

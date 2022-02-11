@@ -103,10 +103,10 @@ class AccountServiceTest {
     @Test
     void deleteAccount() {
         DeleteAccountRequest goodDeleteAccountRequest = new DeleteAccountRequest(storedAccount.getPk_account_id());
-        DeleteResponse successfulDeleteAccountResponse = new DeleteResponse.Builder(
-                true,
-                ResponseType.DELETE,
-                ("Successful Account Deletion: " + storedAccount.getPk_account_id()))
+        DeleteResponse successfulDeleteAccountResponse = DeleteResponse.builder()
+                .success(true)
+                .responseType(ResponseType.DELETE)
+                .message("Successful Account Deletion: " + storedAccount.getPk_account_id())
                 .deletedObject(storedAccount)
                 .build();
         assertEquals(successfulDeleteAccountResponse, accountService.deleteAccount(goodDeleteAccountRequest));
@@ -137,11 +137,11 @@ class AccountServiceTest {
         AccountEntity accountToUpdateBalance = new AccountEntity();
         AccountEntity updatedAccount = new AccountEntity();
 
-        PutResponse updatedBalanceResponse = new PutResponse.Builder(
-                true,
-                ResponseType.PUT,
-                ("Successfully updated users available balance: " + updateBalanceRequest.getAmount())
-                ).updatedObject(updatedAccount)
+        PutResponse updatedBalanceResponse = PutResponse.builder()
+                .success(true)
+                .responseType(ResponseType.PUT)
+                .message("Successfully updated users available balance: " + updateBalanceRequest.getAmount())
+                .updatedObject(updatedAccount)
                 .build();
 
         Mockito.when(accountRepository.save(accountToUpdateBalance)).thenReturn(updatedAccount);
@@ -176,11 +176,11 @@ class AccountServiceTest {
         AccountEntity accountUpdatingBalance = new AccountEntity();
         AccountEntity updatedAccount = new AccountEntity();
 
-        PutResponse successfulPutResponse = new PutResponse.Builder(
-                true,
-                ResponseType.PUT,
-                ("Successfully updated account pending balance: " + updateBalanceRequest.getAmount())
-               ).updatedObject(updatedAccount)
+        PutResponse successfulPutResponse = PutResponse.builder()
+                .success(true)
+                .responseType(ResponseType.PUT)
+                .message("Successfully updated account pending balance: " + updateBalanceRequest.getAmount())
+                .updatedObject(updatedAccount)
                 .build();
 
         Mockito.when(accountRepository.save(accountUpdatingBalance)).thenReturn(updatedAccount);
@@ -219,13 +219,13 @@ class AccountServiceTest {
 
         AccountEntity updatedOwnerAccount = new AccountEntity();
         AccountEntity updatedReceiverAccount = new AccountEntity();
-        PutResponse successfulTransferResponse = new PutResponse.Builder(
-                true,
-                ResponseType.PUT,
-                ("Successful transfer of amount : " + transferRequest.getAmount() +
+        PutResponse successfulTransferResponse = PutResponse.builder()
+                .success(true)
+                .responseType(ResponseType.PUT)
+                .message("Successful transfer of amount : " + transferRequest.getAmount() +
                         "\nFrom Account: " + transferRequest.getOwnerAccountId() +
                         "\nTo Account: " + transferRequest.getReceiverAccountId())
-        ).updatedObject(Arrays.asList(updatedReceiverAccount, updatedOwnerAccount))
+                .updatedObject(Arrays.asList(updatedReceiverAccount, updatedOwnerAccount))
                 .build();
 
         Mockito.when(accountRepository.save(updateOwnerAccountPendingBalance)).thenReturn(updatedOwnerAccount);

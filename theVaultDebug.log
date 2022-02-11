@@ -70,3 +70,35 @@ Method: getAccount
 Arguments: [GetAccountRequestSingle(accountId=1)]
 2022-02-11 01:02:48,171 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(success=true, responseType=GET, message=Account retrieved by Id: 1, gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
 2022-02-11 01:02:48,171 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(success=true, responseType=GET, message=Account retrieved by Id: 1, gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
+2022-02-11 01:09:43,724 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getAccount
+Arguments: [GetAccountRequestSingle(accountId=1)]
+2022-02-11 01:09:43,734 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccount
+Arguments: [GetAccountRequestSingle(accountId=1)]
+2022-02-11 01:09:43,792 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
+2022-02-11 01:09:43,792 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
+2022-02-11 01:23:48,515 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getAccount
+Arguments: [GetAccountRequestSingle(accountId=1)]
+2022-02-11 01:23:48,525 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccount
+Arguments: [GetAccountRequestSingle(accountId=1)]
+2022-02-11 01:23:48,584 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
+2022-02-11 01:23:48,584 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
+2022-02-11 01:24:25,759 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getAccountList
+Arguments: [GetAccountRequestAll(userId=1)]
+2022-02-11 01:24:25,759 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [GetAccountRequestAll(userId=1)]
+2022-02-11 01:24:25,785 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130)])
+2022-02-11 01:24:25,785 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130)])
+2022-02-11 01:25:37,289 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getAccountList
+Arguments: [GetAccountRequestAll(userId=1)]
+2022-02-11 01:25:37,301 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [GetAccountRequestAll(userId=1)]
+2022-02-11 01:25:37,363 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130)])
+2022-02-11 01:25:37,364 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130)])

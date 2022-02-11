@@ -1,42 +1,30 @@
 package com.revature.thevault.presentation.model.response.builder;
 
-import com.revature.thevault.utility.enums.ResponseType;
 import lombok.*;
-import lombok.experimental.FieldDefaults;
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.ResponseStatus;
 
-@Getter
-@ToString
-@EqualsAndHashCode
+@EqualsAndHashCode(callSuper = false)
 @NoArgsConstructor
 @AllArgsConstructor
-@ResponseStatus(HttpStatus.OK)
-@FieldDefaults(level = AccessLevel.PRIVATE)
-public class DeleteResponse{
-    boolean success;
-    String responseType;
-    String message;
-    Object deletedObject;
+public class DeleteResponse extends GenericResponse{
+    private Object deletedObject;
 
     public DeleteResponse(Builder builder){
-        this.success = builder.success;
-        this.responseType = builder.responseType.toString();
-        this.message = builder.message;
+        super(builder);
         this.deletedObject = builder.deletedObject;
     }
 
-    public static class Builder{
-        private boolean success;
-        private ResponseType responseType;
-        private String message;
+    public static Builder builder(){
+        return new Builder();
+    }
+
+    public static class Builder extends GenericResponse.Builder<Builder>{
         private Object deletedObject;
 
-        public Builder(boolean success, ResponseType responseType, String message){
-            this.success = success;
-            this.responseType = responseType;
-            this.message = message;
+        @Override
+        public Builder getThis(){
+            return this;
         }
+
         public Builder deletedObject(Object deletedObject){
             this.deletedObject = deletedObject;
             return this;

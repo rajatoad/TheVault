@@ -23,7 +23,7 @@ public class AccountEntity {
 	int pk_account_id;
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "fk_user_id")
-	LoginCredentialEntity loginCredentials;
+	LoginCredentialEntity logincredentials;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "fk_account_type_id")
