@@ -3,6 +3,7 @@ package com.revature.thevault.presentation.controller;
 import com.revature.thevault.presentation.model.request.LoginRequest;
 import com.revature.thevault.presentation.model.response.LoginResponse;
 import com.revature.thevault.presentation.model.response.ProfileResponse;
+import com.revature.thevault.repository.entity.LoginCredentialEntity;
 import com.revature.thevault.repository.entity.NewLoginCredentialsRequest;
 import com.revature.thevault.service.classes.AccountProfileService;
 import com.revature.thevault.service.classes.LoginService;
@@ -34,6 +35,12 @@ public class LoginController {
 //    public ProfileResponse newLogin(@NonNull @RequestBody NewLoginCredentialsRequest newUser){
 //        return profileService.newUserProfile(loginService.newAccount(newUser), newUser.getEmail());
 //    }
+
+    @ResponseStatus(HttpStatus.OK)
+    @PostMapping("/validate")
+    public LoginCredentialEntity findLoginCredential(@RequestBody LoginRequest loginRequest){
+        return loginService.getLoginCredentialFromLogin(loginRequest);
+    }
 
 
 }

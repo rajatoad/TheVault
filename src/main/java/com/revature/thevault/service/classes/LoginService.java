@@ -1,6 +1,7 @@
 package com.revature.thevault.service.classes;
 
 import com.revature.thevault.presentation.model.request.LoginRequest;
+import com.revature.thevault.presentation.model.request.ResetPasswordRequest;
 import com.revature.thevault.presentation.model.response.LoginResponse;
 import com.revature.thevault.repository.dao.LoginRepository;
 import com.revature.thevault.repository.entity.LoginCredentialEntity;
@@ -27,7 +28,7 @@ public class LoginService implements LoginServiceInterface {
     }
 
     @Override
-    public LoginCredentialEntity getUserCredentialFromLogin(LoginRequest loginRequest) {
+    public LoginCredentialEntity getLoginCredentialFromLogin(LoginRequest loginRequest) {
         try{
             return loginRepository.findByUsernameAndPassword(loginRequest.getUsername(), loginRequest.getPassword());
         }catch(Exception e){
@@ -44,6 +45,16 @@ public class LoginService implements LoginServiceInterface {
                 newUserAccountRequest.getUsername(),
                 newUserAccountRequest.getPassword()
         ));
+    }
+
+    @Override
+    public LoginResponse resetPassword(ResetPasswordRequest resetPasswordRequest) {
+        return null;
+    }
+
+    @Override
+    public LoginCredentialEntity findUserByUserId(int userId) {
+        return loginRepository.findById(userId).orElse(null);
     }
 
 

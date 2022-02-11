@@ -28,26 +28,39 @@ public class LoginServiceTest {
     private LoginResponse validLoginResponse;
     private LoginRequest validLoginRequest;
     private LoginCredentialEntity loginCredentialEntity;
+    private LoginRequest storedUserCred;
+
+
+
 
     @BeforeEach
     void setUp(){
         MockitoAnnotations.openMocks(this);
 
         int userId = 1;
-        String validUsername = "user";
-        String validPassword = "pass";
+        String validUsername = "username1";
+        String validPassword = "password1";
 
         validLoginResponse = new LoginResponse(true);
         validLoginRequest = new LoginRequest(validUsername, validPassword);
-
         loginCredentialEntity = new LoginCredentialEntity(userId, validUsername, validPassword);
+        storedUserCred = new LoginRequest(validLoginRequest.getUsername(), validLoginRequest.getPassword());
+
+
 
         Mockito.when(loginRepository.findByUsername(validUsername)).thenReturn(loginCredentialEntity);
+        Mockito.when(loginRepository.findByUsernameAndPassword(validLoginRequest.getUsername(), validLoginRequest.getPassword())).thenReturn(loginCredentialEntity);
     }
 
     @Test
     void checkValidLoginTest(){
         assertEquals(validLoginResponse, loginService.checkLogin(validLoginRequest));
     }
+
+    @Test
+    void getLoginCredentialSuccessTest() { assertEquals(loginCredentialEntity, loginService.getLoginCredentialFromLogin(validLoginRequest)); }
+
+//    @Test
+//    void newAccountTest(){ assertEquals(newLoginCredential, loginService.newAccount(newLoginCredentialsRequest));}
 
 }

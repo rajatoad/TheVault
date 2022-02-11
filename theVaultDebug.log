@@ -22,3 +22,80 @@ Arguments: [AccountProfileRequest(userId=1)]
 2022-02-10 20:32:42,010 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.LoginService
 Method: checkLogin
 Arguments: [LoginRequest(username=user, password=pass)]
+2022-02-11 10:22:58,990 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.LoginService
+Method: checkLogin
+Arguments: [LoginRequest(username=user, password=pass)]
+2022-02-11 10:46:54,181 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.LoginService
+Method: getLoginCredentialFromLogin
+Arguments: [LoginRequest(username=user, password=pass)]
+2022-02-11 10:48:16,586 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.LoginService
+Method: getLoginCredentialFromLogin
+Arguments: [LoginRequest(username=user, password=pass)]
+2022-02-11 10:51:06,241 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.LoginService
+Method: getLoginCredentialFromLogin
+Arguments: [LoginRequest(username=user, password=pass)]
+2022-02-11 15:12:40,394 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.LoginService
+Method: getLoginCredentialFromLogin
+Arguments: [LoginRequest(username=user, password=pass)]
+2022-02-11 15:22:04,792 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.LoginService
+Method: getLoginCredentialFromLogin
+Arguments: [LoginRequest(username=user, password=pass)]
+2022-02-11 15:25:33,276 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.LoginService
+Method: getLoginCredentialFromLogin
+Arguments: [LoginRequest(username=user, password=pass)]
+2022-02-11 15:29:42,591 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.LoginService
+Method: getLoginCredentialFromLogin
+Arguments: [LoginRequest(username=null, password=null)]
+2022-02-11 15:33:18,387 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.LoginService
+Method: getLoginCredentialFromLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-11 15:33:31,079 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.LoginService
+Method: checkLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-11 15:34:47,435 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.LoginService
+Method: getLoginCredentialFromLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-11 15:35:11,105 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.LoginService
+Method: getLoginCredentialFromLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-11 15:35:13,050 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.LoginService
+Method: getLoginCredentialFromLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-11 15:35:35,566 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.LoginService
+Method: getLoginCredentialFromLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-11 15:39:40,735 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.LoginService
+Method: getLoginCredentialFromLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-11 16:07:07,121 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.LoginService
+Method: getLoginCredentialFromLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-11 17:37:54,040 DEBUG dLog [http-nio-8080-exec-1] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.LoginController
+METHOD: findLoginCredential
+2022-02-11 17:37:54,051 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.LoginService
+Method: getLoginCredentialFromLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-11 17:37:54,094 ERROR dLog [http-nio-8080-exec-1] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.LoginController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidInputException
+2022-02-11 17:37:54,094 ERROR dLog [http-nio-8080-exec-1] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.LoginController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidInputException
+2022-02-11 17:41:48,286 DEBUG dLog [http-nio-8080-exec-2] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.LoginController
+METHOD: findLoginCredential
+2022-02-11 17:41:48,296 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.LoginService
+Method: getLoginCredentialFromLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-11 17:41:48,365 INFO dLog [http-nio-8080-exec-2] RETURNING: LoginCredentialEntity(pk_user_id=1, username=username1, password=password1)
+2022-02-11 17:41:48,365 INFO dLog [http-nio-8080-exec-2] RETURNING: LoginCredentialEntity(pk_user_id=1, username=username1, password=password1)
+2022-02-11 17:43:07,030 DEBUG dLog [http-nio-8080-exec-2] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.LoginController
+METHOD: findLoginCredential
+2022-02-11 17:43:07,039 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.LoginService
+Method: getLoginCredentialFromLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-11 17:43:07,079 INFO dLog [http-nio-8080-exec-2] RETURNING: LoginCredentialEntity(pk_user_id=1, username=username1, password=password1)
+2022-02-11 17:43:07,080 INFO dLog [http-nio-8080-exec-2] RETURNING: LoginCredentialEntity(pk_user_id=1, username=username1, password=password1)
+2022-02-11 17:45:15,561 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.LoginService
+Method: getLoginCredentialFromLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-11 17:46:19,695 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.LoginService
+Method: getLoginCredentialFromLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
