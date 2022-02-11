@@ -22,7 +22,7 @@ public class AccountProfileEntity {
     int pk_profile_id;
     @OneToOne
     @JoinColumn(name = "pk_user_id")
-    LoginCredentialEntity loginCredential;
+    LoginCredentialEntity logincredential;
     @Column(name = "first_name")
     String first_name;
     @Column(name = "last_name")
