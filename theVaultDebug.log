@@ -22,3 +22,6 @@ Arguments: [AccountProfileRequest(userId=1)]
 2022-02-10 19:39:44,329 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountProfileService
 Method: getProfile
 Arguments: [AccountProfileRequest(userId=1)]
+2022-02-10 20:00:01,107 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: getProfile
+Arguments: [AccountProfileRequest(userId=1)]
