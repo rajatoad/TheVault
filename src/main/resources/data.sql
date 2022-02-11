@@ -146,3 +146,8 @@ INSERT INTO account_type_table
 VALUES
     (default, 'Checking'),
     (default, 'Savings');
+
+INSERT INTO account_table
+VALUES
+    (default, 1, 1, 100, 130),
+    (default, 2, 2, 199, 19);

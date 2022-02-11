@@ -22,11 +22,11 @@ public class AccountEntity {
 	@SequenceGenerator(allocationSize = 1, name = "account_table_pk_account_id_seq", sequenceName = "account_table_pk_account_id_seq")
 	int pk_account_id;
 	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "pk_user_id")
+	@JoinColumn(name = "fk_user_id")
 	LoginCredentialEntity loginCredentials;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "account_type_table")
+	@JoinColumn(name = "fk_account_type_id")
 	AccountTypeEntity accountTypeEntity;
 
 	@Column(name = "available_balance")

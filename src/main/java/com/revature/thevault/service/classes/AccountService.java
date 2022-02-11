@@ -1,16 +1,15 @@
 package com.revature.thevault.service.classes;
 
-import com.revature.thevault.presentation.model.request.CreateAccountRequest;
-import com.revature.thevault.presentation.model.request.DeleteAccountRequest;
-import com.revature.thevault.presentation.model.request.TransferRequest;
-import com.revature.thevault.presentation.model.request.UpdateBalanceRequest;
+import com.revature.thevault.presentation.model.request.*;
 import com.revature.thevault.presentation.model.response.AccountResponse;
-import com.revature.thevault.presentation.model.response.GenericResponse;
+import com.revature.thevault.presentation.model.response.builder.*;
 import com.revature.thevault.repository.dao.AccountRepository;
 import com.revature.thevault.repository.entity.AccountEntity;
+import com.revature.thevault.service.exceptions.InvalidAccountIdException;
 import com.revature.thevault.service.interfaces.AccountServiceInterface;
 import com.revature.thevault.utility.enums.ResponseType;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;
@@ -23,35 +22,46 @@ public class AccountService implements AccountServiceInterface{
     private AccountRepository accountRepository;
 
     @Override
-    public AccountResponse createAccount(CreateAccountRequest createAccountRequest) {
+    public GenericResponse createAccount(CreateAccountRequest createAccountRequest) {
+
         return null;
     }
 
     @Override
-    public GenericResponse deleteAccount(DeleteAccountRequest deleteAccountRequest) {
+    public GetResponse getAccount(GetAccountRequestSingle getAccountRequestSingle) {
         try{
-            AccountEntity accountEntity = accountRepository.getById(deleteAccountRequest.getAccountId());
-            accountRepository.delete(accountEntity);
-            return new GenericResponse.GenericResponseBuilder(true)
-                    .requestType(ResponseType.DELETE)
-                    .message("Successful Account Deletion: " + deleteAccountRequest.getAccountId())
+            return new GetResponse.Builder(true, ResponseType.GET, ("Account retrieved by Id: " + getAccountRequestSingle.getAccountId()))
+                    .gotObject(accountRepository.findById(getAccountRequestSingle.getAccountId()).get())
                     .build();
         }catch(EntityNotFoundException e){
-            return failResponse("Failed to delete account: Entity Not Found");
+            throw new InvalidAccountIdException(HttpStatus.BAD_REQUEST, "Invalid Account Id for get request: " + getAccountRequestSingle.getAccountId());
         }catch(Exception e){
-            return failResponse("Failed to delete account");
+            return null;
         }
     }
 
-    private GenericResponse failResponse(String message) {
-        return new GenericResponse.GenericResponseBuilder(false)
-                .requestType(ResponseType.FAIL)
-                .message(message)
-                .build();
+    @Override
+    public DeleteResponse deleteAccount(DeleteAccountRequest deleteAccountRequest) {
+        try{
+            AccountEntity accountEntity = accountRepository.getById(deleteAccountRequest.getAccountId());
+            accountRepository.delete(accountEntity);
+            return new DeleteResponse.Builder(
+                    true,
+                    ResponseType.DELETE,
+                    ("Successful Account Deletion: " + deleteAccountRequest.getAccountId())
+                    ).deletedObject(accountEntity)
+                    .build();
+        }catch(EntityNotFoundException e){
+            throw new InvalidAccountIdException(HttpStatus.BAD_REQUEST, "Invalid Account Id for delete request: " + deleteAccountRequest.getAccountId());
+        }catch(Exception e){
+//            return failResponse(e, "Failed to delete account");
+            return null;
+        }
     }
 
+
     @Override
-    public List<AccountEntity> getAccounts(int userId) {
+    public GetResponse getAccounts(GetAccountRequestAll getAccountRequestAll) {
         return null;
     }
 
@@ -68,5 +78,18 @@ public class AccountService implements AccountServiceInterface{
     @Override
     public GenericResponse transferToAnotherAccount(TransferRequest transferRequest) {
         return null;
+    }
+
+
+    //Generic Fail Response used by the service methods for exceptions that occurred but were not caught explicitly
+    //This will provide more information than a generic exception for the front end
+
+    private GenericResponse failResponse(Exception e, String message) {
+        return new FailResponse.Builder(
+                true,
+                ResponseType.FAIL,
+                (message)
+        ).exception(e).
+                build();
     }
 }
