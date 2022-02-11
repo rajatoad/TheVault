@@ -1,11 +1,11 @@
 package com.revature.thevault.service.interfaces;
 
-import com.revature.thevault.presentation.model.request.CreateAccountRequest;
-import com.revature.thevault.presentation.model.request.DeleteAccountRequest;
-import com.revature.thevault.presentation.model.request.TransferRequest;
-import com.revature.thevault.presentation.model.request.UpdateBalanceRequest;
+import com.revature.thevault.presentation.model.request.*;
 import com.revature.thevault.presentation.model.response.AccountResponse;
-import com.revature.thevault.presentation.model.response.GenericResponse;
+import com.revature.thevault.presentation.model.response.builder.DeleteResponse;
+import com.revature.thevault.presentation.model.response.builder.GenericResponse;
+import com.revature.thevault.presentation.model.response.builder.GetResponse;
+import com.revature.thevault.presentation.model.response.builder.PostResponse;
 import com.revature.thevault.repository.entity.AccountEntity;
 
 import java.util.List;
@@ -13,13 +13,15 @@ import java.util.List;
 public interface AccountServiceInterface {
 
     // Method responsible for creating a request
-    AccountResponse createAccount(CreateAccountRequest createAccountRequest);
+    GenericResponse createAccount(CreateAccountRequest createAccountRequest);
+
+    GetResponse getAccount(GetAccountRequestSingle getAccountRequestSingle);
 
     // Delete an account
-    GenericResponse deleteAccount(DeleteAccountRequest deleteAccountRequest);
+    DeleteResponse deleteAccount(DeleteAccountRequest deleteAccountRequest);
 
     // Get users accounts
-    List<AccountEntity> getAccounts(int userId);
+    GetResponse getAccounts(GetAccountRequestAll getAccountRequestAll);
 
     // Update accounts available balance
     GenericResponse updateAccountAvailableBalance(UpdateBalanceRequest updateBalanceRequest);
@@ -29,4 +31,5 @@ public interface AccountServiceInterface {
 
     // Transfer from one account to another
     GenericResponse transferToAnotherAccount(TransferRequest transferRequest);
+
 }
