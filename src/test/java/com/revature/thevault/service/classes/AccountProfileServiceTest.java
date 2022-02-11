@@ -47,7 +47,7 @@ class AccountProfileServiceTest {
                 1238765555L,
                 "1 court"
         );
-        Mockito.when(accountProfileRepository.findByFk_user_id(normalLoginCredentialEntity.getPkuserid()))
+        Mockito.when(accountProfileRepository.findByLogincredential(normalLoginCredentialEntity))
                 .thenReturn(normalAccountProfileEntity);
     }
 
@@ -55,7 +55,7 @@ class AccountProfileServiceTest {
     void getProfile() {
         AccountProfileResponse successfulResponse = new AccountProfileResponse(true, normalAccountProfileEntity);
         AccountProfileRequest goodAccountProfileRequest = new AccountProfileRequest(
-                normalAccountProfileEntity.getLoginCredential().getPkuserid()
+                normalAccountProfileEntity.getLogincredential().getPk_user_id()
         );
         assertEquals(successfulResponse, accountProfileService.getProfile(goodAccountProfileRequest));
     }

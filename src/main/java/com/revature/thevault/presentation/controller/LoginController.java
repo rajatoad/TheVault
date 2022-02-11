@@ -2,8 +2,12 @@ package com.revature.thevault.presentation.controller;
 
 import com.revature.thevault.presentation.model.request.LoginRequest;
 import com.revature.thevault.presentation.model.response.LoginResponse;
+import com.revature.thevault.presentation.model.response.ProfileResponse;
+import com.revature.thevault.repository.entity.NewLoginCredentialsRequest;
 import com.revature.thevault.service.classes.AccountProfileService;
 import com.revature.thevault.service.classes.LoginService;
+import com.revature.thevault.service.interfaces.AccountProfileInterface;
+import lombok.NonNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
