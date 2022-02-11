@@ -13,24 +13,24 @@ import javax.persistence.*;
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
-@Table(name = "accountprofiletable")
+@Table(name = "account_profile_table")
 public class AccountProfileEntity {
     @Id
-    @Column(name = "pkprofileid")
-    @GeneratedValue(generator = "accountprofiletable_pkprofileid_seq", strategy = GenerationType.SEQUENCE)
-    @SequenceGenerator(allocationSize = 1, name = "accountprofiletable_pkprofileid_seq", sequenceName = "accountprofiletable_pkprofileid_seq")
-    int pkprofileid;
+    @Column(name = "pk_profile_id")
+    @GeneratedValue(generator = "account_profile_table_pk_profile_id_seq", strategy = GenerationType.SEQUENCE)
+    @SequenceGenerator(allocationSize = 1, name = "account_profile_table_pk_profile_id_seq", sequenceName = "account_profile_table_pk_profile_id_seq")
+    int pk_profile_id;
     @OneToOne
-    @JoinColumn(name = "pkuserid")
-    LoginCredentialEntity loginCredential;
-    @Column(name = "firstname")
-    String firstname;
-    @Column(name = "lastname")
-    String lastname;
+    @JoinColumn(name = "pk_user_id")
+    LoginCredentialEntity logincredential;
+    @Column(name = "first_name")
+    String first_name;
+    @Column(name = "last_name")
+    String last_name;
     @Column(name = "email")
     String email;
-    @Column(name = "phonenumber")
-    long phonenumber;
+    @Column(name = "phone_number")
+    long phone_number;
     @Column(name = "address")
     String address;
 }

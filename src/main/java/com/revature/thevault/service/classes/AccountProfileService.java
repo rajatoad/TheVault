@@ -5,6 +5,7 @@ import com.revature.thevault.presentation.model.request.ProfileCreateRequest;
 import com.revature.thevault.presentation.model.response.AccountProfileResponse;
 import com.revature.thevault.repository.dao.AccountProfileRepository;
 import com.revature.thevault.repository.entity.AccountProfileEntity;
+import com.revature.thevault.repository.entity.LoginCredentialEntity;
 import com.revature.thevault.service.interfaces.AccountProfileInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,7 +19,8 @@ public class AccountProfileService implements AccountProfileInterface {
     @Override
     public AccountProfileResponse getProfile(AccountProfileRequest accountProfileRequest) {
         try {
-            AccountProfileEntity accountProfileEntity = accountProfileRepository.findByFk_user_id(accountProfileRequest.getUserId());
+            LoginCredentialEntity loginCredentialEntity = new LoginCredentialEntity(accountProfileRequest.getUserId(), "", "");
+            AccountProfileEntity accountProfileEntity = accountProfileRepository.findByLogincredential(loginCredentialEntity);
             return new AccountProfileResponse(true, accountProfileEntity);
         }catch(Exception e){
             return failResponse();
