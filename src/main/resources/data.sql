@@ -6,38 +6,38 @@
 --                                  DROP TABLES
 --========================================================================================
 
- DROP TABLE login_credential_table CASCADE;
-
+DROP TABLE logincredentialtable CASCADE;
+DROP TABLE accountprofiletable CASCADE;
 -- DON'T NEED THIS BUT USEFUL FOR RDS DATABASE IN FUTURE
 
---DROP TABLE deposit_type_table;
---DROP TABLE request_type_table;
---DROP TABLE request_status_table;
---DROP TABLE deposit_table;
-DROP TABLE account_type_table CASCADE;
-DROP TABLE account_table CASCADE;
+--DROP TABLE deposittypetable;
+--DROP TABLE requesttypetable;
+--DROP TABLE requeststatustable;
+--DROP TABLE deposittable;
+DROP TABLE accounttypetable CASCADE;
+DROP TABLE accounttable CASCADE;
 
 --========================================================================================
 --                                  LOOK UP TABLES
 --========================================================================================
 
-CREATE TABLE deposit_type_table(
-    pk_deposit_type_id SERIAL PRIMARY KEY,
+CREATE TABLE deposittypetable(
+    pkdeposittypeid SERIAL PRIMARY KEY,
     name VARCHAR NOT NULL
 );
 
-CREATE TABLE request_type_table(
-    pk_request_type_id SERIAL PRIMARY KEY,
+CREATE TABLE requesttypetable(
+    pkrequesttypeid SERIAL PRIMARY KEY,
     name VARCHAR NOT NULL
 );
 
-CREATE TABLE request_status_table(
-    pk_request_status_id SERIAL PRIMARY KEY,
+CREATE TABLE requeststatustable(
+    pkrequeststatusid SERIAL PRIMARY KEY,
     name VARCHAR NOT NULL
 );
 
-CREATE TABLE account_type_table(
-    pk_account_type_id SERIAL PRIMARY KEY,
+CREATE TABLE accounttypetable(
+    pkaccounttypeid SERIAL PRIMARY KEY,
     name VARCHAR NOT NULL
 );
 
@@ -45,88 +45,104 @@ CREATE TABLE account_type_table(
 --                               BRIDGE TABLES FOR USE
 --========================================================================================
 
---CREATE TABLE account_type_bridge_table(
---    fk_account_id INTEGER,
---    fk_account_type_id INTEGER,
---    FOREIGN KEY (fk_account_id) REFERENCES account_table(pk_account_id),
---    FOREIGN KEY (fk_account_type_id) REFERENCES account_type_table(pk_account_type_id),
---    PRIMARY KEY (fk_account_id, fk_account_type_id)
+--CREATE TABLE accounttypebridgetable(
+--    fkaccountid INTEGER,
+--    fkaccounttypeid INTEGER,
+--    FOREIGN KEY (fkaccountid) REFERENCES accounttable(pkaccountid),
+--    FOREIGN KEY (fkaccounttypeid) REFERENCES accounttypetable(pkaccounttypeid),
+--    PRIMARY KEY (fkaccountid, fkaccounttypeid)
 --);
 
 --========================================================================================
 --                               NORMAL TABLES FOR USE
 --========================================================================================
 
-CREATE TABLE login_credential_table (
-    pk_user_id SERIAL PRIMARY KEY,
-    username VARCHAR(15) NOT NULL,
+CREATE TABLE logincredentialtable (
+    pkuserid SERIAL PRIMARY KEY,
+    username VARCHAR(15) UNIQUE NOT NULL,
     password VARCHAR(15) NOT NULL
 );
 
-CREATE TABLE account_table(
-    pk_account_id SERIAL PRIMARY KEY,
-    fk_user_id INTEGER,
-    fk_account_type_id INTEGER,
-    available_balance INTEGER,
-    pending_balance INTEGER,
-    FOREIGN KEY (fk_user_id) REFERENCES login_credential_table(pk_user_id),
-    FOREIGN KEY (fk_account_type_id) REFERENCES account_type_table(pk_account_type_id)
+CREATE TABLE accountprofiletable (
+    pkprofileid SERIAL PRIMARY KEY,
+    fkuserid INTEGER,
+    firstname VARCHAR NOT NULL,
+    lastname VARCHAR NOT NULL,
+    email VARCHAR UNIQUE NOT NULL,
+    phonenumber BIGINT UNIQUE NOT NULL,
+    address VARCHAR NOT NULL,
+    FOREIGN KEY (fkuserid) REFERENCES logincredentialtable(pkuserid)
 );
 
-CREATE TABLE deposit_table(
-    pk_deposit_id SERIAL PRIMARY KEY,
-    fk_account_id INTEGER,
-    fk_deposit_type_id INTEGER,
-    reference VARCHAR(25),
-    date_deposit DATE,
-    amount DECIMAL(10, 2),
-    FOREIGN KEY (fk_account_id) REFERENCES account_table(pk_account_id),
-    FOREIGN KEY (fk_deposit_type_id) REFERENCES deposit_type_table(pk_deposit_type_id)
+CREATE TABLE accounttable(
+    pkaccountid SERIAL PRIMARY KEY,
+    fkuserid INTEGER,
+    fkaccounttypeid INTEGER,
+    availablebalance INTEGER,
+    pendingbalance INTEGER,
+    FOREIGN KEY (fkuserid) REFERENCES logincredentialtable(pkuserid),
+    FOREIGN KEY (fkaccounttypeid) REFERENCES accounttypetable(pkaccounttypeid)
 );
 
-CREATE TABLE withdraw_table(
-    pk_withdraw_id SERIAL PRIMARY KEY,
-    fk_account_id INTEGER,
-    fk_request_type_id INTEGER,
-    fk_request_status_id INTEGER,
+CREATE TABLE deposittable(
+    pkdepositid SERIAL PRIMARY KEY,
+    fkaccountid INTEGER,
+    fkdeposittypeid INTEGER,
     reference VARCHAR(25),
-    date_withdraw DATE,
+    datedeposit DATE,
     amount DECIMAL(10, 2),
-    FOREIGN KEY (fk_account_id) REFERENCES account_table(pk_account_id),
-    FOREIGN KEY (fk_request_type_id) REFERENCES request_type_table(pk_request_type_id),
-    FOREIGN KEY (fk_request_status_id) REFERENCES request_status_table(pk_request_status_id)
+    FOREIGN KEY (fkaccountid) REFERENCES accounttable(pkaccountid),
+    FOREIGN KEY (fkdeposittypeid) REFERENCES deposittypetable(pkdeposittypeid)
+);
+
+CREATE TABLE withdrawtable(
+    pkwithdrawid SERIAL PRIMARY KEY,
+    fkaccountid INTEGER,
+    fkrequesttypeid INTEGER,
+    fkrequeststatusid INTEGER,
+    reference VARCHAR(25),
+    datewithdraw DATE,
+    amount DECIMAL(10, 2),
+    FOREIGN KEY (fkaccountid) REFERENCES accounttable(pkaccountid),
+    FOREIGN KEY (fkrequesttypeid) REFERENCES requesttypetable(pkrequesttypeid),
+    FOREIGN KEY (fkrequeststatusid) REFERENCES requeststatustable(pkrequeststatusid)
 );
 
 --========================================================================================
 --                                  POPULATE TABLES
 --========================================================================================
 
-INSERT INTO login_credential_table
+INSERT INTO logincredentialtable
 VALUES
     (default, 'username1', 'password1'),
     (default, 'username2', 'password2'),
     (default, 'username3', 'password3'),
     (default, 'username4', 'password4');
 
-INSERT INTO deposit_type_table
+INSERT INTO accountprofiletable
+VALUES
+    (default, 1, 'Tom', 'Cat', 'email@email.com', 5559991234, '1 lane'),
+    (default, 2, 'Joe', 'Shmo', 'yahoo@yahoo.com', 9995554323, '2 st');
+
+INSERT INTO deposittypetable
 VALUES
     (default, 'Cash'),
     (default, 'Cheque'),
     (default, 'Direct Deposit');
 
-INSERT INTO request_status_table
+INSERT INTO requeststatustable
 VALUES
     (default, 'Pending'),
     (default, 'Completed'),
     (default, 'Failed');
 
-INSERT INTO request_type_table
+INSERT INTO requesttypetable
 VALUES
     (default, 'Retail'),
     (default, 'Tech'),
     (default, 'Transfer');
 
-INSERT INTO account_type_table
+INSERT INTO accounttypetable
 VALUES
     (default, 'Checking'),
     (default, 'Savings');

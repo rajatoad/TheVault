@@ -1,5 +1,6 @@
-package com.revature.thevault.repository.dao.presentation.model.response;
+package com.revature.thevault.presentation.model.response;
 
+import com.revature.thevault.repository.entity.AccountProfileEntity;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,6 +11,7 @@ import lombok.experimental.FieldDefaults;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class LoginResponse {
+public class AccountProfileResponse {
     boolean success;
+    AccountProfileEntity accountProfileEntity;
 }

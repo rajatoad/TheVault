@@ -1,10 +1,10 @@
 package com.revature.thevault.service.classes;
 
-import com.revature.thevault.repository.dao.presentation.model.request.LoginRequest;
-import com.revature.thevault.repository.dao.presentation.model.response.LoginResponse;
+import com.revature.thevault.presentation.model.request.LoginRequest;
+import com.revature.thevault.presentation.model.response.LoginResponse;
 import com.revature.thevault.repository.dao.LoginRepository;
 import com.revature.thevault.repository.entity.LoginCredentialEntity;
-import com.revature.thevault.repository.entity.NewLoginCredentialsRequest;
+import com.revature.thevault.presentation.model.request.NewLoginCredentialsRequest;
 import com.revature.thevault.service.exceptions.InvalidInputException;
 import com.revature.thevault.service.interfaces.LoginServiceInterface;
 import org.springframework.beans.factory.annotation.Autowired;

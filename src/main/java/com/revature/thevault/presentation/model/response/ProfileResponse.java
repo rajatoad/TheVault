@@ -1,4 +1,4 @@
-package com.revature.thevault.repository.dao.presentation.model.response;
+package com.revature.thevault.presentation.model.response;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;

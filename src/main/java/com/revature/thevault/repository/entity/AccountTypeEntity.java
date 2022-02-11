@@ -16,13 +16,13 @@ import java.util.Set;
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
-@Table(name = "account_type_table")
+@Table(name = "accounttypetable")
 public class AccountTypeEntity {
 	@Id
-	@Column(name = "pk_account_type_id")
-	@GeneratedValue(generator = "account_type_table_pk_account_type_id_seq", strategy = GenerationType.SEQUENCE)
-	@SequenceGenerator(allocationSize = 1, name = "account_type_table_pk_account_type_id_seq", sequenceName = "account_type_table_pk_account_type_id_seq")
-	int pk_account_type_id;
+	@Column(name = "pkaccounttypeid")
+	@GeneratedValue(generator = "accounttypetable_pkaccounttypeid_seq", strategy = GenerationType.SEQUENCE)
+	@SequenceGenerator(allocationSize = 1, name = "accounttypetable_pkaccounttypeid_seq", sequenceName = "accounttypetable_pkaccounttypeid_seq")
+	int pkaccounttypeid;
 	@Column(name = "name")
 	String name;
 }

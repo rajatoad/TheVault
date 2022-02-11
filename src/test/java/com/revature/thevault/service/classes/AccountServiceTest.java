@@ -104,10 +104,10 @@ class AccountServiceTest {
 
     @Test
     void deleteAccount() {
-        DeleteAccountRequest goodDeleteAccountRequest = new DeleteAccountRequest(storedAccount.getPk_account_id());
+        DeleteAccountRequest goodDeleteAccountRequest = new DeleteAccountRequest(storedAccount.getPkaccountid());
         GenericResponse successfulDeleteAccountResponse = new GenericResponse.GenericResponseBuilder(true)
                 .requestType(ResponseType.DELETE)
-                        .message("Successful Account Deletion: " + storedAccount.getPk_account_id())
+                        .message("Successful Account Deletion: " + storedAccount.getPkaccountid())
                                 .build();
         assertEquals(successfulDeleteAccountResponse, accountService.deleteAccount(goodDeleteAccountRequest));
     }
