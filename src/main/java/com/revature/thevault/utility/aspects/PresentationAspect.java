@@ -6,6 +6,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+import java.util.Arrays;
+
 @Component("presentationAspect")
 @Aspect
 public class PresentationAspect {
@@ -14,7 +16,7 @@ public class PresentationAspect {
 
     @Before("com.revature.thevault.utility.aspects.SystemArchitect.controller()")
     public void beforeServiceCheck(JoinPoint jp){
-        dLog.debug("CONTROLLER CLASS: " + jp.getSignature().getDeclaringType() + "\nMETHOD: " + jp.getSignature().getName());
+        dLog.debug("Class: " + jp.getSignature().getDeclaringType() + "\nMethod: " + jp.getSignature().getName() + "\nArguments: " + Arrays.toString(jp.getArgs()));
     }
 
     @AfterReturning(value = "com.revature.thevault.utility.aspects.SystemArchitect.controller()", returning = "returnedValue")

@@ -21,7 +21,7 @@ public class AccountProfileEntity {
     @SequenceGenerator(allocationSize = 1, name = "account_profile_table_pk_profile_id_seq", sequenceName = "account_profile_table_pk_profile_id_seq")
     int pk_profile_id;
     @OneToOne
-    @JoinColumn(name = "pk_user_id")
+    @JoinColumn(name = "fk_user_id")
     LoginCredentialEntity logincredential;
     @Column(name = "first_name")
     String first_name;
