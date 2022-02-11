@@ -1,11 +1,9 @@
 package com.revature.thevault.service.classes;
 
-import com.revature.thevault.presentation.model.request.CreateAccountRequest;
-import com.revature.thevault.presentation.model.request.DeleteAccountRequest;
-import com.revature.thevault.presentation.model.request.TransferRequest;
-import com.revature.thevault.presentation.model.request.UpdateBalanceRequest;
+import com.revature.thevault.presentation.model.request.*;
 import com.revature.thevault.presentation.model.response.AccountResponse;
 import com.revature.thevault.presentation.model.response.builder.DeleteResponse;
+import com.revature.thevault.presentation.model.response.builder.GetResponse;
 import com.revature.thevault.presentation.model.response.builder.PutResponse;
 import com.revature.thevault.repository.dao.AccountRepository;
 import com.revature.thevault.repository.entity.AccountEntity;
@@ -16,6 +14,7 @@ import com.revature.thevault.service.exceptions.InvalidAccountTypeException;
 import com.revature.thevault.service.exceptions.InvalidAmountException;
 import com.revature.thevault.service.exceptions.InvalidUserIdException;
 import com.revature.thevault.utility.enums.ResponseType;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -57,7 +56,7 @@ class AccountServiceTest {
 
     private int otherAccountId;
 
-    @BeforeEach
+    @BeforeAll
     void setup(){
         MockitoAnnotations.openMocks(this);
         userId = 1;
@@ -82,6 +81,20 @@ class AccountServiceTest {
         AccountEntity createdAccount = new AccountEntity();
         Mockito.when(accountRepository.save(creatingAccount)).thenReturn(createdAccount);
         assertEquals(successfulAccountResponse, accountService.createAccount(goodAccountCreateRequest));
+    }
+
+    @Test
+    void getAccount() {
+        Optional<AccountEntity> accountEntityOptional = Optional.of(storedAccount);
+        Mockito.when(accountRepository.findById(storedAccount.getPk_account_id())).thenReturn(accountEntityOptional);
+        GetResponse goodGetResponse = GetResponse.builder()
+                        .success(true)
+                                .responseType(ResponseType.GET)
+                                        .message("Account retrieved by Account Id: " + storedAccount.getPk_account_id())
+                                                .gotObject(accountEntityOptional.get())
+                                                        .build();
+        GetAccountRequestSingle goodGetAccountRequestSingle = new GetAccountRequestSingle(storedAccount.getPk_account_id());
+        assertEquals(goodGetResponse, accountService.getAccount(goodGetAccountRequestSingle));
     }
 
     @Test
@@ -149,7 +162,6 @@ class AccountServiceTest {
     }
 
     @ParameterizedTest
-    @NullAndEmptySource
     @ValueSource(ints = {-1})
     void updateAccountAvailableBalanceInvalidAccountId(int number) {
         //update user account balance
@@ -160,7 +172,7 @@ class AccountServiceTest {
     }
 
     @ParameterizedTest
-    @NullAndEmptySource
+    @ValueSource(ints ={0, 10000000} )
     void updateAccountAvailableBalanceInvalidAmount(int number) {
 
         UpdateBalanceRequest updateBalanceRequest = new UpdateBalanceRequest(accountId, number);
@@ -187,24 +199,19 @@ class AccountServiceTest {
         assertEquals(successfulPutResponse, accountService.updateAccountPendingBalance(updateBalanceRequest));
     }
 
-    @ParameterizedTest
-    @NullAndEmptySource
-    @ValueSource(ints = {-1})
-    void updateAccountPendingBalanceInvalidAccountId(int number) {
+    @Test
+    void updateAccountPendingBalanceInvalidAccountId() {
         //update user account balance
-        UpdateBalanceRequest updateBalanceRequest = new UpdateBalanceRequest(number, 10);
-
-        Mockito.when(accountRepository.findById(number)).thenReturn(Optional.empty());
+        UpdateBalanceRequest updateBalanceRequest = new UpdateBalanceRequest(-1, 10);
+        Mockito.when(accountRepository.findById(updateBalanceRequest.getAccountId())).thenReturn(Optional.empty());
         assertThrows(InvalidAccountIdException.class,() -> accountService.updateAccountPendingBalance(updateBalanceRequest));
     }
 
     @ParameterizedTest
-    @NullAndEmptySource
+    @ValueSource(ints ={0, 10000000} )
     void updateAccountPendingBalanceInvalidAmount(int number) {
-
         UpdateBalanceRequest updateBalanceRequest = new UpdateBalanceRequest(accountId, number);
         AccountEntity storedAccount = new AccountEntity();
-
         assertThrows(InvalidAmountException.class, () -> accountService.updateAccountAvailableBalance(updateBalanceRequest));
     }
 
@@ -252,4 +259,5 @@ class AccountServiceTest {
         TransferRequest transferRequest = new TransferRequest(accountId, otherAccountId, 100000);
         assertThrows(InvalidAmountException.class, () -> accountService.transferToAnotherAccount(transferRequest));
     }
+
 }

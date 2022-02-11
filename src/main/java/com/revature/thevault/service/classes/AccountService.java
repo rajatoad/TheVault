@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;
 import java.util.List;
+import java.util.Optional;
 
 @Service("accountService")
 public class AccountService implements AccountServiceInterface{
@@ -33,14 +34,16 @@ public class AccountService implements AccountServiceInterface{
     @Override
     public GetResponse getAccount(GetAccountRequestSingle getAccountRequestSingle) {
         try{
-            return GetResponse.builder()
-                    .success(true)
-                    .responseType(ResponseType.GET)
-                    .message("Account retrieved by Account Id: " + getAccountRequestSingle.getAccountId())
-                    .gotObject(accountRepository.findById(getAccountRequestSingle.getAccountId()).get())
-                    .build();
-        }catch(EntityNotFoundException e){
-            throw new InvalidAccountIdException(HttpStatus.BAD_REQUEST, "Invalid Account Id for get request: " + getAccountRequestSingle.getAccountId());
+            Optional<AccountEntity> accountEntityOptional = accountRepository.findById(getAccountRequestSingle.getAccountId());
+            if(accountEntityOptional.isPresent())
+                return GetResponse.builder()
+                        .success(true)
+                        .responseType(ResponseType.GET)
+                        .message("Account retrieved by Account Id: " + getAccountRequestSingle.getAccountId())
+                        .gotObject(accountEntityOptional.get())
+                        .build();
+            else
+                throw new InvalidAccountIdException(HttpStatus.BAD_REQUEST, "Invalid Account Id for get request: " + getAccountRequestSingle.getAccountId());
         }catch(Exception e){
             throw new InvalidRequestException(HttpStatus.BAD_REQUEST, "Invalid Request");
         }
