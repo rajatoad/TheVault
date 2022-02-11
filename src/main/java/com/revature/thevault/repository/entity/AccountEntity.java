@@ -13,24 +13,24 @@ import javax.persistence.*;
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Entity
-@Table(name = "account_table")
+@Table(name = "accounttable")
 public class AccountEntity {
 
 	@Id
-	@Column(name = "pk_account_id")
-	@GeneratedValue(generator = "account_table_pk_account_id_seq", strategy = GenerationType.SEQUENCE)
-	@SequenceGenerator(allocationSize = 1, name = "account_table_pk_account_id_seq", sequenceName = "account_table_pk_account_id_seq")
-	int pk_account_id;
+	@Column(name = "pkaccountid")
+	@GeneratedValue(generator = "accounttable_pkaccountid_seq", strategy = GenerationType.SEQUENCE)
+	@SequenceGenerator(allocationSize = 1, name = "accounttable_pkaccountid_seq", sequenceName = "accounttable_pkaccountid_seq")
+	int pkaccountid;
 	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "pk_user_id")
+	@JoinColumn(name = "pkuserid")
 	LoginCredentialEntity loginCredentials;
 	
 	@ManyToOne(fetch = FetchType.EAGER)
-	@JoinColumn(name = "account_type_table")
+	@JoinColumn(name = "accounttypetable")
 	AccountTypeEntity accountTypeEntity;
 
-	@Column(name = "available_balance")
-	int available_balance;
-	@Column(name = "pending_balance")
-	int pending_balance;
+	@Column(name = "availablebalance")
+	int availablebalance;
+	@Column(name = "pendingbalance")
+	int pendingbalance;
 }
