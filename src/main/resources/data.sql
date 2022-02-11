@@ -7,7 +7,7 @@
 --========================================================================================
 
  DROP TABLE login_credential_table CASCADE;
-
+DROP TABLE account_profile_table CASCADE;
 -- DON'T NEED THIS BUT USEFUL FOR RDS DATABASE IN FUTURE
 
 --DROP TABLE deposit_type_table;
@@ -59,8 +59,19 @@ CREATE TABLE account_type_table(
 
 CREATE TABLE login_credential_table (
     pk_user_id SERIAL PRIMARY KEY,
-    username VARCHAR(15) NOT NULL,
+    username VARCHAR(15) UNIQUE NOT NULL,
     password VARCHAR(15) NOT NULL
+);
+
+CREATE TABLE account_profile_table (
+    pk_profile_id SERIAL PRIMARY KEY,
+    fk_user_id INTEGER,
+    first_name VARCHAR NOT NULL,
+    last_name VARCHAR NOT NULL,
+    email VARCHAR UNIQUE NOT NULL,
+    phone_number BIGINT UNIQUE NOT NULL,
+    address VARCHAR NOT NULL,
+    FOREIGN KEY (fk_user_id) REFERENCES login_credential_table(pk_user_id)
 );
 
 CREATE TABLE account_table(
@@ -107,6 +118,11 @@ VALUES
     (default, 'username2', 'password2'),
     (default, 'username3', 'password3'),
     (default, 'username4', 'password4');
+
+INSERT INTO account_profile_table
+VALUES
+    (default, 1, 'Tom', 'Cat', 'email@email.com', 5559991234, '1 lane'),
+    (default, 2, 'Joe', 'Shmo', 'yahoo@yahoo.com', 9995554323, '2 st');
 
 INSERT INTO deposit_type_table
 VALUES

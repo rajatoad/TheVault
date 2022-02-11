@@ -1,4 +1,4 @@
-package com.revature.thevault.repository.dao.presentation.model.request;
+package com.revature.thevault.presentation.model.request;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
