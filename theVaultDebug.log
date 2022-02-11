@@ -13,3 +13,9 @@ Arguments: [DeleteAccountRequest(accountId=-1)]
 2022-02-10 16:46:11,094 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
 Method: deleteAccount
 Arguments: [DeleteAccountRequest(accountId=-1)]
+2022-02-10 19:02:12,590 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: getProfile
+Arguments: [AccountProfileRequest(userId=1)]
+2022-02-10 19:16:20,060 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: getProfile
+Arguments: [AccountProfileRequest(userId=1)]
