@@ -1,4 +1,4 @@
-package com.revature.thevault.repository.dao.presentation.model.request;
+package com.revature.thevault.presentation.model.response;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -7,10 +7,9 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class LoginRequest {
-    String username;
-    String password;
+public class UpdateWithdrawResponse {
+    boolean success;
 }
