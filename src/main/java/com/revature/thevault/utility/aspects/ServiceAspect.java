@@ -19,7 +19,7 @@ public class ServiceAspect {
         dLog.debug("Class: " + jp.getSignature().getDeclaringType() + "\nMethod: " + jp.getSignature().getName() + "\nArguments: " + Arrays.toString(jp.getArgs()));
     }
 
-    @AfterReturning(value = "com.revature.thevault.utility.aspects.SystemArchitect.controller()", returning = "returnedValue")
+    @AfterReturning(value = "com.revature.thevault.utility.aspects.SystemArchitect.businessService()", returning = "returnedValue")
     public void afterServiceCheck(JoinPoint jp, Object returnedValue){
         if(returnedValue != null){
             dLog.info("RETURNING: " + returnedValue.toString());
@@ -28,7 +28,7 @@ public class ServiceAspect {
         }
     }
 
-    @AfterThrowing(value = "com.revature.thevault.utility.aspects.SystemArchitect.controller()", throwing = "thrownException")
+    @AfterThrowing(value = "com.revature.thevault.utility.aspects.SystemArchitect.businessService()", throwing = "thrownException")
     public void afterThrowingCheck(JoinPoint jp, Object thrownException){
         dLog.error("CONTROLLER CLASS: " + jp.getSignature().getDeclaringType() + "\nTHROWING EXCEPTION: " + thrownException.getClass());
     }

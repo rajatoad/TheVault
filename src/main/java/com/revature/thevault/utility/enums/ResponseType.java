@@ -2,11 +2,11 @@ package com.revature.thevault.utility.enums;
 
 public enum ResponseType {
 
-    CREATE("Create"),
+    POST("Post"),
     DELETE("Delete"),
-    UPDATE("Update"),
+    PUT("Put"),
     FAIL("Fail"),
-    TRANSFER("Transfer");
+    GET("Get");
 
     private String requestType;
 
