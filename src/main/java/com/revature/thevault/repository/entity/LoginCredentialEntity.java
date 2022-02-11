@@ -20,8 +20,8 @@ public class LoginCredentialEntity {
     @GeneratedValue(generator = "login_credential_table_pk_user_id_seq", strategy = GenerationType.SEQUENCE)
     @SequenceGenerator(allocationSize = 1, name = "login_credential_table_pk_user_id_seq", sequenceName = "login_credential_table_pk_user_id_seq")
     int pk_user_id;
-    @Column(name = "user_username")
+    @Column(name = "username")
     String username;
-    @Column(name = "user_password")
+    @Column(name = "password")
     String password;
 }
