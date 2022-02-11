@@ -9,19 +9,19 @@ import lombok.experimental.FieldDefaults;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "login_credential_table")
+@Table(name = "logincredentialtable")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class LoginCredentialEntity {
     @Id
-    @Column(name = "pk_user_id")
-    @GeneratedValue(generator = "login_credential_table_pk_user_id_seq", strategy = GenerationType.SEQUENCE)
-    @SequenceGenerator(allocationSize = 1, name = "login_credential_table_pk_user_id_seq", sequenceName = "login_credential_table_pk_user_id_seq")
-    int pk_user_id;
-    @Column(name = "user_username")
+    @Column(name = "pkuserid")
+    @GeneratedValue(generator = "logincredentialtable_pkuserid_seq", strategy = GenerationType.SEQUENCE)
+    @SequenceGenerator(allocationSize = 1, name = "logincredentialtable_pkuserid_seq", sequenceName = "logincredentialtable_pkuserid_seq")
+    int pkuserid;
+    @Column(name = "userusername")
     String username;
-    @Column(name = "user_password")
+    @Column(name = "userpassword")
     String password;
 }
