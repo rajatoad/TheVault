@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
+import java.util.List;
+
 @EqualsAndHashCode(callSuper = false)
 @Data
 @NoArgsConstructor
@@ -15,7 +17,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 @ResponseStatus(HttpStatus.OK)
 @JsonDeserialize(builder = DeleteResponse.Builder.class)
 public class DeleteResponse extends GenericResponse{
-    private Object deletedObject;
+    private List deletedObject;
 
     public DeleteResponse(Builder builder){
         super(builder);
@@ -27,14 +29,14 @@ public class DeleteResponse extends GenericResponse{
     }
 
     public static class Builder extends GenericResponse.Builder<Builder>{
-        private Object deletedObject;
+        private List deletedObject;
 
         @Override
         public Builder getThis(){
             return this;
         }
 
-        public Builder deletedObject(Object deletedObject){
+        public Builder deletedObject(List deletedObject){
             this.deletedObject = deletedObject;
             return this;
         }

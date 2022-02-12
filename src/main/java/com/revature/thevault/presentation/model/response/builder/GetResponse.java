@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
+import java.util.List;
+
 @EqualsAndHashCode(callSuper = true)
 @Data
 @AllArgsConstructor
@@ -16,7 +18,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 @JsonDeserialize(builder = GetResponse.Builder.class)
 public class GetResponse extends GenericResponse{
 
-    private Object gotObject;
+    private List gotObject;
 
     public GetResponse(Builder builder){
         super(builder);
@@ -28,14 +30,14 @@ public class GetResponse extends GenericResponse{
     }
 
     public static class Builder extends GenericResponse.Builder<Builder>{
-        private Object gotObject;
+        private List gotObject;
 
         @Override
         public Builder getThis(){
             return this;
         }
 
-        public Builder gotObject(Object gotObject){
+        public Builder gotObject(List gotObject){
             this.gotObject = gotObject;
             return this;
         }

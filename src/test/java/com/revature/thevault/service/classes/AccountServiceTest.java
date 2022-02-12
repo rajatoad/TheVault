@@ -28,10 +28,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
 import javax.persistence.EntityNotFoundException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -91,7 +88,7 @@ class AccountServiceTest {
                         .success(true)
                                 .responseType(ResponseType.GET)
                                         .message("Account retrieved by Account Id: " + storedAccount.getPk_account_id())
-                                                .gotObject(accountEntityOptional.get())
+                                                .gotObject(Collections.singletonList(accountEntityOptional.get()))
                                                         .build();
         GetAccountRequestSingle goodGetAccountRequestSingle = new GetAccountRequestSingle(storedAccount.getPk_account_id());
         assertEquals(goodGetResponse, accountService.getAccount(goodGetAccountRequestSingle));
@@ -120,7 +117,7 @@ class AccountServiceTest {
                 .success(true)
                 .responseType(ResponseType.DELETE)
                 .message("Successful Account Deletion: " + storedAccount.getPk_account_id())
-                .deletedObject(storedAccount)
+                .deletedObject(Collections.singletonList(storedAccount))
                 .build();
         assertEquals(successfulDeleteAccountResponse, accountService.deleteAccount(goodDeleteAccountRequest));
     }
@@ -154,7 +151,7 @@ class AccountServiceTest {
                 .success(true)
                 .responseType(ResponseType.PUT)
                 .message("Successfully updated users available balance: " + updateBalanceRequest.getAmount())
-                .updatedObject(updatedAccount)
+                .updatedObject(Collections.singletonList(updatedAccount))
                 .build();
 
         Mockito.when(accountRepository.save(accountToUpdateBalance)).thenReturn(updatedAccount);
@@ -192,7 +189,7 @@ class AccountServiceTest {
                 .success(true)
                 .responseType(ResponseType.PUT)
                 .message("Successfully updated account pending balance: " + updateBalanceRequest.getAmount())
-                .updatedObject(updatedAccount)
+                .updatedObject(Collections.singletonList(updatedAccount))
                 .build();
 
         Mockito.when(accountRepository.save(accountUpdatingBalance)).thenReturn(updatedAccount);

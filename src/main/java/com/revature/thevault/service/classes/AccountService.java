@@ -16,6 +16,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -40,7 +42,7 @@ public class AccountService implements AccountServiceInterface{
                         .success(true)
                         .responseType(ResponseType.GET)
                         .message("Account retrieved by Account Id: " + getAccountRequestSingle.getAccountId())
-                        .gotObject(accountEntityOptional.get())
+                        .gotObject(Collections.singletonList(accountEntityOptional.get()))
                         .build();
             else
                 throw new InvalidAccountIdException(HttpStatus.BAD_REQUEST, "Invalid Account Id for get request: " + getAccountRequestSingle.getAccountId());
@@ -58,7 +60,7 @@ public class AccountService implements AccountServiceInterface{
                     .success(true)
                     .responseType(ResponseType.DELETE)
                     .message("Successful Account Deletion: " + deleteAccountRequest.getAccountId())
-                    .deletedObject(accountEntity)
+                    .deletedObject(Collections.singletonList(accountEntity))
                     .build();
         }catch(EntityNotFoundException e){
             throw new InvalidAccountIdException(HttpStatus.BAD_REQUEST, "Invalid Account Id for delete request: " + deleteAccountRequest.getAccountId());
