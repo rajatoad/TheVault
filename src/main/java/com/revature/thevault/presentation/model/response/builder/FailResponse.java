@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+//EXPERIMENTAL DO NOT USE IT
+
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
