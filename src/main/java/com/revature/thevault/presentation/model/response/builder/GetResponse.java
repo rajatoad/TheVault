@@ -14,7 +14,6 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@ResponseStatus(HttpStatus.OK)
 @JsonDeserialize(builder = GetResponse.Builder.class)
 public class GetResponse extends GenericResponse{
 

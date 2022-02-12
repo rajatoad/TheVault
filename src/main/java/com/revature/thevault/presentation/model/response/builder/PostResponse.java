@@ -14,7 +14,6 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@ResponseStatus(HttpStatus.CREATED)
 @JsonDeserialize(builder = PostResponse.Builder.class)
 public class PostResponse extends GenericResponse{
     private List createdObject;

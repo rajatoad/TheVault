@@ -5,8 +5,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.ResponseStatus;
 
 import java.util.List;
 
@@ -14,10 +12,9 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@ResponseStatus(HttpStatus.OK)
 @JsonDeserialize(builder = PutResponse.Builder.class)
 public class PutResponse extends GenericResponse{
-    private List updatedObject;
+    private List<Object> updatedObject;
 
     public PutResponse(Builder builder){
         super(builder);
@@ -29,14 +26,14 @@ public class PutResponse extends GenericResponse{
     }
 
     public static class Builder extends GenericResponse.Builder<Builder>{
-        private List updatedObject;
+        private List<Object> updatedObject;
 
         @Override
         public Builder getThis(){
             return this;
         }
 
-        public Builder updatedObject(List updatedObject){
+        public Builder updatedObject(List<Object> updatedObject){
             this.updatedObject = updatedObject;
             return this;
         }

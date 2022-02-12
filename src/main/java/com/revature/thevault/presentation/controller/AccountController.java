@@ -1,10 +1,13 @@
 package com.revature.thevault.presentation.controller;
 
-import com.revature.thevault.presentation.model.request.GetAccountRequestAll;
-import com.revature.thevault.presentation.model.request.GetAccountRequestSingle;
+import com.revature.thevault.presentation.model.request.*;
+import com.revature.thevault.presentation.model.response.builder.DeleteResponse;
 import com.revature.thevault.presentation.model.response.builder.GetResponse;
+import com.revature.thevault.presentation.model.response.builder.PostResponse;
+import com.revature.thevault.presentation.model.response.builder.PutResponse;
 import com.revature.thevault.service.classes.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin("*")
@@ -15,14 +18,40 @@ public class AccountController {
     @Autowired
     private AccountService accountService;
 
+    @ResponseStatus(HttpStatus.OK)
     @GetMapping("/find")
-    public GetResponse getAccount(@RequestBody GetAccountRequestSingle getAccountRequestSingle){
-        return accountService.getAccount(getAccountRequestSingle);
+    public GetResponse getAccount(@RequestParam int accountId){
+        return accountService.getAccount(accountId);
     }
 
+    @ResponseStatus(HttpStatus.OK)
     @GetMapping("/users-accounts")
-    public GetResponse getAccountList(@RequestBody GetAccountRequestAll getAccountRequestAll){
-        return accountService.getAccounts(getAccountRequestAll);
+    public GetResponse getUserAccountList(@RequestParam int userId){
+        return accountService.getAccounts(userId);
+    }
+
+    @ResponseStatus(HttpStatus.CREATED)
+    @PostMapping("/create")
+    public PostResponse createAccount(@RequestBody CreateAccountRequest createAccountRequest){
+        return accountService.createAccount(createAccountRequest);
+    }
+
+    @ResponseStatus(HttpStatus.OK)
+    @DeleteMapping("/delete")
+    public DeleteResponse deleteAccount(@RequestParam int accountId){
+        return accountService.deleteAccount(accountId);
+    }
+
+    @ResponseStatus(HttpStatus.OK)
+    @PutMapping("/update")
+    public PutResponse updateAccount(@RequestBody UpdateAccountRequest updateAccountRequest){
+        return accountService.updateAccount(updateAccountRequest);
+    }
+
+    @ResponseStatus(HttpStatus.OK)
+    @PutMapping("/transfer")
+    public PutResponse transferToAccount(@RequestBody TransferRequest transferRequest){
+        return accountService.transferToAnotherAccount(transferRequest);
     }
 
 }
