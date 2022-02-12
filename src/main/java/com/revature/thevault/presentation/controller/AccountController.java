@@ -8,6 +8,7 @@ import com.revature.thevault.presentation.model.response.builder.PutResponse;
 import com.revature.thevault.service.classes.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin("*")
@@ -19,37 +20,37 @@ public class AccountController {
     private AccountService accountService;
 
     @ResponseStatus(HttpStatus.OK)
-    @GetMapping("/find")
+    @GetMapping(path = "/find", produces = MediaType.APPLICATION_JSON_VALUE)
     public GetResponse getAccount(@RequestParam int accountId){
         return accountService.getAccount(accountId);
     }
 
     @ResponseStatus(HttpStatus.OK)
-    @GetMapping("/users-accounts")
+    @GetMapping(path = "/users-accounts", produces = MediaType.APPLICATION_JSON_VALUE)
     public GetResponse getUserAccountList(@RequestParam int userId){
         return accountService.getAccounts(userId);
     }
 
     @ResponseStatus(HttpStatus.CREATED)
-    @PostMapping("/create")
+    @PostMapping(path = "/create", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public PostResponse createAccount(@RequestBody CreateAccountRequest createAccountRequest){
         return accountService.createAccount(createAccountRequest);
     }
 
     @ResponseStatus(HttpStatus.OK)
-    @DeleteMapping("/delete")
+    @DeleteMapping(path = "/delete", produces = MediaType.APPLICATION_JSON_VALUE)
     public DeleteResponse deleteAccount(@RequestParam int accountId){
         return accountService.deleteAccount(accountId);
     }
 
     @ResponseStatus(HttpStatus.OK)
-    @PutMapping("/update")
+    @PutMapping(path = "/update", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public PutResponse updateAccount(@RequestBody UpdateAccountRequest updateAccountRequest){
         return accountService.updateAccount(updateAccountRequest);
     }
 
     @ResponseStatus(HttpStatus.OK)
-    @PutMapping("/transfer")
+    @PutMapping(path = "/transfer", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public PutResponse transferToAccount(@RequestBody TransferRequest transferRequest){
         return accountService.transferToAnotherAccount(transferRequest);
     }
