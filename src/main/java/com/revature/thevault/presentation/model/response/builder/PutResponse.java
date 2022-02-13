@@ -14,7 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 @JsonDeserialize(builder = PutResponse.Builder.class)
 public class PutResponse extends GenericResponse{
-    private List<Object> updatedObject;
+    private List updatedObject;
 
     public PutResponse(Builder builder){
         super(builder);
@@ -26,14 +26,14 @@ public class PutResponse extends GenericResponse{
     }
 
     public static class Builder extends GenericResponse.Builder<Builder>{
-        private List<Object> updatedObject;
+        private List updatedObject;
 
         @Override
         public Builder getThis(){
             return this;
         }
 
-        public Builder updatedObject(List<Object> updatedObject){
+        public Builder updatedObject(List updatedObject){
             this.updatedObject = updatedObject;
             return this;
         }

@@ -1,23 +1,24 @@
 package com.revature.thevault.service.classes;
 
-import com.revature.thevault.presentation.model.request.*;
-import com.revature.thevault.presentation.model.response.builder.*;
+import com.revature.thevault.presentation.model.request.CreateAccountRequest;
+import com.revature.thevault.presentation.model.request.TransferRequest;
+import com.revature.thevault.presentation.model.request.UpdateAccountRequest;
+import com.revature.thevault.presentation.model.response.builder.DeleteResponse;
+import com.revature.thevault.presentation.model.response.builder.GetResponse;
+import com.revature.thevault.presentation.model.response.builder.PostResponse;
+import com.revature.thevault.presentation.model.response.builder.PutResponse;
 import com.revature.thevault.repository.dao.AccountRepository;
 import com.revature.thevault.repository.entity.AccountEntity;
 import com.revature.thevault.repository.entity.LoginCredentialEntity;
+import com.revature.thevault.service.dto.AccountResponseObject;
 import com.revature.thevault.service.exceptions.*;
 import com.revature.thevault.service.interfaces.AccountServiceInterface;
-import com.revature.thevault.utility.enums.ResponseType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;
-import javax.security.auth.login.AccountNotFoundException;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Service("accountService")
 public class AccountService implements AccountServiceInterface{
@@ -33,19 +34,15 @@ public class AccountService implements AccountServiceInterface{
         try {
             return PostResponse.builder()
                     .success(true)
-                    .responseType(ResponseType.POST)
-                    .message("Successful Account Creation")
                     .createdObject(Collections.singletonList(
-                            accountRepository.save(
-                                    new AccountEntity(
-                                            0,
-                                            new LoginCredentialEntity(createAccountRequest.getUserId(), "", ""),
-                                            accountTypeService.findAccountTypeEntityByName(createAccountRequest.getAccountType()),
-                                            0,
-                                            0
-                                    )
-                            )
-                    ))
+                            convertAccountEntityToResponse(
+                                    accountRepository.save(
+                                            new AccountEntity(
+                                                    0,
+                                                    new LoginCredentialEntity(createAccountRequest.getUserId(), "", ""),
+                                                    accountTypeService.findAccountTypeEntityByName(createAccountRequest.getAccountType()),
+                                                    0,
+                                                    0)))))
                     .build();
         }catch(InvalidAccountTypeException e){
             throw e;
@@ -54,14 +51,15 @@ public class AccountService implements AccountServiceInterface{
         }
     }
 
+
     @Override
     public GetResponse getAccount(int accountId) {
         try {
             return GetResponse.builder()
                     .success(true)
-                    .responseType(ResponseType.GET)
-                    .message("Account retrieved by Account Id: " + accountId)
-                    .gotObject(Collections.singletonList(getAccountById(accountId)))
+                    .gotObject(Collections.singletonList(
+                            convertAccountEntityToResponse(
+                                    getAccountById(accountId))))
                     .build();
         }catch(InvalidAccountIdException e){
             throw e;
@@ -77,9 +75,8 @@ public class AccountService implements AccountServiceInterface{
             accountRepository.delete(accountEntity);
             return DeleteResponse.builder()
                     .success(true)
-                    .responseType(ResponseType.DELETE)
-                    .message("Successful Account Deletion: " + accountId)
-                    .deletedObject(Collections.singletonList(accountEntity))
+                    .deletedObject(Collections.singletonList(
+                            convertAccountEntityToResponse(accountEntity)))
                     .build();
         }catch(InvalidAccountIdException e){
             throw new InvalidAccountIdException(HttpStatus.BAD_REQUEST, "Invalid Account Id for delete request: " + accountId);
@@ -88,16 +85,14 @@ public class AccountService implements AccountServiceInterface{
         }
     }
 
-
     @Override
     public GetResponse getAccounts(int userId) {
         try {
             List<AccountEntity> accountEntities = getUserAccountsByUserId(userId);
             return GetResponse.builder()
                     .success(true)
-                    .responseType(ResponseType.GET)
-                    .message("Successful retrieval of user accounts by user Id: " + userId)
-                    .gotObject(accountEntities)
+                    .gotObject(
+                            convertAccountEntitiesToResponseList(accountEntities))
                     .build();
         }catch(InvalidUserIdException e){
             throw e;
@@ -118,9 +113,8 @@ public class AccountService implements AccountServiceInterface{
             AccountEntity updatedAccountEntity = updateAccountEntity(accountEntityReal);
             return PutResponse.builder()
                     .success(true)
-                    .responseType(ResponseType.PUT)
-                    .message("Successfully Updated Account")
-                    .updatedObject(Collections.singletonList(updatedAccountEntity))
+                    .updatedObject(Collections.singletonList(
+                            convertAccountEntityToResponse(updatedAccountEntity)))
                     .build();
         }catch(InvalidAccountIdException e){
             throw e;
@@ -144,9 +138,7 @@ public class AccountService implements AccountServiceInterface{
 
             return PutResponse.builder()
                     .success(true)
-                    .responseType(ResponseType.PUT)
-                    .message("Successfully Transferred Amount: $" + transferRequest.getAmount() + " From Account Id: " + ownerAccountEntity.getPk_account_id() + " To Account Id: " + receiverAccountEntity.getPk_account_id())
-                    .updatedObject(Arrays.asList(updatedOwner, updatedReceiver))
+                    .updatedObject(convertAccountEntitiesToResponseList(Arrays.asList(updatedOwner, updatedReceiver)))
                     .build();
         }catch (InvalidAccountIdException | InvalidAmountException e) {
             throw e;
@@ -169,19 +161,6 @@ public class AccountService implements AccountServiceInterface{
         return accountRepository.save(accountEntity);
     }
 
-//
-//    //Generic Fail Response used by the service methods for exceptions that occurred but were not caught explicitly
-//    //This will provide more information than a generic exception for the front end
-//
-//    private GenericResponse failResponse(Exception e, String message) {
-//        return FailResponse.builder()
-//                .success(false)
-//                .responseType(ResponseType.FAIL)
-//                .message(message)
-//                .exception(e)
-//                .build();
-//    }
-
     private AccountEntity getAccountById(int accountId){
         try {
             Optional<AccountEntity> accountEntityOptional = accountRepository.findById(accountId);
@@ -202,5 +181,21 @@ public class AccountService implements AccountServiceInterface{
 
     private AccountEntity updateAccountEntity(AccountEntity accountEntity){
         return accountRepository.save(accountEntity);
+    }
+
+    private List<AccountResponseObject> convertAccountEntitiesToResponseList(List<AccountEntity> accountEntities) {
+        List<AccountResponseObject> responseObjects = new ArrayList<>(accountEntities.size());
+        accountEntities.forEach(acc -> responseObjects.add(convertAccountEntityToResponse(acc)));
+        return responseObjects;
+    }
+
+    private AccountResponseObject convertAccountEntityToResponse(AccountEntity accountEntity) {
+        return new AccountResponseObject(
+                accountEntity.getPk_account_id(),
+                accountEntity.getLogincredentials().getPk_user_id(),
+                accountEntity.getAccountTypeEntity().getName(),
+                accountEntity.getAvailable_balance(),
+                accountEntity.getPending_balance()
+        );
     }
 }

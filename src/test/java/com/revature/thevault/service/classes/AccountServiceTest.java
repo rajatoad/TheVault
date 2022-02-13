@@ -9,6 +9,7 @@ import com.revature.thevault.repository.dao.AccountRepository;
 import com.revature.thevault.repository.entity.AccountEntity;
 import com.revature.thevault.repository.entity.AccountTypeEntity;
 import com.revature.thevault.repository.entity.LoginCredentialEntity;
+import com.revature.thevault.service.dto.AccountResponseObject;
 import com.revature.thevault.service.exceptions.InvalidAccountIdException;
 import com.revature.thevault.service.exceptions.InvalidAccountTypeException;
 import com.revature.thevault.service.exceptions.InvalidAmountException;
@@ -53,6 +54,9 @@ class AccountServiceTest {
     private Optional<AccountEntity> optionalAccount;
     private Optional<AccountEntity> optionalAccountTransferring;
 
+    private AccountResponseObject storedAccountResponseObject;
+    private AccountResponseObject storedAccountTransferringResponseObject;
+
     private int userId;
     private int otherUserId;
     private int accountId;
@@ -83,6 +87,22 @@ class AccountServiceTest {
         storedAccountTransferring = new AccountEntity(otherAccountId, secondaryLogin, accountTypeEntity, 100L, 120L);
         optionalAccountTransferring = Optional.of(storedAccountTransferring);
 
+        storedAccountResponseObject = new AccountResponseObject(
+                storedAccount.getPk_account_id(),
+                storedAccount.getLogincredentials().getPk_user_id(),
+                storedAccount.getAccountTypeEntity().getName(),
+                storedAccount.getAvailable_balance(),
+                storedAccount.getPending_balance()
+        );
+
+        storedAccountTransferringResponseObject = new AccountResponseObject(
+                storedAccountTransferring.getPk_account_id(),
+                storedAccountTransferring.getLogincredentials().getPk_user_id(),
+                storedAccountTransferring.getAccountTypeEntity().getName(),
+                storedAccountTransferring.getAvailable_balance(),
+                storedAccountTransferring.getPending_balance()
+        );
+
         Mockito.when(accountRepository.findById(accountId)).thenReturn(optionalAccount);
         Mockito.when(accountTypeService.findAccountTypeEntityByName(accountType.get(0))).thenReturn(new AccountTypeEntity(1, accountType.get(0)));
         Mockito.when(accountTypeService.findAccountTypeEntityByName(accountType.get(1))).thenReturn(new AccountTypeEntity(2, accountType.get(1)));
@@ -104,10 +124,8 @@ class AccountServiceTest {
 
         PostResponse successfulAccountResponse = PostResponse.builder()
                 .success(true)
-                        .responseType(ResponseType.POST)
-                                .message("Successful Account Creation")
-                                        .createdObject(Collections.singletonList(storedAccount))
-                                                .build();
+                        .createdObject(Collections.singletonList(storedAccountResponseObject))
+                                .build();
         assertEquals(successfulAccountResponse, accountService.createAccount(goodAccountCreateRequest));
     }
 
@@ -122,10 +140,8 @@ class AccountServiceTest {
     void getAccount() {
         GetResponse goodGetResponse = GetResponse.builder()
                         .success(true)
-                                .responseType(ResponseType.GET)
-                                        .message("Account retrieved by Account Id: " + storedAccount.getPk_account_id())
-                                                .gotObject(Collections.singletonList(optionalAccount.get()))
-                                                        .build();
+                                .gotObject(Collections.singletonList(storedAccountResponseObject))
+                                        .build();
         assertEquals(goodGetResponse, accountService.getAccount(storedAccount.getPk_account_id()));
     }
 
@@ -138,9 +154,7 @@ class AccountServiceTest {
     void deleteAccount() {
         DeleteResponse successfulDeleteAccountResponse = DeleteResponse.builder()
                 .success(true)
-                .responseType(ResponseType.DELETE)
-                .message("Successful Account Deletion: " + storedAccount.getPk_account_id())
-                .deletedObject(Collections.singletonList(storedAccount))
+                .deletedObject(Collections.singletonList(storedAccountResponseObject))
                 .build();
 
         Mockito.doNothing().when(accountRepository).delete(storedAccount);
@@ -156,10 +170,8 @@ class AccountServiceTest {
     void getAccounts() {
         GetResponse getResponse = GetResponse.builder()
                         .success(true)
-                                .responseType(ResponseType.GET)
-                                        .message("Successful retrieval of user accounts by user Id: " + userId)
-                                                .gotObject(Collections.singletonList(storedAccount))
-                                                        .build();
+                                .gotObject(Collections.singletonList(storedAccountResponseObject))
+                                        .build();
         assertEquals(getResponse, accountService.getAccounts(userId));
     }
 
@@ -182,9 +194,15 @@ class AccountServiceTest {
 
         PutResponse updatedBalanceResponse = PutResponse.builder()
                 .success(true)
-                .responseType(ResponseType.PUT)
-                .message("Successfully updated users available balance: " + updateAccountRequest.getAvailableBalance())
-                .updatedObject(Collections.singletonList(updatedAccount))
+                .updatedObject(Collections.singletonList(
+                        new AccountResponseObject(
+                                updatedAccount.getPk_account_id(),
+                                updatedAccount.getLogincredentials().getPk_user_id(),
+                                updatedAccount.getAccountTypeEntity().getName(),
+                                updatedAccount.getAvailable_balance(),
+                                updatedAccount.getPending_balance()
+                        )
+                ))
                 .build();
 
         Mockito.when(accountRepository.save(updatedAccount)).thenReturn(updatedAccount);
@@ -219,11 +237,23 @@ class AccountServiceTest {
         Mockito.when(accountRepository.save(updatedOwnerAccount)).thenReturn(updatedOwnerAccount);
         Mockito.when(accountRepository.save(updatedReceiverAccount)).thenReturn(updatedReceiverAccount);
 
+        AccountResponseObject updatedOwnerAccountResponse = new AccountResponseObject(
+                updatedOwnerAccount.getPk_account_id(),
+                updatedOwnerAccount.getLogincredentials().getPk_user_id(),
+                updatedOwnerAccount.getAccountTypeEntity().getName(),
+                updatedOwnerAccount.getAvailable_balance(),
+                updatedOwnerAccount.getPending_balance()
+        );
+        AccountResponseObject updatedReceiverAccountResponse = new AccountResponseObject(
+                updatedReceiverAccount.getPk_account_id(),
+                updatedReceiverAccount.getLogincredentials().getPk_user_id(),
+                updatedReceiverAccount.getAccountTypeEntity().getName(),
+                updatedReceiverAccount.getAvailable_balance(),
+                updatedReceiverAccount.getPending_balance()
+        );
         PutResponse successfulTransferResponse = PutResponse.builder()
                 .success(true)
-                .responseType(ResponseType.PUT)
-                .message("Successfully Transferred Amount: $" + transferRequest.getAmount() + " From Account Id: " + updatedOwnerAccount.getPk_account_id() + " To Account Id: " + updatedReceiverAccount.getPk_account_id())
-                .updatedObject(Arrays.asList(updatedOwnerAccount, updatedReceiverAccount))
+                .updatedObject(Arrays.asList(updatedOwnerAccountResponse, updatedReceiverAccountResponse))
                 .build();
 
         assertEquals(successfulTransferResponse, accountService.transferToAnotherAccount(transferRequest));
