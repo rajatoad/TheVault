@@ -1,10 +1,14 @@
 package com.revature.thevault.service.classes;
 
 import com.revature.thevault.presentation.model.request.AccountProfileRequest;
+import com.revature.thevault.presentation.model.request.ProfileCreateRequest;
 import com.revature.thevault.presentation.model.response.AccountProfileResponse;
+import com.revature.thevault.presentation.model.response.builder.GetResponse;
+import com.revature.thevault.presentation.model.response.builder.PostResponse;
 import com.revature.thevault.repository.dao.AccountProfileRepository;
 import com.revature.thevault.repository.entity.AccountProfileEntity;
 import com.revature.thevault.repository.entity.LoginCredentialEntity;
+import com.revature.thevault.utility.enums.ResponseType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -44,23 +48,73 @@ class AccountProfileServiceTest {
                 "Bob",
                 "Tom",
                 "some@email.com",
-                1238765555L,
+                "123-876-5555",
                 "1 court"
         );
+
         Mockito.when(accountProfileRepository.findByLogincredential(normalLoginCredentialEntity))
+                .thenReturn(normalAccountProfileEntity);
+        Mockito.when(accountProfileRepository.deleteByLogincredential(normalLoginCredentialEntity))
                 .thenReturn(normalAccountProfileEntity);
     }
 
     @Test
     void getProfile() {
-        AccountProfileResponse successfulResponse = new AccountProfileResponse(true, normalAccountProfileEntity);
-        AccountProfileRequest goodAccountProfileRequest = new AccountProfileRequest(
+        AccountProfileRequest goodRequest = new AccountProfileRequest(
                 normalAccountProfileEntity.getLogincredential().getPk_user_id()
         );
-        assertEquals(successfulResponse, accountProfileService.getProfile(goodAccountProfileRequest));
+        GetResponse successfulResponse = GetResponse.builder()
+                .success(true)
+                .responseType(ResponseType.GET)
+                .message("Account profile retrieved")
+                .gotObject(accountProfileRepository.getById(goodRequest.getProfileId()))
+                .build();
+
+        assertEquals(successfulResponse, accountProfileService.getProfile(goodRequest));
     }
 
     @Test
     void createProfile() {
+        ProfileCreateRequest normalCreateRequest = new ProfileCreateRequest(
+                5,
+                "joe",
+                "something",
+                "asdf@fjfo.com",
+                "555-555-5555",
+                "1 street"
+        );
+
+        PostResponse postResponse = PostResponse.builder()
+                .success(true)
+                .responseType(ResponseType.POST)
+                .message("New account profile saved and created")
+                .createdObject(accountProfileRepository.save(new AccountProfileEntity(
+                        0,
+                        new LoginCredentialEntity(normalCreateRequest.getUserId(), "", ""),
+                        normalCreateRequest.getFirstName(),
+                        normalCreateRequest.getLastName(),
+                        normalCreateRequest.getEmail(),
+                        normalCreateRequest.getPhoneNumber(),
+                        normalCreateRequest.getAddress()
+                )))
+                .build();
+        assertEquals(postResponse, accountProfileService.createProfile(normalCreateRequest));
+    }
+
+    @Test
+    void deleteProfile(){
+        AccountProfileRequest goodRequest = new AccountProfileRequest(
+                normalAccountProfileEntity.getLogincredential().getPk_user_id()
+        );
+        AccountProfileResponse goodResponse = new AccountProfileResponse(
+                true,
+                accountProfileRepository.deleteByLogincredential(normalLoginCredentialEntity)
+        );
+
+        assertEquals(
+                goodResponse.getAccountProfileEntity(),
+                accountProfileRepository.deleteByLogincredential(normalLoginCredentialEntity)
+        );
+
     }
 }

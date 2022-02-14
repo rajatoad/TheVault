@@ -3,12 +3,22 @@ package com.revature.thevault.service.classes;
 import com.revature.thevault.presentation.model.request.AccountProfileRequest;
 import com.revature.thevault.presentation.model.request.ProfileCreateRequest;
 import com.revature.thevault.presentation.model.response.AccountProfileResponse;
+import com.revature.thevault.presentation.model.response.builder.DeleteResponse;
+import com.revature.thevault.presentation.model.response.builder.GetResponse;
+import com.revature.thevault.presentation.model.response.builder.PostResponse;
 import com.revature.thevault.repository.dao.AccountProfileRepository;
 import com.revature.thevault.repository.entity.AccountProfileEntity;
 import com.revature.thevault.repository.entity.LoginCredentialEntity;
+import com.revature.thevault.service.exceptions.InvalidProfileIdException;
+import com.revature.thevault.service.exceptions.InvalidRequestException;
 import com.revature.thevault.service.interfaces.AccountProfileInterface;
+import com.revature.thevault.utility.enums.ResponseType;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+
+import javax.transaction.Transactional;
+import java.util.Optional;
 
 @Service("accountProfileService")
 public class AccountProfileService implements AccountProfileInterface {
@@ -17,13 +27,19 @@ public class AccountProfileService implements AccountProfileInterface {
     private AccountProfileRepository accountProfileRepository;
 
     @Override
-    public AccountProfileResponse getProfile(AccountProfileRequest accountProfileRequest) {
+    public GetResponse getProfile(AccountProfileRequest accountProfileRequest) {
         try {
-            LoginCredentialEntity loginCredentialEntity = new LoginCredentialEntity(accountProfileRequest.getUserId(), "", "");
-            AccountProfileEntity accountProfileEntity = accountProfileRepository.findByLogincredential(loginCredentialEntity);
-            return new AccountProfileResponse(true, accountProfileEntity);
-        }catch(Exception e){
-            return failResponse();
+//            LoginCredentialEntity loginCredentialEntity = new LoginCredentialEntity(accountProfileRequest.getUserId(), "", "");
+//            AccountProfileEntity accountProfileEntity = accountProfileRepository.findByLogincredential(loginCredentialEntity);
+//            return new AccountProfileResponse(true, accountProfileEntity);
+            return GetResponse.builder()
+                    .success(true)
+                    .responseType(ResponseType.GET)
+                    .message("Account profile retrieved")
+                    .gotObject(accountProfileRepository.getById(accountProfileRequest.getProfileId()))
+                    .build();
+        } catch (Exception e) {
+            throw new InvalidRequestException(HttpStatus.BAD_REQUEST, "invalid request");
         }
     }
 
@@ -32,7 +48,68 @@ public class AccountProfileService implements AccountProfileInterface {
     }
 
     @Override
-    public AccountProfileResponse createProfile(ProfileCreateRequest profileCreateRequest) {
-        return null;
+    public PostResponse createProfile(ProfileCreateRequest profileCreateRequest) {
+
+        try {
+            return PostResponse.builder()
+                    .success(true)
+                    .responseType(ResponseType.POST)
+                    .message("New account profile saved and created")
+                    .createdObject(accountProfileRepository.save(new AccountProfileEntity(
+                            0,
+                            new LoginCredentialEntity(profileCreateRequest.getUserId(), "", ""),
+                            profileCreateRequest.getFirstName(),
+                            profileCreateRequest.getLastName(),
+                            profileCreateRequest.getEmail(),
+                            profileCreateRequest.getPhoneNumber(),
+                            profileCreateRequest.getAddress()
+                    )))
+                    .build();
+        } catch (Exception e) {
+            throw new InvalidRequestException(HttpStatus.BAD_REQUEST, "invalid request");
+        }
+    }
+
+    @Override
+    public PostResponse updateProfile(ProfileCreateRequest profileCreateRequest) {
+        try {
+            return PostResponse.builder()
+                    .success(true)
+                    .responseType(ResponseType.POST)
+                    .message("Updated and saved account profile")
+                    .createdObject(accountProfileRepository.save(new AccountProfileEntity(
+                            0,
+                            new LoginCredentialEntity(profileCreateRequest.getUserId(), "", ""),
+                            profileCreateRequest.getFirstName(),
+                            profileCreateRequest.getLastName(),
+                            profileCreateRequest.getEmail(),
+                            profileCreateRequest.getPhoneNumber(),
+                            profileCreateRequest.getAddress()
+                    )))
+                    .build();
+        } catch (Exception e) {
+            throw new InvalidRequestException(HttpStatus.BAD_REQUEST, "invalid request");
+        }
+    }
+
+
+    @Override
+    @Transactional
+    public DeleteResponse deleteProfile(AccountProfileRequest accountProfileRequest) {
+        try {
+            Optional<AccountProfileEntity> optionalProfile = accountProfileRepository.findById(accountProfileRequest.getProfileId());
+            accountProfileRepository.delete(optionalProfile.get());
+            return DeleteResponse.builder()
+                .success(true)
+                .responseType(ResponseType.DELETE)
+                .message(" ")
+                .deletedObject(optionalProfile.get())
+                .build();
+
+        }catch(IllegalArgumentException | NullPointerException e){
+            throw new InvalidProfileIdException(HttpStatus.BAD_REQUEST, "account profile not found");
+        }catch(Exception e){
+            throw new InvalidRequestException(HttpStatus.BAD_REQUEST, "invalid request");
+        }
     }
 }
