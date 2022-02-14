@@ -11,8 +11,9 @@ DROP TABLE account_profile_table CASCADE;
 -- DON'T NEED THIS BUT USEFUL FOR RDS DATABASE IN FUTURE
 
 --DROP TABLE deposit_type_table;
---DROP TABLE request_type_table;
---DROP TABLE request_status_table;
+DROP TABLE request_type_table CASCADE;
+DROP TABLE request_status_table CASCADE;
+DROP TABLE withdraw_table CASCADE;
 --DROP TABLE deposit_table;
 DROP TABLE account_type_table CASCADE;
 DROP TABLE account_table CASCADE;
