@@ -18,6 +18,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.Collections;
 import java.util.Optional;
 
 @Service("accountProfileService")
@@ -29,22 +30,13 @@ public class AccountProfileService implements AccountProfileInterface {
     @Override
     public GetResponse getProfile(AccountProfileRequest accountProfileRequest) {
         try {
-//            LoginCredentialEntity loginCredentialEntity = new LoginCredentialEntity(accountProfileRequest.getUserId(), "", "");
-//            AccountProfileEntity accountProfileEntity = accountProfileRepository.findByLogincredential(loginCredentialEntity);
-//            return new AccountProfileResponse(true, accountProfileEntity);
             return GetResponse.builder()
                     .success(true)
-                    .responseType(ResponseType.GET)
-                    .message("Account profile retrieved")
-                    .gotObject(accountProfileRepository.getById(accountProfileRequest.getProfileId()))
+                    .gotObject(Collections.singletonList(convertEntityToResponse(accountProfileRepository.getById(accountProfileRequest.getProfileId()))))
                     .build();
         } catch (Exception e) {
             throw new InvalidRequestException(HttpStatus.BAD_REQUEST, "invalid request");
         }
-    }
-
-    private AccountProfileResponse failResponse() {
-        return new AccountProfileResponse(false, null);
     }
 
     @Override
@@ -53,9 +45,7 @@ public class AccountProfileService implements AccountProfileInterface {
         try {
             return PostResponse.builder()
                     .success(true)
-                    .responseType(ResponseType.POST)
-                    .message("New account profile saved and created")
-                    .createdObject(accountProfileRepository.save(new AccountProfileEntity(
+                    .createdObject(Collections.singletonList(convertEntityToResponse(accountProfileRepository.save(new AccountProfileEntity(
                             0,
                             new LoginCredentialEntity(profileCreateRequest.getUserId(), "", ""),
                             profileCreateRequest.getFirstName(),
@@ -63,7 +53,7 @@ public class AccountProfileService implements AccountProfileInterface {
                             profileCreateRequest.getEmail(),
                             profileCreateRequest.getPhoneNumber(),
                             profileCreateRequest.getAddress()
-                    )))
+                    )))))
                     .build();
         } catch (Exception e) {
             throw new InvalidRequestException(HttpStatus.BAD_REQUEST, "invalid request");
@@ -75,9 +65,7 @@ public class AccountProfileService implements AccountProfileInterface {
         try {
             return PostResponse.builder()
                     .success(true)
-                    .responseType(ResponseType.POST)
-                    .message("Updated and saved account profile")
-                    .createdObject(accountProfileRepository.save(new AccountProfileEntity(
+                    .createdObject(Collections.singletonList(convertEntityToResponse(accountProfileRepository.save(new AccountProfileEntity(
                             0,
                             new LoginCredentialEntity(profileCreateRequest.getUserId(), "", ""),
                             profileCreateRequest.getFirstName(),
@@ -85,7 +73,7 @@ public class AccountProfileService implements AccountProfileInterface {
                             profileCreateRequest.getEmail(),
                             profileCreateRequest.getPhoneNumber(),
                             profileCreateRequest.getAddress()
-                    )))
+                    )))))
                     .build();
         } catch (Exception e) {
             throw new InvalidRequestException(HttpStatus.BAD_REQUEST, "invalid request");
@@ -101,9 +89,7 @@ public class AccountProfileService implements AccountProfileInterface {
             accountProfileRepository.delete(optionalProfile.get());
             return DeleteResponse.builder()
                 .success(true)
-                .responseType(ResponseType.DELETE)
-                .message(" ")
-                .deletedObject(optionalProfile.get())
+                .deletedObject(Collections.singletonList(convertEntityToResponse(optionalProfile.get())))
                 .build();
 
         }catch(IllegalArgumentException | NullPointerException e){
@@ -111,5 +97,17 @@ public class AccountProfileService implements AccountProfileInterface {
         }catch(Exception e){
             throw new InvalidRequestException(HttpStatus.BAD_REQUEST, "invalid request");
         }
+    }
+
+    private AccountProfileResponse convertEntityToResponse(AccountProfileEntity accountProfileEntity) {
+        return new AccountProfileResponse(
+                accountProfileEntity.getPk_profile_id(),
+                accountProfileEntity.getLogincredential().getPk_user_id(),
+                accountProfileEntity.getFirst_name(),
+                accountProfileEntity.getLast_name(),
+                accountProfileEntity.getEmail(),
+                accountProfileEntity.getPhone_number(),
+                accountProfileEntity.getAddress()
+        );
     }
 }
