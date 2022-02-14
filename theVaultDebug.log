@@ -46,3 +46,51 @@ Arguments: [NewLoginCredentialsRequest(username=testuser1, password=testpass1)]
 THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidInputException
 2022-02-13 21:38:10,315 ERROR dLog [http-nio-8080-exec-5] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.LoginController
 THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidInputException
+2022-02-13 21:43:13,977 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: newLogin
+Arguments: [LoginCredentialEntity(pk_user_id=0, username=testuser1, password=testpass1)]
+2022-02-13 21:43:14,009 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.service.classes.LoginService
+Method: createNewLogin
+Arguments: [LoginCredentialEntity(pk_user_id=0, username=testuser1, password=testpass1)]
+2022-02-13 21:43:14,200 ERROR dLog [http-nio-8080-exec-9] CONTROLLER CLASS: class com.revature.thevault.service.classes.LoginService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidInputException
+2022-02-13 21:43:14,200 ERROR dLog [http-nio-8080-exec-9] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.LoginController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidInputException
+2022-02-13 21:44:02,727 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: newLogin
+Arguments: [LoginCredentialEntity(pk_user_id=0, username=testuser1, password=testpass1)]
+2022-02-13 21:44:02,728 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.service.classes.LoginService
+Method: createNewLogin
+Arguments: [LoginCredentialEntity(pk_user_id=0, username=testuser1, password=testpass1)]
+2022-02-13 21:44:02,731 ERROR dLog [http-nio-8080-exec-9] CONTROLLER CLASS: class com.revature.thevault.service.classes.LoginService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidInputException
+2022-02-13 21:44:02,731 ERROR dLog [http-nio-8080-exec-9] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.LoginController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidInputException
+2022-02-13 21:44:03,679 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: newLogin
+Arguments: [LoginCredentialEntity(pk_user_id=0, username=testuser1, password=testpass1)]
+2022-02-13 21:44:03,679 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.service.classes.LoginService
+Method: createNewLogin
+Arguments: [LoginCredentialEntity(pk_user_id=0, username=testuser1, password=testpass1)]
+2022-02-13 21:44:03,683 ERROR dLog [http-nio-8080-exec-5] CONTROLLER CLASS: class com.revature.thevault.service.classes.LoginService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidInputException
+2022-02-13 21:44:03,683 ERROR dLog [http-nio-8080-exec-5] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.LoginController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidInputException
+2022-02-13 21:44:04,477 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: newLogin
+Arguments: [LoginCredentialEntity(pk_user_id=0, username=testuser1, password=testpass1)]
+2022-02-13 21:44:04,477 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.LoginService
+Method: createNewLogin
+Arguments: [LoginCredentialEntity(pk_user_id=0, username=testuser1, password=testpass1)]
+2022-02-13 21:44:04,480 ERROR dLog [http-nio-8080-exec-6] CONTROLLER CLASS: class com.revature.thevault.service.classes.LoginService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidInputException
+2022-02-13 21:44:04,480 ERROR dLog [http-nio-8080-exec-6] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.LoginController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidInputException
+2022-02-13 21:44:05,299 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: newLogin
+Arguments: [LoginCredentialEntity(pk_user_id=0, username=testuser1, password=testpass1)]
+2022-02-13 21:44:05,299 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.service.classes.LoginService
+Method: createNewLogin
+Arguments: [LoginCredentialEntity(pk_user_id=0, username=testuser1, password=testpass1)]
+2022-02-13 21:44:05,305 INFO dLog [http-nio-8080-exec-8] RETURNING: GenericResponse(success=true, responseType=POST, message=Credentials Submitted Successfully)
+2022-02-13 21:44:05,305 INFO dLog [http-nio-8080-exec-8] RETURNING: GenericResponse(success=true, responseType=POST, message=Credentials Submitted Successfully)
