@@ -10,5 +10,5 @@ import lombok.NoArgsConstructor;
 public class TransferRequest {
     int ownerAccountId;
     int receiverAccountId;
-    int amount;
+    long amount;
 }

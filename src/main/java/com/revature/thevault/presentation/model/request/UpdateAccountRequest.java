@@ -7,7 +7,9 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class UpdateBalanceRequest {
+public class UpdateAccountRequest {
     int accountId;
-    int amount;
+    String accountType;
+    long availableBalance;
+    long pendingBalance;
 }

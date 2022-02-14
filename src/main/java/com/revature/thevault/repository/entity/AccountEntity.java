@@ -30,7 +30,7 @@ public class AccountEntity {
 	AccountTypeEntity accountTypeEntity;
 
 	@Column(name = "available_balance")
-	int available_balance;
+	long available_balance;
 	@Column(name = "pending_balance")
-	int pending_balance;
+	long pending_balance;
 }
