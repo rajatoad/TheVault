@@ -89,7 +89,7 @@ CREATE TABLE withdraw_table(
     fk_request_status_id INTEGER,
     reference VARCHAR(25),
     date_withdraw DATE,
-    amount DECIMAL(10, 2),
+    amount BIGINT,
     FOREIGN KEY (fk_account_id) REFERENCES account_table(pk_account_id),
     FOREIGN KEY (fk_request_type_id) REFERENCES request_type_table(pk_request_type_id),
     FOREIGN KEY (fk_request_status_id) REFERENCES request_status_table(pk_request_status_id)
