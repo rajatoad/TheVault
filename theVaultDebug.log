@@ -1,209 +1,246 @@
-2022-02-11 00:05:38,669 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 00:05:38,686 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 00:05:38,749 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130)])
-2022-02-11 00:05:38,749 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130)])
-2022-02-11 00:08:37,629 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 00:08:37,640 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 00:08:37,704 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 00:08:37,704 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 00:09:16,591 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 00:09:16,601 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 00:09:16,661 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 00:09:16,662 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 00:11:07,366 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 00:11:07,377 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 00:11:07,442 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 00:11:07,443 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 00:51:27,759 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 00:51:27,768 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 00:51:27,825 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 00:51:27,825 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 00:54:06,034 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 00:54:06,043 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 00:54:06,108 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 00:54:06,108 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 00:59:46,349 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 00:59:46,361 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 00:59:46,427 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(success=true, responseType=GET, message=Account retrieved by Id: 1, gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 00:59:46,427 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(success=true, responseType=GET, message=Account retrieved by Id: 1, gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 01:01:23,061 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 01:01:23,073 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 01:01:23,128 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(success=true, responseType=GET, message=Account retrieved by Id: 1, gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 01:01:23,129 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(success=true, responseType=GET, message=Account retrieved by Id: 1, gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 01:02:48,099 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 01:02:48,110 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 01:02:48,171 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(success=true, responseType=GET, message=Account retrieved by Id: 1, gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 01:02:48,171 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(success=true, responseType=GET, message=Account retrieved by Id: 1, gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 01:09:43,724 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 01:09:43,734 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 01:09:43,792 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 01:09:43,792 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 01:23:48,515 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 01:23:48,525 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 01:23:48,584 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 01:23:48,584 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 01:24:25,759 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccountList
-Arguments: [GetAccountRequestAll(userId=1)]
-2022-02-11 01:24:25,759 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccounts
-Arguments: [GetAccountRequestAll(userId=1)]
-2022-02-11 01:24:25,785 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130)])
-2022-02-11 01:24:25,785 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130)])
-2022-02-11 01:25:37,289 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccountList
-Arguments: [GetAccountRequestAll(userId=1)]
-2022-02-11 01:25:37,301 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccounts
-Arguments: [GetAccountRequestAll(userId=1)]
-2022-02-11 01:25:37,363 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130)])
-2022-02-11 01:25:37,364 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130)])
-2022-02-11 01:26:20,369 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccountList
-Arguments: [GetAccountRequestAll(userId=1)]
-2022-02-11 01:26:20,380 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccounts
-Arguments: [GetAccountRequestAll(userId=1)]
-2022-02-11 01:26:20,439 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130)])
-2022-02-11 01:26:20,439 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130)])
-2022-02-11 01:31:40,778 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 01:31:40,778 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 01:31:40,793 INFO dLog [http-nio-8080-exec-5] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 01:31:40,793 INFO dLog [http-nio-8080-exec-5] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 14:49:45,953 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: transferToAnotherAccount
-Arguments: [TransferRequest(ownerAccountId=1, receiverAccountId=2, amount=100000)]
-2022-02-11 14:49:45,967 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:45,979 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: deleteAccount
-Arguments: [DeleteAccountRequest(accountId=-1)]
-2022-02-11 14:49:45,985 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
-THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidAccountIdException
-2022-02-11 14:49:45,996 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: deleteAccount
-Arguments: [DeleteAccountRequest(accountId=1)]
-2022-02-11 14:49:45,996 INFO dLog [main] RETURNING: GenericResponse(success=true, responseType=DELETE, message=Successful Account Deletion: 1)
-2022-02-11 14:49:46,019 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: transferToAnotherAccount
-Arguments: [TransferRequest(ownerAccountId=1, receiverAccountId=2, amount=42)]
-2022-02-11 14:49:46,019 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,029 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: transferToAnotherAccount
-Arguments: [TransferRequest(ownerAccountId=1, receiverAccountId=2, amount=820)]
-2022-02-11 14:49:46,029 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,039 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: transferToAnotherAccount
-Arguments: [TransferRequest(ownerAccountId=1, receiverAccountId=2, amount=539)]
-2022-02-11 14:49:46,040 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,050 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: transferToAnotherAccount
-Arguments: [TransferRequest(ownerAccountId=1, receiverAccountId=2, amount=235)]
-2022-02-11 14:49:46,050 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,060 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: transferToAnotherAccount
-Arguments: [TransferRequest(ownerAccountId=1, receiverAccountId=2, amount=965)]
-2022-02-11 14:49:46,060 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,070 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: updateAccountAvailableBalance
-Arguments: [UpdateBalanceRequest(accountId=1, amount=10)]
-2022-02-11 14:49:46,070 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,085 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: updateAccountPendingBalance
-Arguments: [UpdateBalanceRequest(accountId=1, amount=743)]
-2022-02-11 14:49:46,085 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,094 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: updateAccountPendingBalance
-Arguments: [UpdateBalanceRequest(accountId=1, amount=686)]
-2022-02-11 14:49:46,094 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,103 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: updateAccountPendingBalance
-Arguments: [UpdateBalanceRequest(accountId=1, amount=604)]
-2022-02-11 14:49:46,104 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,113 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: updateAccountPendingBalance
-Arguments: [UpdateBalanceRequest(accountId=1, amount=233)]
-2022-02-11 14:49:46,114 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,123 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: updateAccountPendingBalance
-Arguments: [UpdateBalanceRequest(accountId=1, amount=298)]
-2022-02-11 14:49:46,123 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,130 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: updateAccountPendingBalance
-Arguments: [UpdateBalanceRequest(accountId=1, amount=-10)]
-2022-02-11 14:49:46,130 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,138 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: updateAccountPendingBalance
-Arguments: [UpdateBalanceRequest(accountId=1, amount=0)]
-2022-02-11 14:49:46,138 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,159 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: createAccount
-Arguments: [CreateAccountRequest(userId=1, accountType=lol)]
-2022-02-11 14:49:46,160 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,182 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: transferToAnotherAccount
-Arguments: [TransferRequest(ownerAccountId=1, receiverAccountId=-1, amount=10)]
-2022-02-11 14:49:46,182 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,192 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: createAccount
-Arguments: [CreateAccountRequest(userId=-1, accountType=Checking)]
-2022-02-11 14:49:46,192 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,198 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: createAccount
-Arguments: [CreateAccountRequest(userId=1, accountType=Checking)]
-2022-02-11 14:49:46,198 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,205 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: transferToAnotherAccount
-Arguments: [TransferRequest(ownerAccountId=-1, receiverAccountId=2, amount=10)]
-2022-02-11 14:49:46,205 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 15:02:17,159 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 15:02:17,175 INFO dLog [main] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username, password=password), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=120))
+2022-02-14 08:59:59,945 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: deleteProfile
+Arguments: [AccountProfileRequest(userId=4)]
+2022-02-14 08:59:59,957 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: deleteProfile
+Arguments: [AccountProfileRequest(userId=4)]
+2022-02-14 08:59:59,996 INFO dLog [http-nio-8080-exec-4] RETURNING: AccountProfileResponse(success=false, accountProfileEntity=null)
+2022-02-14 08:59:59,996 INFO dLog [http-nio-8080-exec-4] RETURNING: AccountProfileResponse(success=false, accountProfileEntity=null)
+2022-02-14 09:00:08,839 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Broderick, lastName=Terry, email=Abe.Kovacek@yahoo.com, phoneNumber=899-400-1421, address=7304 Graham Lake)]
+2022-02-14 09:00:08,840 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Broderick, lastName=Terry, email=Abe.Kovacek@yahoo.com, phoneNumber=899-400-1421, address=7304 Graham Lake)]
+2022-02-14 09:00:08,890 ERROR dLog [http-nio-8080-exec-5] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-14 09:00:08,890 ERROR dLog [http-nio-8080-exec-5] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.AccountProfileController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-14 09:05:10,260 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: getProfile
+Arguments: [1]
+2022-02-14 09:05:10,261 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: getProfile
+Arguments: [AccountProfileRequest(userId=1)]
+2022-02-14 09:05:10,279 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=AccountProfileEntity(pk_profile_id=1, logincredential=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), first_name=Tom, last_name=Cat, email=email@email.com, phone_number=5559991234, address=1 lane))
+2022-02-14 09:05:10,279 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=AccountProfileEntity(pk_profile_id=1, logincredential=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), first_name=Tom, last_name=Cat, email=email@email.com, phone_number=5559991234, address=1 lane))
+2022-02-14 09:10:27,565 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Laurel, lastName=Goodwin, email=Louie_Shields@hotmail.com, phoneNumber=957-571-4520, address=83508 Koss Walk)]
+2022-02-14 09:10:27,565 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Laurel, lastName=Goodwin, email=Louie_Shields@hotmail.com, phoneNumber=957-571-4520, address=83508 Koss Walk)]
+2022-02-14 09:10:27,567 ERROR dLog [http-nio-8080-exec-3] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-14 09:10:27,568 ERROR dLog [http-nio-8080-exec-3] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.AccountProfileController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-14 09:10:42,486 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Lynn, lastName=Waters, email=Kenneth_Rath@hotmail.com, phoneNumber=886-266-7806, address=5441 Mia Drive)]
+2022-02-14 09:10:42,486 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Lynn, lastName=Waters, email=Kenneth_Rath@hotmail.com, phoneNumber=886-266-7806, address=5441 Mia Drive)]
+2022-02-14 09:10:42,489 INFO dLog [http-nio-8080-exec-5] RETURNING: PostResponse(createdObject=AccountProfileEntity(pk_profile_id=3, logincredential=LoginCredentialEntity(pk_user_id=1, username=, password=), first_name=Lynn, last_name=Waters, email=Kenneth_Rath@hotmail.com, phone_number=886-266-7806, address=5441 Mia Drive))
+2022-02-14 09:10:42,489 INFO dLog [http-nio-8080-exec-5] RETURNING: PostResponse(createdObject=AccountProfileEntity(pk_profile_id=3, logincredential=LoginCredentialEntity(pk_user_id=1, username=, password=), first_name=Lynn, last_name=Waters, email=Kenneth_Rath@hotmail.com, phone_number=886-266-7806, address=5441 Mia Drive))
+2022-02-14 09:10:43,454 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Flavio, lastName=Jacobs, email=Geovany_Smith28@hotmail.com, phoneNumber=758-361-6420, address=6831 Mina Summit)]
+2022-02-14 09:10:43,454 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Flavio, lastName=Jacobs, email=Geovany_Smith28@hotmail.com, phoneNumber=758-361-6420, address=6831 Mina Summit)]
+2022-02-14 09:10:43,456 INFO dLog [http-nio-8080-exec-6] RETURNING: PostResponse(createdObject=AccountProfileEntity(pk_profile_id=4, logincredential=LoginCredentialEntity(pk_user_id=1, username=, password=), first_name=Flavio, last_name=Jacobs, email=Geovany_Smith28@hotmail.com, phone_number=758-361-6420, address=6831 Mina Summit))
+2022-02-14 09:10:43,456 INFO dLog [http-nio-8080-exec-6] RETURNING: PostResponse(createdObject=AccountProfileEntity(pk_profile_id=4, logincredential=LoginCredentialEntity(pk_user_id=1, username=, password=), first_name=Flavio, last_name=Jacobs, email=Geovany_Smith28@hotmail.com, phone_number=758-361-6420, address=6831 Mina Summit))
+2022-02-14 09:10:47,764 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Karolann, lastName=Glover, email=Nicholas_Ziemann29@yahoo.com, phoneNumber=308-724-7373, address=92342 Walker Junction)]
+2022-02-14 09:10:47,764 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Karolann, lastName=Glover, email=Nicholas_Ziemann29@yahoo.com, phoneNumber=308-724-7373, address=92342 Walker Junction)]
+2022-02-14 09:10:47,766 INFO dLog [http-nio-8080-exec-7] RETURNING: PostResponse(createdObject=AccountProfileEntity(pk_profile_id=5, logincredential=LoginCredentialEntity(pk_user_id=1, username=, password=), first_name=Karolann, last_name=Glover, email=Nicholas_Ziemann29@yahoo.com, phone_number=308-724-7373, address=92342 Walker Junction))
+2022-02-14 09:10:47,766 INFO dLog [http-nio-8080-exec-7] RETURNING: PostResponse(createdObject=AccountProfileEntity(pk_profile_id=5, logincredential=LoginCredentialEntity(pk_user_id=1, username=, password=), first_name=Karolann, last_name=Glover, email=Nicholas_Ziemann29@yahoo.com, phone_number=308-724-7373, address=92342 Walker Junction))
+2022-02-14 09:11:15,613 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: getProfile
+Arguments: [4]
+2022-02-14 09:11:15,613 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: getProfile
+Arguments: [AccountProfileRequest(userId=4)]
+2022-02-14 09:11:15,615 INFO dLog [http-nio-8080-exec-8] RETURNING: GetResponse(gotObject=AccountProfileEntity(pk_profile_id=4, logincredential=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), first_name=Flavio, last_name=Jacobs, email=Geovany_Smith28@hotmail.com, phone_number=758-361-6420, address=6831 Mina Summit))
+2022-02-14 09:11:15,615 INFO dLog [http-nio-8080-exec-8] RETURNING: GetResponse(gotObject=AccountProfileEntity(pk_profile_id=4, logincredential=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), first_name=Flavio, last_name=Jacobs, email=Geovany_Smith28@hotmail.com, phone_number=758-361-6420, address=6831 Mina Summit))
+2022-02-14 15:02:00,197 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: getProfile
+Arguments: [AccountProfileRequest(userId=1)]
+2022-02-14 15:02:00,207 INFO dLog [main] RETURNING: GetResponse(gotObject=null)
+2022-02-14 15:02:10,820 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: getProfile
+Arguments: [4]
+2022-02-14 15:02:10,820 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: getProfile
+Arguments: [AccountProfileRequest(userId=4)]
+2022-02-14 15:02:10,824 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=AccountProfileEntity(pk_profile_id=4, logincredential=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), first_name=Flavio, last_name=Jacobs, email=Geovany_Smith28@hotmail.com, phone_number=758-361-6420, address=6831 Mina Summit))
+2022-02-14 15:02:10,824 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=AccountProfileEntity(pk_profile_id=4, logincredential=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), first_name=Flavio, last_name=Jacobs, email=Geovany_Smith28@hotmail.com, phone_number=758-361-6420, address=6831 Mina Summit))
+2022-02-14 15:02:35,265 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: getProfile
+Arguments: [4]
+2022-02-14 15:02:35,265 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: getProfile
+Arguments: [AccountProfileRequest(userId=4)]
+2022-02-14 15:02:35,266 INFO dLog [http-nio-8080-exec-5] RETURNING: GetResponse(gotObject=AccountProfileEntity(pk_profile_id=4, logincredential=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), first_name=Flavio, last_name=Jacobs, email=Geovany_Smith28@hotmail.com, phone_number=758-361-6420, address=6831 Mina Summit))
+2022-02-14 15:02:35,266 INFO dLog [http-nio-8080-exec-5] RETURNING: GetResponse(gotObject=AccountProfileEntity(pk_profile_id=4, logincredential=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), first_name=Flavio, last_name=Jacobs, email=Geovany_Smith28@hotmail.com, phone_number=758-361-6420, address=6831 Mina Summit))
+2022-02-14 15:03:36,137 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: getProfile
+Arguments: [AccountProfileRequest(userId=1)]
+2022-02-14 15:03:36,145 INFO dLog [main] RETURNING: GetResponse(gotObject=null)
+2022-02-14 15:05:21,511 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: getProfile
+Arguments: [4]
+2022-02-14 15:05:21,511 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: getProfile
+Arguments: [AccountProfileRequest(userId=4)]
+2022-02-14 15:05:21,512 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=AccountProfileEntity(pk_profile_id=4, logincredential=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), first_name=Flavio, last_name=Jacobs, email=Geovany_Smith28@hotmail.com, phone_number=758-361-6420, address=6831 Mina Summit))
+2022-02-14 15:05:21,512 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=AccountProfileEntity(pk_profile_id=4, logincredential=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), first_name=Flavio, last_name=Jacobs, email=Geovany_Smith28@hotmail.com, phone_number=758-361-6420, address=6831 Mina Summit))
+2022-02-14 15:10:08,877 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: getProfile
+Arguments: [AccountProfileRequest(userId=1)]
+2022-02-14 15:10:08,888 INFO dLog [main] RETURNING: GetResponse(gotObject=null)
+2022-02-14 15:10:49,539 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: getProfile
+Arguments: [4]
+2022-02-14 15:10:49,548 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: getProfile
+Arguments: [AccountProfileRequest(userId=4)]
+2022-02-14 15:10:49,586 ERROR dLog [http-nio-8080-exec-2] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.AccountProfileController
+THROWING EXCEPTION: class javax.persistence.EntityNotFoundException
+2022-02-14 15:11:08,204 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: getProfile
+Arguments: [1]
+2022-02-14 15:11:08,205 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: getProfile
+Arguments: [AccountProfileRequest(userId=1)]
+2022-02-14 15:11:08,216 INFO dLog [http-nio-8080-exec-4] RETURNING: GetResponse(gotObject=AccountProfileEntity(pk_profile_id=1, logincredential=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), first_name=Tom, last_name=Cat, email=email@email.com, phone_number=5559991234, address=1 lane))
+2022-02-14 15:11:08,216 INFO dLog [http-nio-8080-exec-4] RETURNING: GetResponse(gotObject=AccountProfileEntity(pk_profile_id=1, logincredential=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), first_name=Tom, last_name=Cat, email=email@email.com, phone_number=5559991234, address=1 lane))
+2022-02-14 15:11:54,185 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Danial, lastName=Torphy, email=Mohamed_Goldner@yahoo.com, phoneNumber=698-692-0868, address=3044 Nathanael Tunnel)]
+2022-02-14 15:11:54,185 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Danial, lastName=Torphy, email=Mohamed_Goldner@yahoo.com, phoneNumber=698-692-0868, address=3044 Nathanael Tunnel)]
+2022-02-14 15:11:54,212 ERROR dLog [http-nio-8080-exec-5] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-14 15:11:54,212 ERROR dLog [http-nio-8080-exec-5] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.AccountProfileController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-14 15:11:55,431 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Jaylan, lastName=Mayert, email=Shawn.Marquardt@hotmail.com, phoneNumber=232-462-4126, address=4734 Bradtke Valley)]
+2022-02-14 15:11:55,431 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Jaylan, lastName=Mayert, email=Shawn.Marquardt@hotmail.com, phoneNumber=232-462-4126, address=4734 Bradtke Valley)]
+2022-02-14 15:11:55,433 ERROR dLog [http-nio-8080-exec-7] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-14 15:11:55,433 ERROR dLog [http-nio-8080-exec-7] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.AccountProfileController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-14 15:11:55,989 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Graham, lastName=Pollich, email=Christopher44@hotmail.com, phoneNumber=697-787-0835, address=8708 Jamie Neck)]
+2022-02-14 15:11:55,989 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Graham, lastName=Pollich, email=Christopher44@hotmail.com, phoneNumber=697-787-0835, address=8708 Jamie Neck)]
+2022-02-14 15:11:55,992 INFO dLog [http-nio-8080-exec-9] RETURNING: PostResponse(createdObject=AccountProfileEntity(pk_profile_id=3, logincredential=LoginCredentialEntity(pk_user_id=1, username=, password=), first_name=Graham, last_name=Pollich, email=Christopher44@hotmail.com, phone_number=697-787-0835, address=8708 Jamie Neck))
+2022-02-14 15:11:55,992 INFO dLog [http-nio-8080-exec-9] RETURNING: PostResponse(createdObject=AccountProfileEntity(pk_profile_id=3, logincredential=LoginCredentialEntity(pk_user_id=1, username=, password=), first_name=Graham, last_name=Pollich, email=Christopher44@hotmail.com, phone_number=697-787-0835, address=8708 Jamie Neck))
+2022-02-14 15:12:14,638 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: deleteProfile
+Arguments: [AccountProfileRequest(userId=1)]
+2022-02-14 15:12:14,639 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: deleteProfile
+Arguments: [AccountProfileRequest(userId=1)]
+2022-02-14 15:12:14,654 INFO dLog [http-nio-8080-exec-10] RETURNING: AccountProfileResponse(success=false, accountProfileEntity=null)
+2022-02-14 15:12:14,655 INFO dLog [http-nio-8080-exec-10] RETURNING: AccountProfileResponse(success=false, accountProfileEntity=null)
+2022-02-14 15:12:23,076 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: deleteProfile
+Arguments: [AccountProfileRequest(userId=1)]
+2022-02-14 15:12:23,076 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: deleteProfile
+Arguments: [AccountProfileRequest(userId=1)]
+2022-02-14 15:12:23,077 INFO dLog [http-nio-8080-exec-1] RETURNING: AccountProfileResponse(success=false, accountProfileEntity=null)
+2022-02-14 15:12:23,077 INFO dLog [http-nio-8080-exec-1] RETURNING: AccountProfileResponse(success=false, accountProfileEntity=null)
+2022-02-14 15:15:25,710 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: deleteProfile
+Arguments: [AccountProfileRequest(userId=1)]
+2022-02-14 15:15:25,720 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: deleteProfile
+Arguments: [AccountProfileRequest(userId=1)]
+2022-02-14 15:15:25,777 INFO dLog [http-nio-8080-exec-2] RETURNING: AccountProfileResponse(success=false, accountProfileEntity=null)
+2022-02-14 15:15:25,777 INFO dLog [http-nio-8080-exec-2] RETURNING: AccountProfileResponse(success=false, accountProfileEntity=null)
+2022-02-14 15:17:15,780 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: deleteProfile
+Arguments: [AccountProfileRequest(userId=1)]
+2022-02-14 15:17:15,791 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: deleteProfile
+Arguments: [AccountProfileRequest(userId=1)]
+2022-02-14 15:17:15,850 INFO dLog [http-nio-8080-exec-1] RETURNING: AccountProfileResponse(success=false, accountProfileEntity=null)
+2022-02-14 15:17:15,861 INFO dLog [http-nio-8080-exec-1] RETURNING: AccountProfileResponse(success=false, accountProfileEntity=null)
+2022-02-14 15:25:22,309 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: deleteProfile
+Arguments: [AccountProfileRequest(userId=1)]
+2022-02-14 15:25:22,322 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: deleteProfile
+Arguments: [AccountProfileRequest(userId=1)]
+2022-02-14 15:25:22,394 INFO dLog [http-nio-8080-exec-1] RETURNING: AccountProfileResponse(success=false, accountProfileEntity=null)
+2022-02-14 15:25:22,405 INFO dLog [http-nio-8080-exec-1] RETURNING: AccountProfileResponse(success=false, accountProfileEntity=null)
+2022-02-14 15:25:27,193 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: deleteProfile
+Arguments: [AccountProfileRequest(userId=1)]
+2022-02-14 15:25:27,193 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: deleteProfile
+Arguments: [AccountProfileRequest(userId=1)]
+2022-02-14 15:25:27,198 INFO dLog [http-nio-8080-exec-3] RETURNING: AccountProfileResponse(success=false, accountProfileEntity=null)
+2022-02-14 15:25:27,199 INFO dLog [http-nio-8080-exec-3] RETURNING: AccountProfileResponse(success=false, accountProfileEntity=null)
+2022-02-14 15:32:30,624 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: deleteProfile
+Arguments: [AccountProfileRequest(userId=1)]
+2022-02-14 15:32:30,638 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: deleteProfile
+Arguments: [AccountProfileRequest(userId=1)]
+2022-02-14 15:32:30,642 INFO dLog [http-nio-8080-exec-2] RETURNING: AccountProfileResponse(success=true, accountProfileEntity=AccountProfileEntity(pk_profile_id=0, logincredential=null, first_name=null, last_name=null, email=null, phone_number=null, address=null))
+2022-02-14 15:32:30,643 INFO dLog [http-nio-8080-exec-2] RETURNING: AccountProfileResponse(success=true, accountProfileEntity=AccountProfileEntity(pk_profile_id=0, logincredential=null, first_name=null, last_name=null, email=null, phone_number=null, address=null))
+2022-02-14 15:49:17,863 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: deleteProfile
+Arguments: [AccountProfileRequest(userId=1)]
+2022-02-14 15:49:17,864 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: deleteProfile
+Arguments: [AccountProfileRequest(userId=1)]
+2022-02-14 15:49:17,864 INFO dLog [http-nio-8080-exec-5] RETURNING: AccountProfileResponse(success=true, accountProfileEntity=AccountProfileEntity(pk_profile_id=0, logincredential=null, first_name=null, last_name=null, email=null, phone_number=null, address=null))
+2022-02-14 15:49:17,864 INFO dLog [http-nio-8080-exec-5] RETURNING: AccountProfileResponse(success=true, accountProfileEntity=AccountProfileEntity(pk_profile_id=0, logincredential=null, first_name=null, last_name=null, email=null, phone_number=null, address=null))
+2022-02-14 16:01:39,010 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: deleteProfile
+Arguments: [AccountProfileRequest(profileId=0)]
+2022-02-14 16:01:39,024 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: deleteProfile
+Arguments: [AccountProfileRequest(profileId=0)]
+2022-02-14 16:01:39,056 ERROR dLog [http-nio-8080-exec-1] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-14 16:01:39,058 ERROR dLog [http-nio-8080-exec-1] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.AccountProfileController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-14 16:01:58,536 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: deleteProfile
+Arguments: [AccountProfileRequest(profileId=1)]
+2022-02-14 16:01:58,536 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: deleteProfile
+Arguments: [AccountProfileRequest(profileId=1)]
+2022-02-14 16:01:58,560 INFO dLog [http-nio-8080-exec-4] RETURNING: DeleteResponse(deletedObject=AccountProfileEntity(pk_profile_id=1, logincredential=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), first_name=Tom, last_name=Cat, email=email@email.com, phone_number=5559991234, address=1 lane))
+2022-02-14 16:01:58,569 INFO dLog [http-nio-8080-exec-4] RETURNING: DeleteResponse(deletedObject=AccountProfileEntity(pk_profile_id=1, logincredential=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), first_name=Tom, last_name=Cat, email=email@email.com, phone_number=5559991234, address=1 lane))
+2022-02-14 16:06:58,865 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: deleteProfile
+Arguments: [AccountProfileRequest(profileId=1)]
+2022-02-14 16:06:58,878 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: deleteProfile
+Arguments: [AccountProfileRequest(profileId=1)]
+2022-02-14 16:06:58,935 INFO dLog [http-nio-8080-exec-2] RETURNING: DeleteResponse(deletedObject=AccountProfileEntity(pk_profile_id=1, logincredential=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), first_name=Tom, last_name=Cat, email=email@email.com, phone_number=5559991234, address=1 lane))
+2022-02-14 16:06:58,948 INFO dLog [http-nio-8080-exec-2] RETURNING: DeleteResponse(deletedObject=AccountProfileEntity(pk_profile_id=1, logincredential=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), first_name=Tom, last_name=Cat, email=email@email.com, phone_number=5559991234, address=1 lane))
+2022-02-14 16:09:01,575 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: deleteProfile
+Arguments: [AccountProfileRequest(profileId=1)]
+2022-02-14 16:09:01,588 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: deleteProfile
+Arguments: [AccountProfileRequest(profileId=1)]
+2022-02-14 16:09:01,647 INFO dLog [http-nio-8080-exec-2] RETURNING: DeleteResponse(deletedObject=AccountProfileEntity(pk_profile_id=1, logincredential=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), first_name=Tom, last_name=Cat, email=email@email.com, phone_number=5559991234, address=1 lane))
+2022-02-14 16:09:01,660 INFO dLog [http-nio-8080-exec-2] RETURNING: DeleteResponse(deletedObject=AccountProfileEntity(pk_profile_id=1, logincredential=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), first_name=Tom, last_name=Cat, email=email@email.com, phone_number=5559991234, address=1 lane))

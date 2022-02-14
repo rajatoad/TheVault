@@ -69,7 +69,7 @@ CREATE TABLE account_profile_table (
     first_name VARCHAR NOT NULL,
     last_name VARCHAR NOT NULL,
     email VARCHAR UNIQUE NOT NULL,
-    phone_number BIGINT UNIQUE NOT NULL,
+    phone_number VARCHAR UNIQUE NOT NULL,
     address VARCHAR NOT NULL,
     FOREIGN KEY (fk_user_id) REFERENCES login_credential_table(pk_user_id)
 );
