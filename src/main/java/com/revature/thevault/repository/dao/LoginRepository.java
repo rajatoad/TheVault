@@ -1,6 +1,7 @@
 package com.revature.thevault.repository.dao;
 
 import com.revature.thevault.repository.entity.LoginCredentialEntity;
+import com.revature.thevault.repository.entity.NewLoginCredentialsRequest;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -11,7 +12,7 @@ import java.util.Optional;
 public interface LoginRepository extends JpaRepository<LoginCredentialEntity, Integer> {
     LoginCredentialEntity findByUsername(String username);
 
-    @Override
+
     <S extends LoginCredentialEntity> S save(S entity);
 
     @Override

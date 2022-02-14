@@ -3,11 +3,14 @@ package com.revature.thevault.service.classes;
 import com.revature.thevault.presentation.model.request.LoginRequest;
 import com.revature.thevault.presentation.model.request.ResetPasswordRequest;
 import com.revature.thevault.presentation.model.response.LoginResponse;
+import com.revature.thevault.presentation.model.response.builder.GetResponse;
+import com.revature.thevault.presentation.model.response.builder.PostResponse;
 import com.revature.thevault.repository.dao.LoginRepository;
 import com.revature.thevault.repository.entity.LoginCredentialEntity;
 import com.revature.thevault.repository.entity.NewLoginCredentialsRequest;
 import com.revature.thevault.service.exceptions.InvalidInputException;
 import com.revature.thevault.service.interfaces.LoginServiceInterface;
+import com.revature.thevault.utility.enums.ResponseType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,9 +31,14 @@ public class LoginService implements LoginServiceInterface {
     }
 
     @Override
-    public LoginCredentialEntity getLoginCredentialFromLogin(LoginRequest loginRequest) {
+    public GetResponse getLoginCredentialFromLogin(LoginRequest loginRequest) {
         try{
-            return loginRepository.findByUsernameAndPassword(loginRequest.getUsername(), loginRequest.getPassword());
+            return GetResponse.builder()
+                    .success(true)
+                    .responseType(ResponseType.GET)
+                    .message("Found User Credential")
+                    .gotObject(loginRepository.findByUsernameAndPassword(loginRequest.getUsername(), loginRequest.getPassword()))
+                    .build();
         }catch(Exception e){
             throw new InvalidInputException("User was not found");
 
@@ -39,12 +47,17 @@ public class LoginService implements LoginServiceInterface {
 
 
     @Override
-    public LoginCredentialEntity newAccount(NewLoginCredentialsRequest newUserAccountRequest) throws InvalidInputException {
-        return loginRepository.save(new LoginCredentialEntity(
-                0,
-                newUserAccountRequest.getUsername(),
-                newUserAccountRequest.getPassword()
-        ));
+    public PostResponse createNewLogin(LoginCredentialEntity newLoginRequest) {
+        try{
+            return PostResponse.builder()
+                    .success(true)
+                    .responseType(ResponseType.POST)
+                    .message("Credentials Submitted Successfully")
+                    .createdObject(loginRepository.save(newLoginRequest))
+                    .build();
+        }catch(Exception e){
+            throw new InvalidInputException("Please check the information");
+        }
     }
 
     @Override

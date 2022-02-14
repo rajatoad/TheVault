@@ -11,5 +11,5 @@ public class NewLoginCredentialsRequest {
 
     String username;
     String password;
-    String email;
+    //String email;
 }
