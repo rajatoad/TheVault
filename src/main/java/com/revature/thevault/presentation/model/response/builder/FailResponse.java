@@ -5,12 +5,17 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+import java.util.Collections;
+import java.util.List;
+
+//EXPERIMENTAL DO NOT USE IT
+
 @EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class FailResponse extends GenericResponse{
-    private String exception;
+    private List exception;
 
     public FailResponse(Builder builder){
         super(builder);
@@ -22,7 +27,7 @@ public class FailResponse extends GenericResponse{
     }
 
     public static class Builder extends GenericResponse.Builder<Builder>{
-        private String exception;
+        private List exception;
 
         @Override
         public Builder getThis(){
@@ -30,7 +35,7 @@ public class FailResponse extends GenericResponse{
         }
 
         public Builder exception(Exception exception){
-            this.exception = exception.toString();
+            this.exception = Collections.singletonList(exception);
             return this;
         }
 

@@ -78,8 +78,8 @@ CREATE TABLE account_table(
     pk_account_id SERIAL PRIMARY KEY,
     fk_user_id INTEGER,
     fk_account_type_id INTEGER,
-    available_balance INTEGER,
-    pending_balance INTEGER,
+    available_balance BIGINT,
+    pending_balance BIGINT,
     FOREIGN KEY (fk_user_id) REFERENCES login_credential_table(pk_user_id),
     FOREIGN KEY (fk_account_type_id) REFERENCES account_type_table(pk_account_type_id)
 );
