@@ -1,0 +1,77 @@
+package com.revature.thevault.service.classes;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInstance;
+import org.mockito.Mockito;
+import org.mockito.MockitoAnnotations;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+
+import com.revature.thevault.presentation.model.request.DepositRequest;
+import com.revature.thevault.presentation.model.response.DepositResponse;
+import com.revature.thevault.repository.dao.DepositRepository;
+import com.revature.thevault.repository.entity.DepositEntity;
+import com.revature.thevault.repository.entity.DepositTypeEntity;
+
+@SpringBootTest
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+class DepositServiceTest {
+	@Autowired
+	private DepositService depositService;
+
+	@MockBean
+	private DepositRepository depositRepository;
+	private DepositResponse successfuldepositResponse;
+	private DepositEntity correctDeposit;
+	private int depositId;
+	private int accountId;
+	private String reference;
+	private int amount;
+	private int badAmount;
+	private List<String> depositType;
+
+	@BeforeAll
+	void setup() {
+		MockitoAnnotations.openMocks(this);
+		depositId = 1;
+		accountId = 1;
+		reference = "work";
+		amount = 100;
+		badAmount = -1;
+		depositType = new ArrayList<>();
+		depositType.add("Cash");
+		depositType.add("Cheque");
+		depositType.add("Direct Deposit");
+		DepositTypeEntity depositTypeEntity = new DepositTypeEntity(1, "Cash");
+
+	}
+
+	@Test
+	void createDeposit() {
+		DepositRequest successfulDeposit = new DepositRequest(depositType.get(1),accountId,reference,amount);
+		DepositEntity creatingDeposit = new DepositEntity();
+		DepositEntity createdDeposit = new DepositEntity();
+		Mockito.when(depositRepository.save(creatingDeposit)).thenReturn(createdDeposit);
+		assertEquals(successfuldepositResponse, depositService.createDeposit(successfulDeposit));
+	}
+	
+	
+	}
+
+@Test
+void createBadDeposit() {
+	DepositRequest successfulDeposit = new DepositRequest(depositType.get(1),accountId,reference,badAmount);
+	DepositEntity creatingDeposit = new DepositEntity();
+	DepositEntity createdDeposit = new DepositEntity();
+	Mockito.when(depositRepository.save(creatingDeposit)).thenReturn(createdDeposit);
+	assertEquals(successfuldepositResponse, depositService.createDeposit(successfulDeposit));
+}
+}

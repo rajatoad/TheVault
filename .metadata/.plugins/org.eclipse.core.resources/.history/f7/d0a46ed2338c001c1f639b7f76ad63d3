@@ -1,0 +1,38 @@
+package com.revature.thevault.repository.entity;
+
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.experimental.FieldDefaults;
+
+import javax.persistence.*;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE)
+
+
+@Entity
+@Table(name = "deposit_table")
+public class DepositEntity {
+    @Id
+    @Column(name = "pk_deposit_id")
+    @GeneratedValue(generator = "deposit_table_pk_id_seq", strategy = GenerationType.SEQUENCE)
+    @SequenceGenerator(allocationSize = 1, name = "deposit_table_pk_id_seq", sequenceName = "deposit_table_pk_id_seq")
+    int pk_deposit_id;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "pk_account_id")
+    AccountEntity accountEntity;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "deposit_type_table")
+    DepositTypeEntity depositTypeEntity;
+    @Column(name = "reference")
+    String reference;
+    @Column(name = "date")
+    Date date = new Date();
+    @Column(name = "amount")
+    int amount;
+
+}
