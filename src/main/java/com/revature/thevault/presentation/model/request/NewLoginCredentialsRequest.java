@@ -1,4 +1,4 @@
-package com.revature.thevault.repository.entity;
+package com.revature.thevault.presentation.model.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

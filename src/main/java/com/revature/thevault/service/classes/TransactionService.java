@@ -16,6 +16,6 @@ public class TransactionService implements TransactionServiceInterface {
 
     @Override
     public GetResponse getTransactionHistory(Integer id) {
-        List<De>
+        return null;
     }
 }
