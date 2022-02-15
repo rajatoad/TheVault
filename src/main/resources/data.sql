@@ -122,8 +122,8 @@ VALUES
 
 INSERT INTO account_profile_table
 VALUES
-    (default, 1, 'Tom', 'Cat', 'email@email.com', 5559991234, '1 lane'),
-    (default, 2, 'Joe', 'Shmo', 'yahoo@yahoo.com', 9995554323, '2 st');
+    (default, 1, 'Tom', 'Cat', 'email@email.com', "555-999-1234", '1 lane'),
+    (default, 2, 'Joe', 'Shmo', 'yahoo@yahoo.com', "999-555-4323", '2 st');
 
 INSERT INTO deposit_type_table
 VALUES
