@@ -11,8 +11,9 @@ DROP TABLE account_profile_table CASCADE;
 -- DON'T NEED THIS BUT USEFUL FOR RDS DATABASE IN FUTURE
 
 --DROP TABLE deposit_type_table;
---DROP TABLE request_type_table;
---DROP TABLE request_status_table;
+DROP TABLE request_type_table CASCADE;
+DROP TABLE request_status_table CASCADE;
+DROP TABLE withdraw_table CASCADE;
 --DROP TABLE deposit_table;
 DROP TABLE account_type_table CASCADE;
 DROP TABLE account_table CASCADE;
@@ -102,7 +103,7 @@ CREATE TABLE withdraw_table(
     fk_request_status_id INTEGER,
     reference VARCHAR(25),
     date_withdraw DATE,
-    amount DECIMAL(10, 2),
+    amount BIGINT,
     FOREIGN KEY (fk_account_id) REFERENCES account_table(pk_account_id),
     FOREIGN KEY (fk_request_type_id) REFERENCES request_type_table(pk_request_type_id),
     FOREIGN KEY (fk_request_status_id) REFERENCES request_status_table(pk_request_status_id)
