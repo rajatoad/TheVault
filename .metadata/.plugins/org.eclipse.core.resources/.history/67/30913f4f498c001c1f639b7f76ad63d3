@@ -1,0 +1,57 @@
+package com.revature.thevault.service.classes;
+
+
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
+
+import javax.persistence.EntityNotFoundException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.revature.thevault.presentation.model.request.DepositRequest;
+import com.revature.thevault.presentation.model.request.GetAccountRequestSingle;
+import com.revature.thevault.presentation.model.response.DepositResponse;
+import com.revature.thevault.presentation.model.response.builder.PostResponse;
+import com.revature.thevault.repository.dao.DepositRepository;
+import com.revature.thevault.repository.entity.AccountEntity;
+import com.revature.thevault.repository.entity.DepositEntity;
+import com.revature.thevault.service.exceptions.NoDepositsFoundGenericException;
+import com.revature.thevault.service.interfaces.DepositServiceInterface;
+import com.revature.thevault.utility.enums.ResponseType;
+
+@Service("depositService")
+public class DepositService implements DepositServiceInterface {
+	
+	@Autowired
+    private DepositRepository depositRepository;
+	@Autowired 
+	DepositTypeService	depositTypeService;
+
+	@Override
+	public DepositResponse createDeposit(DepositRequest depositRequest) {
+		return this.depositRepository.save(depositRequest);
+	}
+	@Override
+	public List<DepositEntity> getAllUserDeposits(int accountId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<DepositEntity> getAlLUserDepositsOfType(int accountId, int depositTypeId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<DepositEntity> getAllDeposits() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public List<DepositEntity> getAllDepositsOfType(int depositTypeId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	    }
+

@@ -1,0 +1,10 @@
+package com.revature.thevault.repository.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.revature.thevault.repository.entity.DepositEntity;
+import com.revature.thevault.repository.entity.DepositTypeEntity;
+
+public interface DepositTypeRepository extends JpaRepository<DepositEntity, Integer>{
+DepositTypeEntity findByName(String depositType);
+}

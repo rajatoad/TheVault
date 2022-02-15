@@ -1,0 +1,28 @@
+package com.revature.thevault.service.classes;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
+
+import com.revature.thevault.service.exceptions.InvalidDepsoitTypeException;
+
+@Service("depositTypeService")
+public class DepositTypeService {
+
+
+
+
+
+public class AccountTypeService implements DepositTypeInterface {
+
+    @Autowired
+    private DepositTypeRepository depositTypeRepository;
+
+    @Override
+    public AccountTypeEntity findAccountTypeEntityByName(String name) {
+        DepositTypeEntity accountTypeEntity = depositTypeRepository.findByName(name);
+        if(accountTypeEntity != null) return accountTypeEntity;
+        else throw new InvalidDepsoitTypeException(HttpStatus.BAD_REQUEST, "Invalid Deposit Type Provided: " + name);
+    }
+
+}
