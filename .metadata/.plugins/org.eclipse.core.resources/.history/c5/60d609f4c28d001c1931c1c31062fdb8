@@ -1,0 +1,65 @@
+package com.revature.thevault.service.classes;
+
+import java.util.Collections;
+import java.util.List;
+import java.util.Optional;
+
+import javax.persistence.EntityNotFoundException;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
+
+import com.revature.thevault.presentation.model.request.DepositRequest;
+import com.revature.thevault.presentation.model.request.GetAccountRequestSingle;
+import com.revature.thevault.presentation.model.response.DepositResponse;
+import com.revature.thevault.presentation.model.response.builder.PostResponse;
+import com.revature.thevault.repository.dao.DepositRepository;
+import com.revature.thevault.repository.entity.AccountEntity;
+import com.revature.thevault.repository.entity.DepositEntity;
+import com.revature.thevault.service.exceptions.InvalidAccountIdException;
+import com.revature.thevault.service.exceptions.NoDepositsFoundGenericException;
+import com.revature.thevault.service.interfaces.DepositServiceInterface;
+import com.revature.thevault.utility.enums.ResponseType;
+
+@Service("depositService")
+public class DepositService implements DepositServiceInterface {
+
+	@Autowired
+	private DepositRepository depositRepository;
+	@Autowired
+	DepositTypeService depositTypeService;
+
+	@Override
+	public DepositResponse createDeposit(DepositRequest depositRequest) {
+		return this.depositRepository.save(depositRequest);
+	}
+
+	@Override
+	public DepositEntity getAllUserDeposits(int accountId) {
+        try {
+            Optional<DepositEntity> depositEntityOptional = depositRepository.findById(accountId);
+            if (depositEntityOptional.isPresent()) return depositEntityOptional.get();
+            else throw new EntityNotFoundException();
+        }catch(Exception e){
+            throw new InvalidAccountIdException(HttpStatus.BAD_REQUEST, "Invalid Account Id Provided: " + accountId);
+        }
+    }
+
+	@Override
+	public List<DepositEntity> getAlLUserDepositsOfType(int accountId, int depositTypeId) {
+		return this.depositRepository.findByAccountIdAndDepositTypeId(accountId, depositTypeId);
+	}
+
+	@Override
+	public List<DepositEntity> getAllDeposits() {
+
+		return this.depositRepository.findAll();
+	}
+
+	@Override
+	public List<DepositEntity> getAllDepositsOfType(int depositTypeId) {
+
+		return this.depositRepository.findAllById(depositTypeId);
+	}
+}

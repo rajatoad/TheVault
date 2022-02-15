@@ -1,0 +1,14 @@
+package com.revature.thevault.service.classes;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class DepositServiceTest {
+
+	@Test
+	void test() {
+		fail("Not yet implemented");
+	}
+
+}
