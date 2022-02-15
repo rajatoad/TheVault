@@ -244,3 +244,93 @@ Method: deleteProfile
 Arguments: [AccountProfileRequest(profileId=1)]
 2022-02-14 16:09:01,647 INFO dLog [http-nio-8080-exec-2] RETURNING: DeleteResponse(deletedObject=AccountProfileEntity(pk_profile_id=1, logincredential=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), first_name=Tom, last_name=Cat, email=email@email.com, phone_number=5559991234, address=1 lane))
 2022-02-14 16:09:01,660 INFO dLog [http-nio-8080-exec-2] RETURNING: DeleteResponse(deletedObject=AccountProfileEntity(pk_profile_id=1, logincredential=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), first_name=Tom, last_name=Cat, email=email@email.com, phone_number=5559991234, address=1 lane))
+2022-02-14 21:03:38,911 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: deleteProfile
+Arguments: [AccountProfileRequest(profileId=1)]
+2022-02-14 21:03:38,921 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-14 21:24:30,631 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: deleteProfile
+Arguments: [AccountProfileRequest(profileId=1)]
+2022-02-14 21:24:30,642 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-14 21:27:24,597 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: deleteProfile
+Arguments: [AccountProfileRequest(profileId=1)]
+2022-02-14 21:27:24,609 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-14 21:37:58,704 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: deleteProfile
+Arguments: [AccountProfileRequest(profileId=1)]
+2022-02-14 21:37:58,717 INFO dLog [main] RETURNING: DeleteResponse(deletedObject=[AccountProfileResponse(profileId=1, userId=1, firstName=Bob, lastName=Tom, email=some@email.com, phoneNumber=123-876-5555, address=1 court)])
+2022-02-14 21:42:04,706 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=5, firstName=joe, lastName=something, email=asdf@fjfo.com, phoneNumber=555-555-5555, address=1 street)]
+2022-02-14 21:42:04,715 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-14 21:43:16,135 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=5, firstName=joe, lastName=something, email=asdf@fjfo.com, phoneNumber=555-555-5555, address=1 street)]
+2022-02-14 21:43:16,146 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-14 21:52:23,141 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Bob, lastName=Tom, email=some@email.com, phoneNumber=123-876-5555, address=1 court)]
+2022-02-14 21:52:23,160 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-14 21:53:58,881 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Bob, lastName=Tom, email=some@email.com, phoneNumber=123-876-5555, address=1 court)]
+2022-02-14 21:53:58,893 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-14 22:00:45,701 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Bob, lastName=Tom, email=some@email.com, phoneNumber=123-876-5555, address=1 court)]
+2022-02-14 22:00:45,711 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-14 22:01:01,952 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Bob, lastName=Tom, email=some@email.com, phoneNumber=123-876-5555, address=1 court)]
+2022-02-14 22:01:01,962 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 07:52:26,746 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Bob, lastName=Tom, email=some@email.com, phoneNumber=123-876-5555, address=1 court)]
+2022-02-15 07:52:26,763 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 07:53:15,941 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: getProfile
+Arguments: [1]
+2022-02-15 07:53:15,954 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: getProfile
+Arguments: [AccountProfileRequest(profileId=1)]
+2022-02-15 07:53:16,016 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=[AccountProfileResponse(profileId=1, userId=1, firstName=Tom, lastName=Cat, email=email@email.com, phoneNumber=5559991234, address=1 lane)])
+2022-02-15 07:53:16,017 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=[AccountProfileResponse(profileId=1, userId=1, firstName=Tom, lastName=Cat, email=email@email.com, phoneNumber=5559991234, address=1 lane)])
+2022-02-15 09:58:24,444 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Lindsay, lastName=Gerhold, email=Raheem_Welch9@hotmail.com, phoneNumber=834-344-2898, address=146 Doyle Pines)]
+2022-02-15 09:58:24,445 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Lindsay, lastName=Gerhold, email=Raheem_Welch9@hotmail.com, phoneNumber=834-344-2898, address=146 Doyle Pines)]
+2022-02-15 09:58:24,503 ERROR dLog [http-nio-8080-exec-5] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 09:58:24,503 ERROR dLog [http-nio-8080-exec-5] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.AccountProfileController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 09:58:25,598 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Michaela, lastName=Willms, email=Kyleigh.Tremblay68@gmail.com, phoneNumber=507-252-4710, address=865 Harvey Shoals)]
+2022-02-15 09:58:25,598 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Michaela, lastName=Willms, email=Kyleigh.Tremblay68@gmail.com, phoneNumber=507-252-4710, address=865 Harvey Shoals)]
+2022-02-15 09:58:25,600 ERROR dLog [http-nio-8080-exec-7] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 09:58:25,600 ERROR dLog [http-nio-8080-exec-7] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.AccountProfileController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 09:58:26,190 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Sanford, lastName=Parisian, email=Melba40@hotmail.com, phoneNumber=535-540-7874, address=026 Towne Prairie)]
+2022-02-15 09:58:26,191 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Sanford, lastName=Parisian, email=Melba40@hotmail.com, phoneNumber=535-540-7874, address=026 Towne Prairie)]
+2022-02-15 09:58:26,193 INFO dLog [http-nio-8080-exec-9] RETURNING: PostResponse(createdObject=[AccountProfileResponse(profileId=3, userId=1, firstName=Sanford, lastName=Parisian, email=Melba40@hotmail.com, phoneNumber=535-540-7874, address=026 Towne Prairie)])
+2022-02-15 09:58:26,193 INFO dLog [http-nio-8080-exec-9] RETURNING: PostResponse(createdObject=[AccountProfileResponse(profileId=3, userId=1, firstName=Sanford, lastName=Parisian, email=Melba40@hotmail.com, phoneNumber=535-540-7874, address=026 Towne Prairie)])
