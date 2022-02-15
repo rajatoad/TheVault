@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Account } from 'src/app/models/account/account.model';
+import { GetAccount } from 'src/app/models/account/responses/get-account';
 import { AccountService } from 'src/app/_services/account/account.service';
+import { AccountRetrieverService } from 'src/app/_services/backend/account-retriever.service';
 
 @Component({
   selector: 'app-select',
@@ -13,7 +15,8 @@ export class SelectComponent implements OnInit {
   userId!:number;
 
   constructor(
-    private accountService: AccountService
+    private accountService: AccountService,
+    private accountHttp: AccountRetrieverService
   ) { }
 
   accounts!: Account[];
@@ -23,7 +26,7 @@ export class SelectComponent implements OnInit {
   }
 
   getAccounts():void{
-    this.accounts = this.accountService.getAccounts(this.userId);
-  }
-
+    this.accountHttp.getUserAccount(this.userId)
+    .subscribe(
+      (data: GetAccount) => this.accounts = data.gotObject)};
 }

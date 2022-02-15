@@ -1,8 +1,16 @@
-<h1>ACCOUNT DETAIL VIEW</h1>
-
-<div>
-    <h2>Account Type: {{account.accountType}}</h2>
-    <h4>Account Id: {{account.accountId}}</h4>
-    <h4>Available Balance: {{account.availableBalance | currency}}</h4>
-    <h4>Pending Balance: {{account.pendingBalance | currency}}</h4>
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">  
+        <div class="d-flex justify-content-around">
+            <div class="p-2">
+                <span class="navbar-text">Account Detail</span>
+            </div>
+            <div class="p-2">
+                <a class="nav-link active" (click)="goBack()">Back</a>
+            </div>
+            <div class="p-2">
+                <a class="nav-link active" (click)="logout()">logout</a>
+            </div>
+        </div>
+    </nav>
+    <app-account-info [account]="account"></app-account-info>
 </div>

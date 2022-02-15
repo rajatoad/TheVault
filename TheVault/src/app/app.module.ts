@@ -12,6 +12,7 @@ import { SelectComponent } from './components/account/select/select.component';
 import { AccountMiniComponent } from './components/account/account-mini/account-mini.component';
 import { AccountDetailComponent } from './components/account/account-detail/account-detail.component';
 import { AccountViewComponent } from './components/account/account-view/account-view.component';
+import { AccountInfoComponent } from './components/account/account-detail/account-info/account-info.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { AccountViewComponent } from './components/account/account-view/account-
     SelectComponent,
     AccountMiniComponent,
     AccountDetailComponent,
-    AccountViewComponent
+    AccountViewComponent,
+    AccountInfoComponent
   ],
   imports: [
     BrowserModule,

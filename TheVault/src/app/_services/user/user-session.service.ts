@@ -22,4 +22,8 @@ export class UserSessionService {
 
     return {};
   }
+
+  public clearUser():void{
+    window.sessionStorage.removeItem(USER_KEY);
+  }
 }

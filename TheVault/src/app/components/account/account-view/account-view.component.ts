@@ -13,13 +13,16 @@ export class AccountViewComponent implements OnInit {
 
   userId!:number;
 
+  name!:string;
+
   constructor(
     private accountService: AccountService,
     private userService: UserService,
     private userSession: UserSessionService) { }
 
     ngOnInit(): void {
-        this.userId = this.userSession.getUser().id;
+      this.userId = this.userSession.getUser().id;
+      this.name = this.userSession.getUser().firstName;
     }
 
 

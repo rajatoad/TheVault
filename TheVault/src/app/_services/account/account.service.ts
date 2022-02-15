@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Account } from 'src/app/models/account/account.model';
+import { GetAccount } from 'src/app/models/account/responses/get-account';
+import { AccountRetrieverService } from '../backend/account-retriever.service';
 
 @Injectable({
   providedIn: 'root'
@@ -10,16 +12,14 @@ export class AccountService {
 
   activeAccount!: Account;
 
-  constructor() { }
+  getAccount!: GetAccount;
 
-  getAccounts(userId:number): Account[]{
-    return [
-      new Account(1, 1, this.accountTypes[0], 100, 100),
-      new Account(2, 1, this.accountTypes[1], 120, 300)
-    ]
-  }
+  constructor(
+    private accountHttp: AccountRetrieverService
+  ) { }
 
   setActiveAccount(account:Account):void{
     this.activeAccount = account;
   }
+
 }
