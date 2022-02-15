@@ -7,7 +7,6 @@ import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 @NgModule({
-
   imports: [
     CommonModule,
     BsDropdownModule.forRoot(),

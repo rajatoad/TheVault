@@ -16,9 +16,10 @@ import { AccountInfoComponent } from './components/account/account-detail/accoun
 import { AppBootstrapModule } from './app-bootstrap/app-bootstrap.module';
 import { AppBootstrapComponent } from './app-bootstrap/app-bootstrap.component';
 import { AccountTransactionsComponent } from './components/account/account-transactions/account-transactions.component';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './_services/transactions/in-memory-data.service';
+// import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+// import { InMemoryDataService } from './_services/transactions/in-memory-data.service';
 import { TransactionHistoryComponent } from './components/account/account-transactions/history/transaction-history/transaction-history.component';
+import { SelectTransactionComponent } from './components/transaction/select-transaction/select-transaction.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { TransactionHistoryComponent } from './components/account/account-transa
     AccountInfoComponent,
     AppBootstrapComponent,
     AccountTransactionsComponent,
-    TransactionHistoryComponent
+    TransactionHistoryComponent,
+    SelectTransactionComponent
   ],
   imports: [
     BrowserModule,
@@ -39,9 +41,9 @@ import { TransactionHistoryComponent } from './components/account/account-transa
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    AppBootstrapModule,
-    HttpClientModule, HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService,
-      {dataEncapsulation: false})
+    AppBootstrapModule
+    // HttpClientModule, HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService,
+    //   {dataEncapsulation: false})
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Account } from 'src/app/models/account/account.model';
 import { Deposit } from 'src/app/models/deposit.model';
 import { TransactionHistoryService } from 'src/app/_services/transactions/transaction-history.service';
 @Component({
@@ -7,12 +8,16 @@ import { TransactionHistoryService } from 'src/app/_services/transactions/transa
   styleUrls: ['./transaction-history.component.css']
 })
 export class TransactionHistoryComponent implements OnInit {
-  
-transactions: Deposit[] = [];
+
+  @Input()
+  account!: Account; 
+  transactions: Deposit[] = [];
   constructor(private transService: TransactionHistoryService) { }
-getHistory(): void{
-  this.transService.getHistory().subscribe(transactions => this.transactions = transactions)
-}
+
+  getHistory(): void{
+    this.transService.getHistory().subscribe(transactions => this.transactions = transactions);
+  }
+
   ngOnInit(): void {
     this.getHistory();
   }
