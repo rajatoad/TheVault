@@ -1,0 +1,7 @@
+<div>
+    <h2>Account Type: {{account.accountType}}</h2>
+    <h4>Account Id: {{account.accountId}}</h4>
+    <h4>Available Balance: {{account.availableBalance | currency}}</h4>
+    <h4>Pending Balance: {{account.pendingBalance | currency}}</h4>
+    <button (click)="goToDetail(account)">View Details</button>
+</div>
