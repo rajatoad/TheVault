@@ -23,6 +23,17 @@ export class AccountViewComponent implements OnInit {
     ngOnInit(): void {
       this.userId = this.userSession.getUser().id;
       this.name = this.userSession.getUser().firstName;
+      console.log(
+        '%cOK, things are really bad now!',
+        `
+        font-size: 2em;
+        padding: 0.5em 2em;
+        margin: 1em 0;
+        color: yellow;
+        background-color: red;
+        border-radius: 50%;
+        `
+      );
     }
 
 

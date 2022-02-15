@@ -13,8 +13,12 @@ import { AccountMiniComponent } from './components/account/account-mini/account-
 import { AccountDetailComponent } from './components/account/account-detail/account-detail.component';
 import { AccountViewComponent } from './components/account/account-view/account-view.component';
 import { AccountInfoComponent } from './components/account/account-detail/account-info/account-info.component';
-
-
+import { AppBootstrapModule } from './app-bootstrap/app-bootstrap.module';
+import { AppBootstrapComponent } from './app-bootstrap/app-bootstrap.component';
+import { AccountTransactionsComponent } from './components/account/account-transactions/account-transactions.component';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './_services/transactions/in-memory-data.service';
+import { TransactionHistoryComponent } from './components/account/account-transactions/history/transaction-history/transaction-history.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,14 +28,20 @@ import { AccountInfoComponent } from './components/account/account-detail/accoun
     AccountMiniComponent,
     AccountDetailComponent,
     AccountViewComponent,
-    AccountInfoComponent
+    AccountInfoComponent,
+    AppBootstrapComponent,
+    AccountTransactionsComponent,
+    TransactionHistoryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppBootstrapModule,
+    HttpClientModule, HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService,
+      {dataEncapsulation: false})
   ],
   providers: [],
   bootstrap: [AppComponent]
