@@ -1,0 +1,21 @@
+
+<div class="dropdown mt-3">
+    <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" id="trans-dropdown">
+      Transactions
+    </button>
+       <ul class="dropdown-menu" aria-labelledby="trans-dropdown">
+            <li><a href="/account-withdraw" class="dropdown-item">Deposit</a></li>
+            <li><a href="/account-withdraw" class="dropdown-item">Withdraw</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a href="/account-history" class="dropdown-item">History</a></li>
+       </ul>
+       <div *ngIf="active">
+        <h2 >
+           <!-- {{account.accountType}} -->
+
+        </h2>
+       </div>
+        
+       
+</div>
+
