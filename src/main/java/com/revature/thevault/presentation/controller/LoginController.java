@@ -2,11 +2,12 @@ package com.revature.thevault.presentation.controller;
 
 import com.revature.thevault.presentation.model.request.LoginRequest;
 import com.revature.thevault.presentation.model.response.LoginResponse;
-import com.revature.thevault.presentation.model.response.ProfileResponse;
+import com.revature.thevault.presentation.model.response.builder.GetResponse;
+import com.revature.thevault.presentation.model.response.builder.PostResponse;
+import com.revature.thevault.repository.entity.LoginCredentialEntity;
 import com.revature.thevault.repository.entity.NewLoginCredentialsRequest;
 import com.revature.thevault.service.classes.AccountProfileService;
 import com.revature.thevault.service.classes.LoginService;
-import com.revature.thevault.service.interfaces.AccountProfileInterface;
 import lombok.NonNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -29,11 +30,17 @@ public class LoginController {
         return loginService.checkLogin(loginRequest);
     }
 
-//    @ResponseStatus(HttpStatus.CREATED)
-//    @PostMapping("/new")
-//    public ProfileResponse newLogin(@NonNull @RequestBody NewLoginCredentialsRequest newUser){
-//        return profileService.newUserProfile(loginService.newAccount(newUser), newUser.getEmail());
-//    }
+    @ResponseStatus(HttpStatus.CREATED)
+    @PostMapping("/new")
+    public PostResponse newLogin(@NonNull @RequestBody LoginCredentialEntity newLoginRequest){
+        return loginService.createNewLogin(newLoginRequest);
+    }
+
+    @ResponseStatus(HttpStatus.OK)
+    @PostMapping("/validate")
+    public GetResponse findLoginCredential(@RequestBody LoginRequest loginRequest){
+        return loginService.getLoginCredentialFromLogin(loginRequest);
+    }
 
 
 }

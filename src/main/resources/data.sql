@@ -113,12 +113,12 @@ CREATE TABLE withdraw_table(
 --                                  POPULATE TABLES
 --========================================================================================
 
-INSERT INTO login_credential_table
-VALUES
-    (default, 'username1', 'password1'),
-    (default, 'username2', 'password2'),
-    (default, 'username3', 'password3'),
-    (default, 'username4', 'password4');
+--INSERT INTO login_credential_table
+--VALUES
+----    (default, 'username1', 'password1'),
+----    (default, 'username2', 'password2'),
+----    (default, 'username3', 'password3'),
+----    (default, 'username4', 'password4');
 
 INSERT INTO account_profile_table
 VALUES
