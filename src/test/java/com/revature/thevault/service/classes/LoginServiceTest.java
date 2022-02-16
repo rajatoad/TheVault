@@ -61,6 +61,6 @@ public class LoginServiceTest {
     void getLoginCredentialSuccessTest() { assertEquals(loginCredentialEntity, loginService.getLoginCredentialFromLogin(validLoginRequest)); }
 
 //    @Test
-//    void newAccountTest(){ assertEquals(newLoginCredential, loginService.newAccount(newLoginCredentialsRequest));}
+//    void newLoginCredentialTest(){ assertEquals(newLoginCredential, loginService.newAccount(newLoginCredentialsRequest));}
 
 }
