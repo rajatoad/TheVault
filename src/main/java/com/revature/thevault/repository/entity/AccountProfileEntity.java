@@ -30,7 +30,7 @@ public class AccountProfileEntity {
     @Column(name = "email")
     String email;
     @Column(name = "phone_number")
-    long phone_number;
+    String phone_number;
     @Column(name = "address")
     String address;
 }

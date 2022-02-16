@@ -15,6 +15,6 @@ public class ProfileCreateRequest {
     String firstName;
     String lastName;
     String email;
-    long phoneNumber;
+    String phoneNumber;
     String address;
 }
