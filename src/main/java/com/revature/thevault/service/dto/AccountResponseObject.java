@@ -14,6 +14,6 @@ public class AccountResponseObject {
     int accountId;
     int userId;
     String accountType;
-    long availableBalance;
-    long pendingBalance;
+    float availableBalance;
+    float pendingBalance;
 }

@@ -20,6 +20,11 @@ import { AccountTransactionsComponent } from './components/account/account-trans
 // import { InMemoryDataService } from './_services/transactions/in-memory-data.service';
 import { TransactionHistoryComponent } from './components/account/account-transactions/history/transaction-history/transaction-history.component';
 import { SelectTransactionComponent } from './components/transaction/select-transaction/select-transaction.component';
+import { AccountProfileComponent } from './components/account-profile/account-profile.component';
+import { WithdrawGenerateComponent } from './components/transaction/withdraw-generate/withdraw-generate.component';
+import { DepositGenerateComponent } from './components/transaction/deposit-generate/deposit-generate.component';
+import { DepositDetailComponent } from './components/transaction/deposit-detail/deposit-detail.component';
+import { WithdrawDetailComponent } from './components/transaction/withdraw-detail/withdraw-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +38,12 @@ import { SelectTransactionComponent } from './components/transaction/select-tran
     AppBootstrapComponent,
     AccountTransactionsComponent,
     TransactionHistoryComponent,
-    SelectTransactionComponent
+    SelectTransactionComponent,
+    AccountProfileComponent,
+    WithdrawGenerateComponent,
+    DepositGenerateComponent,
+    DepositDetailComponent,
+    WithdrawDetailComponent
   ],
   imports: [
     BrowserModule,

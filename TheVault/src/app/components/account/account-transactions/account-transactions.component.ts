@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AccountDetailComponent } from '../account-detail/account-detail.component';
 import { TransactionHistoryService } from 'src/app/_services/transactions/transaction-history.service';
-import { Deposit } from 'src/app/models/deposit.model';
 import { Account } from 'src/app/models/account/account.model';
 import { AccountService } from 'src/app/_services/account/account.service'; 
 @Component({
@@ -12,7 +11,6 @@ import { AccountService } from 'src/app/_services/account/account.service';
 })
 export class AccountTransactionsComponent implements OnInit {
 
-  transactions: Deposit[]= [];
 
 newTrans(reason:string, amount:string):void{
 // data: Deposit  = {

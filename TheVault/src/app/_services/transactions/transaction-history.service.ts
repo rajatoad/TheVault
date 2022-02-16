@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { Deposit } from 'src/app/models/deposit.model';
+import { GetTransaction } from 'src/app/models/transaction/responses/get-transaction';
 @Injectable({
   providedIn: 'root'
 })
@@ -13,9 +12,8 @@ export class TransactionHistoryService {
 
   private transHistory = 'api/transactions'
   constructor(private http: HttpClient) { }
-  getHistory(): Observable<Deposit[]> {return this.http.get<Deposit[]>(this.transHistory)}
-
-  addHistory(): Observable<Deposit> {
-    return this.http.post<Deposit>(this.transHistory,this.httpOptions)
-  } 
+  getHistory(accountId:number) {
+    let transactionUrl = `http://localhost:8080/transaction/history/${accountId}`;
+    return this.http.get<GetTransaction>(transactionUrl)
+  }
 }
