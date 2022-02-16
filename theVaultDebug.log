@@ -3882,3 +3882,39 @@ Method: deleteProfile
 Arguments: [AccountProfileRequest(profileId=3)]
 2022-02-15 21:12:10,114 INFO dLog [http-nio-8080-exec-8] RETURNING: DeleteResponse(deletedObject=[AccountProfileResponse(profileId=3, userId=1, firstName=Benny, lastName=Ryan, email=Crystel_Barrows@hotmail.com, phoneNumber=894-667-9299, address=8421 Lou Isle)])
 2022-02-15 21:12:10,117 INFO dLog [http-nio-8080-exec-8] RETURNING: DeleteResponse(deletedObject=[AccountProfileResponse(profileId=3, userId=1, firstName=Benny, lastName=Ryan, email=Crystel_Barrows@hotmail.com, phoneNumber=894-667-9299, address=8421 Lou Isle)])
+2022-02-15 21:13:44,032 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: updateProfile
+Arguments: [ProfileCreateRequest(userId=2, firstName=Zakary, lastName=Crooks, email=Carolyne89@yahoo.com, phoneNumber=856-450-3506, address=08371 Bartell Roads)]
+2022-02-15 21:13:44,042 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: updateProfile
+Arguments: [ProfileCreateRequest(userId=2, firstName=Zakary, lastName=Crooks, email=Carolyne89@yahoo.com, phoneNumber=856-450-3506, address=08371 Bartell Roads)]
+2022-02-15 21:13:44,101 ERROR dLog [http-nio-8080-exec-1] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 21:13:44,101 ERROR dLog [http-nio-8080-exec-1] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.AccountProfileController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 21:13:45,114 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: updateProfile
+Arguments: [ProfileCreateRequest(userId=2, firstName=Ole, lastName=Berge, email=Keara27@yahoo.com, phoneNumber=809-908-6798, address=91628 Macie Ridges)]
+2022-02-15 21:13:45,114 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: updateProfile
+Arguments: [ProfileCreateRequest(userId=2, firstName=Ole, lastName=Berge, email=Keara27@yahoo.com, phoneNumber=809-908-6798, address=91628 Macie Ridges)]
+2022-02-15 21:13:45,116 ERROR dLog [http-nio-8080-exec-4] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 21:13:45,116 ERROR dLog [http-nio-8080-exec-4] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.AccountProfileController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 21:14:05,101 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: updateProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Kacie, lastName=Cummings, email=Norma96@hotmail.com, phoneNumber=553-984-1236, address=945 Sanford Branch)]
+2022-02-15 21:14:05,101 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: updateProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Kacie, lastName=Cummings, email=Norma96@hotmail.com, phoneNumber=553-984-1236, address=945 Sanford Branch)]
+2022-02-15 21:14:05,104 INFO dLog [http-nio-8080-exec-6] RETURNING: PostResponse(createdObject=[AccountProfileResponse(profileId=3, userId=1, firstName=Kacie, lastName=Cummings, email=Norma96@hotmail.com, phoneNumber=553-984-1236, address=945 Sanford Branch)])
+2022-02-15 21:14:05,104 INFO dLog [http-nio-8080-exec-6] RETURNING: PostResponse(createdObject=[AccountProfileResponse(profileId=3, userId=1, firstName=Kacie, lastName=Cummings, email=Norma96@hotmail.com, phoneNumber=553-984-1236, address=945 Sanford Branch)])
+2022-02-15 21:14:11,757 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: updateProfile
+Arguments: [ProfileCreateRequest(userId=2, firstName=Dolores, lastName=Christiansen, email=Marcel.Smith@hotmail.com, phoneNumber=795-495-3655, address=2624 Fay Glens)]
+2022-02-15 21:14:11,757 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: updateProfile
+Arguments: [ProfileCreateRequest(userId=2, firstName=Dolores, lastName=Christiansen, email=Marcel.Smith@hotmail.com, phoneNumber=795-495-3655, address=2624 Fay Glens)]
+2022-02-15 21:14:11,758 INFO dLog [http-nio-8080-exec-7] RETURNING: PostResponse(createdObject=[AccountProfileResponse(profileId=4, userId=2, firstName=Dolores, lastName=Christiansen, email=Marcel.Smith@hotmail.com, phoneNumber=795-495-3655, address=2624 Fay Glens)])
+2022-02-15 21:14:11,758 INFO dLog [http-nio-8080-exec-7] RETURNING: PostResponse(createdObject=[AccountProfileResponse(profileId=4, userId=2, firstName=Dolores, lastName=Christiansen, email=Marcel.Smith@hotmail.com, phoneNumber=795-495-3655, address=2624 Fay Glens)])
