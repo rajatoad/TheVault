@@ -12,7 +12,7 @@ import com.revature.thevault.service.exceptions.InvalidInputException;
 public interface LoginServiceInterface {
     LoginResponse checkLogin(LoginRequest loginRequest);
 
-    GetResponse getLoginCredentialFromLogin(LoginRequest loginRequest);
+    PostResponse getLoginCredentialFromLogin(LoginRequest loginRequest);
 
     PostResponse createNewLogin(LoginCredentialEntity newLoginRequest) throws InvalidInputException;
 
