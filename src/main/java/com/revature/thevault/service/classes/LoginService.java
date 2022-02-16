@@ -7,16 +7,15 @@ import com.revature.thevault.presentation.model.response.builder.GetResponse;
 import com.revature.thevault.presentation.model.response.builder.PostResponse;
 import com.revature.thevault.repository.dao.LoginRepository;
 import com.revature.thevault.repository.entity.LoginCredentialEntity;
-import com.revature.thevault.repository.entity.NewLoginCredentialsRequest;
-import com.revature.thevault.service.dto.LoginCredentialResponse;
+import com.revature.thevault.service.dto.LoginResponseObject;
 import com.revature.thevault.service.exceptions.InvalidInputException;
+import com.revature.thevault.service.exceptions.InvalidRequestException;
 import com.revature.thevault.service.interfaces.LoginServiceInterface;
-import com.revature.thevault.utility.enums.ResponseType;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import java.util.Collections;
-import java.util.List;
 
 @Service("loginService")
 public class LoginService implements LoginServiceInterface {
@@ -39,14 +38,13 @@ public class LoginService implements LoginServiceInterface {
         try{
             return GetResponse.builder()
                     .success(true)
-                    .gotObject((List) loginRepository.findByUsernameAndPassword(loginRequest.getUsername(), loginRequest.getPassword()))
+                    .gotObject(Collections.singletonList(loginRepository.findByUsernameAndPassword(loginRequest.getUsername(), loginRequest.getPassword())))
                     .build();
         }catch(Exception e){
             throw new InvalidInputException("User was not found");
 
         }
     }
-
 
     @Override
     public PostResponse createNewLogin(LoginCredentialEntity newLoginRequest) {
@@ -62,10 +60,6 @@ public class LoginService implements LoginServiceInterface {
         }
     }
 
-    private LoginCredentialResponse convertEntityToResponse(LoginCredentialEntity entity) {
-        return new LoginCredentialResponse(entity.getUsername(), entity.getPassword()) ;
-    }
-
     @Override
     public LoginResponse resetPassword(ResetPasswordRequest resetPasswordRequest) {
         return null;
@@ -78,4 +72,23 @@ public class LoginService implements LoginServiceInterface {
 
 
 
+    public PostResponse validateLogin(LoginRequest loginRequest) {
+        try{
+            LoginCredentialEntity loginCredentialEntity = loginRepository.findByUsernameAndPassword(loginRequest.getUsername(), loginRequest.getPassword());
+            return PostResponse.builder()
+                    .success(true)
+                    .createdObject(Collections.singletonList(convertEntityToResponse(loginCredentialEntity)))
+                    .build();
+        }catch (Exception e){
+            throw new InvalidRequestException(HttpStatus.BAD_REQUEST, e.getMessage());
+        }
+    }
+
+    private LoginResponseObject convertEntityToResponse(LoginCredentialEntity loginCredentialEntity) {
+        return new LoginResponseObject(
+                loginCredentialEntity.getPk_user_id(),
+                loginCredentialEntity.getUsername(),
+                loginCredentialEntity.getPassword()
+        );
+    }
 }

@@ -8,6 +8,7 @@ import com.revature.thevault.repository.entity.LoginCredentialEntity;
 import com.revature.thevault.repository.entity.NewLoginCredentialsRequest;
 import com.revature.thevault.service.classes.AccountProfileService;
 import com.revature.thevault.service.classes.LoginService;
+import lombok.extern.java.Log;
 import lombok.NonNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -41,6 +42,4 @@ public class LoginController {
     public GetResponse findLoginCredential(@RequestBody LoginRequest loginRequest){
         return loginService.getLoginCredentialFromLogin(loginRequest);
     }
-
-
 }
