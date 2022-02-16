@@ -1226,3 +1226,29 @@ Arguments: [1]
 2022-02-16 14:10:21,994 INFO dLog [http-nio-8080-exec-4] RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=asdfasdf, dateWithdraw=2022-02-16, amount=44.0)])
 2022-02-16 14:10:21,995 INFO dLog [http-nio-8080-exec-4] RETURNING: GetResponse(gotObject=[TransactionObject(transactionId=1, transactionType=Deposit, date=2022-02-16, amount=299.0), TransactionObject(transactionId=1, transactionType=Withdrawal, date=2022-02-16, amount=44.0)])
 2022-02-16 14:10:21,995 INFO dLog [http-nio-8080-exec-4] RETURNING: GetResponse(gotObject=[TransactionObject(transactionId=1, transactionType=Deposit, date=2022-02-16, amount=299.0), TransactionObject(transactionId=1, transactionType=Withdrawal, date=2022-02-16, amount=44.0)])
+2022-02-16 14:38:59,500 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: findLoginCredential
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-16 14:38:59,511 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.LoginService
+Method: getLoginCredentialFromLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-16 14:38:59,561 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=[null])
+2022-02-16 14:38:59,561 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=[null])
+2022-02-16 14:39:29,532 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: validateLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-16 14:39:29,542 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.LoginService
+Method: validateLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-16 14:39:29,591 ERROR dLog [http-nio-8080-exec-1] CONTROLLER CLASS: class com.revature.thevault.service.classes.LoginService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-16 14:39:29,592 ERROR dLog [http-nio-8080-exec-1] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.LoginController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-16 14:40:29,697 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: findLoginCredential
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-16 14:40:29,707 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.LoginService
+Method: getLoginCredentialFromLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-16 14:40:29,763 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[LoginCredentialEntity(pk_user_id=1, username=username1, password=password1)])
+2022-02-16 14:40:29,763 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[LoginCredentialEntity(pk_user_id=1, username=username1, password=password1)])
