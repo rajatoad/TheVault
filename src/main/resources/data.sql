@@ -151,4 +151,5 @@ VALUES
 INSERT INTO account_table
 VALUES
     (default, 1, 1, 100, 130),
-    (default, 2, 2, 199, 19);
+    (default, 2, 2, 199, 19),
+    (default, 1, 2, 1000, 299);

@@ -13,7 +13,6 @@
 //@AllArgsConstructor
 //@FieldDefaults(level = AccessLevel.PRIVATE)
 //
-//
 //@Entity
 //@Table(name = "deposit_table")
 //public class DepositEntity {

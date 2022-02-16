@@ -27,9 +27,9 @@ public class WithdrawEntity {
     int pkWithdrawID;
     @OneToMany(fetch = FetchType.EAGER)
     Set<AccountEntity> accountEntities;
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(fetch = FetchType.EAGER)
     RequestType requestType;
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(fetch = FetchType.EAGER)
     RequestStatus requestStatus;
     @Column
     String reference;
