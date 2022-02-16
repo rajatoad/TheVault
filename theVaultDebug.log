@@ -3709,3 +3709,15 @@ Method: getProfile
 Arguments: [AccountProfileRequest(profileId=3)]
 2022-02-15 16:19:25,970 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=[AccountProfileResponse(profileId=3, userId=1, firstName=Odie, lastName=Marquardt, email=Destin78@gmail.com, phoneNumber=414-338-3354, address=207 Ricky Mount)])
 2022-02-15 16:19:25,970 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=[AccountProfileResponse(profileId=3, userId=1, firstName=Odie, lastName=Marquardt, email=Destin78@gmail.com, phoneNumber=414-338-3354, address=207 Ricky Mount)])
+2022-02-15 18:45:13,657 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: getProfile
+Arguments: [AccountProfileRequest(profileId=1)]
+2022-02-15 18:45:13,668 INFO dLog [main] RETURNING: GetResponse(gotObject=[AccountProfileResponse(profileId=1, userId=1, firstName=Bob, lastName=Tom, email=some@email.com, phoneNumber=123-876-5555, address=1 court)])
+2022-02-15 18:46:43,179 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: getProfile
+Arguments: [AccountProfileRequest(profileId=1)]
+2022-02-15 18:46:43,190 INFO dLog [main] RETURNING: GetResponse(gotObject=[AccountProfileResponse(profileId=1, userId=1, firstName=Bob, lastName=Tom, email=some@email.com, phoneNumber=123-876-5555, address=1 court)])
+2022-02-15 18:47:49,732 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: getProfile
+Arguments: [AccountProfileRequest(profileId=1)]
+2022-02-15 18:47:49,743 INFO dLog [main] RETURNING: GetResponse(gotObject=[AccountProfileResponse(profileId=1, userId=1, firstName=Bob, lastName=Tom, email=some@email.com, phoneNumber=123-876-5555, address=1 court)])
