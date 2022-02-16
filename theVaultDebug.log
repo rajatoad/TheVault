@@ -1940,3 +1940,1117 @@ Arguments: [1]
 2022-02-15 21:40:57,964 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=lol, dateWithdraw=2022-02-15, amount=10.2)])
 2022-02-15 21:40:57,965 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[TransactionObject(transactionId=1, transactionType=Deposit, date=2022-02-15, amount=3003.3), TransactionObject(transactionId=1, transactionType=Withdrawal, date=2022-02-15, amount=10.2)])
 2022-02-15 21:40:57,965 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[TransactionObject(transactionId=1, transactionType=Deposit, date=2022-02-15, amount=3003.3), TransactionObject(transactionId=1, transactionType=Withdrawal, date=2022-02-15, amount=10.2)])
+2022-02-15 22:21:37,734 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: validateLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-15 22:21:37,745 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.LoginService
+Method: validateLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-15 22:21:37,788 INFO dLog [http-nio-8080-exec-1] RETURNING: PostResponse(createdObject=[LoginResponseObject(userId=1, username=username1, password=password1)])
+2022-02-15 22:21:37,788 INFO dLog [http-nio-8080-exec-1] RETURNING: PostResponse(createdObject=[LoginResponseObject(userId=1, username=username1, password=password1)])
+2022-02-15 22:22:28,648 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: getProfile
+Arguments: [1]
+2022-02-15 22:22:28,653 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: getProfile
+Arguments: [AccountProfileRequest(profileId=1)]
+2022-02-15 22:22:28,688 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountProfileResponse(profileId=1, userId=1, firstName=Tom, lastName=Cat, email=email@email.com, phoneNumber=5559991234, address=1 lane)])
+2022-02-15 22:22:28,689 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountProfileResponse(profileId=1, userId=1, firstName=Tom, lastName=Cat, email=email@email.com, phoneNumber=5559991234, address=1 lane)])
+2022-02-15 22:44:30,631 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: validateLogin
+Arguments: [LoginRequest(username=null, password=null)]
+2022-02-15 22:44:30,641 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.service.classes.LoginService
+Method: validateLogin
+Arguments: [LoginRequest(username=null, password=null)]
+2022-02-15 22:44:30,674 ERROR dLog [http-nio-8080-exec-5] CONTROLLER CLASS: class com.revature.thevault.service.classes.LoginService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 22:44:30,674 ERROR dLog [http-nio-8080-exec-5] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.LoginController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 22:45:51,001 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: validateLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-15 22:45:51,002 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.LoginService
+Method: validateLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-15 22:45:51,016 INFO dLog [http-nio-8080-exec-6] RETURNING: PostResponse(createdObject=[LoginResponseObject(userId=1, username=username1, password=password1)])
+2022-02-15 22:45:51,016 INFO dLog [http-nio-8080-exec-6] RETURNING: PostResponse(createdObject=[LoginResponseObject(userId=1, username=username1, password=password1)])
+2022-02-15 22:46:24,134 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: validateLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-15 22:46:24,134 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.service.classes.LoginService
+Method: validateLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-15 22:46:24,135 INFO dLog [http-nio-8080-exec-7] RETURNING: PostResponse(createdObject=[LoginResponseObject(userId=1, username=username1, password=password1)])
+2022-02-15 22:46:24,135 INFO dLog [http-nio-8080-exec-7] RETURNING: PostResponse(createdObject=[LoginResponseObject(userId=1, username=username1, password=password1)])
+2022-02-15 22:46:55,543 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: validateLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-15 22:46:55,543 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.service.classes.LoginService
+Method: validateLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-15 22:46:55,544 INFO dLog [http-nio-8080-exec-8] RETURNING: PostResponse(createdObject=[LoginResponseObject(userId=1, username=username1, password=password1)])
+2022-02-15 22:46:55,544 INFO dLog [http-nio-8080-exec-8] RETURNING: PostResponse(createdObject=[LoginResponseObject(userId=1, username=username1, password=password1)])
+2022-02-15 22:47:27,168 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: validateLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-15 22:47:27,168 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.service.classes.LoginService
+Method: validateLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-15 22:47:27,169 INFO dLog [http-nio-8080-exec-9] RETURNING: PostResponse(createdObject=[LoginResponseObject(userId=1, username=username1, password=password1)])
+2022-02-15 22:47:27,169 INFO dLog [http-nio-8080-exec-9] RETURNING: PostResponse(createdObject=[LoginResponseObject(userId=1, username=username1, password=password1)])
+2022-02-15 22:47:27,191 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:47:27,196 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:47:27,230 INFO dLog [http-nio-8080-exec-10] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:47:27,230 INFO dLog [http-nio-8080-exec-10] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:00,963 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:48:00,963 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:48:00,966 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:00,966 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:00,971 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:48:00,971 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:48:00,974 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:00,974 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:20,558 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:48:20,559 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:48:20,561 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:20,561 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:20,565 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:48:20,565 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:48:20,567 INFO dLog [http-nio-8080-exec-4] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:20,567 INFO dLog [http-nio-8080-exec-4] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:23,589 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:48:23,589 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:48:23,591 INFO dLog [http-nio-8080-exec-5] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:23,591 INFO dLog [http-nio-8080-exec-5] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:23,594 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:48:23,594 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:48:23,596 INFO dLog [http-nio-8080-exec-6] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:23,596 INFO dLog [http-nio-8080-exec-6] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:32,635 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:48:32,636 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:48:32,639 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:32,639 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:32,643 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:48:32,643 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:48:32,645 INFO dLog [http-nio-8080-exec-8] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:32,645 INFO dLog [http-nio-8080-exec-8] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:34,531 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:48:34,531 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:48:34,533 INFO dLog [http-nio-8080-exec-9] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:34,533 INFO dLog [http-nio-8080-exec-9] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:34,536 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:48:34,536 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:48:34,539 INFO dLog [http-nio-8080-exec-10] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:34,539 INFO dLog [http-nio-8080-exec-10] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:36,515 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:48:36,515 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:48:36,517 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:36,518 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:36,521 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:48:36,521 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:48:36,524 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:36,524 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:38,613 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:48:38,613 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:48:38,615 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:38,615 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:38,619 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:48:38,619 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:48:38,621 INFO dLog [http-nio-8080-exec-4] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:38,622 INFO dLog [http-nio-8080-exec-4] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:39,679 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:48:39,679 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:48:39,682 INFO dLog [http-nio-8080-exec-5] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:39,682 INFO dLog [http-nio-8080-exec-5] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:39,686 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:48:39,686 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:48:39,689 INFO dLog [http-nio-8080-exec-6] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:39,689 INFO dLog [http-nio-8080-exec-6] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:42,143 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:48:42,143 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:48:42,147 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:42,147 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:42,150 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:48:42,150 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:48:42,152 INFO dLog [http-nio-8080-exec-8] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:42,152 INFO dLog [http-nio-8080-exec-8] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:44,134 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:48:44,134 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:48:44,136 INFO dLog [http-nio-8080-exec-9] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:44,136 INFO dLog [http-nio-8080-exec-9] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:44,140 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:48:44,140 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:48:44,142 INFO dLog [http-nio-8080-exec-10] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:44,142 INFO dLog [http-nio-8080-exec-10] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:47,801 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:48:47,801 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:48:47,802 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:47,803 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:47,806 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:48:47,806 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:48:47,808 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:48:47,808 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:49:09,093 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:49:09,093 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:49:09,096 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:49:09,096 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:49:09,099 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:49:09,099 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:49:09,102 INFO dLog [http-nio-8080-exec-4] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:49:09,102 INFO dLog [http-nio-8080-exec-4] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:50:39,635 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:50:39,635 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:50:39,638 INFO dLog [http-nio-8080-exec-6] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:50:39,638 INFO dLog [http-nio-8080-exec-6] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:50:39,641 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:50:39,641 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:50:39,645 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:50:39,645 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:03,656 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:51:03,656 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:51:03,657 INFO dLog [http-nio-8080-exec-8] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:03,658 INFO dLog [http-nio-8080-exec-8] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:03,661 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:51:03,661 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:51:03,662 INFO dLog [http-nio-8080-exec-9] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:03,662 INFO dLog [http-nio-8080-exec-9] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:08,903 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:51:08,903 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:51:08,905 INFO dLog [http-nio-8080-exec-10] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:08,905 INFO dLog [http-nio-8080-exec-10] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:08,907 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:51:08,907 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:51:08,911 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:08,911 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:14,982 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:51:14,982 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:51:14,997 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:14,997 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:15,001 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:51:15,001 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:51:15,005 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:15,005 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:17,594 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:51:17,594 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:51:17,595 INFO dLog [http-nio-8080-exec-4] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:17,595 INFO dLog [http-nio-8080-exec-4] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:17,598 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:51:17,598 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:51:17,600 INFO dLog [http-nio-8080-exec-5] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:17,600 INFO dLog [http-nio-8080-exec-5] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:19,368 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:51:19,368 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:51:19,370 INFO dLog [http-nio-8080-exec-6] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:19,370 INFO dLog [http-nio-8080-exec-6] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:19,372 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:51:19,372 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:51:19,374 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:19,375 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:25,262 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:51:25,263 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:51:25,265 INFO dLog [http-nio-8080-exec-8] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:25,265 INFO dLog [http-nio-8080-exec-8] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:25,268 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:51:25,268 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:51:25,271 INFO dLog [http-nio-8080-exec-9] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:25,271 INFO dLog [http-nio-8080-exec-9] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:27,572 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:51:27,572 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:51:27,574 INFO dLog [http-nio-8080-exec-10] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:27,574 INFO dLog [http-nio-8080-exec-10] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:27,577 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:51:27,577 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:51:27,579 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:27,579 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:28,276 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:51:28,276 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:51:28,277 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:28,278 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:28,280 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:51:28,280 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:51:28,284 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:28,285 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:29,512 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:51:29,513 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:51:29,514 INFO dLog [http-nio-8080-exec-4] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:29,514 INFO dLog [http-nio-8080-exec-4] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:29,518 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:51:29,518 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:51:29,520 INFO dLog [http-nio-8080-exec-5] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:29,521 INFO dLog [http-nio-8080-exec-5] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:34,575 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:51:34,575 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:51:34,577 INFO dLog [http-nio-8080-exec-6] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:34,577 INFO dLog [http-nio-8080-exec-6] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:34,580 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:51:34,580 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:51:34,582 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:34,582 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:57,383 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:51:57,383 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:51:57,384 INFO dLog [http-nio-8080-exec-8] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:57,384 INFO dLog [http-nio-8080-exec-8] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:57,387 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:51:57,387 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:51:57,389 INFO dLog [http-nio-8080-exec-9] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:57,389 INFO dLog [http-nio-8080-exec-9] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:58,439 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:51:58,439 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:51:58,441 INFO dLog [http-nio-8080-exec-10] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:58,441 INFO dLog [http-nio-8080-exec-10] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:58,444 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:51:58,444 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:51:58,446 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:51:58,446 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:01,036 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:52:01,036 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:52:01,038 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:01,038 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:01,041 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:52:01,041 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:52:01,042 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:01,043 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:03,447 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:52:03,447 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:52:03,449 INFO dLog [http-nio-8080-exec-4] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:03,450 INFO dLog [http-nio-8080-exec-4] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:03,453 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:52:03,454 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:52:03,456 INFO dLog [http-nio-8080-exec-5] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:03,456 INFO dLog [http-nio-8080-exec-5] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:04,919 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:52:04,919 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:52:04,921 INFO dLog [http-nio-8080-exec-6] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:04,921 INFO dLog [http-nio-8080-exec-6] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:04,925 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:52:04,925 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:52:04,926 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:04,927 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:06,941 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:52:06,941 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:52:06,943 INFO dLog [http-nio-8080-exec-8] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:06,943 INFO dLog [http-nio-8080-exec-8] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:06,945 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:52:06,945 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:52:06,947 INFO dLog [http-nio-8080-exec-9] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:06,947 INFO dLog [http-nio-8080-exec-9] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:24,239 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:52:24,239 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:52:24,241 INFO dLog [http-nio-8080-exec-10] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:24,241 INFO dLog [http-nio-8080-exec-10] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:24,244 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:52:24,244 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:52:24,246 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:24,246 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:27,429 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:52:27,429 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:52:27,431 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:27,431 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:27,434 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:52:27,434 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:52:27,437 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:27,437 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:28,096 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:52:28,097 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:52:28,101 INFO dLog [http-nio-8080-exec-4] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:28,101 INFO dLog [http-nio-8080-exec-4] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:28,104 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:52:28,104 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:52:28,107 INFO dLog [http-nio-8080-exec-5] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:28,107 INFO dLog [http-nio-8080-exec-5] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:32,409 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:52:32,410 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:52:32,411 INFO dLog [http-nio-8080-exec-6] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:32,411 INFO dLog [http-nio-8080-exec-6] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:32,414 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:52:32,414 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:52:32,415 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:32,415 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:45,501 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:52:45,501 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:52:45,503 INFO dLog [http-nio-8080-exec-8] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:45,503 INFO dLog [http-nio-8080-exec-8] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:45,505 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:52:45,505 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:52:45,507 INFO dLog [http-nio-8080-exec-9] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:45,507 INFO dLog [http-nio-8080-exec-9] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:54,111 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:52:54,111 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:52:54,112 INFO dLog [http-nio-8080-exec-10] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:54,113 INFO dLog [http-nio-8080-exec-10] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:54,116 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:52:54,116 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:52:54,118 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:54,118 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:56,915 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:52:56,915 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:52:56,916 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:56,916 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:56,918 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:52:56,918 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:52:56,919 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:52:56,919 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:02,511 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:53:02,511 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:53:02,512 INFO dLog [http-nio-8080-exec-4] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:02,512 INFO dLog [http-nio-8080-exec-4] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:02,515 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:53:02,516 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:53:02,517 INFO dLog [http-nio-8080-exec-5] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:02,517 INFO dLog [http-nio-8080-exec-5] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:03,659 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:53:03,659 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:53:03,661 INFO dLog [http-nio-8080-exec-6] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:03,661 INFO dLog [http-nio-8080-exec-6] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:03,664 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:53:03,664 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:53:03,665 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:03,666 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:04,491 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:53:04,491 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:53:04,492 INFO dLog [http-nio-8080-exec-8] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:04,492 INFO dLog [http-nio-8080-exec-8] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:04,494 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:53:04,495 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:53:04,496 INFO dLog [http-nio-8080-exec-9] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:04,496 INFO dLog [http-nio-8080-exec-9] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:07,425 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:53:07,426 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:53:07,427 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:07,427 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:07,429 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:53:07,429 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:53:07,431 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:07,431 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:09,649 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:53:09,649 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:53:09,650 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:09,650 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:09,653 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:53:09,653 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:53:09,654 INFO dLog [http-nio-8080-exec-4] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:09,654 INFO dLog [http-nio-8080-exec-4] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:25,091 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:53:25,091 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:53:25,092 INFO dLog [http-nio-8080-exec-5] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:25,092 INFO dLog [http-nio-8080-exec-5] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:25,095 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:53:25,095 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:53:25,097 INFO dLog [http-nio-8080-exec-6] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:25,097 INFO dLog [http-nio-8080-exec-6] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:27,757 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:53:27,757 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:53:27,758 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:27,758 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:27,761 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:53:27,761 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:53:27,762 INFO dLog [http-nio-8080-exec-8] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:27,762 INFO dLog [http-nio-8080-exec-8] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:34,570 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:53:34,570 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:53:34,572 INFO dLog [http-nio-8080-exec-9] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:34,573 INFO dLog [http-nio-8080-exec-9] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:34,575 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:53:34,575 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:53:34,576 INFO dLog [http-nio-8080-exec-10] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:34,577 INFO dLog [http-nio-8080-exec-10] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:37,503 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:53:37,503 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:53:37,505 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:37,507 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:37,511 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:53:37,511 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:53:37,513 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:53:37,514 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:54:32,679 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:54:32,679 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:54:32,680 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:54:32,680 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:54:32,683 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:54:32,683 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:54:32,685 INFO dLog [http-nio-8080-exec-4] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:54:32,685 INFO dLog [http-nio-8080-exec-4] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:54:33,439 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:54:33,440 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:54:33,441 INFO dLog [http-nio-8080-exec-5] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:54:33,441 INFO dLog [http-nio-8080-exec-5] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:54:33,443 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:54:33,443 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:54:33,445 INFO dLog [http-nio-8080-exec-6] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:54:33,445 INFO dLog [http-nio-8080-exec-6] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:54:35,372 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:54:35,372 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:54:35,376 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:54:35,376 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:54:35,380 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:54:35,380 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:54:35,381 INFO dLog [http-nio-8080-exec-8] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:54:35,382 INFO dLog [http-nio-8080-exec-8] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:54:37,031 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:54:37,031 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:54:37,032 INFO dLog [http-nio-8080-exec-9] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:54:37,032 INFO dLog [http-nio-8080-exec-9] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:54:37,035 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:54:37,035 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:54:37,036 INFO dLog [http-nio-8080-exec-10] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:54:37,036 INFO dLog [http-nio-8080-exec-10] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:54:52,526 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:54:52,526 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:54:52,527 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:54:52,527 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:54:52,530 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:54:52,530 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:54:52,531 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:54:52,531 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:54:58,780 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:54:58,780 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:54:58,781 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:54:58,781 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:54:58,784 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:54:58,784 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:54:58,785 INFO dLog [http-nio-8080-exec-4] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:54:58,785 INFO dLog [http-nio-8080-exec-4] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:54:59,465 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:54:59,465 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:54:59,467 INFO dLog [http-nio-8080-exec-5] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:54:59,468 INFO dLog [http-nio-8080-exec-5] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:54:59,471 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:54:59,471 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:54:59,472 INFO dLog [http-nio-8080-exec-6] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:54:59,472 INFO dLog [http-nio-8080-exec-6] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:55:17,437 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:55:17,437 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:55:17,439 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:55:17,439 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:55:17,444 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:55:17,444 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:55:17,446 INFO dLog [http-nio-8080-exec-8] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:55:17,447 INFO dLog [http-nio-8080-exec-8] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:55:20,239 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:55:20,239 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:55:20,240 INFO dLog [http-nio-8080-exec-9] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:55:20,240 INFO dLog [http-nio-8080-exec-9] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:55:20,242 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:55:20,243 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:55:20,244 INFO dLog [http-nio-8080-exec-10] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:55:20,244 INFO dLog [http-nio-8080-exec-10] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:55:22,255 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:55:22,255 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:55:22,257 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:55:22,257 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:55:22,263 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:55:22,264 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:55:22,265 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:55:22,266 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:55:31,966 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:55:31,967 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:55:31,968 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:55:31,968 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:55:31,972 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:55:31,972 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:55:31,972 INFO dLog [http-nio-8080-exec-4] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:55:31,972 INFO dLog [http-nio-8080-exec-4] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:55:38,147 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:55:38,147 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:55:38,148 INFO dLog [http-nio-8080-exec-5] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:55:38,148 INFO dLog [http-nio-8080-exec-5] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:55:38,151 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:55:38,151 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:55:38,152 INFO dLog [http-nio-8080-exec-6] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:55:38,152 INFO dLog [http-nio-8080-exec-6] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:55:39,214 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:55:39,214 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:55:39,216 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:55:39,216 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:55:39,219 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:55:39,219 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:55:39,220 INFO dLog [http-nio-8080-exec-8] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:55:39,220 INFO dLog [http-nio-8080-exec-8] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:55:40,823 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:55:40,823 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:55:40,824 INFO dLog [http-nio-8080-exec-9] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:55:40,824 INFO dLog [http-nio-8080-exec-9] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:55:40,828 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:55:40,828 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:55:40,829 INFO dLog [http-nio-8080-exec-10] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:55:40,829 INFO dLog [http-nio-8080-exec-10] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:55:52,515 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:55:52,516 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:55:52,517 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:55:52,517 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:55:52,521 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:55:52,521 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:55:52,522 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:55:52,522 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:59:43,488 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: validateLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-15 22:59:43,488 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.LoginService
+Method: validateLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-15 22:59:43,489 INFO dLog [http-nio-8080-exec-3] RETURNING: PostResponse(createdObject=[LoginResponseObject(userId=1, username=username1, password=password1)])
+2022-02-15 22:59:43,489 INFO dLog [http-nio-8080-exec-3] RETURNING: PostResponse(createdObject=[LoginResponseObject(userId=1, username=username1, password=password1)])
+2022-02-15 22:59:43,497 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: getProfile
+Arguments: [1]
+2022-02-15 22:59:43,501 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: getProfile
+Arguments: [AccountProfileRequest(profileId=1)]
+2022-02-15 22:59:43,529 INFO dLog [http-nio-8080-exec-4] RETURNING: GetResponse(gotObject=[AccountProfileResponse(profileId=1, userId=1, firstName=Tom, lastName=Cat, email=email@email.com, phoneNumber=5559991234, address=1 lane)])
+2022-02-15 22:59:43,529 INFO dLog [http-nio-8080-exec-4] RETURNING: GetResponse(gotObject=[AccountProfileResponse(profileId=1, userId=1, firstName=Tom, lastName=Cat, email=email@email.com, phoneNumber=5559991234, address=1 lane)])
+2022-02-15 22:59:43,544 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 22:59:43,544 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 22:59:43,547 INFO dLog [http-nio-8080-exec-5] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 22:59:43,547 INFO dLog [http-nio-8080-exec-5] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 23:24:17,865 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: validateLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-15 23:24:17,865 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.service.classes.LoginService
+Method: validateLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-15 23:24:17,867 INFO dLog [http-nio-8080-exec-8] RETURNING: PostResponse(createdObject=[LoginResponseObject(userId=1, username=username1, password=password1)])
+2022-02-15 23:24:17,867 INFO dLog [http-nio-8080-exec-8] RETURNING: PostResponse(createdObject=[LoginResponseObject(userId=1, username=username1, password=password1)])
+2022-02-15 23:24:17,873 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: getProfile
+Arguments: [1]
+2022-02-15 23:24:17,873 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: getProfile
+Arguments: [AccountProfileRequest(profileId=1)]
+2022-02-15 23:24:17,874 INFO dLog [http-nio-8080-exec-9] RETURNING: GetResponse(gotObject=[AccountProfileResponse(profileId=1, userId=1, firstName=Tom, lastName=Cat, email=email@email.com, phoneNumber=5559991234, address=1 lane)])
+2022-02-15 23:24:17,874 INFO dLog [http-nio-8080-exec-9] RETURNING: GetResponse(gotObject=[AccountProfileResponse(profileId=1, userId=1, firstName=Tom, lastName=Cat, email=email@email.com, phoneNumber=5559991234, address=1 lane)])
+2022-02-15 23:24:17,892 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 23:24:17,892 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 23:24:17,894 INFO dLog [http-nio-8080-exec-10] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 23:24:17,894 INFO dLog [http-nio-8080-exec-10] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 23:24:19,160 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.TransactionController
+Method: getTransactionHistory
+Arguments: [1]
+2022-02-15 23:24:19,163 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.TransactionService
+Method: getTransactionHistory
+Arguments: [1]
+2022-02-15 23:24:19,165 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.DepositService
+Method: getAllUserDeposits
+Arguments: [1]
+2022-02-15 23:24:19,172 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[])
+2022-02-15 23:24:19,172 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.WithdrawService
+Method: getAllUserWithdrawals
+Arguments: [1]
+2022-02-15 23:24:19,180 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[])
+2022-02-15 23:24:19,181 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[])
+2022-02-15 23:24:19,181 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[])
+2022-02-15 23:24:23,385 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [1]
+2022-02-15 23:24:23,385 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-15 23:24:23,386 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 23:24:23,386 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=130.0), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000.0, pendingBalance=299.0)])
+2022-02-15 23:24:24,435 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.presentation.controller.TransactionController
+Method: getTransactionHistory
+Arguments: [3]
+2022-02-15 23:24:24,435 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.TransactionService
+Method: getTransactionHistory
+Arguments: [3]
+2022-02-15 23:24:24,435 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.DepositService
+Method: getAllUserDeposits
+Arguments: [3]
+2022-02-15 23:24:24,435 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[])
+2022-02-15 23:24:24,435 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.WithdrawService
+Method: getAllUserWithdrawals
+Arguments: [3]
+2022-02-15 23:24:24,436 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[])
+2022-02-15 23:24:24,437 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[])
+2022-02-15 23:24:24,437 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[])

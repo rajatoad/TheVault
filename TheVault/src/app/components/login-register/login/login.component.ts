@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { PostLogin } from 'src/app/models/login/responses/post-login';
 import { LoginUser } from 'src/app/models/users/login-user.model';
+import { GetUser } from 'src/app/models/users/responses/get-user';
 import BuildUser from 'src/app/utils/build-user';
+import { RoutingAllocatorService } from 'src/app/_services/app_control/routing-allocator.service';
 import { AuthService } from 'src/app/_services/auth/auth.service';
+import { ProfileService } from 'src/app/_services/profile.service';
 import { UserSessionService } from 'src/app/_services/user/user-session.service';
 
 @Component({
@@ -24,7 +28,9 @@ export class LoginComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private authService: AuthService,
-    private userStorage: UserSessionService 
+    private userStorage: UserSessionService,
+    private router: RoutingAllocatorService,
+    private profileService: ProfileService
     ) { }
 
   ngOnInit(): void {
@@ -65,21 +71,21 @@ onSubmit(): void {
   let userN = this.form.get('username')?.value
   let passW = this.form.get('password')?.value
   if(userN != null && passW != null) {
-    let loginUser = new LoginUser(userN, passW)
-    this.authService.login(loginUser).subscribe({
-      next: data => {         
-        console.log(data);
-        this.isLoginFailed = false;
-        let builtUser = BuildUser.userBuilder(data);
-        this.userStorage.saveUser(builtUser)
-   
-      },
-      error: err => {
-        this.errorMessage = err.error.message;
-        console.log("Login failed")
-        this.isLoginFailed = true;
-      }
-    });        
+    let loginUser = new LoginUser(userN, passW);
+    this.authService.validateLogin(loginUser)
+      .subscribe(
+        (data: PostLogin) => {
+          console.log(data);
+          this.userStorage.saveUserId(data.createdObject[0].userId);
+          this.profileService.getUserProfile(this.userStorage.getUserId()).subscribe(
+            (data: GetUser) => {
+              this.userStorage.saveUser(data.gotObject[0]);
+              this.router.accountView();
+            }            
+            );
+          }
+        );
+ 
   }
 }
 

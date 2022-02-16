@@ -32,7 +32,6 @@ export class AccountDetailComponent implements OnInit {
   }
 
   logout(){
-    this.userSession.clearUser();
     this.router.login();
   }
 

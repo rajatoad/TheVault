@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppBootstrapComponent } from './app-bootstrap/app-bootstrap.component';
+import { AccountProfileComponent } from './components/account-profile/account-profile.component';
 import { AccountDetailComponent } from './components/account/account-detail/account-detail.component';
-import { AccountTransactionsComponent } from './components/account/account-transactions/account-transactions.component';
+import { AccountTransactionsComponent } from './components/account/account-transactions/account-transactions.component'; 
 import { TransactionHistoryComponent } from './components/account/account-transactions/history/transaction-history/transaction-history.component';
 import { AccountViewComponent } from './components/account/account-view/account-view.component';
 import { SelectComponent } from './components/account/select/select.component';
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     component: TransactionHistoryComponent,
     path: 'account-history'
+  },
+  {
+    component: AccountProfileComponent,
+    path: 'profile'
   }
 ];
 

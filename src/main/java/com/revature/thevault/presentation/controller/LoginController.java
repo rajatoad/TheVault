@@ -2,8 +2,11 @@ package com.revature.thevault.presentation.controller;
 
 import com.revature.thevault.presentation.model.request.LoginRequest;
 import com.revature.thevault.presentation.model.response.LoginResponse;
+import com.revature.thevault.presentation.model.response.builder.GetResponse;
+import com.revature.thevault.presentation.model.response.builder.PostResponse;
 import com.revature.thevault.service.classes.AccountProfileService;
 import com.revature.thevault.service.classes.LoginService;
+import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -23,6 +26,11 @@ public class LoginController {
     @RequestMapping("/check")
     public LoginResponse checkLogin(@RequestBody LoginRequest loginRequest){
         return loginService.checkLogin(loginRequest);
+    }
+
+    @PostMapping("/validate")
+    public PostResponse validateLogin(@RequestBody LoginRequest loginRequest){
+        return loginService.validateLogin(loginRequest);
     }
 
 //    @ResponseStatus(HttpStatus.CREATED)
