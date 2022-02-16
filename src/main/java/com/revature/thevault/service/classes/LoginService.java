@@ -61,8 +61,19 @@ public class LoginService implements LoginServiceInterface {
     }
 
     @Override
-    public LoginResponse resetPassword(ResetPasswordRequest resetPasswordRequest) {
-        return null;
+    public PostResponse resetPassword(ResetPasswordRequest resetPasswordRequest) {
+        try{
+            return PostResponse.builder()
+                    .success(true)
+                    .createdObject(Collections.singletonList(loginRepository.resetPassword(
+                            resetPasswordRequest.getUsername(),
+                            resetPasswordRequest.getEmail()
+                    )))
+                    .build();
+        }catch (Exception e){
+            throw new InvalidRequestException(HttpStatus.BAD_REQUEST, "invalid request");
+        }
+
     }
 
     @Override

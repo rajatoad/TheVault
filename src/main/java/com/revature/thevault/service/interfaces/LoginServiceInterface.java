@@ -6,7 +6,6 @@ import com.revature.thevault.presentation.model.response.LoginResponse;
 import com.revature.thevault.presentation.model.response.builder.GetResponse;
 import com.revature.thevault.presentation.model.response.builder.PostResponse;
 import com.revature.thevault.repository.entity.LoginCredentialEntity;
-import com.revature.thevault.presentation.model.request.NewLoginCredentialsRequest;
 import com.revature.thevault.service.exceptions.InvalidInputException;
 
 public interface LoginServiceInterface {
@@ -16,7 +15,7 @@ public interface LoginServiceInterface {
 
     PostResponse createNewLogin(LoginCredentialEntity newLoginRequest) throws InvalidInputException;
 
-    LoginResponse resetPassword(ResetPasswordRequest bodyAsClass);
+    PostResponse resetPassword(ResetPasswordRequest resetPasswordRequest);
 
     LoginCredentialEntity findUserByUserId(int userId);
 }

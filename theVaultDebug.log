@@ -1252,3 +1252,13 @@ Method: getLoginCredentialFromLogin
 Arguments: [LoginRequest(username=username1, password=password1)]
 2022-02-16 14:40:29,763 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[LoginCredentialEntity(pk_user_id=1, username=username1, password=password1)])
 2022-02-16 14:40:29,763 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[LoginCredentialEntity(pk_user_id=1, username=username1, password=password1)])
+2022-02-16 16:56:26,627 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: resetPassword
+Arguments: [ResetPasswordRequest(username=Carole.Berge, email=Myrna58@gmail.com)]
+2022-02-16 16:56:26,637 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.LoginService
+Method: resetPassword
+Arguments: [ResetPasswordRequest(username=Carole.Berge, email=Myrna58@gmail.com)]
+2022-02-16 16:56:26,838 ERROR dLog [http-nio-8080-exec-1] CONTROLLER CLASS: class com.revature.thevault.service.classes.LoginService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-16 16:56:26,838 ERROR dLog [http-nio-8080-exec-1] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.LoginController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException

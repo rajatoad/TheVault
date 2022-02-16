@@ -1,6 +1,7 @@
 package com.revature.thevault.presentation.controller;
 
 import com.revature.thevault.presentation.model.request.LoginRequest;
+import com.revature.thevault.presentation.model.request.ResetPasswordRequest;
 import com.revature.thevault.presentation.model.response.LoginResponse;
 import com.revature.thevault.presentation.model.response.builder.GetResponse;
 import com.revature.thevault.presentation.model.response.builder.PostResponse;
@@ -41,5 +42,10 @@ public class LoginController {
     @PostMapping("/validate")
     public GetResponse findLoginCredential(@RequestBody LoginRequest loginRequest){
         return loginService.getLoginCredentialFromLogin(loginRequest);
+    }
+
+    @PostMapping("/reset-password")
+    public PostResponse resetPassword(@RequestBody ResetPasswordRequest resetPasswordRequest){
+        return loginService.resetPassword(resetPasswordRequest);
     }
 }
