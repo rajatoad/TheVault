@@ -40,5 +40,4 @@ public class AccountProfileController {
     public PostResponse updateProfile(@RequestBody ProfileCreateRequest profileCreateRequest){
         return accountProfileService.updateProfile(profileCreateRequest);
     }
-
 }

@@ -1,0 +1,33 @@
+<!-- <h1>Logs</h1>
+<ul>
+<li>
+    <span class="accountid">{{transactions.amount}}</span>
+</li>
+</ul> -->
+<div class="container mt-3">
+    <h2>Transaction History</h2>
+    <table *ngFor="let trans of transactions" class="table table-hover">
+      <thead>
+        <tr>
+          <th>Deposit ID</th>
+          <th>Account ID</th>
+          <th>Reference</th>
+          <th>Deposit Date</th>
+          <th>Amount</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{trans.depositid}}</td>
+          <td>{{trans.accountid}}</td>
+          <td>{{trans.reference}}</td>
+          <td>{{trans.depositDate | date}}</td>
+          <td>{{trans.amount | currency}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+ 
+ 
+  
