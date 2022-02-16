@@ -1430,3 +1430,227 @@ Method: getAccounts
 Arguments: [1]
 2022-02-15 14:40:25,999 INFO dLog [http-nio-8080-exec-6] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100, pendingBalance=130), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000, pendingBalance=299)])
 2022-02-15 14:40:26,000 INFO dLog [http-nio-8080-exec-6] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100, pendingBalance=130), AccountResponseObject(accountId=3, userId=1, accountType=Savings, availableBalance=1000, pendingBalance=299)])
+2022-02-15 20:07:07,104 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.DepositController
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Direct Deposit, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 20:07:07,114 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.DepositService
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Direct Deposit, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 20:07:07,122 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.DepositTypeService
+Method: findDepositTypeEntityByName
+Arguments: [Direct Deposit]
+2022-02-15 20:07:07,162 ERROR dLog [http-nio-8080-exec-1] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositTypeService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidDepositTypeException
+2022-02-15 20:07:07,162 ERROR dLog [http-nio-8080-exec-1] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 20:07:07,162 ERROR dLog [http-nio-8080-exec-1] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.DepositController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 20:11:24,317 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.presentation.controller.DepositController
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 20:11:24,317 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.DepositService
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 20:11:24,317 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.DepositTypeService
+Method: findDepositTypeEntityByName
+Arguments: [Cash]
+2022-02-15 20:11:24,318 ERROR dLog [http-nio-8080-exec-4] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositTypeService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidDepositTypeException
+2022-02-15 20:11:24,318 ERROR dLog [http-nio-8080-exec-4] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 20:11:24,318 ERROR dLog [http-nio-8080-exec-4] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.DepositController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 20:14:27,195 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.DepositController
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 20:14:27,205 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.DepositService
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 20:14:27,211 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.DepositTypeService
+Method: findDepositTypeEntityByName
+Arguments: [Cash]
+2022-02-15 20:14:27,260 INFO dLog [http-nio-8080-exec-2] Returning: NULL VALUE
+2022-02-15 20:14:27,313 ERROR dLog [http-nio-8080-exec-2] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 20:14:27,313 ERROR dLog [http-nio-8080-exec-2] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.DepositController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 20:14:28,416 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.presentation.controller.DepositController
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 20:14:28,416 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.DepositService
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 20:14:28,416 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.DepositTypeService
+Method: findDepositTypeEntityByName
+Arguments: [Cash]
+2022-02-15 20:14:28,417 INFO dLog [http-nio-8080-exec-4] Returning: NULL VALUE
+2022-02-15 20:14:28,418 ERROR dLog [http-nio-8080-exec-4] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 20:14:28,418 ERROR dLog [http-nio-8080-exec-4] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.DepositController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 20:14:29,121 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.presentation.controller.DepositController
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 20:14:29,121 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.DepositService
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 20:14:29,121 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.DepositTypeService
+Method: findDepositTypeEntityByName
+Arguments: [Cash]
+2022-02-15 20:14:29,122 INFO dLog [http-nio-8080-exec-6] Returning: NULL VALUE
+2022-02-15 20:14:29,125 ERROR dLog [http-nio-8080-exec-6] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 20:14:29,125 ERROR dLog [http-nio-8080-exec-6] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.DepositController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 20:14:29,713 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.presentation.controller.DepositController
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 20:14:29,713 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.service.classes.DepositService
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 20:14:29,713 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.service.classes.DepositTypeService
+Method: findDepositTypeEntityByName
+Arguments: [Cash]
+2022-02-15 20:14:29,714 INFO dLog [http-nio-8080-exec-8] Returning: NULL VALUE
+2022-02-15 20:14:29,716 ERROR dLog [http-nio-8080-exec-8] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 20:14:29,716 ERROR dLog [http-nio-8080-exec-8] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.DepositController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 20:14:30,271 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.presentation.controller.DepositController
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 20:14:30,271 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.service.classes.DepositService
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 20:14:30,271 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.service.classes.DepositTypeService
+Method: findDepositTypeEntityByName
+Arguments: [Cash]
+2022-02-15 20:14:30,272 INFO dLog [http-nio-8080-exec-10] Returning: NULL VALUE
+2022-02-15 20:14:30,273 ERROR dLog [http-nio-8080-exec-10] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 20:14:30,273 ERROR dLog [http-nio-8080-exec-10] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.DepositController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 20:15:26,306 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.DepositController
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 20:15:26,315 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.DepositService
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 20:15:26,320 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.DepositTypeService
+Method: findDepositTypeEntityByName
+Arguments: [Cash]
+2022-02-15 20:15:26,358 INFO dLog [http-nio-8080-exec-1] Returning: NULL VALUE
+2022-02-15 20:15:26,407 ERROR dLog [http-nio-8080-exec-1] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 20:15:26,408 ERROR dLog [http-nio-8080-exec-1] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.DepositController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 20:15:37,061 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.presentation.controller.DepositController
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 20:15:37,061 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.DepositService
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 20:15:37,061 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.DepositTypeService
+Method: findDepositTypeEntityByName
+Arguments: [Cash]
+2022-02-15 20:15:37,062 INFO dLog [http-nio-8080-exec-4] Returning: NULL VALUE
+2022-02-15 20:15:37,065 ERROR dLog [http-nio-8080-exec-4] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 20:15:37,065 ERROR dLog [http-nio-8080-exec-4] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.DepositController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 20:15:37,519 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.presentation.controller.DepositController
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 20:15:37,519 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.DepositService
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 20:15:37,519 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.DepositTypeService
+Method: findDepositTypeEntityByName
+Arguments: [Cash]
+2022-02-15 20:15:37,520 INFO dLog [http-nio-8080-exec-6] Returning: NULL VALUE
+2022-02-15 20:15:37,522 ERROR dLog [http-nio-8080-exec-6] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 20:15:37,522 ERROR dLog [http-nio-8080-exec-6] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.DepositController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 20:15:38,029 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.presentation.controller.DepositController
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 20:15:38,029 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.service.classes.DepositService
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 20:15:38,029 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.service.classes.DepositTypeService
+Method: findDepositTypeEntityByName
+Arguments: [Cash]
+2022-02-15 20:15:38,030 INFO dLog [http-nio-8080-exec-8] Returning: NULL VALUE
+2022-02-15 20:15:38,032 ERROR dLog [http-nio-8080-exec-8] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 20:15:38,033 ERROR dLog [http-nio-8080-exec-8] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.DepositController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 20:15:38,626 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.presentation.controller.DepositController
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 20:15:38,626 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.service.classes.DepositService
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 20:15:38,626 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.service.classes.DepositTypeService
+Method: findDepositTypeEntityByName
+Arguments: [Cash]
+2022-02-15 20:15:38,627 INFO dLog [http-nio-8080-exec-10] Returning: NULL VALUE
+2022-02-15 20:15:38,628 ERROR dLog [http-nio-8080-exec-10] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 20:15:38,628 ERROR dLog [http-nio-8080-exec-10] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.DepositController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 20:17:54,413 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.DepositController
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 20:17:54,423 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.DepositService
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 20:17:54,429 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.DepositTypeService
+Method: findDepositTypeEntityByName
+Arguments: [Cash]
+2022-02-15 20:17:54,470 INFO dLog [http-nio-8080-exec-1] Returning: NULL VALUE
+2022-02-15 20:17:54,524 ERROR dLog [http-nio-8080-exec-1] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 20:17:54,524 ERROR dLog [http-nio-8080-exec-1] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.DepositController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 20:17:55,272 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.presentation.controller.DepositController
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 20:17:55,272 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.DepositService
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 20:17:55,272 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.DepositTypeService
+Method: findDepositTypeEntityByName
+Arguments: [Cash]
+2022-02-15 20:17:55,273 INFO dLog [http-nio-8080-exec-4] Returning: NULL VALUE
+2022-02-15 20:17:55,275 ERROR dLog [http-nio-8080-exec-4] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 20:17:55,275 ERROR dLog [http-nio-8080-exec-4] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.DepositController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 20:17:55,817 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.presentation.controller.DepositController
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 20:17:55,817 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.DepositService
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 20:17:55,817 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.DepositTypeService
+Method: findDepositTypeEntityByName
+Arguments: [Cash]
+2022-02-15 20:17:55,819 INFO dLog [http-nio-8080-exec-6] Returning: NULL VALUE
+2022-02-15 20:17:55,820 ERROR dLog [http-nio-8080-exec-6] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 20:17:55,820 ERROR dLog [http-nio-8080-exec-6] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.DepositController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 20:20:47,338 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.DepositController
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 20:20:47,348 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.DepositService
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 20:20:47,356 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.DepositTypeService
+Method: findDepositTypeEntityByName
+Arguments: [Cash]
+2022-02-15 20:20:47,405 INFO dLog [http-nio-8080-exec-1] RETURNING: DepositTypeEntity(pk_deposit_type_id=1, name=Cash)
+2022-02-15 20:20:47,446 INFO dLog [http-nio-8080-exec-1] RETURNING: PostResponse(createdObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=hellow, dateDeposit=2022-02-15, amount=3003.3)])
+2022-02-15 20:20:47,447 INFO dLog [http-nio-8080-exec-1] RETURNING: PostResponse(createdObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=hellow, dateDeposit=2022-02-15, amount=3003.3)])

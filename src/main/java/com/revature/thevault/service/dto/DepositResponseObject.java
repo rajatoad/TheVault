@@ -17,7 +17,7 @@ public class DepositResponseObject {
 	String depositType;
 	String reference;
 	LocalDate dateDeposit;
-	int amount;
+	float amount;
 }
  
 

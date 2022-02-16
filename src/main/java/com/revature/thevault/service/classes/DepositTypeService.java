@@ -9,18 +9,22 @@ import com.revature.thevault.repository.dao.DepositTypeRepository;
 import com.revature.thevault.repository.entity.DepositTypeEntity;
 import com.revature.thevault.service.exceptions.InvalidDepositTypeException;
 import com.revature.thevault.service.interfaces.DepositTypeInterface;
+
 @Service("depositTypeService")
 public class DepositTypeService implements DepositTypeInterface {
-	 @Autowired
-	    private DepositTypeRepository depositTypeRepository;
 
+		@Autowired
+		private DepositTypeRepository depositTypeRepository;
 	 
 		@Override
 		public DepositTypeEntity findDepositTypeEntityByName(String name) {
-			
-			 DepositTypeEntity depositTypeEntity = depositTypeRepository.findByName(name);
-		        if(depositTypeEntity != null) return depositTypeEntity;
-		        else throw new InvalidDepositTypeException(HttpStatus.BAD_REQUEST, "Invalid Deposit Type Provided: " + name);
-		    }
 
+				try{
+					DepositTypeEntity depositTypeEntity = depositTypeRepository.findByName(name);
+					return depositTypeEntity;
+				}catch(Exception e){
+					throw new InvalidDepositTypeException(HttpStatus.BAD_REQUEST, "Invalid Deposit Type Provided: " + name);
+				}
+
+		}
 }

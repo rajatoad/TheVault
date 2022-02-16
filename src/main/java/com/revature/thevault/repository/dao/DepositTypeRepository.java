@@ -7,5 +7,5 @@ import com.revature.thevault.repository.entity.DepositTypeEntity;
 
 @Repository("depositTypeRepository")
 public interface DepositTypeRepository extends JpaRepository<DepositTypeEntity, Integer> {
-    DepositTypeEntity findByName(String depositType);
+    DepositTypeEntity findByName(String name);
 }

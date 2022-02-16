@@ -8,7 +8,6 @@ import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
 import java.sql.Date;
-import java.time.LocalDate;
 
 @Data
 @NoArgsConstructor
@@ -30,8 +29,8 @@ public class DepositEntity {
     DepositTypeEntity deposittypeentity;
     @Column(name = "reference")
     String reference;
-    @Column(name = "date")
-    LocalDate date_deposit;
+    @Column(name = "date_deposit")
+    Date date_deposit;
     @Column(name = "amount")
-    int amount;
+    float amount;
 }

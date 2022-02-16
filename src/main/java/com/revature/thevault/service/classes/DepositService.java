@@ -11,6 +11,7 @@ import com.revature.thevault.service.exceptions.InvalidAccountIdException;
 import com.revature.thevault.service.exceptions.InvalidRequestException;
 import com.revature.thevault.service.interfaces.DepositServiceInterface;
 
+import java.sql.Date;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -43,7 +44,7 @@ public class DepositService implements DepositServiceInterface {
                                             new AccountEntity(depositRequest.getAccountId(), new LoginCredentialEntity(), new AccountTypeEntity(), 0, 0),
                                            depositTypeService.findDepositTypeEntityByName(depositRequest.getDepositType()),
                                            depositRequest.getReference(),
-                                           LocalDate.now(),
+                                           Date.valueOf(LocalDate.now()),
                                            depositRequest.getAmount()
                                    )
                            )
@@ -85,13 +86,19 @@ public class DepositService implements DepositServiceInterface {
     }
 
     private List<DepositEntity> getUserDepositsByAccountIdAndType(int accountId, DepositTypeEntity depositTypeEntity) {
-        return depositRepository.findbyAccountentityAndDeposittypeentity(
+        return depositRepository.findByAccountentityAndDeposittypeentity(
                 new AccountEntity(accountId, new LoginCredentialEntity(), new AccountTypeEntity(), 0, 0),
                 depositTypeEntity);
     }
 
     private List<DepositEntity> getUserDepositsByAccountId(int accountId) {
-        return depositRepository.findByAccountId(accountId);
+        return depositRepository.findByAccountentity(new AccountEntity(
+                accountId,
+                new LoginCredentialEntity(),
+                new AccountTypeEntity(),
+                0,
+                0
+        ));
     }
 
     private DepositResponseObject convertDepositEntityToResponse(DepositEntity depositEntity) {
@@ -100,7 +107,7 @@ public class DepositService implements DepositServiceInterface {
         		depositEntity.getAccountentity().getPk_account_id(),
         		depositEntity.getDeposittypeentity().getName(),
         		depositEntity.getReference(),
-        		depositEntity.getDate_deposit(),
+        		depositEntity.getDate_deposit().toLocalDate(),
         		depositEntity.getAmount()
         );
     }

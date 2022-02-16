@@ -13,9 +13,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository("depositRepository")
 public interface DepositRepository extends JpaRepository<DepositEntity, Integer> {
-
-	List<DepositEntity> findByAccountId(int accountId);
-
-
-    List<DepositEntity> findbyAccountentityAndDeposittypeentity(AccountEntity accountEntity, DepositTypeEntity depositTypeEntity);
+    List<DepositEntity> findByAccountentity(AccountEntity accountEntity);
+    List<DepositEntity> findByAccountentityAndDeposittypeentity(AccountEntity accountEntity, DepositTypeEntity depositTypeEntity);
 }
