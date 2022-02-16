@@ -15,36 +15,4 @@ public class DepositRequest {
     int accountId;
     String reference;
     int amount;
-	public DepositRequest(String depositType, int accountId, String reference, int amount) {
-		super();
-		this.depositType = depositType;
-		this.accountId = accountId;
-		this.reference = reference;
-		this.amount = amount;
-	}
-	public String getDepositType() {
-		return depositType;
-	}
-	public void setDepositType(String depositType) {
-		this.depositType = depositType;
-	}
-	public int getAccountId() {
-		return accountId;
-	}
-	public void setAccountId(int accountId) {
-		this.accountId = accountId;
-	}
-	public String getReference() {
-		return reference;
-	}
-	public void setReference(String reference) {
-		this.reference = reference;
-	}
-	public int getAmount() {
-		return amount;
-	}
-	public void setAmount(int amount) {
-		this.amount = amount;
-	}
-	
 }

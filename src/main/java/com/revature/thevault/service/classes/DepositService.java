@@ -1,23 +1,20 @@
 package com.revature.thevault.service.classes;
 
 
-import com.revature.thevault.presentation.model.request.CreateAccountRequest;
 import com.revature.thevault.presentation.model.request.DepositRequest;
 import com.revature.thevault.presentation.model.response.builder.GetResponse;
 import com.revature.thevault.presentation.model.response.builder.PostResponse;
 import com.revature.thevault.repository.dao.DepositRepository;
-import com.revature.thevault.repository.entity.AccountEntity;
-import com.revature.thevault.repository.entity.DepositEntity;
-import com.revature.thevault.repository.entity.LoginCredentialEntity;
+import com.revature.thevault.repository.entity.*;
 import com.revature.thevault.service.dto.DepositResponseObject;
 import com.revature.thevault.service.exceptions.InvalidAccountIdException;
 import com.revature.thevault.service.exceptions.InvalidRequestException;
 import com.revature.thevault.service.interfaces.DepositServiceInterface;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Optional;
 
 import javax.persistence.EntityNotFoundException;
 
@@ -27,31 +24,43 @@ import org.springframework.stereotype.Service;
 
 @Service("depositService")
 public class DepositService implements DepositServiceInterface {
-	 @Autowired
-	    private DepositRepository depositRepository;
-	 @Autowired
+
+    @Autowired
+   private DepositRepository depositRepository;
+
+   @Autowired
 	 private DepositTypeService depositTypeService;
-	 @Autowired
-	 private AccountTypeService accountTypeService;
-	@Override
-    public PostResponse createDeposit(DepositRequest depositRequest) {
-//		  try {
-//	            return PostResponse.builder()
-//	                    .success(true)
-//	                    .createdObject(Collections.singletonList(
-//	                            convertDepositEntityToResponse(
-//	                                    depositRepository.save( 
-//	                                    		0,
-//	                                    		0,
-		return null;	    }
+
+   @Override
+   public PostResponse createDeposit(DepositRequest depositRequest){
+       try{
+           return PostResponse.builder()
+                   .success(true)
+                   .createdObject(Collections.singletonList(
+                           convertDepositEntityToResponse(depositRepository.save(
+                                   new DepositEntity(
+                                           0,
+                                            new AccountEntity(depositRequest.getAccountId(), new LoginCredentialEntity(), new AccountTypeEntity(), 0, 0),
+                                           depositTypeService.findDepositTypeEntityByName(depositRequest.getDepositType()),
+                                           depositRequest.getReference(),
+                                           LocalDate.now(),
+                                           depositRequest.getAmount()
+                                   )
+                           )
+                   )))
+                   .build();
+       }catch(Exception e){
+           throw new InvalidRequestException(HttpStatus.BAD_REQUEST, "Bad request");
+       }
+   }
+
     @Override
-  public GetResponse getAllUserDeposits(int accountId) {
+    public GetResponse getAllUserDeposits(int accountId) {
         try {
             List<DepositEntity> depositEntities = getUserDepositsByAccountId(accountId);
             return GetResponse.builder()
                     .success(true)
-                    .gotObject(
-                            convertDepositEntitiesToResponseList(depositEntities))
+                    .gotObject(convertDepositEntitiesToResponseList(depositEntities))
                     .build();
         }catch(InvalidAccountIdException e){
             throw e;
@@ -60,48 +69,36 @@ public class DepositService implements DepositServiceInterface {
         }catch(Exception e){
             throw new InvalidRequestException(HttpStatus.BAD_REQUEST, "Invalid Request");
         }
-//return null;    
-}
-    
-    
-
-    @Override
-    public GetResponse getAlLUserDepositsOfType(int accountId, int depositTypeId) {
-        return null;
     }
 
     @Override
-    public GetResponse getAllDeposits() {
-        return null;
+    public GetResponse getAlLUserDepositsOfType(int accountId, String depositType) {
+       try{
+           List<DepositEntity> depositEntities = getUserDepositsByAccountIdAndType(accountId, depositTypeService.findDepositTypeEntityByName(depositType));
+           return GetResponse.builder()
+                   .success(true)
+                   .gotObject(convertDepositEntitiesToResponseList(depositEntities))
+                   .build();
+       }catch(Exception e){
+           throw new InvalidRequestException(HttpStatus.BAD_REQUEST, e.getMessage());
+       }
     }
 
-    @Override
-    public GetResponse getAllDepositsOfType(int depositTypeId) {
-        return null;
+    private List<DepositEntity> getUserDepositsByAccountIdAndType(int accountId, DepositTypeEntity depositTypeEntity) {
+        return depositRepository.findbyAccountentityAndDeposittypeentity(
+                new AccountEntity(accountId, new LoginCredentialEntity(), new AccountTypeEntity(), 0, 0),
+                depositTypeEntity);
     }
-    
-   private List<DepositEntity>  getUserDepositsByAccountId(int accountId ){
-        try {
-            return depositRepository.findByAccountId(accountId);
-        }catch(Exception e){
-            throw new InvalidAccountIdException(HttpStatus.BAD_REQUEST, "Invalid Account Id Provided: " + accountId);
-        }
-//return null;  
-        }
-    private DepositEntity getDepositById(int accountId){
-        try {
-            Optional<DepositEntity> depositEntityOptional = depositRepository.findById(accountId);
-            if (depositEntityOptional.isPresent()) return depositEntityOptional.get();
-            else throw new EntityNotFoundException();
-        }catch(Exception e){
-            throw new InvalidAccountIdException(HttpStatus.BAD_REQUEST, "Invalid Account Id Provided: " + accountId);
-        }
+
+    private List<DepositEntity> getUserDepositsByAccountId(int accountId) {
+        return depositRepository.findByAccountId(accountId);
     }
+
     private DepositResponseObject convertDepositEntityToResponse(DepositEntity depositEntity) {
         return new DepositResponseObject(
         		depositEntity.getPk_deposit_id(),
-        		depositEntity.getAccountEntity().getPk_account_id(),
-        		depositEntity.getDepositTypeEntity().getName(),
+        		depositEntity.getAccountentity().getPk_account_id(),
+        		depositEntity.getDeposittypeentity().getName(),
         		depositEntity.getReference(),
         		depositEntity.getDate_deposit(),
         		depositEntity.getAmount()

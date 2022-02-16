@@ -7,6 +7,7 @@ import com.revature.thevault.repository.entity.DepositEntity;
 
 import java.util.List;
 
+import com.revature.thevault.repository.entity.DepositTypeEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -15,6 +16,6 @@ public interface DepositRepository extends JpaRepository<DepositEntity, Integer>
 
 	List<DepositEntity> findByAccountId(int accountId);
 
-	
-	
+
+    List<DepositEntity> findbyAccountentityAndDeposittypeentity(AccountEntity accountEntity, DepositTypeEntity depositTypeEntity);
 }
