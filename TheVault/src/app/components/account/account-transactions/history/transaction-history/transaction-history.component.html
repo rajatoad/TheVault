@@ -15,19 +15,15 @@
           <th scope="col">Amount</th>
         </tr>
       </thead>
-      <div *ngFor="let tran of transactions">
         <tbody>
-          <tr>
-            <th scope="row">{{tran.transactionId}}</th>
+          
+          <tr *ngFor="let tran of transactions; index as i">
+            <th scope="row">{{i + 1}}</th>
             <td>{{tran.transactionType}}</td>
             <td>{{tran.date | date}}</td>
             <td>{{tran.amount | currency}}</td>
           </tr>
+          
         </tbody>
-      </div>
     </table>
   </div>
-  
- 
- 
-  

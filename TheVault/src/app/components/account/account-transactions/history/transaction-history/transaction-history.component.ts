@@ -12,18 +12,13 @@ export class TransactionHistoryComponent implements OnInit {
 
   @Input()
   account!: Account; 
+  @Input()
   transactions: Transaction[] = [];
-  constructor(private transService: TransactionHistoryService) { }
+  constructor(
+    private transService: TransactionHistoryService
+  ) { }
 
   ngOnInit(): void {
-    this.getHistory();
-  }
-
-  getHistory(): void{
-    this.transService.getHistory(this.account.accountId).subscribe(
-      (data: GetTransaction) => this.transactions = data.gotObject
-    )
-
   }
 
 

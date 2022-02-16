@@ -25,8 +25,8 @@
               Transactions
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="/account-withdraw">Deposit</a></li>
-              <li><a class="dropdown-item" href="/account-withdraw">Withdraw</a></li>
+              <li><a class="dropdown-item" (click)="depositGenerator()">Deposit</a></li>
+              <li><a class="dropdown-item" (click)="withdrawGenerator()">Withdraw</a></li>
             </ul>
           </li>
         </ul>
@@ -37,6 +37,12 @@
       </div>
     </div>
   </nav>
+  <div *ngIf="createDeposit">
+    <app-deposit-generate (submitEmitter)="depositSubmitEvent($event)"></app-deposit-generate>
+  </div>
+  <div *ngIf="createWithdraw">
+    <app-withdraw-generate (submitEmitter)="withdrawSubmitEvent($event)"></app-withdraw-generate>
+  </div>
     <app-account-info [account]="account"></app-account-info>
-    <app-transaction-history [account]="account"></app-transaction-history>
+    <app-transaction-history [account]="account" [transactions]="transactions"></app-transaction-history>
 </div>

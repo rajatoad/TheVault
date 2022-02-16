@@ -9,6 +9,8 @@ import { AccountViewComponent } from './components/account/account-view/account-
 import { SelectComponent } from './components/account/select/select.component';
 import { LoginComponent } from './components/login-register/login/login.component';
 import { RegisterComponent } from './components/login-register/register/register.component';
+import { DepositGenerateComponent } from './components/transaction/deposit-generate/deposit-generate.component';
+import { WithdrawGenerateComponent } from './components/transaction/withdraw-generate/withdraw-generate.component';
 
 const routes: Routes = [
   {
@@ -41,6 +43,14 @@ const routes: Routes = [
   {
     component: AccountProfileComponent,
     path: 'profile'
+  },
+  {
+    component: DepositGenerateComponent,
+    path: 'deposit'
+  },
+  {
+    component: WithdrawGenerateComponent,
+    path: 'withdraw-test'
   }
 ];
 

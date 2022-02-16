@@ -1,1 +1,22 @@
-<p>deposit-generate works!</p>
+<h1>Make a Deposit</h1>
+<form #depositForm class="was-validated" (ngSubmit)="onClickSubmit(Wbox.value, depositType.value, reference.value)">
+    <div class="col-md-1">
+      <label for="Wbox" class="form-label">Deposit:</label>
+      <input type="number" class="form-control" min="1" id="Wbox" #Wbox placeholder="Desired Amount" name="withdrawbox" required ngModel>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Enter number greater than 1</div>
+    </div>
+     <div class="col-md-2">
+         <label for="depositTypeBox" class="form-label">Deposit Type</label>
+        <select class="form-control" id="depositTypeBox" name="depTypeBox" #depositType required ngModel>
+            <option>Cash</option>
+            <option>Cheque</option>
+            <option>Direct Deposit</option>
+        </select>
+    </div>
+    <div class="col-md-3">
+        <label for="refBox" class="form-lable">Reference</label>
+        <input type="text" class="form-control" id="refBox" name="referenceBox" required #reference ngModel>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
