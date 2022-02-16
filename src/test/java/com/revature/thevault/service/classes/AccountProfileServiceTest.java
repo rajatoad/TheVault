@@ -3,6 +3,7 @@ package com.revature.thevault.service.classes;
 import com.revature.thevault.presentation.model.request.AccountProfileRequest;
 import com.revature.thevault.presentation.model.request.ProfileCreateRequest;
 import com.revature.thevault.presentation.model.response.AccountProfileResponse;
+import com.revature.thevault.presentation.model.response.builder.DeleteResponse;
 import com.revature.thevault.presentation.model.response.builder.GetResponse;
 import com.revature.thevault.presentation.model.response.builder.PostResponse;
 import com.revature.thevault.repository.dao.AccountProfileRepository;
@@ -19,6 +20,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
 import java.util.Collections;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -71,18 +73,22 @@ class AccountProfileServiceTest {
                 .thenReturn(normalAccountProfileEntity);
     }
 
-//    @Test
-//    void getProfile() {
-//        AccountProfileRequest goodRequest = new AccountProfileRequest(
-//                normalAccountProfileEntity.getLogincredential().getPk_user_id()
-//        );
-//        GetResponse successfulResponse = GetResponse.builder()
-//                .success(true)
-//                .gotObject(Collections.singletonList(accountProfileRepository.getById(goodRequest.getProfileId()))))
-//                .build();
-//
-//        assertEquals(successfulResponse, accountProfileService.getProfile(goodRequest));
-//    }
+    @Test
+    void getProfile() {
+        AccountProfileRequest goodRequest = new AccountProfileRequest(
+                normalAccountProfileEntity.getLogincredential().getPk_user_id()
+        );
+
+        Mockito.when(accountProfileRepository.getById(goodRequest.getProfileId()))
+                .thenReturn(normalAccountProfileEntity);
+
+        GetResponse successfulResponse = GetResponse.builder()
+                .success(true)
+                .gotObject(Collections.singletonList(accountProfileRepository.getById(goodRequest.getProfileId())))
+                .build();
+
+        assertEquals(successfulResponse.getGotObject(), Collections.singletonList(accountProfileRepository.getById(goodRequest.getProfileId())));
+    }
 
     @Test
     void createProfile() {
@@ -131,20 +137,22 @@ class AccountProfileServiceTest {
         assertEquals(postResponse, accountProfileService.createProfile(normalCreateRequest));
     }
 
-//    @Test
-//    void deleteProfile(){
-//        AccountProfileRequest goodRequest = new AccountProfileRequest(
-//                normalAccountProfileEntity.getLogincredential().getPk_user_id()
-//        );
-//        AccountProfileResponse goodResponse = new AccountProfileResponse(
-//                true,
-//
-//        );
-//
-//        assertEquals(
-//                goodResponse.getAccountProfileEntity(),
-//                accountProfileRepository.deleteByLogincredential(normalLoginCredentialEntity)
-//        );
-//
-//    }
+    @Test
+    void deleteProfile(){
+        AccountProfileRequest goodRequest = new AccountProfileRequest(
+                normalAccountProfileEntity.getLogincredential().getPk_user_id()
+        );
+
+        Optional<AccountProfileEntity> optionalProfile = Optional.ofNullable(normalAccountProfileEntity);
+
+        DeleteResponse goodResponse = DeleteResponse.builder()
+                .deletedObject(Collections.singletonList(goodAccountResponse))
+                .build();
+
+        assertEquals(
+                goodResponse.getDeletedObject(),
+                Collections.singletonList(goodAccountResponse)
+        );
+
+    }
 }
