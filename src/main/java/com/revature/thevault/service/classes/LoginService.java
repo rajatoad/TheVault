@@ -38,7 +38,7 @@ public class LoginService implements LoginServiceInterface {
         try{
             return PostResponse.builder()
                     .success(true)
-                    .createdObject(Collections.singletonList(loginRepository.findByUsernameAndPassword(loginRequest.getUsername(), loginRequest.getPassword())))
+                    .createdObject(Collections.singletonList(convertEntityToResponse(loginRepository.findByUsernameAndPassword(loginRequest.getUsername(), loginRequest.getPassword()))))
                     .build();
         }catch(Exception e){
             throw new InvalidInputException("User was not found");
