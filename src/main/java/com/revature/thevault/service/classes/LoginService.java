@@ -34,11 +34,11 @@ public class LoginService implements LoginServiceInterface {
     }
 
     @Override
-    public GetResponse getLoginCredentialFromLogin(LoginRequest loginRequest) {
+    public PostResponse getLoginCredentialFromLogin(LoginRequest loginRequest) {
         try{
-            return GetResponse.builder()
+            return PostResponse.builder()
                     .success(true)
-                    .gotObject(Collections.singletonList(loginRepository.findByUsernameAndPassword(loginRequest.getUsername(), loginRequest.getPassword())))
+                    .createdObject(Collections.singletonList(loginRepository.findByUsernameAndPassword(loginRequest.getUsername(), loginRequest.getPassword())))
                     .build();
         }catch(Exception e){
             throw new InvalidInputException("User was not found");

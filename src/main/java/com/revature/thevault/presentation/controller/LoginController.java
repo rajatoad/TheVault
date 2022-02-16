@@ -39,7 +39,7 @@ public class LoginController {
 
     @ResponseStatus(HttpStatus.OK)
     @PostMapping("/validate")
-    public GetResponse findLoginCredential(@RequestBody LoginRequest loginRequest){
+    public PostResponse findLoginCredential(@RequestBody LoginRequest loginRequest){
         return loginService.getLoginCredentialFromLogin(loginRequest);
     }
 }
