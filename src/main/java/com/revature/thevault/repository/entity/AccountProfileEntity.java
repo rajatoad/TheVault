@@ -20,7 +20,7 @@ public class AccountProfileEntity {
     @GeneratedValue(generator = "account_profile_table_pk_profile_id_seq", strategy = GenerationType.SEQUENCE)
     @SequenceGenerator(allocationSize = 1, name = "account_profile_table_pk_profile_id_seq", sequenceName = "account_profile_table_pk_profile_id_seq")
     int pk_profile_id;
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "fk_user_id")
     LoginCredentialEntity logincredential;
     @Column(name = "first_name")

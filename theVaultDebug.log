@@ -3754,3 +3754,131 @@ Arguments: [AccountProfileRequest(profileId=1)]
 Method: getProfile
 Arguments: [AccountProfileRequest(profileId=1)]
 2022-02-15 20:03:35,388 INFO dLog [main] RETURNING: GetResponse(gotObject=[AccountProfileResponse(profileId=1, userId=1, firstName=Bob, lastName=Tom, email=some@email.com, phoneNumber=123-876-5555, address=1 court)])
+2022-02-15 21:08:57,110 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Rowan, lastName=Ortiz, email=Caterina.Lueilwitz2@gmail.com, phoneNumber=825-341-3118, address=306 Bergstrom Greens)]
+2022-02-15 21:08:57,121 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Rowan, lastName=Ortiz, email=Caterina.Lueilwitz2@gmail.com, phoneNumber=825-341-3118, address=306 Bergstrom Greens)]
+2022-02-15 21:08:57,128 INFO dLog [http-nio-8080-exec-2] RETURNING: PostResponse(createdObject=[AccountProfileResponse(profileId=0, userId=1, firstName=Rowan, lastName=Ortiz, email=Caterina.Lueilwitz2@gmail.com, phoneNumber=825-341-3118, address=306 Bergstrom Greens)])
+2022-02-15 21:08:57,128 INFO dLog [http-nio-8080-exec-2] RETURNING: PostResponse(createdObject=[AccountProfileResponse(profileId=0, userId=1, firstName=Rowan, lastName=Ortiz, email=Caterina.Lueilwitz2@gmail.com, phoneNumber=825-341-3118, address=306 Bergstrom Greens)])
+2022-02-15 21:09:03,077 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Melody, lastName=Ratke, email=Alessandro38@hotmail.com, phoneNumber=453-768-7854, address=546 Kane Grove)]
+2022-02-15 21:09:03,077 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Melody, lastName=Ratke, email=Alessandro38@hotmail.com, phoneNumber=453-768-7854, address=546 Kane Grove)]
+2022-02-15 21:09:03,077 INFO dLog [http-nio-8080-exec-3] RETURNING: PostResponse(createdObject=[AccountProfileResponse(profileId=0, userId=1, firstName=Melody, lastName=Ratke, email=Alessandro38@hotmail.com, phoneNumber=453-768-7854, address=546 Kane Grove)])
+2022-02-15 21:09:03,077 INFO dLog [http-nio-8080-exec-3] RETURNING: PostResponse(createdObject=[AccountProfileResponse(profileId=0, userId=1, firstName=Melody, lastName=Ratke, email=Alessandro38@hotmail.com, phoneNumber=453-768-7854, address=546 Kane Grove)])
+2022-02-15 21:09:06,278 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Alia, lastName=Cartwright, email=Zoey.Hintz@gmail.com, phoneNumber=877-489-8968, address=395 Kaleb Squares)]
+2022-02-15 21:09:06,278 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Alia, lastName=Cartwright, email=Zoey.Hintz@gmail.com, phoneNumber=877-489-8968, address=395 Kaleb Squares)]
+2022-02-15 21:09:06,278 INFO dLog [http-nio-8080-exec-4] RETURNING: PostResponse(createdObject=[AccountProfileResponse(profileId=0, userId=1, firstName=Alia, lastName=Cartwright, email=Zoey.Hintz@gmail.com, phoneNumber=877-489-8968, address=395 Kaleb Squares)])
+2022-02-15 21:09:06,278 INFO dLog [http-nio-8080-exec-4] RETURNING: PostResponse(createdObject=[AccountProfileResponse(profileId=0, userId=1, firstName=Alia, lastName=Cartwright, email=Zoey.Hintz@gmail.com, phoneNumber=877-489-8968, address=395 Kaleb Squares)])
+2022-02-15 21:10:42,128 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Elbert, lastName=Tromp, email=Velda54@yahoo.com, phoneNumber=472-441-7818, address=6665 Buford Corners)]
+2022-02-15 21:10:42,136 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Elbert, lastName=Tromp, email=Velda54@yahoo.com, phoneNumber=472-441-7818, address=6665 Buford Corners)]
+2022-02-15 21:10:42,179 ERROR dLog [http-nio-8080-exec-2] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+THROWING EXCEPTION: class org.springframework.dao.InvalidDataAccessApiUsageException
+2022-02-15 21:10:42,179 ERROR dLog [http-nio-8080-exec-2] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.AccountProfileController
+THROWING EXCEPTION: class org.springframework.dao.InvalidDataAccessApiUsageException
+2022-02-15 21:10:43,081 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Terrill, lastName=Crist, email=Aubree39@hotmail.com, phoneNumber=897-585-9029, address=348 Pfeffer Centers)]
+2022-02-15 21:10:43,081 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Terrill, lastName=Crist, email=Aubree39@hotmail.com, phoneNumber=897-585-9029, address=348 Pfeffer Centers)]
+2022-02-15 21:10:43,081 ERROR dLog [http-nio-8080-exec-4] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+THROWING EXCEPTION: class org.springframework.dao.InvalidDataAccessApiUsageException
+2022-02-15 21:10:43,081 ERROR dLog [http-nio-8080-exec-4] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.AccountProfileController
+THROWING EXCEPTION: class org.springframework.dao.InvalidDataAccessApiUsageException
+2022-02-15 21:10:43,731 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Savannah, lastName=Considine, email=Nora.Schaefer@gmail.com, phoneNumber=864-542-1902, address=1709 Katlyn Route)]
+2022-02-15 21:10:43,731 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Savannah, lastName=Considine, email=Nora.Schaefer@gmail.com, phoneNumber=864-542-1902, address=1709 Katlyn Route)]
+2022-02-15 21:10:43,732 ERROR dLog [http-nio-8080-exec-6] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+THROWING EXCEPTION: class org.springframework.dao.InvalidDataAccessApiUsageException
+2022-02-15 21:10:43,732 ERROR dLog [http-nio-8080-exec-6] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.AccountProfileController
+THROWING EXCEPTION: class org.springframework.dao.InvalidDataAccessApiUsageException
+2022-02-15 21:10:44,454 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Natalia, lastName=Beier, email=Maya77@gmail.com, phoneNumber=563-404-8410, address=2143 Considine Squares)]
+2022-02-15 21:10:44,454 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Natalia, lastName=Beier, email=Maya77@gmail.com, phoneNumber=563-404-8410, address=2143 Considine Squares)]
+2022-02-15 21:10:44,454 ERROR dLog [http-nio-8080-exec-8] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+THROWING EXCEPTION: class org.springframework.dao.InvalidDataAccessApiUsageException
+2022-02-15 21:10:44,454 ERROR dLog [http-nio-8080-exec-8] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.AccountProfileController
+THROWING EXCEPTION: class org.springframework.dao.InvalidDataAccessApiUsageException
+2022-02-15 21:11:24,693 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Branson, lastName=Hilll, email=Thurman.Hudson82@yahoo.com, phoneNumber=758-557-3069, address=9348 Wiza Expressway)]
+2022-02-15 21:11:24,693 DEBUG dLog [http-nio-8080-exec-10] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Branson, lastName=Hilll, email=Thurman.Hudson82@yahoo.com, phoneNumber=758-557-3069, address=9348 Wiza Expressway)]
+2022-02-15 21:11:24,694 ERROR dLog [http-nio-8080-exec-10] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+THROWING EXCEPTION: class org.springframework.dao.InvalidDataAccessApiUsageException
+2022-02-15 21:11:24,694 ERROR dLog [http-nio-8080-exec-10] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.AccountProfileController
+THROWING EXCEPTION: class org.springframework.dao.InvalidDataAccessApiUsageException
+2022-02-15 21:11:25,581 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Brendon, lastName=Dibbert, email=Harley_Koch11@gmail.com, phoneNumber=346-424-5510, address=625 Toy Cove)]
+2022-02-15 21:11:25,581 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Brendon, lastName=Dibbert, email=Harley_Koch11@gmail.com, phoneNumber=346-424-5510, address=625 Toy Cove)]
+2022-02-15 21:11:25,582 ERROR dLog [http-nio-8080-exec-2] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+THROWING EXCEPTION: class org.springframework.dao.InvalidDataAccessApiUsageException
+2022-02-15 21:11:25,582 ERROR dLog [http-nio-8080-exec-2] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.AccountProfileController
+THROWING EXCEPTION: class org.springframework.dao.InvalidDataAccessApiUsageException
+2022-02-15 21:11:42,521 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Alfred, lastName=Monahan, email=Breana_Jaskolski@hotmail.com, phoneNumber=916-946-1438, address=67430 Ozella Circle)]
+2022-02-15 21:11:42,530 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Alfred, lastName=Monahan, email=Breana_Jaskolski@hotmail.com, phoneNumber=916-946-1438, address=67430 Ozella Circle)]
+2022-02-15 21:11:42,587 ERROR dLog [http-nio-8080-exec-2] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+THROWING EXCEPTION: class org.springframework.dao.DataIntegrityViolationException
+2022-02-15 21:11:42,588 ERROR dLog [http-nio-8080-exec-2] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.AccountProfileController
+THROWING EXCEPTION: class org.springframework.dao.DataIntegrityViolationException
+2022-02-15 21:11:43,328 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=George, lastName=Nolan, email=Serenity_Daugherty@gmail.com, phoneNumber=945-279-3907, address=999 Thompson Overpass)]
+2022-02-15 21:11:43,328 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=George, lastName=Nolan, email=Serenity_Daugherty@gmail.com, phoneNumber=945-279-3907, address=999 Thompson Overpass)]
+2022-02-15 21:11:43,330 ERROR dLog [http-nio-8080-exec-4] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+THROWING EXCEPTION: class org.springframework.dao.DataIntegrityViolationException
+2022-02-15 21:11:43,330 ERROR dLog [http-nio-8080-exec-4] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.AccountProfileController
+THROWING EXCEPTION: class org.springframework.dao.DataIntegrityViolationException
+2022-02-15 21:11:44,040 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Benny, lastName=Ryan, email=Crystel_Barrows@hotmail.com, phoneNumber=894-667-9299, address=8421 Lou Isle)]
+2022-02-15 21:11:44,040 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=1, firstName=Benny, lastName=Ryan, email=Crystel_Barrows@hotmail.com, phoneNumber=894-667-9299, address=8421 Lou Isle)]
+2022-02-15 21:11:44,044 INFO dLog [http-nio-8080-exec-6] RETURNING: PostResponse(createdObject=[AccountProfileResponse(profileId=3, userId=1, firstName=Benny, lastName=Ryan, email=Crystel_Barrows@hotmail.com, phoneNumber=894-667-9299, address=8421 Lou Isle)])
+2022-02-15 21:11:44,045 INFO dLog [http-nio-8080-exec-6] RETURNING: PostResponse(createdObject=[AccountProfileResponse(profileId=3, userId=1, firstName=Benny, lastName=Ryan, email=Crystel_Barrows@hotmail.com, phoneNumber=894-667-9299, address=8421 Lou Isle)])
+2022-02-15 21:12:02,021 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: getProfile
+Arguments: [3]
+2022-02-15 21:12:02,021 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: getProfile
+Arguments: [AccountProfileRequest(profileId=3)]
+2022-02-15 21:12:02,042 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[AccountProfileResponse(profileId=3, userId=1, firstName=Benny, lastName=Ryan, email=Crystel_Barrows@hotmail.com, phoneNumber=894-667-9299, address=8421 Lou Isle)])
+2022-02-15 21:12:02,042 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[AccountProfileResponse(profileId=3, userId=1, firstName=Benny, lastName=Ryan, email=Crystel_Barrows@hotmail.com, phoneNumber=894-667-9299, address=8421 Lou Isle)])
+2022-02-15 21:12:10,108 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: deleteProfile
+Arguments: [AccountProfileRequest(profileId=3)]
+2022-02-15 21:12:10,108 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: deleteProfile
+Arguments: [AccountProfileRequest(profileId=3)]
+2022-02-15 21:12:10,114 INFO dLog [http-nio-8080-exec-8] RETURNING: DeleteResponse(deletedObject=[AccountProfileResponse(profileId=3, userId=1, firstName=Benny, lastName=Ryan, email=Crystel_Barrows@hotmail.com, phoneNumber=894-667-9299, address=8421 Lou Isle)])
+2022-02-15 21:12:10,117 INFO dLog [http-nio-8080-exec-8] RETURNING: DeleteResponse(deletedObject=[AccountProfileResponse(profileId=3, userId=1, firstName=Benny, lastName=Ryan, email=Crystel_Barrows@hotmail.com, phoneNumber=894-667-9299, address=8421 Lou Isle)])

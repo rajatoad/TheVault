@@ -41,19 +41,22 @@ public class AccountProfileService implements AccountProfileInterface {
 
     @Override
     public PostResponse createProfile(ProfileCreateRequest profileCreateRequest) {
+        AccountProfileEntity createdProfileEntity = new AccountProfileEntity(
+                0,
+                new LoginCredentialEntity(profileCreateRequest.getUserId(), "", ""),
+                profileCreateRequest.getFirstName(),
+                profileCreateRequest.getLastName(),
+                profileCreateRequest.getEmail(),
+                profileCreateRequest.getPhoneNumber(),
+                profileCreateRequest.getAddress()
+        );
+
+        AccountProfileResponse convertedCreatedEntity = convertEntityToResponse(accountProfileRepository.save(createdProfileEntity));
 
         try {
             return PostResponse.builder()
                     .success(true)
-                    .createdObject(Collections.singletonList(convertEntityToResponse(accountProfileRepository.save(new AccountProfileEntity(
-                            0,
-                            new LoginCredentialEntity(profileCreateRequest.getUserId(), "", ""),
-                            profileCreateRequest.getFirstName(),
-                            profileCreateRequest.getLastName(),
-                            profileCreateRequest.getEmail(),
-                            profileCreateRequest.getPhoneNumber(),
-                            profileCreateRequest.getAddress()
-                    )))))
+                    .createdObject(Collections.singletonList(convertedCreatedEntity))
                     .build();
         } catch (Exception e) {
             throw new InvalidRequestException(HttpStatus.BAD_REQUEST, "invalid request");
