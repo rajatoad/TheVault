@@ -36,9 +36,4 @@ public class AccountProfileController {
         return accountProfileService.deleteProfile(accountProfileRequest);
     }
 
-    @PostMapping("/update")
-    public PostResponse updateProfile(@RequestBody ProfileCreateRequest profileCreateRequest){
-        return accountProfileService.updateProfile(profileCreateRequest);
-    }
-
 }

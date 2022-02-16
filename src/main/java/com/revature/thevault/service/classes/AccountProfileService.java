@@ -41,23 +41,19 @@ public class AccountProfileService implements AccountProfileInterface {
 
     @Override
     public PostResponse createProfile(ProfileCreateRequest profileCreateRequest) {
-        AccountProfileEntity ape = new AccountProfileEntity(
-                0,
-                new LoginCredentialEntity(profileCreateRequest.getUserId(), "", ""),
-                profileCreateRequest.getFirstName(),
-                profileCreateRequest.getLastName(),
-                profileCreateRequest.getEmail(),
-                profileCreateRequest.getPhoneNumber(),
-                profileCreateRequest.getAddress()
-        );
-
-        AccountProfileEntity savedProfileEntity = accountProfileRepository.save(ape);
-        AccountProfileResponse convertedSaveProfile = convertEntityToResponse(savedProfileEntity);
 
         try {
             return PostResponse.builder()
                     .success(true)
-                    .createdObject(Collections.singletonList(convertedSaveProfile))
+                    .createdObject(Collections.singletonList(convertEntityToResponse(accountProfileRepository.save(new AccountProfileEntity(
+                            0,
+                            new LoginCredentialEntity(profileCreateRequest.getUserId(), "", ""),
+                            profileCreateRequest.getFirstName(),
+                            profileCreateRequest.getLastName(),
+                            profileCreateRequest.getEmail(),
+                            profileCreateRequest.getPhoneNumber(),
+                            profileCreateRequest.getAddress()
+                    )))))
                     .build();
         } catch (Exception e) {
             throw new InvalidRequestException(HttpStatus.BAD_REQUEST, "invalid request");
@@ -103,7 +99,7 @@ public class AccountProfileService implements AccountProfileInterface {
         }
     }
 
-    public AccountProfileResponse convertEntityToResponse(AccountProfileEntity accountProfileEntity) {
+    private AccountProfileResponse convertEntityToResponse(AccountProfileEntity accountProfileEntity) {
         return new AccountProfileResponse(
                 accountProfileEntity.getPk_profile_id(),
                 accountProfileEntity.getLogincredential().getPk_user_id(),

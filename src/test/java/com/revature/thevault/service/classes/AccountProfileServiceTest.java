@@ -18,8 +18,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
-import java.util.Collections;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
@@ -35,8 +33,6 @@ class AccountProfileServiceTest {
     private AccountProfileEntity normalAccountProfileEntity;
 
     private LoginCredentialEntity normalLoginCredentialEntity;
-
-    private AccountProfileResponse goodAccountResponse;
 
     @BeforeEach
     void setup(){
@@ -55,15 +51,6 @@ class AccountProfileServiceTest {
                 "123-876-5555",
                 "1 court"
         );
-        goodAccountResponse = new AccountProfileResponse(
-                normalAccountProfileEntity.getPk_profile_id(),
-                normalAccountProfileEntity.getLogincredential().getPk_user_id(),
-                normalAccountProfileEntity.getFirst_name(),
-                normalAccountProfileEntity.getLast_name(),
-                normalAccountProfileEntity.getEmail(),
-                normalAccountProfileEntity.getPhone_number(),
-                normalAccountProfileEntity.getAddress()
-        );
 
         Mockito.when(accountProfileRepository.findByLogincredential(normalLoginCredentialEntity))
                 .thenReturn(normalAccountProfileEntity);
@@ -71,18 +58,20 @@ class AccountProfileServiceTest {
                 .thenReturn(normalAccountProfileEntity);
     }
 
-//    @Test
-//    void getProfile() {
-//        AccountProfileRequest goodRequest = new AccountProfileRequest(
-//                normalAccountProfileEntity.getLogincredential().getPk_user_id()
-//        );
-//        GetResponse successfulResponse = GetResponse.builder()
-//                .success(true)
-//                .gotObject(Collections.singletonList(accountProfileRepository.getById(goodRequest.getProfileId()))))
-//                .build();
-//
-//        assertEquals(successfulResponse, accountProfileService.getProfile(goodRequest));
-//    }
+    @Test
+    void getProfile() {
+        AccountProfileRequest goodRequest = new AccountProfileRequest(
+                normalAccountProfileEntity.getLogincredential().getPk_user_id()
+        );
+        GetResponse successfulResponse = GetResponse.builder()
+                .success(true)
+                .responseType(ResponseType.GET)
+                .message("Account profile retrieved")
+                .gotObject(accountProfileRepository.getById(goodRequest.getProfileId()))
+                .build();
+
+        assertEquals(successfulResponse, accountProfileService.getProfile(goodRequest));
+    }
 
     @Test
     void createProfile() {
@@ -94,57 +83,38 @@ class AccountProfileServiceTest {
                 "555-555-5555",
                 "1 street"
         );
-        AccountProfileEntity storedProfileEntity = new AccountProfileEntity(
-            1,
-                new LoginCredentialEntity(normalCreateRequest.getUserId(), "username", "password"),
-                normalCreateRequest.getFirstName(),
-                normalCreateRequest.getLastName(),
-                normalCreateRequest.getEmail(),
-                normalCreateRequest.getPhoneNumber(),
-                normalCreateRequest.getAddress()
-
-        );
-        Mockito.when(accountProfileRepository.save(new AccountProfileEntity(
-                0,
-                new LoginCredentialEntity(normalCreateRequest.getUserId(), "", ""),
-                normalCreateRequest.getFirstName(),
-                normalCreateRequest.getLastName(),
-                normalCreateRequest.getEmail(),
-                normalCreateRequest.getPhoneNumber(),
-                normalCreateRequest.getAddress()
-        ))).thenReturn(storedProfileEntity);
-
 
         PostResponse postResponse = PostResponse.builder()
                 .success(true)
-                .createdObject(Collections.singletonList(new AccountProfileResponse(
-                        storedProfileEntity.getPk_profile_id(),
-                        storedProfileEntity.getLogincredential().getPk_user_id(),
-                        storedProfileEntity.getFirst_name(),
-                        storedProfileEntity.getLast_name(),
-                        storedProfileEntity.getEmail(),
-                        storedProfileEntity.getPhone_number(),
-                        storedProfileEntity.getAddress()
+                .responseType(ResponseType.POST)
+                .message("New account profile saved and created")
+                .createdObject(accountProfileRepository.save(new AccountProfileEntity(
+                        0,
+                        new LoginCredentialEntity(normalCreateRequest.getUserId(), "", ""),
+                        normalCreateRequest.getFirstName(),
+                        normalCreateRequest.getLastName(),
+                        normalCreateRequest.getEmail(),
+                        normalCreateRequest.getPhoneNumber(),
+                        normalCreateRequest.getAddress()
                 )))
                 .build();
-
         assertEquals(postResponse, accountProfileService.createProfile(normalCreateRequest));
     }
 
-//    @Test
-//    void deleteProfile(){
-//        AccountProfileRequest goodRequest = new AccountProfileRequest(
-//                normalAccountProfileEntity.getLogincredential().getPk_user_id()
-//        );
-//        AccountProfileResponse goodResponse = new AccountProfileResponse(
-//                true,
-//
-//        );
-//
-//        assertEquals(
-//                goodResponse.getAccountProfileEntity(),
-//                accountProfileRepository.deleteByLogincredential(normalLoginCredentialEntity)
-//        );
-//
-//    }
+    @Test
+    void deleteProfile(){
+        AccountProfileRequest goodRequest = new AccountProfileRequest(
+                normalAccountProfileEntity.getLogincredential().getPk_user_id()
+        );
+        AccountProfileResponse goodResponse = new AccountProfileResponse(
+                true,
+                accountProfileRepository.deleteByLogincredential(normalLoginCredentialEntity)
+        );
+
+        assertEquals(
+                goodResponse.getAccountProfileEntity(),
+                accountProfileRepository.deleteByLogincredential(normalLoginCredentialEntity)
+        );
+
+    }
 }
