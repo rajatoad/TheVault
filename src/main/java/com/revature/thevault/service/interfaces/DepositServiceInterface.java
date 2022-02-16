@@ -16,4 +16,5 @@ public interface DepositServiceInterface {
     // Get all of their deposits by specific type of deposit
     GetResponse getAlLUserDepositsOfType(int accountId, String depositTypeId);
 
+    GetResponse findByDepositId(int depositId);
 }

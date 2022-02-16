@@ -13,8 +13,8 @@ public class TransactionController {
     @Autowired
     private TransactionService transactionService;
 
-    @GetMapping("/history/{id}")
-    public GetResponse getTransactionHistory(@PathVariable Integer id){
-        return transactionService.getTransactionHistory(id);
+    @GetMapping("/history/{accountId}")
+    public GetResponse getTransactionHistory(@PathVariable Integer accountId){
+        return transactionService.getTransactionHistory(accountId);
     }
 }

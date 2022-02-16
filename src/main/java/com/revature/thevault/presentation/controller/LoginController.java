@@ -31,5 +31,4 @@ public class LoginController {
 //        return profileService.newUserProfile(loginService.newAccount(newUser), newUser.getEmail());
 //    }
 
-
 }

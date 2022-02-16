@@ -8,6 +8,7 @@ import com.revature.thevault.repository.dao.DepositRepository;
 import com.revature.thevault.repository.entity.*;
 import com.revature.thevault.service.dto.DepositResponseObject;
 import com.revature.thevault.service.exceptions.InvalidAccountIdException;
+import com.revature.thevault.service.exceptions.InvalidDepositIdException;
 import com.revature.thevault.service.exceptions.InvalidRequestException;
 import com.revature.thevault.service.interfaces.DepositServiceInterface;
 
@@ -16,6 +17,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Optional;
 
 import javax.persistence.EntityNotFoundException;
 
@@ -83,6 +85,23 @@ public class DepositService implements DepositServiceInterface {
        }catch(Exception e){
            throw new InvalidRequestException(HttpStatus.BAD_REQUEST, e.getMessage());
        }
+    }
+
+    @Override
+    public GetResponse findByDepositId(int depositId) {
+        try{
+            Optional<DepositEntity> depositEntityOptional =depositRepository.findById(depositId);
+            if(depositEntityOptional.isPresent())
+            return GetResponse.builder()
+                    .success(true)
+                    .gotObject(
+                            Collections.singletonList(convertDepositEntityToResponse(depositEntityOptional.get())
+                    ))
+                    .build();
+            else throw new InvalidDepositIdException(HttpStatus.BAD_REQUEST, "Deposit not found: " + depositId);
+        }catch(Exception e){
+            throw new InvalidRequestException(HttpStatus.BAD_REQUEST, e.getMessage());
+        }
     }
 
     private List<DepositEntity> getUserDepositsByAccountIdAndType(int accountId, DepositTypeEntity depositTypeEntity) {

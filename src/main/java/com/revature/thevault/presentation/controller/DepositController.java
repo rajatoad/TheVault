@@ -24,6 +24,11 @@ public class DepositController {
 				return depositService.createDeposit(depositRequest);
 		}
 
+		@GetMapping("/detail")
+		public GetResponse getByDepositId(@RequestParam int depositId){
+			return depositService.findByDepositId(depositId);
+		}
+
 		@ResponseStatus(HttpStatus.OK)
 		@GetMapping("/all/{id}")
 		public GetResponse findAllById(@PathVariable Integer id) {

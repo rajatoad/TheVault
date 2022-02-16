@@ -1654,3 +1654,289 @@ Arguments: [Cash]
 2022-02-15 20:20:47,405 INFO dLog [http-nio-8080-exec-1] RETURNING: DepositTypeEntity(pk_deposit_type_id=1, name=Cash)
 2022-02-15 20:20:47,446 INFO dLog [http-nio-8080-exec-1] RETURNING: PostResponse(createdObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=hellow, dateDeposit=2022-02-15, amount=3003.3)])
 2022-02-15 20:20:47,447 INFO dLog [http-nio-8080-exec-1] RETURNING: PostResponse(createdObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=hellow, dateDeposit=2022-02-15, amount=3003.3)])
+2022-02-15 21:10:58,721 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.presentation.controller.WithdrawController
+Method: createWithdrawal
+Arguments: [WithdrawRequest(accountId=1, requestType=Retail, reference=lol, amount=10.2)]
+2022-02-15 21:10:58,732 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.WithdrawService
+Method: createWithdrawal
+Arguments: [WithdrawRequest(accountId=1, requestType=Retail, reference=lol, amount=10.2)]
+2022-02-15 21:10:58,737 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.RequestTypeService
+Method: getRequestTypeByName
+Arguments: [Retail]
+2022-02-15 21:10:58,799 INFO dLog [http-nio-8080-exec-3] RETURNING: RequestTypeEntity(pk_request_type_id=1, name=Retail)
+2022-02-15 21:10:58,799 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.RequestStatusService
+Method: getRequestStatusByName
+Arguments: [Pending]
+2022-02-15 21:10:58,804 INFO dLog [http-nio-8080-exec-3] Returning: NULL VALUE
+2022-02-15 21:10:58,861 ERROR dLog [http-nio-8080-exec-3] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 21:10:58,861 ERROR dLog [http-nio-8080-exec-3] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.WithdrawController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 21:12:58,156 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.presentation.controller.WithdrawController
+Method: createWithdrawal
+Arguments: [WithdrawRequest(accountId=1, requestType=Retail, reference=lol, amount=10.2)]
+2022-02-15 21:12:58,156 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.WithdrawService
+Method: createWithdrawal
+Arguments: [WithdrawRequest(accountId=1, requestType=Retail, reference=lol, amount=10.2)]
+2022-02-15 21:12:58,157 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.RequestTypeService
+Method: getRequestTypeByName
+Arguments: [Retail]
+2022-02-15 21:12:58,157 INFO dLog [http-nio-8080-exec-4] RETURNING: RequestTypeEntity(pk_request_type_id=1, name=Retail)
+2022-02-15 21:12:58,158 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.RequestStatusService
+Method: getRequestStatusByName
+Arguments: [Pending]
+2022-02-15 21:12:58,158 INFO dLog [http-nio-8080-exec-4] Returning: NULL VALUE
+2022-02-15 21:12:58,160 ERROR dLog [http-nio-8080-exec-4] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 21:12:58,160 ERROR dLog [http-nio-8080-exec-4] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.WithdrawController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 21:12:58,813 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.presentation.controller.WithdrawController
+Method: createWithdrawal
+Arguments: [WithdrawRequest(accountId=1, requestType=Retail, reference=lol, amount=10.2)]
+2022-02-15 21:12:58,814 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.WithdrawService
+Method: createWithdrawal
+Arguments: [WithdrawRequest(accountId=1, requestType=Retail, reference=lol, amount=10.2)]
+2022-02-15 21:12:58,814 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.RequestTypeService
+Method: getRequestTypeByName
+Arguments: [Retail]
+2022-02-15 21:12:58,815 INFO dLog [http-nio-8080-exec-6] RETURNING: RequestTypeEntity(pk_request_type_id=1, name=Retail)
+2022-02-15 21:12:58,815 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.RequestStatusService
+Method: getRequestStatusByName
+Arguments: [Pending]
+2022-02-15 21:12:58,815 INFO dLog [http-nio-8080-exec-6] Returning: NULL VALUE
+2022-02-15 21:12:58,817 ERROR dLog [http-nio-8080-exec-6] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 21:12:58,817 ERROR dLog [http-nio-8080-exec-6] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.WithdrawController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 21:12:59,259 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.presentation.controller.WithdrawController
+Method: createWithdrawal
+Arguments: [WithdrawRequest(accountId=1, requestType=Retail, reference=lol, amount=10.2)]
+2022-02-15 21:12:59,259 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.service.classes.WithdrawService
+Method: createWithdrawal
+Arguments: [WithdrawRequest(accountId=1, requestType=Retail, reference=lol, amount=10.2)]
+2022-02-15 21:12:59,259 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.service.classes.RequestTypeService
+Method: getRequestTypeByName
+Arguments: [Retail]
+2022-02-15 21:12:59,260 INFO dLog [http-nio-8080-exec-5] RETURNING: RequestTypeEntity(pk_request_type_id=1, name=Retail)
+2022-02-15 21:12:59,260 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.service.classes.RequestStatusService
+Method: getRequestStatusByName
+Arguments: [Pending]
+2022-02-15 21:12:59,261 INFO dLog [http-nio-8080-exec-5] Returning: NULL VALUE
+2022-02-15 21:12:59,263 ERROR dLog [http-nio-8080-exec-5] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 21:12:59,263 ERROR dLog [http-nio-8080-exec-5] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.WithdrawController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 21:13:00,673 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.presentation.controller.WithdrawController
+Method: createWithdrawal
+Arguments: [WithdrawRequest(accountId=1, requestType=Retail, reference=lol, amount=10.2)]
+2022-02-15 21:13:00,673 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.service.classes.WithdrawService
+Method: createWithdrawal
+Arguments: [WithdrawRequest(accountId=1, requestType=Retail, reference=lol, amount=10.2)]
+2022-02-15 21:13:00,673 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.service.classes.RequestTypeService
+Method: getRequestTypeByName
+Arguments: [Retail]
+2022-02-15 21:13:00,674 INFO dLog [http-nio-8080-exec-8] RETURNING: RequestTypeEntity(pk_request_type_id=1, name=Retail)
+2022-02-15 21:13:00,674 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.service.classes.RequestStatusService
+Method: getRequestStatusByName
+Arguments: [Pending]
+2022-02-15 21:13:00,675 INFO dLog [http-nio-8080-exec-8] Returning: NULL VALUE
+2022-02-15 21:13:00,676 ERROR dLog [http-nio-8080-exec-8] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 21:13:00,677 ERROR dLog [http-nio-8080-exec-8] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.WithdrawController
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-15 21:14:31,968 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.WithdrawController
+Method: createWithdrawal
+Arguments: [WithdrawRequest(accountId=1, requestType=Retail, reference=lol, amount=10.2)]
+2022-02-15 21:14:31,979 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.WithdrawService
+Method: createWithdrawal
+Arguments: [WithdrawRequest(accountId=1, requestType=Retail, reference=lol, amount=10.2)]
+2022-02-15 21:14:31,987 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.RequestTypeService
+Method: getRequestTypeByName
+Arguments: [Retail]
+2022-02-15 21:14:32,048 INFO dLog [http-nio-8080-exec-1] RETURNING: RequestTypeEntity(pk_request_type_id=1, name=Retail)
+2022-02-15 21:14:32,049 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.RequestStatusService
+Method: getRequestStatusByName
+Arguments: [Pending]
+2022-02-15 21:14:32,056 INFO dLog [http-nio-8080-exec-1] RETURNING: RequestStatusEntity(pk_request_status_id=1, name=Pending)
+2022-02-15 21:14:32,113 INFO dLog [http-nio-8080-exec-1] RETURNING: PostResponse(createdObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=lol, dateWithdraw=2022-02-15, amount=10.2)])
+2022-02-15 21:14:32,113 INFO dLog [http-nio-8080-exec-1] RETURNING: PostResponse(createdObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=lol, dateWithdraw=2022-02-15, amount=10.2)])
+2022-02-15 21:16:15,694 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.DepositController
+Method: findAllById
+Arguments: [1]
+2022-02-15 21:16:15,705 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.DepositService
+Method: getAllUserDeposits
+Arguments: [1]
+2022-02-15 21:16:15,751 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[])
+2022-02-15 21:16:15,751 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[])
+2022-02-15 21:16:20,272 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.presentation.controller.DepositController
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 21:16:20,272 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.DepositService
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 21:16:20,274 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.DepositTypeService
+Method: findDepositTypeEntityByName
+Arguments: [Cash]
+2022-02-15 21:16:20,293 INFO dLog [http-nio-8080-exec-3] RETURNING: DepositTypeEntity(pk_deposit_type_id=1, name=Cash)
+2022-02-15 21:16:20,349 INFO dLog [http-nio-8080-exec-3] RETURNING: PostResponse(createdObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=hellow, dateDeposit=2022-02-15, amount=3003.3)])
+2022-02-15 21:16:20,349 INFO dLog [http-nio-8080-exec-3] RETURNING: PostResponse(createdObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=hellow, dateDeposit=2022-02-15, amount=3003.3)])
+2022-02-15 21:16:22,024 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.presentation.controller.DepositController
+Method: findAllById
+Arguments: [1]
+2022-02-15 21:16:22,025 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.DepositService
+Method: getAllUserDeposits
+Arguments: [1]
+2022-02-15 21:16:22,037 INFO dLog [http-nio-8080-exec-4] RETURNING: GetResponse(gotObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=hellow, dateDeposit=2022-02-15, amount=3003.3)])
+2022-02-15 21:16:22,037 INFO dLog [http-nio-8080-exec-4] RETURNING: GetResponse(gotObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=hellow, dateDeposit=2022-02-15, amount=3003.3)])
+2022-02-15 21:17:18,308 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.presentation.controller.WithdrawController
+Method: getUsersWithdraws
+Arguments: [1]
+2022-02-15 21:17:18,311 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.service.classes.WithdrawService
+Method: getAllUserWithdrawals
+Arguments: [1]
+2022-02-15 21:17:18,320 INFO dLog [http-nio-8080-exec-5] RETURNING: GetResponse(gotObject=[])
+2022-02-15 21:17:18,320 INFO dLog [http-nio-8080-exec-5] RETURNING: GetResponse(gotObject=[])
+2022-02-15 21:17:20,606 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.presentation.controller.WithdrawController
+Method: createWithdrawal
+Arguments: [WithdrawRequest(accountId=1, requestType=Retail, reference=lol, amount=10.2)]
+2022-02-15 21:17:20,607 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.WithdrawService
+Method: createWithdrawal
+Arguments: [WithdrawRequest(accountId=1, requestType=Retail, reference=lol, amount=10.2)]
+2022-02-15 21:17:20,607 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.RequestTypeService
+Method: getRequestTypeByName
+Arguments: [Retail]
+2022-02-15 21:17:20,612 INFO dLog [http-nio-8080-exec-6] RETURNING: RequestTypeEntity(pk_request_type_id=1, name=Retail)
+2022-02-15 21:17:20,612 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.RequestStatusService
+Method: getRequestStatusByName
+Arguments: [Pending]
+2022-02-15 21:17:20,617 INFO dLog [http-nio-8080-exec-6] RETURNING: RequestStatusEntity(pk_request_status_id=1, name=Pending)
+2022-02-15 21:17:20,623 INFO dLog [http-nio-8080-exec-6] RETURNING: PostResponse(createdObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=lol, dateWithdraw=2022-02-15, amount=10.2)])
+2022-02-15 21:17:20,623 INFO dLog [http-nio-8080-exec-6] RETURNING: PostResponse(createdObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=lol, dateWithdraw=2022-02-15, amount=10.2)])
+2022-02-15 21:17:22,870 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.presentation.controller.WithdrawController
+Method: getUsersWithdraws
+Arguments: [1]
+2022-02-15 21:17:22,870 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.service.classes.WithdrawService
+Method: getAllUserWithdrawals
+Arguments: [1]
+2022-02-15 21:17:22,874 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=lol, dateWithdraw=2022-02-15, amount=10.2)])
+2022-02-15 21:17:22,875 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=lol, dateWithdraw=2022-02-15, amount=10.2)])
+2022-02-15 21:30:17,172 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.presentation.controller.TransactionController
+Method: getTransactionHistory
+Arguments: [1]
+2022-02-15 21:30:17,182 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.TransactionService
+Method: getTransactionHistory
+Arguments: [1]
+2022-02-15 21:30:17,186 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.DepositService
+Method: getAllUserDeposits
+Arguments: [1]
+2022-02-15 21:30:17,234 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[])
+2022-02-15 21:30:17,234 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.WithdrawService
+Method: getAllUserWithdrawals
+Arguments: [1]
+2022-02-15 21:30:17,241 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[])
+2022-02-15 21:30:17,242 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[])
+2022-02-15 21:30:17,242 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[])
+2022-02-15 21:30:22,062 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.presentation.controller.DepositController
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 21:30:22,066 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.DepositService
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 21:30:22,067 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.service.classes.DepositTypeService
+Method: findDepositTypeEntityByName
+Arguments: [Cash]
+2022-02-15 21:30:22,085 INFO dLog [http-nio-8080-exec-4] RETURNING: DepositTypeEntity(pk_deposit_type_id=1, name=Cash)
+2022-02-15 21:30:22,133 INFO dLog [http-nio-8080-exec-4] RETURNING: PostResponse(createdObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=hellow, dateDeposit=2022-02-15, amount=3003.3)])
+2022-02-15 21:30:22,133 INFO dLog [http-nio-8080-exec-4] RETURNING: PostResponse(createdObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=hellow, dateDeposit=2022-02-15, amount=3003.3)])
+2022-02-15 21:30:26,774 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.presentation.controller.WithdrawController
+Method: createWithdrawal
+Arguments: [WithdrawRequest(accountId=1, requestType=Retail, reference=lol, amount=10.2)]
+2022-02-15 21:30:26,777 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.service.classes.WithdrawService
+Method: createWithdrawal
+Arguments: [WithdrawRequest(accountId=1, requestType=Retail, reference=lol, amount=10.2)]
+2022-02-15 21:30:26,777 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.service.classes.RequestTypeService
+Method: getRequestTypeByName
+Arguments: [Retail]
+2022-02-15 21:30:26,782 INFO dLog [http-nio-8080-exec-5] RETURNING: RequestTypeEntity(pk_request_type_id=1, name=Retail)
+2022-02-15 21:30:26,782 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.service.classes.RequestStatusService
+Method: getRequestStatusByName
+Arguments: [Pending]
+2022-02-15 21:30:26,787 INFO dLog [http-nio-8080-exec-5] RETURNING: RequestStatusEntity(pk_request_status_id=1, name=Pending)
+2022-02-15 21:30:26,792 INFO dLog [http-nio-8080-exec-5] RETURNING: PostResponse(createdObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=lol, dateWithdraw=2022-02-15, amount=10.2)])
+2022-02-15 21:30:26,793 INFO dLog [http-nio-8080-exec-5] RETURNING: PostResponse(createdObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=lol, dateWithdraw=2022-02-15, amount=10.2)])
+2022-02-15 21:30:29,288 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.presentation.controller.TransactionController
+Method: getTransactionHistory
+Arguments: [1]
+2022-02-15 21:30:29,288 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.TransactionService
+Method: getTransactionHistory
+Arguments: [1]
+2022-02-15 21:30:29,288 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.DepositService
+Method: getAllUserDeposits
+Arguments: [1]
+2022-02-15 21:30:29,304 INFO dLog [http-nio-8080-exec-6] RETURNING: GetResponse(gotObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=hellow, dateDeposit=2022-02-15, amount=3003.3)])
+2022-02-15 21:30:29,304 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.WithdrawService
+Method: getAllUserWithdrawals
+Arguments: [1]
+2022-02-15 21:30:29,307 INFO dLog [http-nio-8080-exec-6] RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=lol, dateWithdraw=2022-02-15, amount=10.2)])
+2022-02-15 21:30:29,307 INFO dLog [http-nio-8080-exec-6] RETURNING: GetResponse(gotObject=[TransactionObject(transactionId=1, transactionType=Deposit, date=2022-02-15, amount=3003.3), TransactionObject(transactionId=1, transactionType=Withdrawal, date=2022-02-15, amount=10.2)])
+2022-02-15 21:30:29,307 INFO dLog [http-nio-8080-exec-6] RETURNING: GetResponse(gotObject=[TransactionObject(transactionId=1, transactionType=Deposit, date=2022-02-15, amount=3003.3), TransactionObject(transactionId=1, transactionType=Withdrawal, date=2022-02-15, amount=10.2)])
+2022-02-15 21:39:44,320 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.DepositController
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 21:39:44,334 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.DepositService
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=hellow, amount=3003.3)]
+2022-02-15 21:39:44,341 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.DepositTypeService
+Method: findDepositTypeEntityByName
+Arguments: [Cash]
+2022-02-15 21:39:44,402 INFO dLog [http-nio-8080-exec-2] RETURNING: DepositTypeEntity(pk_deposit_type_id=1, name=Cash)
+2022-02-15 21:39:44,466 INFO dLog [http-nio-8080-exec-2] RETURNING: PostResponse(createdObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=hellow, dateDeposit=2022-02-15, amount=3003.3)])
+2022-02-15 21:39:44,466 INFO dLog [http-nio-8080-exec-2] RETURNING: PostResponse(createdObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=hellow, dateDeposit=2022-02-15, amount=3003.3)])
+2022-02-15 21:39:46,513 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.presentation.controller.DepositController
+Method: getByDepositId
+Arguments: [1]
+2022-02-15 21:39:46,514 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.DepositService
+Method: findByDepositId
+Arguments: [1]
+2022-02-15 21:39:46,535 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=hellow, dateDeposit=2022-02-15, amount=3003.3)])
+2022-02-15 21:39:46,535 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=hellow, dateDeposit=2022-02-15, amount=3003.3)])
+2022-02-15 21:40:53,425 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.presentation.controller.WithdrawController
+Method: createWithdrawal
+Arguments: [WithdrawRequest(accountId=1, requestType=Retail, reference=lol, amount=10.2)]
+2022-02-15 21:40:53,429 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.service.classes.WithdrawService
+Method: createWithdrawal
+Arguments: [WithdrawRequest(accountId=1, requestType=Retail, reference=lol, amount=10.2)]
+2022-02-15 21:40:53,434 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.service.classes.RequestTypeService
+Method: getRequestTypeByName
+Arguments: [Retail]
+2022-02-15 21:40:53,441 INFO dLog [http-nio-8080-exec-5] RETURNING: RequestTypeEntity(pk_request_type_id=1, name=Retail)
+2022-02-15 21:40:53,441 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.service.classes.RequestStatusService
+Method: getRequestStatusByName
+Arguments: [Pending]
+2022-02-15 21:40:53,447 INFO dLog [http-nio-8080-exec-5] RETURNING: RequestStatusEntity(pk_request_status_id=1, name=Pending)
+2022-02-15 21:40:53,453 INFO dLog [http-nio-8080-exec-5] RETURNING: PostResponse(createdObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=lol, dateWithdraw=2022-02-15, amount=10.2)])
+2022-02-15 21:40:53,454 INFO dLog [http-nio-8080-exec-5] RETURNING: PostResponse(createdObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=lol, dateWithdraw=2022-02-15, amount=10.2)])
+2022-02-15 21:40:55,658 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.presentation.controller.WithdrawController
+Method: findByWithdrawId
+Arguments: [1]
+2022-02-15 21:40:55,659 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.service.classes.WithdrawService
+Method: findByWithdrawId
+Arguments: [1]
+2022-02-15 21:40:55,662 INFO dLog [http-nio-8080-exec-6] RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=lol, dateWithdraw=2022-02-15, amount=10.2)])
+2022-02-15 21:40:55,662 INFO dLog [http-nio-8080-exec-6] RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=lol, dateWithdraw=2022-02-15, amount=10.2)])
+2022-02-15 21:40:57,948 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.presentation.controller.TransactionController
+Method: getTransactionHistory
+Arguments: [1]
+2022-02-15 21:40:57,951 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.service.classes.TransactionService
+Method: getTransactionHistory
+Arguments: [1]
+2022-02-15 21:40:57,953 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.service.classes.DepositService
+Method: getAllUserDeposits
+Arguments: [1]
+2022-02-15 21:40:57,959 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=hellow, dateDeposit=2022-02-15, amount=3003.3)])
+2022-02-15 21:40:57,959 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.service.classes.WithdrawService
+Method: getAllUserWithdrawals
+Arguments: [1]
+2022-02-15 21:40:57,964 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=lol, dateWithdraw=2022-02-15, amount=10.2)])
+2022-02-15 21:40:57,965 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[TransactionObject(transactionId=1, transactionType=Deposit, date=2022-02-15, amount=3003.3), TransactionObject(transactionId=1, transactionType=Withdrawal, date=2022-02-15, amount=10.2)])
+2022-02-15 21:40:57,965 INFO dLog [http-nio-8080-exec-7] RETURNING: GetResponse(gotObject=[TransactionObject(transactionId=1, transactionType=Deposit, date=2022-02-15, amount=3003.3), TransactionObject(transactionId=1, transactionType=Withdrawal, date=2022-02-15, amount=10.2)])

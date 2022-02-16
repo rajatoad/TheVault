@@ -36,7 +36,6 @@ public class LoginService implements LoginServiceInterface {
         }
     }
 
-
     @Override
     public LoginCredentialEntity newAccount(NewLoginCredentialsRequest newUserAccountRequest) throws InvalidInputException {
         return loginRepository.save(new LoginCredentialEntity(

@@ -1,7 +1,5 @@
 package com.revature.thevault.repository.entity;
 
-import com.revature.thevault.repository.entity.references.RequestStatus;
-import com.revature.thevault.repository.entity.references.RequestType;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,8 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
 import javax.persistence.*;
-import java.time.LocalDate;
-import java.util.Set;
+import java.sql.Date;
 
 @Data
 @NoArgsConstructor
@@ -21,21 +18,24 @@ import java.util.Set;
 @Table(name = "withdraw_table")
 public class WithdrawEntity {
     @Id
-    @Column(name = "pkWithdrawID")
-    @GeneratedValue(generator = "auto_increment", strategy = GenerationType.IDENTITY)
-    @SequenceGenerator(allocationSize = 1, name = "pk_withdraw_id_seq", sequenceName = "pk_withdraw_id_seq")
-    int pkWithdrawID;
-    @OneToMany(fetch = FetchType.EAGER)
-    Set<AccountEntity> accountEntities;
+    @Column(name = "pk_withdraw_id")
+    @GeneratedValue(generator = "withdraw_table_pk_withdraw_id_seq", strategy = GenerationType.IDENTITY)
+    @SequenceGenerator(allocationSize = 1, name = "withdraw_table_pk_withdraw_id_seq", sequenceName = "withdraw_table_pk_withdraw_id_seq")
+    int pk_withdraw_id;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "fk_account_id")
+    AccountEntity accountentity;
     @OneToOne(fetch = FetchType.EAGER)
-    RequestType requestType;
+    @JoinColumn(name = "fk_request_type_id")
+    RequestTypeEntity requesttypeentity;
     @OneToOne(fetch = FetchType.EAGER)
-    RequestStatus requestStatus;
-    @Column
+    @JoinColumn(name = "fk_request_status_id")
+    RequestStatusEntity requeststatusentity;
+    @Column(name = "reference")
     String reference;
-    @Column
-    LocalDate dateWithdraw;
-    @Column
-    double amount;
+    @Column(name = "date_withdraw")
+    Date date_withdraw;
+    @Column(name = "amount")
+    float amount;
 
 }
