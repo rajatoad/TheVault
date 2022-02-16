@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Profile } from 'src/app/models/users/profile.model';
+import { User } from 'src/app/models/users/user.model';
 
 const USER_KEY = 'auth-user';
 
@@ -7,19 +9,24 @@ const USER_KEY = 'auth-user';
 })
 export class UserSessionService {
 
+  userId!: number;
+  userProfile!: Profile;
+
   constructor() { }
 
-  public saveUser(user: any): void {
-    window.sessionStorage.removeItem(USER_KEY);
-    window.sessionStorage.setItem(USER_KEY, JSON.stringify(user));
+  public saveUser(user: Profile): void {
+    this.userProfile = user;
   }
 
-  public getUser(): any {
-    const user = window.sessionStorage.getItem(USER_KEY);
-    if (user) {
-      return JSON.parse(user);
-    }
+  public getUser(): Profile {
+    return this.userProfile;
+  }
 
-    return {};
+  saveUserId(userId: number){
+    this.userId = userId;
+  }
+
+  getUserId():number{
+    return this.userId;
   }
 }

@@ -6,15 +6,15 @@
 --                                  DROP TABLES
 --========================================================================================
 
- DROP TABLE login_credential_table CASCADE;
+DROP TABLE login_credential_table CASCADE;
 DROP TABLE account_profile_table CASCADE;
 -- DON'T NEED THIS BUT USEFUL FOR RDS DATABASE IN FUTURE
 
---DROP TABLE deposit_type_table;
+DROP TABLE deposit_type_table CASCADE;
 DROP TABLE request_type_table CASCADE;
 DROP TABLE request_status_table CASCADE;
 DROP TABLE withdraw_table CASCADE;
---DROP TABLE deposit_table;
+DROP TABLE deposit_table CASCADE;
 DROP TABLE account_type_table CASCADE;
 DROP TABLE account_table CASCADE;
 
@@ -79,8 +79,8 @@ CREATE TABLE account_table(
     pk_account_id SERIAL PRIMARY KEY,
     fk_user_id INTEGER,
     fk_account_type_id INTEGER,
-    available_balance BIGINT,
-    pending_balance BIGINT,
+    available_balance DECIMAL(10, 2),
+    pending_balance DECIMAL(10, 2),
     FOREIGN KEY (fk_user_id) REFERENCES login_credential_table(pk_user_id),
     FOREIGN KEY (fk_account_type_id) REFERENCES account_type_table(pk_account_type_id)
 );
@@ -103,7 +103,7 @@ CREATE TABLE withdraw_table(
     fk_request_status_id INTEGER,
     reference VARCHAR(25),
     date_withdraw DATE,
-    amount BIGINT,
+    amount DECIMAL(10, 2),
     FOREIGN KEY (fk_account_id) REFERENCES account_table(pk_account_id),
     FOREIGN KEY (fk_request_type_id) REFERENCES request_type_table(pk_request_type_id),
     FOREIGN KEY (fk_request_status_id) REFERENCES request_status_table(pk_request_status_id)
@@ -122,8 +122,8 @@ CREATE TABLE withdraw_table(
 
 INSERT INTO account_profile_table
 VALUES
-    (default, 1, 'Tom', 'Cat', 'email@email.com', "555-999-1234", '1 lane'),
-    (default, 2, 'Joe', 'Shmo', 'yahoo@yahoo.com', "999-555-4323", '2 st');
+    (default, 1, 'Tom', 'Cat', 'email@email.com', 5559991234, '1 lane'),
+    (default, 2, 'Joe', 'Shmo', 'yahoo@yahoo.com', 9995554323, '2 st');
 
 INSERT INTO deposit_type_table
 VALUES
@@ -151,4 +151,5 @@ VALUES
 INSERT INTO account_table
 VALUES
     (default, 1, 1, 100, 130),
-    (default, 2, 2, 199, 19);
+    (default, 2, 2, 199, 19),
+    (default, 1, 2, 1000, 299);

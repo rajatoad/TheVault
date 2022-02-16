@@ -1,0 +1,29 @@
+<!-- <h1>Logs</h1>
+<ul>
+<li>
+    <span class="accountid">{{transactions.amount}}</span>
+</li>
+</ul> -->
+<div class="container mt-3">
+    <h2 class="display-4">Transaction History</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Transaction Id</th>
+          <th scope="col">Type</th>
+          <th scope="col">Date</th>
+          <th scope="col">Amount</th>
+        </tr>
+      </thead>
+        <tbody>
+          
+          <tr *ngFor="let tran of transactions; index as i">
+            <th scope="row">{{i + 1}}</th>
+            <td>{{tran.transactionType}}</td>
+            <td>{{tran.date | date}}</td>
+            <td>{{tran.amount | currency}}</td>
+          </tr>
+          
+        </tbody>
+    </table>
+  </div>

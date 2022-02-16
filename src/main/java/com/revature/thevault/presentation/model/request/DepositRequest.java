@@ -14,5 +14,5 @@ public class DepositRequest {
     String depositType;
     int accountId;
     String reference;
-    int amount;
+    float amount;
 }
