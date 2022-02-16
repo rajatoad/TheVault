@@ -70,7 +70,7 @@ CREATE TABLE account_profile_table (
     first_name VARCHAR NOT NULL,
     last_name VARCHAR NOT NULL,
     email VARCHAR UNIQUE NOT NULL,
-    phone_number BIGINT UNIQUE NOT NULL,
+    phone_number VARCHAR UNIQUE NOT NULL,
     address VARCHAR NOT NULL,
     FOREIGN KEY (fk_user_id) REFERENCES login_credential_table(pk_user_id)
 );
@@ -122,8 +122,8 @@ VALUES
 
 INSERT INTO account_profile_table
 VALUES
-    (default, 1, 'Tom', 'Cat', 'email@email.com', 5559991234, '1 lane'),
-    (default, 2, 'Joe', 'Shmo', 'yahoo@yahoo.com', 9995554323, '2 st');
+    (default, 1, 'Tom', 'Cat', 'email@email.com', "555-999-1234", '1 lane'),
+    (default, 2, 'Joe', 'Shmo', 'yahoo@yahoo.com', "999-555-4323", '2 st');
 
 INSERT INTO deposit_type_table
 VALUES
