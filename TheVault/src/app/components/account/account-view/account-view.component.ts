@@ -29,7 +29,7 @@ export class AccountViewComponent implements OnInit {
 
     initializeView(){
       this.userId = this.userSession.getUserId();
-      this.profile = this.userSession.getUser();
+      this.profile = this.userSession.getProfile();
     }
 
 }

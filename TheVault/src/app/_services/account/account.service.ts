@@ -22,4 +22,8 @@ export class AccountService {
     this.activeAccount = account;
   }
 
+  getActiveAccount():Account{
+    return this.activeAccount;
+  }
+
 }
