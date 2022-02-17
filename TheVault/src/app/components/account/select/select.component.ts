@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Account } from 'src/app/models/account/account.model';
+import { DeleteAccount } from 'src/app/models/account/responses/delete-account';
 import { GetAccount } from 'src/app/models/account/responses/get-account';
 import { AccountService } from 'src/app/_services/account/account.service';
 import { AccountRetrieverService } from 'src/app/_services/backend/account-retriever.service';
@@ -14,19 +15,31 @@ export class SelectComponent implements OnInit {
   @Input()
   userId!:number;
 
+  @Input()
+  accounts!: Account[];
+
   constructor(
     private accountService: AccountService,
     private accountHttp: AccountRetrieverService
   ) { }
 
-  accounts!: Account[];
 
   ngOnInit(): void {
-    this.getAccounts();
+    this.setupAccounts();
   }
 
-  getAccounts():void{
-    this.accountHttp.getUserAccount(this.userId)
+  setupAccounts(){
+    this.accounts = this.accountService.getStoredAccounts();
+  }
+
+  deleteAccount(account:Account, index:number){
+    this.accountService.deleteAccount(account)
     .subscribe(
-      (data: GetAccount) => this.accounts = data.gotObject)};
+     (data: DeleteAccount) => {
+      window.alert(`${data.deletedObject[0].accountId} GOODBYE`); 
+      this.accounts.splice(index, 1);
+     } 
+    )
+  }
+
 }

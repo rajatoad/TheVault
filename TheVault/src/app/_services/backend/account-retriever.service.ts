@@ -14,7 +14,7 @@ export class AccountRetrieverService {
   accountUrl = 'http://localhost:8080/account'
 
   getUserAccount(userId: number){
-    let userAccountUrl: string = `${this.accountUrl}/users-accounts?userId=1`;
+    let userAccountUrl: string = `${this.accountUrl}/users-accounts?userId=${userId}`;
     return this.http.get<GetAccount>(userAccountUrl);
   }
 

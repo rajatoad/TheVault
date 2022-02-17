@@ -26,6 +26,7 @@ import { DepositGenerateComponent } from './components/transaction/deposit-gener
 import { DepositDetailComponent } from './components/transaction/deposit-detail/deposit-detail.component';
 import { WithdrawDetailComponent } from './components/transaction/withdraw-detail/withdraw-detail.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
+import { CreateAccountComponent } from './components/account/create-account/create-account.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +46,8 @@ import { EditProfileComponent } from './components/edit-profile/edit-profile.com
     DepositGenerateComponent,
     DepositDetailComponent,
     WithdrawDetailComponent,
-    EditProfileComponent
+    EditProfileComponent,
+    CreateAccountComponent
   ],
   imports: [
     BrowserModule,
