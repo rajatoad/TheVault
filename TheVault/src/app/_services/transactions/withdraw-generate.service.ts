@@ -11,7 +11,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class WithdrawGenerateService {
-
+depositUrl = `http://localhost:8080/withdraw/details`
   constructor(
     private http: HttpClient
   ) { }
@@ -26,3 +26,5 @@ export class WithdrawGenerateService {
     }), httpOptions);
   }
 }
+
+

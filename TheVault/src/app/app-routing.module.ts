@@ -51,6 +51,10 @@ const routes: Routes = [
   {
     component: WithdrawGenerateComponent,
     path: 'withdraw-test'
+  },
+  {
+    component: TransactionHistoryComponent,
+    path:'rickRoll'
   }
 ];
 
