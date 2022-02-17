@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { PutAccount } from 'src/app/models/account/responses/put-account';
 import { WithdrawRequest } from 'src/app/models/transaction/request/withdraw-request.model';
 import { PostWithdraw } from 'src/app/models/transaction/responses/post-withdraw';
 import { AccountService } from 'src/app/_services/account/account.service';
@@ -29,9 +30,22 @@ export class WithdrawGenerateComponent implements OnInit {
       reference,
       Number.parseFloat(amount)
     );
+    if(Number.parseFloat(amount) > this.accountService.getActiveAccount().pendingBalance) {
+      window.alert("TOO MUCH MONEY BUDDY");
+      this.submitEmitter.emit(false);
+      return;
+    }
 
     this.withdrawService.createWithdraw(withdraw).subscribe(
       (data: PostWithdraw) => {
+        let activeAccount = this.accountService.getActiveAccount();
+        activeAccount.pendingBalance -= data.createdObject[0].amount;
+        this.accountService.updateAccount(activeAccount).subscribe(
+          (data: PutAccount) => {
+            console.log(data);
+            this.accountService.activeAccount = data.updatedObject[0];
+          }
+        )
         this.submitEmitter.emit(false);
       }
     );

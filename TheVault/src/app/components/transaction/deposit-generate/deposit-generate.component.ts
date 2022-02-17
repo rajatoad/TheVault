@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { PutAccount } from 'src/app/models/account/responses/put-account';
 import { Deposit } from 'src/app/models/transaction/deposit.model';
 import { DepositRequest } from 'src/app/models/transaction/request/deposit-request.model';
 import { PostDeposit } from 'src/app/models/transaction/responses/post-deposit';
@@ -33,6 +34,15 @@ export class DepositGenerateComponent implements OnInit {
     this.depositService.createDeposit(deposit).subscribe(
       (data: PostDeposit) => {
         console.log(data);
+        let activeAccount = this.accountService.getActiveAccount();
+        activeAccount.availableBalance += data.createdObject[0].amount;
+        activeAccount.pendingBalance += data.createdObject[0].amount;
+        this.accountService.updateAccount(activeAccount).subscribe(
+          (data: PutAccount) => {
+            console.log(data);
+            this.accountService.activeAccount = data.updatedObject[0];
+          }
+        )
         this.submitEmitter.emit(false);
       }
     );
