@@ -29,4 +29,8 @@ export class UserSessionService {
   getUserId():number{
     return this.userId;
   }
+
+  getProfile():Profile{
+    return this.userProfile;
+  }
 }
