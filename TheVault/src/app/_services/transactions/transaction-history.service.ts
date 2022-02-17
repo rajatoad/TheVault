@@ -16,4 +16,5 @@ export class TransactionHistoryService {
     let transactionUrl = `http://localhost:8080/transaction/history/${accountId}`;
     return this.http.get<GetTransaction>(transactionUrl)
   }
+  
 }
