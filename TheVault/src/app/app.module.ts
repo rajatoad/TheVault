@@ -25,6 +25,7 @@ import { WithdrawGenerateComponent } from './components/transaction/withdraw-gen
 import { DepositGenerateComponent } from './components/transaction/deposit-generate/deposit-generate.component';
 import { DepositDetailComponent } from './components/transaction/deposit-detail/deposit-detail.component';
 import { WithdrawDetailComponent } from './components/transaction/withdraw-detail/withdraw-detail.component';
+import { TransferGenerateComponent } from './components/transaction/transfer-generate/transfer-generate.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +44,8 @@ import { WithdrawDetailComponent } from './components/transaction/withdraw-detai
     WithdrawGenerateComponent,
     DepositGenerateComponent,
     DepositDetailComponent,
-    WithdrawDetailComponent
+    WithdrawDetailComponent,
+    TransferGenerateComponent
   ],
   imports: [
     BrowserModule,
