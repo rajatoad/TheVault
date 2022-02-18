@@ -4,6 +4,7 @@ import { PostLogin } from 'src/app/models/login/responses/post-login';
 import { LoginUser } from 'src/app/models/users/login-user.model';
 import { GetUser } from 'src/app/models/users/responses/get-user';
 import BuildUser from 'src/app/utils/build-user';
+import { AccountService } from 'src/app/_services/account/account.service';
 import { RoutingAllocatorService } from 'src/app/_services/app_control/routing-allocator.service';
 import { AuthService } from 'src/app/_services/auth/auth.service';
 import { ProfileService } from 'src/app/_services/profile.service';
@@ -30,7 +31,8 @@ export class LoginComponent implements OnInit {
     private authService: AuthService,
     private userStorage: UserSessionService,
     private router: RoutingAllocatorService,
-    private profileService: ProfileService
+    private profileService: ProfileService,
+    private accountService: AccountService
     ) { }
 
   ngOnInit(): void {
@@ -80,7 +82,7 @@ onSubmit(): void {
           this.profileService.getUserProfile(this.userStorage.getUserId()).subscribe(
             (data: GetUser) => {
               this.userStorage.saveUser(data.gotObject[0]);
-              this.router.accountView();
+              this.accountService.getUserAccounts(data.gotObject[0].userId);
             }            
             );
           }

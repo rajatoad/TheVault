@@ -28,6 +28,7 @@ import { WithdrawDetailComponent } from './components/transaction/withdraw-detai
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 import { TransactionSearchComponent } from './components/transaction/select-transaction/transaction-search/transaction-search.component';
 import{Ng2SearchPipeModule} from 'ng2-search-filter';
+import { CreateAccountComponent } from './components/account/create-account/create-account.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +49,8 @@ import{Ng2SearchPipeModule} from 'ng2-search-filter';
     DepositDetailComponent,
     WithdrawDetailComponent,
     EditProfileComponent,
-    TransactionSearchComponent
+    TransactionSearchComponent,
+    CreateAccountComponent
   ],
   imports: [
     BrowserModule,

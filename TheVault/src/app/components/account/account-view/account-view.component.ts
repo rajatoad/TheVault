@@ -18,6 +18,8 @@ export class AccountViewComponent implements OnInit {
 
   name!:string;
 
+  accounts!: Account[];
+
   constructor(
     private accountService: AccountService,
     private userService: UserService,
@@ -30,6 +32,7 @@ export class AccountViewComponent implements OnInit {
     initializeView(){
       this.userId = this.userSession.getUserId();
       this.profile = this.userSession.getProfile();
+      this.accounts = this.accountService.getStoredAccounts();
     }
 
 }
