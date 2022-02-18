@@ -2,6 +2,7 @@
 package com.revature.thevault.presentation.controller;
 
 import com.revature.thevault.presentation.model.request.DepositRequest;
+import com.revature.thevault.presentation.model.response.builder.DeleteResponse;
 import com.revature.thevault.presentation.model.response.builder.GetResponse;
 import com.revature.thevault.presentation.model.response.builder.PostResponse;
 import com.revature.thevault.service.classes.DepositService;
@@ -41,6 +42,10 @@ public class DepositController {
 			return this.depositService.getAlLUserDepositsOfType(accountId, depositType);
 		}
 
+		@DeleteMapping("/clear/{accountId}")
+		public DeleteResponse deleteAllDeposits(@PathVariable Integer accountId){
+			return this.depositService.deleteAllDeposits(accountId);
+		}
 }
 
 

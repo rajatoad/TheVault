@@ -2,7 +2,6 @@ package com.revature.thevault.repository.dao;
 
 import com.revature.thevault.presentation.model.request.ResetPasswordRequest;
 import com.revature.thevault.repository.entity.LoginCredentialEntity;
-import com.revature.thevault.repository.entity.NewLoginCredentialsRequest;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

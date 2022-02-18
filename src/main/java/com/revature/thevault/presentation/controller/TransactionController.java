@@ -17,4 +17,5 @@ public class TransactionController {
     public GetResponse getTransactionHistory(@PathVariable Integer accountId){
         return transactionService.getTransactionHistory(accountId);
     }
+
 }

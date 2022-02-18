@@ -6,10 +6,15 @@
 </ul> -->
 <div class="container mt-3">
     <h2 class="display-4">Transaction History</h2>
+    <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search" [(ngModel)]="term" [ngModelOptions]="{standalone: true}" aria-label="Search">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
     <table class="table">
       <thead>
-        <tr>
+        <tr class ="table-info">
           <th scope="col">Transaction Id</th>
+          <th scope="col"> Reference </th>
           <th scope="col">Type</th>
           <th scope="col">Date</th>
           <th scope="col">Amount</th>
@@ -17,8 +22,10 @@
       </thead>
         <tbody>
           
-          <tr *ngFor="let tran of transactions; index as i">
-            <th scope="row">{{i + 1}}</th>
+          <!-- <tr class="table-secondary" *ngFor="let tran of transactions |filter:term; index as i">  -->
+          <tr class="table-secondary" *ngFor="let tran of transactions; index as i"> 
+            <th scope="row"><button (click)="showDetails(tran)" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" id="transactionInfo">{{i + 1}} </button></th>
+            <td class="table-danger">{{tran.transactionReference}}</td>
             <td>{{tran.transactionType}}</td>
             <td>{{tran.date | date}}</td>
             <td>{{tran.amount | currency}}</td>
@@ -27,3 +34,30 @@
         </tbody>
     </table>
   </div>
+
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Modal body..
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+        <button routerLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ" type="button" class="btn btn-success"> File a claim</button>
+      </div>
+
+    </div>
+  </div>
+</div>

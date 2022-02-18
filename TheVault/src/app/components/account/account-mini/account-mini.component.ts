@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Account } from 'src/app/models/account/account.model';
-import { AccountService } from 'src/app/_services/account/account.service';
 import { RoutingAllocatorService } from 'src/app/_services/app_control/routing-allocator.service';
+import { GlobalStorageService } from 'src/app/_services/global-storage.service';
 
 @Component({
   selector: 'app-account-mini',
@@ -12,7 +12,7 @@ export class AccountMiniComponent implements OnInit {
 
   constructor(
     private routingAllocator: RoutingAllocatorService,
-    private accountService: AccountService
+    private globalStorage: GlobalStorageService
   ) { }
 
   @Input()
@@ -23,7 +23,7 @@ export class AccountMiniComponent implements OnInit {
   }
 
   goToDetail(account:Account){
-    this.accountService.setActiveAccount(account);
+    this.globalStorage.setActiveAccount(account);
     this.routingAllocator.detail();
   }
 

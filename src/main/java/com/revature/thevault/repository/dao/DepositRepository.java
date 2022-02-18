@@ -11,8 +11,13 @@ import com.revature.thevault.repository.entity.DepositTypeEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import javax.transaction.Transactional;
+
 @Repository("depositRepository")
 public interface DepositRepository extends JpaRepository<DepositEntity, Integer> {
     List<DepositEntity> findByAccountentity(AccountEntity accountEntity);
     List<DepositEntity> findByAccountentityAndDeposittypeentity(AccountEntity accountEntity, DepositTypeEntity depositTypeEntity);
+
+    @Transactional
+    void deleteByAccountentity(AccountEntity accountEntity);
 }

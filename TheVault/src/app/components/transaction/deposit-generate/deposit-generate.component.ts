@@ -1,12 +1,10 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { Deposit } from 'src/app/models/transaction/deposit.model';
+import { PutAccount } from 'src/app/models/account/responses/put-account';
 import { DepositRequest } from 'src/app/models/transaction/request/deposit-request.model';
 import { PostDeposit } from 'src/app/models/transaction/responses/post-deposit';
-import { AccountService } from 'src/app/_services/account/account.service';
-import { RoutingAllocatorService } from 'src/app/_services/app_control/routing-allocator.service';
-import { DepositGenerateService } from 'src/app/_services/transactions/deposit-generate.service';
-import { UserSessionService } from 'src/app/_services/user/user-session.service';
+import { AccountHandlerService } from 'src/app/_services/account/account-handler.service';
+import { GlobalStorageService } from 'src/app/_services/global-storage.service';
+import { TransactionHandlerService } from 'src/app/_services/transactions/transaction-handler.service';
 
 @Component({
   selector: 'app-deposit-generate',
@@ -19,23 +17,37 @@ export class DepositGenerateComponent implements OnInit {
   submitEmitter = new EventEmitter<boolean>();
 
   constructor(
-    private accountService: AccountService,
-    private depositService: DepositGenerateService,
+    private globalStorage: GlobalStorageService,
+    private accountHandler: AccountHandlerService,
+    private transactionHandler: TransactionHandlerService
   ) { }
 
   ngOnInit(): void {
   }
 
+  // creates a deposit request and then updates both the account and creates and an entity in the database
   onClickSubmit(amount:string, type:string, reference:string){
-    console.log(this.accountService.activeAccount);
-    let deposit: DepositRequest = new DepositRequest(type, this.accountService.activeAccount.accountId, reference, Number.parseFloat(amount));
-    console.log(deposit);
-    this.depositService.createDeposit(deposit).subscribe(
-      (data: PostDeposit) => {
-        console.log(data);
-        this.submitEmitter.emit(false);
-      }
-    );
+    let deposit: DepositRequest = new DepositRequest(type, this.globalStorage.activeAccount.accountId, reference, Number.parseFloat(amount));
+    this.transactionHandler.createDeposit(deposit).subscribe(this.createDepositObserver);
   }
 
+  createDepositObserver = {
+    next: (data: PostDeposit) => {
+      let activeAccount = this.globalStorage.getActiveAccount();
+      activeAccount.availableBalance += data.createdObject[0].amount;
+      activeAccount.pendingBalance += data.createdObject[0].amount;
+      this.accountHandler.updateAccount(activeAccount).subscribe(this.updateAccountObserver);
+    },
+    error: (err: Error) => console.error("Create Deposit Observer Error: " + err),
+    complete: () => console.log("Successfully created deposit")
+  }
+
+  updateAccountObserver = {
+    next: (data: PutAccount) => {
+      this.globalStorage.setActiveAccount(data.updatedObject[0]);
+      this.submitEmitter.emit(false);
+    },
+    error: (err: Error) => console.error("Update Account Observer Error: " + err),
+    complete: () => console.log("Successfully updated account")
+  }
 }

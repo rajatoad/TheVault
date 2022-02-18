@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { PostLogin } from 'src/app/models/login/responses/post-login';
 import { NewUser } from 'src/app/models/users/new-user.model';
+import { PostProfile } from 'src/app/models/users/responses/post-profile';
 import Validation from 'src/app/utils/validation';
 import { RoutingAllocatorService } from 'src/app/_services/app_control/routing-allocator.service';
-import { AuthService } from 'src/app/_services/auth/auth.service';
+import { UserHandlerService } from 'src/app/_services/user/user-handler.service';
 
 @Component({
   selector: 'app-register',
@@ -23,10 +25,12 @@ export class RegisterComponent implements OnInit {
   submitted = false;
   posts: any;
 
+  newUser!: NewUser;
+
   constructor(
     private formBuilder: FormBuilder,
-    private authService: AuthService,
-    private routingAllocator: RoutingAllocatorService
+    private routingAllocator: RoutingAllocatorService,
+    private userHandler: UserHandlerService
   ) { }
 
   ngOnInit(): void {
@@ -131,13 +135,34 @@ export class RegisterComponent implements OnInit {
     if (userN != null && firstN != null && lastN != null && email != null && addr != null 
        && phoneN != null && passW != null) {
          
-      let newUser = new NewUser(userN, firstN, lastN, email, addr, phoneN, passW);
-      this.authService.register(newUser).subscribe(
-        (data) => {
-          console.log("Profile successfully created!");
-          this.goToLogin();
-        })
+      this.newUser = new NewUser(userN, firstN, lastN, email, addr, phoneN, passW);
+      this.registerUser();
     }
+  }
+
+      // Creates a new user login and a new profile using two separate endpoints
+  registerUser(){
+    console.log(this.newUser)
+    this.userHandler.createNewLogin(this.newUser.username, this.newUser.password).subscribe(this.loginObserver)
+  }
+
+  // On a successful login credential creation, a new profile is made and returned back to login
+  loginObserver = {
+    next: (data: PostLogin) => {
+      this.userHandler.createProfile(data.createdObject[0].userId, this.newUser).subscribe(this.profileObserver)
+    },
+    error: (err: Error) => {
+      console.error("Login Observer error: " + err.message);
+      this.onReset();},
+    complete: () => console.log("Completed creating login credentials")
+  }
+
+  profileObserver = {
+    next: (data: PostProfile) => this.goToLogin(),
+    error: (err: Error) => {
+      console.error("Profile Observer error: " + err);
+      this.onReset();},
+    complete: () => console.log("Completed creating user profile")
   }
 
   onReset(): void {
