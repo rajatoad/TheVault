@@ -29,7 +29,7 @@ export class AuthService {
   }
 
   register(data: any): Observable<any> {
-    //return this.http.post(AUTH_API, JSON.stringify({
+    console.log(data)
     return this.http.post(ENDPOINTS.REGISTER, JSON.stringify(data), httpOptions);
   }
 

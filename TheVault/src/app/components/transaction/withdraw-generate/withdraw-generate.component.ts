@@ -30,7 +30,7 @@ export class WithdrawGenerateComponent implements OnInit {
       reference,
       Number.parseFloat(amount)
     );
-    if(Number.parseFloat(amount) > this.accountService.getActiveAccount().pendingBalance) {
+    if(Number.parseFloat(amount) > this.accountService.getActiveAccount().availableBalance) {
       window.alert("TOO MUCH MONEY BUDDY");
       this.submitEmitter.emit(false);
       return;
@@ -39,6 +39,7 @@ export class WithdrawGenerateComponent implements OnInit {
     this.withdrawService.createWithdraw(withdraw).subscribe(
       (data: PostWithdraw) => {
         let activeAccount = this.accountService.getActiveAccount();
+        activeAccount.availableBalance -= data.createdObject[0].amount;
         activeAccount.pendingBalance -= data.createdObject[0].amount;
         this.accountService.updateAccount(activeAccount).subscribe(
           (data: PutAccount) => {

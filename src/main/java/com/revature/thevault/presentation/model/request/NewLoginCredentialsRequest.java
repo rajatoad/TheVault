@@ -1,15 +1,11 @@
 package com.revature.thevault.presentation.model.request;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.revature.thevault.presentation.model.GenericLoginRequest;
+import lombok.*;
+import lombok.experimental.FieldDefaults;
 
+@EqualsAndHashCode(callSuper = true)
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
-public class NewLoginCredentialsRequest {
-
-    String username;
-    String password;
-    String email;
+@FieldDefaults(level = AccessLevel.PRIVATE)
+public class NewLoginCredentialsRequest extends GenericLoginRequest {
 }
