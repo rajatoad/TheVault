@@ -44,13 +44,12 @@ export class UserHandlerService {
   getUserProfile(userId:number){return this.http.get<GetProfile>(`${ENDPOINTS.GET_PROFILE + userId}`)}
 
   createNewLogin(username:string, password:string){
-    console.log(username);
     return this.http.post<PostLogin>(
-      ENDPOINTS.NEW_LOGIN, 
+      ENDPOINTS.CREATE_PROFILE, 
       JSON.stringify(
         {
-          username: username,
-          password: password
+          username:username,
+          password:password
         }
       ), httpOptions);
   }
@@ -60,7 +59,7 @@ export class UserHandlerService {
       ENDPOINTS.CREATE_PROFILE, 
       JSON.stringify(
           {
-            userId: userId,
+            userId:userId,
             firstName: newUser.firstName,
             lastName: newUser.lastName,
             email: newUser.email,

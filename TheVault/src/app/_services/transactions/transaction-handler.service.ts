@@ -13,7 +13,7 @@ const AUTH_API = 'http://localhost:8080/';
 
 const ENDPOINTS = {
   CREATE_DEPOSIT: `${AUTH_API}deposit/create`,
-  CREATE_WITHDRAW: `${AUTH_API}withdraw/generate`,
+  CREATE_WITHDRAW: `${AUTH_API}withdraw/create`,
   DELETE_ALL_DEPOSIT: `${AUTH_API}deposit/clear/`,
   DELETE_ALL_WITHDRAW: `${AUTH_API}withdraw/clear/`,
   TRANSACTION_DETAILS: `${AUTH_API}withdraw/detail/`,
@@ -58,7 +58,6 @@ export class TransactionHandlerService {
   }
 
   createWithdraw(withdraw:WithdrawRequest){
-    console.log(withdraw)
     return this.http.post<PostWithdraw>(
       ENDPOINTS.CREATE_WITHDRAW, 
       JSON.stringify(
