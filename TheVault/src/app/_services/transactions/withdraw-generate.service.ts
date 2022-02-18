@@ -5,6 +5,7 @@ import { WithdrawRequest } from 'src/app/models/transaction/request/withdraw-req
 import { PostWithdraw } from 'src/app/models/transaction/responses/post-withdraw';
 import {Withdraw} from 'src/app/models/transaction/withdraw.model';
 import { Observable } from 'rxjs';
+import { DeleteWithdraw } from 'src/app/models/transaction/responses/delete-withdraw';
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
@@ -30,6 +31,11 @@ depositUrl = `http://localhost:8080/withdraw`
       reference: withdraw.reference,
       amount: withdraw.amount
     }), httpOptions);
+  }
+
+  deleteAllWithdraws(accountId:number){
+    let deleteAllWithdrawsUrl = `http://localhost:8080/withdraw/clear/${accountId}`;
+    return this.http.delete<DeleteWithdraw>(deleteAllWithdrawsUrl, httpOptions);
   }
 }
 

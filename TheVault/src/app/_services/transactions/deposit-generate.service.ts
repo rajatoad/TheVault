@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { DepositRequest } from 'src/app/models/transaction/request/deposit-request.model';
+import { DeleteDeposit } from 'src/app/models/transaction/responses/delete-deposit';
 import { PostDeposit } from 'src/app/models/transaction/responses/post-deposit';
 
 
@@ -27,5 +28,10 @@ export class DepositGenerateService {
       amount: deposit.amount
 
     }), httpOptions);
+  }
+
+  deleteAllDeposits(accountId:number){
+    let deleteAllDepositsUrl = `http://localhost:8080/deposit/clear/${accountId}`;
+    return this.http.delete<DeleteDeposit>(deleteAllDepositsUrl, httpOptions);
   }
 }

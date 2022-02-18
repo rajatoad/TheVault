@@ -5,6 +5,7 @@ import com.revature.thevault.repository.entity.RequestTypeEntity;
 import com.revature.thevault.repository.entity.WithdrawEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 public interface WithdrawRepository extends JpaRepository<WithdrawEntity, Integer> {
@@ -12,4 +13,7 @@ public interface WithdrawRepository extends JpaRepository<WithdrawEntity, Intege
     List<WithdrawEntity> findByAccountentity(AccountEntity accountEntity);
 
     List<WithdrawEntity> findByAccountentityAndRequesttypeentity(AccountEntity accountEntity, RequestTypeEntity requestTypeByName);
+
+    @Transactional
+    void deleteByAccountentity(AccountEntity accountEntity);
 }
