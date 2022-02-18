@@ -1,6 +1,7 @@
 package com.revature.thevault.service.classes;
 
 import com.revature.thevault.presentation.model.request.WithdrawRequest;
+import com.revature.thevault.presentation.model.response.builder.DeleteResponse;
 import com.revature.thevault.presentation.model.response.builder.GetResponse;
 import com.revature.thevault.presentation.model.response.builder.PostResponse;
 import com.revature.thevault.repository.dao.WithdrawRepository;
@@ -28,6 +29,7 @@ public class WithdrawService implements WithdrawServiceInterface {
 
     @Autowired
     private RequestTypeService requestTypeService;
+
 
     @Autowired
     private RequestStatusService requestStatusService;
@@ -124,6 +126,19 @@ public class WithdrawService implements WithdrawServiceInterface {
             else
                 throw new InvalidWithdrawIdRequest(HttpStatus.BAD_REQUEST, "Withdraw not found, withdraw Id: " + withdrawId);
         }catch (Exception e){
+            throw new InvalidRequestException(HttpStatus.BAD_REQUEST, e.getMessage());
+        }
+    }
+
+    @Override
+    public DeleteResponse deleteAllWithdraws(Integer accountId) {
+        try{
+            withdrawRepository.deleteByAccountentity(new AccountEntity(accountId, new LoginCredentialEntity(), new AccountTypeEntity(), 0, 0));
+            return DeleteResponse.builder()
+                    .success(true)
+                    .deletedObject(Collections.EMPTY_LIST)
+                    .build();
+        }catch(Exception e){
             throw new InvalidRequestException(HttpStatus.BAD_REQUEST, e.getMessage());
         }
     }

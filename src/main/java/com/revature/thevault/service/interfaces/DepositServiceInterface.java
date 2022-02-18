@@ -2,6 +2,7 @@ package com.revature.thevault.service.interfaces;
 
 import com.revature.thevault.presentation.model.request.DepositRequest;
 
+import com.revature.thevault.presentation.model.response.builder.DeleteResponse;
 import com.revature.thevault.presentation.model.response.builder.GetResponse;
 import com.revature.thevault.presentation.model.response.builder.PostResponse;
 
@@ -17,4 +18,6 @@ public interface DepositServiceInterface {
     GetResponse getAlLUserDepositsOfType(int accountId, String depositTypeId);
 
     GetResponse findByDepositId(int depositId);
+
+    DeleteResponse deleteAllDeposits(Integer accountId);
 }
