@@ -136,13 +136,14 @@ export class RegisterComponent implements OnInit {
        && phoneN != null && passW != null) {
          
       this.newUser = new NewUser(userN, firstN, lastN, email, addr, phoneN, passW);
-      this.registerUser(this.newUser);
+      this.registerUser();
     }
   }
 
       // Creates a new user login and a new profile using two separate endpoints
-  registerUser(newUser: NewUser){
-    this.userHandler.createNewLogin(newUser.username, newUser.password).subscribe(this.loginObserver)
+  registerUser(){
+    console.log(this.newUser)
+    this.userHandler.createNewLogin(this.newUser.username, this.newUser.password).subscribe(this.loginObserver)
   }
 
   // On a successful login credential creation, a new profile is made and returned back to login
@@ -151,7 +152,7 @@ export class RegisterComponent implements OnInit {
       this.userHandler.createProfile(data.createdObject[0].userId, this.newUser).subscribe(this.profileObserver)
     },
     error: (err: Error) => {
-      console.error("Login Observer error: " + err);
+      console.error("Login Observer error: " + err.message);
       this.onReset();},
     complete: () => console.log("Completed creating login credentials")
   }
