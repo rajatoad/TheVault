@@ -11,7 +11,8 @@ import { WithdrawGenerateService } from 'src/app/_services/transactions/withdraw
   styleUrls: ['./transaction-history.component.css']
 })
 export class TransactionHistoryComponent implements OnInit {
-index?:number
+term!:string;
+  index?:number
   @Input()
   account!: Account; 
   @Input()
@@ -20,6 +21,7 @@ index?:number
     private transService: TransactionHistoryService,
     private router: Router,
     private withdrawService:WithdrawGenerateService,
+ 
   ) { }
 showDetails(tran:Transaction){
  console.log(tran);
