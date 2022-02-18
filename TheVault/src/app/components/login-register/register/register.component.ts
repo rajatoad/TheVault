@@ -5,9 +5,7 @@ import { NewUser } from 'src/app/models/users/new-user.model';
 import { PostProfile } from 'src/app/models/users/responses/post-profile';
 import Validation from 'src/app/utils/validation';
 import { RoutingAllocatorService } from 'src/app/_services/app_control/routing-allocator.service';
-import { AuthService } from 'src/app/_services/auth/auth.service';
-import { ProfileService } from 'src/app/_services/profile.service';
-import { UserService } from 'src/app/_services/user/user.service';
+import { UserHandlerService } from 'src/app/_services/user/user-handler.service';
 
 @Component({
   selector: 'app-register',
@@ -27,12 +25,12 @@ export class RegisterComponent implements OnInit {
   submitted = false;
   posts: any;
 
+  newUser!: NewUser;
+
   constructor(
     private formBuilder: FormBuilder,
-    private authService: AuthService,
     private routingAllocator: RoutingAllocatorService,
-    private userService: UserService,
-    private profileService: ProfileService
+    private userHandler: UserHandlerService
   ) { }
 
   ngOnInit(): void {
@@ -137,19 +135,33 @@ export class RegisterComponent implements OnInit {
     if (userN != null && firstN != null && lastN != null && email != null && addr != null 
        && phoneN != null && passW != null) {
          
-      let newUser = new NewUser(userN, firstN, lastN, email, addr, phoneN, passW);
-
-      this.userService.createNewLogin(userN, passW).subscribe(
-        (data: PostLogin) => {
-          this.profileService.createProfile(data.createdObject[0].userId, newUser).subscribe(
-            (data: PostProfile) => {
-              console.log(data);
-              this.goToLogin();
-            }
-          );
-        }
-      );
+      this.newUser = new NewUser(userN, firstN, lastN, email, addr, phoneN, passW);
+      this.registerUser(this.newUser);
     }
+  }
+
+      // Creates a new user login and a new profile using two separate endpoints
+  registerUser(newUser: NewUser){
+    this.userHandler.createNewLogin(newUser.username, newUser.password).subscribe(this.loginObserver)
+  }
+
+  // On a successful login credential creation, a new profile is made and returned back to login
+  loginObserver = {
+    next: (data: PostLogin) => {
+      this.userHandler.createProfile(data.createdObject[0].userId, this.newUser).subscribe(this.profileObserver)
+    },
+    error: (err: Error) => {
+      console.error("Login Observer error: " + err);
+      this.onReset();},
+    complete: () => console.log("Completed creating login credentials")
+  }
+
+  profileObserver = {
+    next: (data: PostProfile) => this.goToLogin(),
+    error: (err: Error) => {
+      console.error("Profile Observer error: " + err);
+      this.onReset();},
+    complete: () => console.log("Completed creating user profile")
   }
 
   onReset(): void {

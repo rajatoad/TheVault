@@ -2,8 +2,9 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { PutAccount } from 'src/app/models/account/responses/put-account';
 import { WithdrawRequest } from 'src/app/models/transaction/request/withdraw-request.model';
 import { PostWithdraw } from 'src/app/models/transaction/responses/post-withdraw';
-import { AccountService } from 'src/app/_services/account/account.service';
-import { WithdrawGenerateService } from 'src/app/_services/transactions/withdraw-generate.service';
+import { AccountHandlerService } from 'src/app/_services/account/account-handler.service';
+import { GlobalStorageService } from 'src/app/_services/global-storage.service';
+import { TransactionHandlerService } from 'src/app/_services/transactions/transaction-handler.service';
 
 @Component({
   selector: 'app-withdraw-generate',
@@ -16,8 +17,9 @@ export class WithdrawGenerateComponent implements OnInit {
   submitEmitter = new EventEmitter<boolean>();
 
   constructor(
-    private accountService: AccountService,
-    private withdrawService: WithdrawGenerateService
+    private globalStorage: GlobalStorageService,
+    private transactionHandler: TransactionHandlerService,
+    private accountHandler: AccountHandlerService
   ) { }
 
   ngOnInit(): void {
@@ -25,31 +27,42 @@ export class WithdrawGenerateComponent implements OnInit {
 
   onClickSubmit(amount:string, type:string, reference:string){
     let withdraw: WithdrawRequest = new WithdrawRequest(
-      this.accountService.activeAccount.accountId,
+      this.globalStorage.activeAccount.accountId,
       type,
       reference,
       Number.parseFloat(amount)
     );
-    if(Number.parseFloat(amount) > this.accountService.getActiveAccount().availableBalance) {
+
+    //Checks to make sure the withdraw request is not over the available balance
+    //If it is then it closes with the submit emitter and returns
+    if(Number.parseFloat(amount) > this.globalStorage.getActiveAccount().availableBalance) {
       window.alert("TOO MUCH MONEY BUDDY");
       this.submitEmitter.emit(false);
       return;
     }
 
-    this.withdrawService.createWithdraw(withdraw).subscribe(
-      (data: PostWithdraw) => {
-        let activeAccount = this.accountService.getActiveAccount();
-        activeAccount.availableBalance -= data.createdObject[0].amount;
-        activeAccount.pendingBalance -= data.createdObject[0].amount;
-        this.accountService.updateAccount(activeAccount).subscribe(
-          (data: PutAccount) => {
-            console.log(data);
-            this.accountService.activeAccount = data.updatedObject[0];
-          }
-        )
-        this.submitEmitter.emit(false);
-      }
-    );
+    // Creates and updates the users profile on angular and Database
+    this.transactionHandler.createWithdraw(withdraw).subscribe(this.createWithdrawObserver);
+  }
+
+  createWithdrawObserver = {
+    next: (data:PostWithdraw) => {
+      let activeAccount = this.globalStorage.getActiveAccount();
+      activeAccount.availableBalance -= data.createdObject[0].amount;
+      activeAccount.pendingBalance -= data.createdObject[0].amount;
+      this.accountHandler.updateAccount(activeAccount).subscribe(this.updateAccountObserver);
+    },
+    error: (err: Error) => console.error("Create Withdraw Observer Error: " + err),
+    complete: () => console.log("Successful creation of withdraw")
+  }
+
+  updateAccountObserver = {
+    next: (data: PutAccount) => {
+      this.globalStorage.setActiveAccount(data.updatedObject[0]);
+      this.submitEmitter.emit(false);
+    },
+    error: (err: Error) => console.error("Update Account Observer Error: " + err),
+    complete: () => console.log("Successfully updated account")
   }
 
 }

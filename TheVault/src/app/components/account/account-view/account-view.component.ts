@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Account } from 'src/app/models/account/account.model';
 import { Profile } from 'src/app/models/users/profile.model';
-import { AccountService } from 'src/app/_services/account/account.service';
-import { UserSessionService } from 'src/app/_services/user/user-session.service';
-import { UserService } from 'src/app/_services/user/user.service';
+import { GlobalStorageService } from 'src/app/_services/global-storage.service';
 
 @Component({
   selector: 'app-account-view',
@@ -13,26 +11,21 @@ import { UserService } from 'src/app/_services/user/user.service';
 export class AccountViewComponent implements OnInit {
 
   userId!:number;
-
   profile!: Profile;
-
-  name!:string;
-
   accounts!: Account[];
 
-  constructor(
-    private accountService: AccountService,
-    private userService: UserService,
-    private userSession: UserSessionService) { }
+  constructor(private globalStorage: GlobalStorageService) { }
 
-    ngOnInit(): void {
-      this.initializeView();
-    }
+  ngOnInit(): void {
+    this.initializeView();
+  }
 
-    initializeView(){
-      this.userId = this.userSession.getUserId();
-      this.profile = this.userSession.getProfile();
-      this.accounts = this.accountService.getStoredAccounts();
-    }
+  //Using global storage we populate the account view. This acts as a way to traverse through
+  //the other views
+  initializeView(){
+    this.userId = this.globalStorage.getUserId();
+    this.profile = this.globalStorage.getProfile();
+    this.accounts = this.globalStorage.getAccounts();
+  }
 
 }

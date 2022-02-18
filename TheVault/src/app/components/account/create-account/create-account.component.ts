@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PostAccount } from 'src/app/models/account/responses/post-account';
-import { AccountService } from 'src/app/_services/account/account.service';
-import { UserSessionService } from 'src/app/_services/user/user-session.service';
+import { AccountHandlerService } from 'src/app/_services/account/account-handler.service';
+import { GlobalStorageService } from 'src/app/_services/global-storage.service';
 
 @Component({
   selector: 'app-create-account',
@@ -11,18 +11,23 @@ import { UserSessionService } from 'src/app/_services/user/user-session.service'
 export class CreateAccountComponent implements OnInit {
 
   constructor(
-    private accountService: AccountService,
-    private userService: UserSessionService
+    private globalStorage: GlobalStorageService,
+    private accountHandler: AccountHandlerService
   ) { }
 
   ngOnInit(): void {
   }
 
+  //Creating an account is sent as a request to the server, on a successful return it is added to the account
+  //array on client side.
   onClickSubmit(accountType:string){
-    this.accountService.createAccount(this.userService.getUserId(), accountType).subscribe(
-      (data: PostAccount) => {
-        this.accountService.addAccount(data.createdObject[0]);
-      }
-    )
+    this.accountHandler.createAccount(this.globalStorage.getUserId(), accountType)
+      .subscribe(this.createAccountObserver)
+  }
+
+  createAccountObserver = {
+    next: (data: PostAccount) => this.globalStorage.addAccount(data.createdObject[0]),
+    error: (err: Error) => console.error("Create Account Observer error: " + err),
+    complete: () => console.log("Successful creation of account")
   }
 }

@@ -1,7 +1,7 @@
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Profile } from 'src/app/models/users/profile.model';
-import { UserSessionService } from 'src/app/_services/user/user-session.service';
+import { GlobalStorageService } from 'src/app/_services/global-storage.service';
 
 @Component({
   selector: 'app-edit-profile',
@@ -19,7 +19,7 @@ export class EditProfileComponent implements OnInit {
   address:string = '';
 
   constructor(
-    private userSession: UserSessionService,
+    private globalStorage: GlobalStorageService,
     private location: Location
   ) { }
 
@@ -28,7 +28,7 @@ export class EditProfileComponent implements OnInit {
   }
 
   setupProfile():void{
-    this.profile = this.userSession.getProfile();
+    this.profile = this.globalStorage.getProfile();
     this.firstName = this.profile.firstName;
     this.lastName = this.profile.lastName;
     this.email = this.profile.email;
@@ -46,7 +46,6 @@ export class EditProfileComponent implements OnInit {
     this.profile.email = this.email;
     this.profile.phoneNumber = this.phoneNumber;
     this.profile.address = this.address;
-    console.log(this.profile);
-    this.userSession.saveUser(this.profile);
+    this.globalStorage.setProfile(this.profile);
   }
 }

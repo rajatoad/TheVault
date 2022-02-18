@@ -1,10 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Account } from 'src/app/models/account/account.model';
-import { GetTransaction } from 'src/app/models/transaction/responses/get-transaction';
 import { Transaction } from 'src/app/models/transaction/transaction.model';
 import { TransactionHistoryService } from 'src/app/_services/transactions/transaction-history.service';
 import { Router } from '@angular/router';
-import { WithdrawGenerateService } from 'src/app/_services/transactions/withdraw-generate.service';
+import { TransactionHandlerService } from 'src/app/_services/transactions/transaction-handler.service';
+
 @Component({
   selector: 'app-transaction-history',
   templateUrl: './transaction-history.component.html',
@@ -19,7 +19,7 @@ index?:number
   constructor(
     private transService: TransactionHistoryService,
     private router: Router,
-    private withdrawService:WithdrawGenerateService,
+    private transactionHandler: TransactionHandlerService,
   ) { }
 showDetails(tran:Transaction){
  console.log(tran);

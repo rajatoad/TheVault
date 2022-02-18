@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ProfileService } from './profile.service';
+import { GlobalStorageService } from './global-storage.service';
 
-describe('ProfileService', () => {
-  let service: ProfileService;
+describe('GlobalStorageService', () => {
+  let service: GlobalStorageService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(ProfileService);
+    service = TestBed.inject(GlobalStorageService);
   });
 
   it('should be created', () => {
