@@ -11,9 +11,10 @@ import { TransactionHandlerService } from 'src/app/_services/transactions/transa
   styleUrls: ['./transaction-history.component.css']
 })
 export class TransactionHistoryComponent implements OnInit {
-index?:number
+term!:string;
+  index?:number
   @Input()
-  account!: Account; 
+  account!: Account;
   @Input()
   transactions: Transaction[] = [];
   constructor(
