@@ -1,7 +1,7 @@
 import { TransferMoney } from './../../models/transaction/responses/transfer';
 import { TransferRequest } from './../../models/transaction/request/transfer-request.model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, Input } from '@angular/core';
 import { DepositRequest } from 'src/app/models/transaction/request/deposit-request.model';
 import { TransferGenerateComponent } from 'src/app/components/transaction/transfer-generate/transfer-generate.component';
 import { Transfer } from 'src/app/models/transaction/transfer.model';
