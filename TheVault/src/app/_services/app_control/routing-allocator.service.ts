@@ -6,7 +6,8 @@ const ROUTES = {
   register: ['register'],
   select: ['account-view'],
   detail: ['account-detail'],
-  profile: ['profile']
+  profile: ['profile'],
+  editProfile: ['edit-profile']
 }
 
 @Injectable({
@@ -26,4 +27,6 @@ export class RoutingAllocatorService {
   profile():void{this.router.navigate(ROUTES.profile)};
 
   accountView():void{this.router.navigate(ROUTES.select)};
+
+  editProfile():void{this.router.navigate(ROUTES.editProfile)};
 }

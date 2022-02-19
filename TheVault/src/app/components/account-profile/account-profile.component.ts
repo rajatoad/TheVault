@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Profile } from 'src/app/models/users/profile.model';
+import { RoutingAllocatorService } from 'src/app/_services/app_control/routing-allocator.service';
 
 @Component({
   selector: 'app-account-profile',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AccountProfileComponent implements OnInit {
 
-  constructor() { }
+  @Input()
+  profile!:Profile;
+
+  constructor(
+    private router: RoutingAllocatorService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  editProfile(){
+    this.router.editProfile();
   }
 
 }

@@ -2,6 +2,7 @@ package com.revature.thevault.service.classes;
 
 
 import com.revature.thevault.presentation.model.request.DepositRequest;
+import com.revature.thevault.presentation.model.response.builder.DeleteResponse;
 import com.revature.thevault.presentation.model.response.builder.GetResponse;
 import com.revature.thevault.presentation.model.response.builder.PostResponse;
 import com.revature.thevault.repository.dao.DepositRepository;
@@ -99,6 +100,19 @@ public class DepositService implements DepositServiceInterface {
                     ))
                     .build();
             else throw new InvalidDepositIdException(HttpStatus.BAD_REQUEST, "Deposit not found: " + depositId);
+        }catch(Exception e){
+            throw new InvalidRequestException(HttpStatus.BAD_REQUEST, e.getMessage());
+        }
+    }
+
+    @Override
+    public DeleteResponse deleteAllDeposits(Integer accountId) {
+        try{
+            depositRepository.deleteByAccountentity(new AccountEntity(accountId, new LoginCredentialEntity(), new AccountTypeEntity(), 0, 0));
+            return DeleteResponse.builder()
+                    .success(true)
+                    .deletedObject(Collections.EMPTY_LIST)
+                    .build();
         }catch(Exception e){
             throw new InvalidRequestException(HttpStatus.BAD_REQUEST, e.getMessage());
         }

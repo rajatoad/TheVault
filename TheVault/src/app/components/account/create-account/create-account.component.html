@@ -1,0 +1,11 @@
+<h1>Create an Account</h1>
+<form #depositForm class="was-validated" (ngSubmit)="onClickSubmit(accountType.value)">
+     <div class="col-md-1">
+         <label for="accountTypeBox" class="form-label">Account Type</label>
+        <select class="form-control" id="accountTypeBox" name="accountTypeBox" #accountType required ngModel>
+            <option>Checking</option>
+            <option>Savings</option>
+        </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+  </form>

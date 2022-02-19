@@ -25,6 +25,10 @@ import { WithdrawGenerateComponent } from './components/transaction/withdraw-gen
 import { DepositGenerateComponent } from './components/transaction/deposit-generate/deposit-generate.component';
 import { DepositDetailComponent } from './components/transaction/deposit-detail/deposit-detail.component';
 import { WithdrawDetailComponent } from './components/transaction/withdraw-detail/withdraw-detail.component';
+import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
+import { TransactionSearchComponent } from './components/transaction/select-transaction/transaction-search/transaction-search.component';
+import { Ng2SearchPipeModule} from 'ng2-search-filter';
+import { CreateAccountComponent } from './components/account/create-account/create-account.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +47,10 @@ import { WithdrawDetailComponent } from './components/transaction/withdraw-detai
     WithdrawGenerateComponent,
     DepositGenerateComponent,
     DepositDetailComponent,
-    WithdrawDetailComponent
+    WithdrawDetailComponent,
+    EditProfileComponent,
+    TransactionSearchComponent,
+    CreateAccountComponent
   ],
   imports: [
     BrowserModule,
@@ -52,8 +59,7 @@ import { WithdrawDetailComponent } from './components/transaction/withdraw-detai
     FormsModule,
     HttpClientModule,
     AppBootstrapModule
-    // HttpClientModule, HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService,
-    //   {dataEncapsulation: false})
+    // Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

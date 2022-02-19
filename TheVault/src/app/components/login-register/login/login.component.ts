@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { GetAccount } from 'src/app/models/account/responses/get-account';
 import { PostLogin } from 'src/app/models/login/responses/post-login';
 import { LoginUser } from 'src/app/models/users/login-user.model';
 import { GetUser } from 'src/app/models/users/responses/get-user';
-import BuildUser from 'src/app/utils/build-user';
+import { AccountHandlerService } from 'src/app/_services/account/account-handler.service';
 import { RoutingAllocatorService } from 'src/app/_services/app_control/routing-allocator.service';
-import { AuthService } from 'src/app/_services/auth/auth.service';
-import { ProfileService } from 'src/app/_services/profile.service';
-import { UserSessionService } from 'src/app/_services/user/user-session.service';
+import { GlobalStorageService } from 'src/app/_services/global-storage.service';
+import { UserHandlerService } from 'src/app/_services/user/user-handler.service';
 
 @Component({
   selector: 'app-login',
@@ -27,10 +27,10 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private authService: AuthService,
-    private userStorage: UserSessionService,
-    private router: RoutingAllocatorService,
-    private profileService: ProfileService
+    private userHandler: UserHandlerService,
+    private globalStorage: GlobalStorageService,
+    private accountHandler: AccountHandlerService,
+    private router: RoutingAllocatorService
     ) { }
 
   ngOnInit(): void {
@@ -72,21 +72,47 @@ onSubmit(): void {
   let passW = this.form.get('password')?.value
   if(userN != null && passW != null) {
     let loginUser = new LoginUser(userN, passW);
-    this.authService.validateLogin(loginUser)
-      .subscribe(
-        (data: PostLogin) => {
-          console.log(data);
-          this.userStorage.saveUserId(data.createdObject[0].userId);
-          this.profileService.getUserProfile(this.userStorage.getUserId()).subscribe(
-            (data: GetUser) => {
-              this.userStorage.saveUser(data.gotObject[0]);
-              this.router.accountView();
-            }            
-            );
-          }
-        );
- 
+    this.getUserInfo(loginUser);
   }
+}
+
+//Validate a users input, returning a response on a successful login
+getUserInfo(loginUser: LoginUser){
+  this.userHandler.validateLogin(loginUser).subscribe(this.loginObserver);
+}
+
+// On a successful login, the profile is requested, and on that success the user accounts are retrieved.
+// After getting all accounts, we move to the next view for account view.
+loginObserver = {
+  next: (data: PostLogin) => {
+    this.globalStorage.setUserId(data.createdObject[0].userId);
+    this.globalStorage.setUsername(data.createdObject[0].username);
+    this.userHandler.getUserProfile(this.globalStorage.getUserId()).subscribe(this.profileObserver)
+  },
+  error: (err: Error) => {
+    console.error("Login Observer error: " + err);
+    this.onReset();},
+  complete: () => console.log("Completed getting login")
+}
+
+profileObserver = {
+  next: (data: GetUser) => {
+    this.globalStorage.setProfile(data.gotObject[0]);
+    this.accountHandler.getAccounts(this.globalStorage.getUserId()).subscribe(this.accountObserver);
+  },
+  error: (err: Error) => {
+    console.error("profile observer error: " + err);
+    this.onReset();},
+  complete: () => console.log("Completed getting profile")
+}
+
+accountObserver = {
+  next: (data: GetAccount) => {
+    this.globalStorage.setAccounts(data.gotObject);
+    this.router.accountView();
+  },
+  error: (err: Error) => console.log("account observer error: " + err),
+  complete: () => console.log("Completed getting user accounts")
 }
 
 onReset(): void {

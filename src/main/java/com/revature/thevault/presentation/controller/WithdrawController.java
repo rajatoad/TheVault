@@ -1,6 +1,7 @@
 package com.revature.thevault.presentation.controller;
 
 import com.revature.thevault.presentation.model.request.WithdrawRequest;
+import com.revature.thevault.presentation.model.response.builder.DeleteResponse;
 import com.revature.thevault.presentation.model.response.builder.GetResponse;
 import com.revature.thevault.presentation.model.response.builder.PostResponse;
 import com.revature.thevault.service.classes.WithdrawService;
@@ -33,5 +34,10 @@ public class WithdrawController {
     @PostMapping("/type/{requestType}")
     public GetResponse getWithdrawalByType(@PathVariable String requestType, @RequestParam int accountId){
         return withdrawService.getAlLUserWithdrawalsOfType(accountId, requestType);
+    }
+
+    @DeleteMapping("/clear/{accountId}")
+    public DeleteResponse deleteAllWithdraws(@PathVariable Integer accountId){
+        return withdrawService.deleteAllWithdraws(accountId);
     }
 }

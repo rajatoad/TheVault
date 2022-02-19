@@ -3,11 +3,9 @@ import { Component, OnInit } from '@angular/core';
 import { Account } from 'src/app/models/account/account.model';
 import { GetTransaction } from 'src/app/models/transaction/responses/get-transaction';
 import { Transaction } from 'src/app/models/transaction/transaction.model';
-import { AccountService } from 'src/app/_services/account/account.service';
 import { RoutingAllocatorService } from 'src/app/_services/app_control/routing-allocator.service';
-import { TransactionHistoryService } from 'src/app/_services/transactions/transaction-history.service';
-import { UserSessionService } from 'src/app/_services/user/user-session.service';
-import { UserService } from 'src/app/_services/user/user.service';
+import { GlobalStorageService } from 'src/app/_services/global-storage.service';
+import { TransactionHandlerService } from 'src/app/_services/transactions/transaction-handler.service';
 
 @Component({
   selector: 'app-account-detail',
@@ -17,37 +15,32 @@ import { UserService } from 'src/app/_services/user/user.service';
 export class AccountDetailComponent implements OnInit {
 
   account!: Account;
-
   transactions: Transaction[] = [];
-
   createDeposit: boolean = false;
-
   createWithdraw: boolean = false;
 
   constructor(
-    private accountService: AccountService,
+    private globalStorage: GlobalStorageService,
+    private transactionHandler: TransactionHandlerService,
     private location: Location,
-    private router: RoutingAllocatorService,
-    private userSession: UserSessionService,
-    private userService: UserService,
-    private transService: TransactionHistoryService
+    private router: RoutingAllocatorService
   ) { }
 
   ngOnInit(): void {
-    this.account = this.accountService.activeAccount;
-    this.updateTransactions();
+    this.setupPage();
   }
 
-  updateTransactions(){
-    this.transService.getHistory(this.account.accountId).subscribe(
-      (data: GetTransaction) => this.transactions = data.gotObject
-    )
+  setupPage(){
+    this.account = this.globalStorage.getActiveAccount();
+    this.getTransactions();
   }
 
-  goBack(){
-    this.location.back();
+  // Populate the transaction history of the account
+  getTransactions(){
+    this.transactionHandler.getTransactionHistory(this.account.accountId).subscribe(this.getTransactionObserver)
   }
 
+  //Deposit and Withdraw generator function used to display the components related to create them
   depositGenerator(){
     this.createWithdraw = false;
     this.createDeposit = !this.createDeposit;
@@ -58,18 +51,29 @@ export class AccountDetailComponent implements OnInit {
     this.createWithdraw = !this.createWithdraw;
   }
 
+  // Submit events are used to close the component and to refresh the transaction history
   depositSubmitEvent(submit:boolean){
     this.createDeposit = submit;
-    this.ngOnInit();
+    this.getTransactions();
   }
 
   withdrawSubmitEvent(submit:boolean){
     this.createWithdraw = submit;
-    this.ngOnInit();
+    this.getTransactions();
   }
 
   logout(){
     this.router.login();
+  }
+
+  goBack(){
+    this.location.back();
+  }
+
+  getTransactionObserver = {
+    next: (data: GetTransaction) => this.transactions = data.gotObject,
+    error: (err: Error) => console.error("Get Transaction Observer Error: " + err),
+    complete: () => console.log("Got Transaction History Successfully")
   }
 
 }

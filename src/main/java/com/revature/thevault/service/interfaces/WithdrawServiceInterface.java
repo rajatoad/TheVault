@@ -1,6 +1,7 @@
 package com.revature.thevault.service.interfaces;
 
 import com.revature.thevault.presentation.model.request.WithdrawRequest;
+import com.revature.thevault.presentation.model.response.builder.DeleteResponse;
 import com.revature.thevault.presentation.model.response.builder.GetResponse;
 import com.revature.thevault.presentation.model.response.builder.PostResponse;
 
@@ -15,4 +16,6 @@ public interface WithdrawServiceInterface {
     GetResponse getAlLUserWithdrawalsOfType(int accountId, String requestTypeId);
 
     GetResponse findByWithdrawId(int withdrawId);
+
+    DeleteResponse deleteAllWithdraws(Integer accountId);
 }

@@ -1,11 +1,11 @@
 package com.revature.thevault.presentation.controller;
 
 import com.revature.thevault.presentation.model.request.LoginRequest;
+import com.revature.thevault.presentation.model.request.NewLoginCredentialsRequest;
 import com.revature.thevault.presentation.model.response.LoginResponse;
 import com.revature.thevault.presentation.model.response.builder.GetResponse;
 import com.revature.thevault.presentation.model.response.builder.PostResponse;
 import com.revature.thevault.repository.entity.LoginCredentialEntity;
-import com.revature.thevault.repository.entity.NewLoginCredentialsRequest;
 import com.revature.thevault.service.classes.AccountProfileService;
 import com.revature.thevault.service.classes.LoginService;
 import lombok.extern.java.Log;
@@ -32,8 +32,8 @@ public class LoginController {
     }
 
     @ResponseStatus(HttpStatus.CREATED)
-    @PostMapping("/new")
-    public PostResponse newLogin(@NonNull @RequestBody LoginCredentialEntity newLoginRequest){
+    @PostMapping("/create")
+    public PostResponse newLogin(@NonNull @RequestBody NewLoginCredentialsRequest newLoginRequest){
         return loginService.createNewLogin(newLoginRequest);
     }
 
