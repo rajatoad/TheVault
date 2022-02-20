@@ -56,7 +56,7 @@ const routes: Routes = [
   },
   {
     component: TransferGenerateComponent,
-    path: 'transfer-test'
+    path: 'account-transfer'
   }
 ];
 

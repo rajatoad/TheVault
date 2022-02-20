@@ -12,19 +12,19 @@ export class TransferRequest {
   public set receiverAccountId(value: number) {
     this._receiverAccountId = value;
   }
-  public get ownerAccountId(): number {
-    return this._ownerAccountId;
+  public get accountId(): number {
+    return this._accountId;
   }
-  public set ownerAccountId(value: number) {
-    this._ownerAccountId = value;
+  public set accountId(value: number) {
+    this._accountId = value;
   }
 
   constructor(
-    private _ownerAccountId: number,
+    private _accountId: number,
     private _receiverAccountId: number,
     private _amount: number
   ) {
-    this._ownerAccountId = _ownerAccountId;
+    this._accountId = _accountId;
     this._receiverAccountId = _receiverAccountId;
     this._amount = _amount;
   }

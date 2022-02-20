@@ -7,13 +7,12 @@ import { Account } from 'src/app/models/account/account.model';
 import { AccountRetrieverService } from 'src/app/_services/backend/account-retriever.service';
 import { GetAccount } from 'src/app/models/account/responses/get-account';
 
-
-
 @Component({
   selector: 'app-transfer-generate',
   templateUrl: './transfer-generate.component.html',
   styleUrls: ['./transfer-generate.component.css']
 })
+
 export class TransferGenerateComponent implements OnInit {
 
   @Output()
@@ -26,11 +25,9 @@ export class TransferGenerateComponent implements OnInit {
     private accountService: AccountService,
     private transferService: TransferGenerateService,
     private accountHttp: AccountRetrieverService
-
   ) { }
 
   ngOnInit(): void {
-    // method for loading accounts goes here
     this.getAccounts();
   }
   userAccounts!: Account[]
@@ -45,9 +42,9 @@ export class TransferGenerateComponent implements OnInit {
   };
 
 
-  onClickSubmit(receiverAccount: string, amount: string) {
+  onClickSubmit(ownerAccount: string, receiverAccount: string, amount: string) {
     console.log(this.accountService.activeAccount)
-    let transfer: TransferRequest = new TransferRequest(this.userId, +receiverAccount, Number.parseFloat(amount))
+    let transfer: TransferRequest = new TransferRequest(+ownerAccount, +receiverAccount, Number.parseFloat(amount))
     console.log(transfer)
     this.transferService.createTransfer(transfer).subscribe(
       (data: TransferMoney) => {
@@ -56,8 +53,6 @@ export class TransferGenerateComponent implements OnInit {
       }
     )
   }
-
-
 
 
 }

@@ -24,6 +24,8 @@ export class AccountDetailComponent implements OnInit {
 
   createWithdraw: boolean = false;
 
+  createTransfer: boolean = false;
+
   constructor(
     private accountService: AccountService,
     private location: Location,
@@ -38,37 +40,50 @@ export class AccountDetailComponent implements OnInit {
     this.updateTransactions();
   }
 
-  updateTransactions(){
+  updateTransactions() {
     this.transService.getHistory(this.account.accountId).subscribe(
       (data: GetTransaction) => this.transactions = data.gotObject
     )
   }
 
-  goBack(){
+  goBack() {
     this.location.back();
   }
 
-  depositGenerator(){
+  depositGenerator() {
     this.createWithdraw = false;
+    this.createTransfer = false;
     this.createDeposit = !this.createDeposit;
   }
 
-  withdrawGenerator(){
+  withdrawGenerator() {
     this.createDeposit = false;
+    this.createTransfer = false;
     this.createWithdraw = !this.createWithdraw;
   }
 
-  depositSubmitEvent(submit:boolean){
+  transferGenerator() {
+    this.createDeposit = false;
+    this.createWithdraw = false;
+    this.createTransfer = !this.createTransfer;
+  }
+
+  depositSubmitEvent(submit: boolean) {
     this.createDeposit = submit;
     this.ngOnInit();
   }
 
-  withdrawSubmitEvent(submit:boolean){
+  withdrawSubmitEvent(submit: boolean) {
     this.createWithdraw = submit;
     this.ngOnInit();
   }
 
-  logout(){
+  transferSubmitEvent(submit: boolean) {
+    this.createTransfer = submit;
+    this.ngOnInit();
+  }
+
+  logout() {
     this.router.login();
   }
 

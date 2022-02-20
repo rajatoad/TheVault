@@ -1,10 +1,8 @@
-import { TransferMoney } from './../../models/transaction/responses/transfer';
-import { TransferRequest } from './../../models/transaction/request/transfer-request.model';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable, Input } from '@angular/core';
-import { DepositRequest } from 'src/app/models/transaction/request/deposit-request.model';
-import { TransferGenerateComponent } from 'src/app/components/transaction/transfer-generate/transfer-generate.component';
-import { Transfer } from 'src/app/models/transaction/transfer.model';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { TransferRequest } from './../../models/transaction/request/transfer-request.model';
+import { TransferMoney } from './../../models/transaction/responses/transfer';
 
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -16,16 +14,16 @@ const httpOptions = {
 export class TransferGenerateService {
 
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
   ) { }
 
   createTransfer(transfer: TransferRequest) {
-    let postTransferUrl = `http://localhost:8080/account/users-accounts?userId=1`;
+    let putTransferUrl = `http://localhost:8080/account/transfer`;
     console.log(transfer);
-    return this.http.post<TransferMoney>(postTransferUrl, JSON.stringify({
-      transferAmount: transfer.amount,
-      transferOwner: transfer.ownerAccountId,
-      transferReciever: transfer.receiverAccountId
+    return this.http.put<TransferMoney>(putTransferUrl, JSON.stringify({
+      ownerAccountId: transfer.accountId,
+      receiverAccountId: transfer.receiverAccountId,
+      amount: transfer.amount
     }), httpOptions);
   }
 }

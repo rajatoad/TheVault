@@ -6,35 +6,28 @@ export class Transfer {
   public set accountId(value: number) {
     this._accountId = value;
   }
-  public get accountType(): string {
-    return this._accountType;
+  public get receiverAccountId(): number {
+    return this._receiverAccountId;
   }
-  public set accountType(value: string) {
-    this._accountType = value;
+  public set receiverAccountId(value: number) {
+    this._receiverAccountId = value;
   }
-  public get availableBalance(): number {
-    return this._availableBalance;
+  public get amount(): number {
+    return this._amount;
   }
-  public set availableBalance(value: number) {
-    this._availableBalance = value;
+  public set amount(value: number) {
+    this._amount = value;
   }
-  public get pendingBalance(): number {
-    return this._pendingBalance;
-  }
-  public set pendingBalance(value: number) {
-    this._pendingBalance = value;
-  }
+
 
 
   constructor(
     private _accountId: number,
-    private _accountType: string,
-    private _availableBalance: number,
-    private _pendingBalance: number
+    private _receiverAccountId: number,
+    private _amount: number
   ) {
     this._accountId = _accountId;
-    this._accountType = _accountType;
-    this._availableBalance = _availableBalance;
-    this._pendingBalance = _pendingBalance;
+    this._receiverAccountId = _receiverAccountId;
+    this._amount = _amount;
   }
 }
