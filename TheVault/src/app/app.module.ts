@@ -58,8 +58,8 @@ import { CreateAccountComponent } from './components/account/create-account/crea
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    AppBootstrapModule
-    // Ng2SearchPipeModule
+    AppBootstrapModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
