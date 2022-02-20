@@ -16,20 +16,20 @@ public class ServiceAspect {
 
     @Before("com.revature.thevault.utility.aspects.SystemArchitect.businessService()")
     public void beforeServiceCheck(JoinPoint jp){
-        dLog.debug("Class: " + jp.getSignature().getDeclaringType() + "\nMethod: " + jp.getSignature().getName() + "\nArguments: " + Arrays.toString(jp.getArgs()));
+        dLog.debug("CLASS: " + jp.getSignature().getDeclaringType() + "\nMETHOD: " + jp.getSignature().getName() + "\nARGUMENTS: " + Arrays.toString(jp.getArgs()));
     }
 
     @AfterReturning(value = "com.revature.thevault.utility.aspects.SystemArchitect.businessService()", returning = "returnedValue")
     public void afterServiceCheck(JoinPoint jp, Object returnedValue){
         if(returnedValue != null){
-            dLog.info("RETURNING: " + returnedValue.toString());
+            dLog.info("METHOD: " + jp.getSignature().getName() + "\nRETURNING: " + returnedValue);
         }else{
-            dLog.info("Returning: NULL VALUE");
+            dLog.info("METHOD: " + jp.getSignature().getName() + "\nRETURNING: NULL VALUE");
         }
     }
 
     @AfterThrowing(value = "com.revature.thevault.utility.aspects.SystemArchitect.businessService()", throwing = "thrownException")
-    public void afterThrowingCheck(JoinPoint jp, Object thrownException){
-        dLog.error("CONTROLLER CLASS: " + jp.getSignature().getDeclaringType() + "\nTHROWING EXCEPTION: " + thrownException.getClass());
+    public void afterThrowingCheck(JoinPoint jp, Exception thrownException){
+        dLog.error("CONTROLLER CLASS: " + jp.getSignature().getDeclaringType() + "\nMETHOD: " + jp.getSignature().getName() + "\nTHROWING EXCEPTION CLASS: " + thrownException.getClass() + "\nEXCEPTION STACKTRACE: " + thrownException.getStackTrace());
     }
 }

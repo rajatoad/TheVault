@@ -22,14 +22,14 @@ public class PresentationAspect {
     @AfterReturning(value = "com.revature.thevault.utility.aspects.SystemArchitect.controller()", returning = "returnedValue")
     public void afterServiceCheck(JoinPoint jp, Object returnedValue){
         if(returnedValue != null){
-            dLog.info("RETURNING: " + returnedValue);
+            dLog.info("Class: " + jp.getSignature().getDeclaringType() + "\nMethod: " + jp.getSignature().getName() +"\nRETURNING: " + returnedValue);
         }else{
-            dLog.info("Returning: NULL VALUE");
+            dLog.info("Class: " + jp.getSignature().getDeclaringType() + "\nMethod: " + jp.getSignature().getName() +"\nReturning: NULL VALUE");
         }
     }
 
     @AfterThrowing(value = "com.revature.thevault.utility.aspects.SystemArchitect.controller()", throwing = "thrownException")
     public void afterThrowingCheck(JoinPoint jp, Object thrownException){
-        dLog.error("CONTROLLER CLASS: " + jp.getSignature().getDeclaringType() + "\nTHROWING EXCEPTION: " + thrownException.getClass());
+        dLog.error("CONTROLLER CLASS: " + jp.getSignature().getDeclaringType() + "\nMETHOD: " + jp.getSignature().getName() +  "\nTHROWING EXCEPTION: " + thrownException.getClass());
     }
 }
