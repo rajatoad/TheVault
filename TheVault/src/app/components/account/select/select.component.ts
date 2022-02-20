@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Account } from 'src/app/models/account/account.model';
 import { DeleteAccount } from 'src/app/models/account/responses/delete-account';
+import { GetAccount } from 'src/app/models/account/responses/get-account';
 import { DeleteDeposit } from 'src/app/models/transaction/responses/delete-deposit';
 import { DeleteWithdraw } from 'src/app/models/transaction/responses/delete-withdraw';
 import { AccountHandlerService } from 'src/app/_services/account/account-handler.service';
@@ -35,7 +36,7 @@ export class SelectComponent implements OnInit {
   }
 
   setupAccounts(){
-    this.accounts = this.globalStorage.getAccounts();
+    this.accountHandler.getAccounts(this.globalStorage.getUserId()).subscribe(this.accountObserver);
   }
 
   // Deleting account must be done in this order due to deposits being linked to a the deposit account
@@ -71,5 +72,13 @@ export class SelectComponent implements OnInit {
     },
     error: (err: Error) => console.log("Delete Account Observer error: " + err),
     complete: () => console.log("Delete Account successful")
+  }
+
+  accountObserver = {
+    next: (data: GetAccount) => {
+      this.accounts = data.gotObject;
+    },
+    error: (err: Error) => console.log("account observer error: " + err),
+    complete: () => console.log("Completed getting user accounts")
   }
 }

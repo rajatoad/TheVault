@@ -1,4 +1,10 @@
 export class TransferRequest {
+  public get ownerAccountId(): number {
+    return this._ownerAccountId;
+  }
+  public set ownerAccountId(value: number) {
+    this._ownerAccountId = value;
+  }
 
   public get amount(): number {
     return this._amount;
@@ -12,19 +18,13 @@ export class TransferRequest {
   public set receiverAccountId(value: number) {
     this._receiverAccountId = value;
   }
-  public get accountId(): number {
-    return this._accountId;
-  }
-  public set accountId(value: number) {
-    this._accountId = value;
-  }
 
   constructor(
-    private _accountId: number,
+    private _ownerAccountId: number,
     private _receiverAccountId: number,
     private _amount: number
   ) {
-    this._accountId = _accountId;
+    this._ownerAccountId = _ownerAccountId;
     this._receiverAccountId = _receiverAccountId;
     this._amount = _amount;
   }

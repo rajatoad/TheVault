@@ -40,7 +40,8 @@ public class TransactionService implements TransactionServiceInterface {
     private TransactionObject convertWithdrawToTransactionObject(WithdrawResponseObject withdrawals) {
         return new TransactionObject(
                 withdrawals.getWithdrawId(),
-                "Withdrawal",
+                "Withdraw",
+                withdrawals.getRequestType(),
                 withdrawals.getReference(),
                 withdrawals.getDateWithdraw(),
                 withdrawals.getAmount()
@@ -51,6 +52,7 @@ public class TransactionService implements TransactionServiceInterface {
         return new TransactionObject(
                 deposit.getDepositId(),
                 "Deposit",
+                deposit.getDepositType(),
                 deposit.getReference(),
                 deposit.getDateDeposit(),
                 deposit.getAmount()

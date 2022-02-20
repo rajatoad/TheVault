@@ -51,7 +51,7 @@ import { TransferGenerateComponent } from './components/transaction/transfer-gen
     WithdrawDetailComponent,
     EditProfileComponent,
     TransactionSearchComponent,
-    CreateAccountComponent
+    CreateAccountComponent,
     WithdrawDetailComponent,
     TransferGenerateComponent
   ],
