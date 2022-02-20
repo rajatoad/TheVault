@@ -1,0 +1,23 @@
+<h1>Make a Transfer</h1>
+<form #transferForm class="was-validated" (ngSubmit)="onClickSubmit(ownerAccount.value, receiverAccount.value, Wbox.value)"> 
+    <div class="col-md-1">
+      <label for="Wbox" class="form-label">Transfer:</label>
+      <input type="number" class="form-control" min="1" id="Wbox" #Wbox placeholder="Desired Amount" name="withdrawbox" required ngModel>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Enter number greater than 1</div>
+    </div>
+  <div class="col-md-2">
+      <label for="transferTypeBox" class="form-label">Account From</label>
+   <select class="form-control" id="transferTypeBox" name="tranTypeBox" #ownerAccount required ngModel>
+      <option *ngFor="let account of userAccounts" value={{account.accountId}}>{{account.accountType}}</option>
+   </select>
+  </div>
+  <div class="col-md-2">
+      <label for="transferTypeBox" class="form-label">Account To</label>
+   <select class="form-control" id="transferTypeBox" name="tranTypeBox" #receiverAccount required ngModel>
+      <option *ngFor="let account of userAccounts" value={{account.accountId}}>{{account.accountType}}</option>
+   </select>
+  </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
