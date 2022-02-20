@@ -9,4 +9,5 @@ import org.springframework.stereotype.Repository;
 public interface AccountProfileRepository extends JpaRepository<AccountProfileEntity, Integer> {
 
     AccountProfileEntity findByLogincredential(LoginCredentialEntity loginCredentialEntity);
+    AccountProfileEntity deleteByLogincredential(LoginCredentialEntity loginCredentialEntity);
 }

@@ -6,6 +6,7 @@ import com.revature.thevault.presentation.model.response.builder.DeleteResponse;
 import com.revature.thevault.presentation.model.response.builder.GenericResponse;
 import com.revature.thevault.presentation.model.response.builder.GetResponse;
 import com.revature.thevault.presentation.model.response.builder.PostResponse;
+import com.revature.thevault.presentation.model.response.builder.PutResponse;
 import com.revature.thevault.repository.entity.AccountEntity;
 
 import java.util.List;
@@ -13,23 +14,19 @@ import java.util.List;
 public interface AccountServiceInterface {
 
     // Method responsible for creating a request
-    GenericResponse createAccount(CreateAccountRequest createAccountRequest);
+    PostResponse createAccount(CreateAccountRequest createAccountRequest);
 
-    GetResponse getAccount(GetAccountRequestSingle getAccountRequestSingle);
+    GetResponse getAccount(int accountId);
 
     // Delete an account
-    DeleteResponse deleteAccount(DeleteAccountRequest deleteAccountRequest);
+    DeleteResponse deleteAccount(int accountId);
 
     // Get users accounts
-    GetResponse getAccounts(GetAccountRequestAll getAccountRequestAll);
+    GetResponse getAccounts(int userId);
 
-    // Update accounts available balance
-    GenericResponse updateAccountAvailableBalance(UpdateBalanceRequest updateBalanceRequest);
-
-    // Update accounts pending balance
-    GenericResponse updateAccountPendingBalance(UpdateBalanceRequest updateBalanceRequest);
+    // Update account
+    PutResponse updateAccount(UpdateAccountRequest updateAccountRequest);
 
     // Transfer from one account to another
-    GenericResponse transferToAnotherAccount(TransferRequest transferRequest);
-
+    PutResponse transferToAnotherAccount(TransferRequest transferRequest);
 }

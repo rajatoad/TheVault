@@ -1,253 +1,486 @@
-2022-02-11 00:05:38,669 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 00:05:38,686 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 00:05:38,749 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130)])
-2022-02-11 00:05:38,749 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130)])
-2022-02-11 00:08:37,629 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 00:08:37,640 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 00:08:37,704 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 00:08:37,704 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 00:09:16,591 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 00:09:16,601 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 00:09:16,661 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 00:09:16,662 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 00:11:07,366 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 00:11:07,377 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 00:11:07,442 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 00:11:07,443 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 00:51:27,759 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 00:51:27,768 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 00:51:27,825 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 00:51:27,825 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 00:54:06,034 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 00:54:06,043 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 00:54:06,108 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 00:54:06,108 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 00:59:46,349 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 00:59:46,361 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 00:59:46,427 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(success=true, responseType=GET, message=Account retrieved by Id: 1, gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 00:59:46,427 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(success=true, responseType=GET, message=Account retrieved by Id: 1, gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 01:01:23,061 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 01:01:23,073 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 01:01:23,128 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(success=true, responseType=GET, message=Account retrieved by Id: 1, gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 01:01:23,129 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(success=true, responseType=GET, message=Account retrieved by Id: 1, gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 01:02:48,099 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 01:02:48,110 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 01:02:48,171 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(success=true, responseType=GET, message=Account retrieved by Id: 1, gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 01:02:48,171 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(success=true, responseType=GET, message=Account retrieved by Id: 1, gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 01:09:43,724 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 01:09:43,734 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 01:09:43,792 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 01:09:43,792 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, loginCredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 01:23:48,515 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 01:23:48,525 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 01:23:48,584 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 01:23:48,584 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 01:24:25,759 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccountList
-Arguments: [GetAccountRequestAll(userId=1)]
-2022-02-11 01:24:25,759 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccounts
-Arguments: [GetAccountRequestAll(userId=1)]
-2022-02-11 01:24:25,785 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130)])
-2022-02-11 01:24:25,785 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130)])
-2022-02-11 01:25:37,289 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccountList
-Arguments: [GetAccountRequestAll(userId=1)]
-2022-02-11 01:25:37,301 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccounts
-Arguments: [GetAccountRequestAll(userId=1)]
-2022-02-11 01:25:37,363 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130)])
-2022-02-11 01:25:37,364 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130)])
-2022-02-11 01:26:20,369 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccountList
-Arguments: [GetAccountRequestAll(userId=1)]
-2022-02-11 01:26:20,380 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccounts
-Arguments: [GetAccountRequestAll(userId=1)]
-2022-02-11 01:26:20,439 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130)])
-2022-02-11 01:26:20,439 INFO dLog [http-nio-8080-exec-1] RETURNING: GetResponse(gotObject=[AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130)])
-2022-02-11 01:31:40,778 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 01:31:40,778 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 01:31:40,793 INFO dLog [http-nio-8080-exec-5] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 01:31:40,793 INFO dLog [http-nio-8080-exec-5] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 14:49:45,953 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: transferToAnotherAccount
-Arguments: [TransferRequest(ownerAccountId=1, receiverAccountId=2, amount=100000)]
-2022-02-11 14:49:45,967 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:45,979 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: deleteAccount
-Arguments: [DeleteAccountRequest(accountId=-1)]
-2022-02-11 14:49:45,985 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
-THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidAccountIdException
-2022-02-11 14:49:45,996 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: deleteAccount
-Arguments: [DeleteAccountRequest(accountId=1)]
-2022-02-11 14:49:45,996 INFO dLog [main] RETURNING: GenericResponse(success=true, responseType=DELETE, message=Successful Account Deletion: 1)
-2022-02-11 14:49:46,019 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: transferToAnotherAccount
-Arguments: [TransferRequest(ownerAccountId=1, receiverAccountId=2, amount=42)]
-2022-02-11 14:49:46,019 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,029 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: transferToAnotherAccount
-Arguments: [TransferRequest(ownerAccountId=1, receiverAccountId=2, amount=820)]
-2022-02-11 14:49:46,029 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,039 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: transferToAnotherAccount
-Arguments: [TransferRequest(ownerAccountId=1, receiverAccountId=2, amount=539)]
-2022-02-11 14:49:46,040 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,050 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: transferToAnotherAccount
-Arguments: [TransferRequest(ownerAccountId=1, receiverAccountId=2, amount=235)]
-2022-02-11 14:49:46,050 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,060 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: transferToAnotherAccount
-Arguments: [TransferRequest(ownerAccountId=1, receiverAccountId=2, amount=965)]
-2022-02-11 14:49:46,060 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,070 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: updateAccountAvailableBalance
-Arguments: [UpdateBalanceRequest(accountId=1, amount=10)]
-2022-02-11 14:49:46,070 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,085 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: updateAccountPendingBalance
-Arguments: [UpdateBalanceRequest(accountId=1, amount=743)]
-2022-02-11 14:49:46,085 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,094 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: updateAccountPendingBalance
-Arguments: [UpdateBalanceRequest(accountId=1, amount=686)]
-2022-02-11 14:49:46,094 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,103 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: updateAccountPendingBalance
-Arguments: [UpdateBalanceRequest(accountId=1, amount=604)]
-2022-02-11 14:49:46,104 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,113 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: updateAccountPendingBalance
-Arguments: [UpdateBalanceRequest(accountId=1, amount=233)]
-2022-02-11 14:49:46,114 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,123 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: updateAccountPendingBalance
-Arguments: [UpdateBalanceRequest(accountId=1, amount=298)]
-2022-02-11 14:49:46,123 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,130 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: updateAccountPendingBalance
-Arguments: [UpdateBalanceRequest(accountId=1, amount=-10)]
-2022-02-11 14:49:46,130 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,138 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: updateAccountPendingBalance
-Arguments: [UpdateBalanceRequest(accountId=1, amount=0)]
-2022-02-11 14:49:46,138 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,159 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+2022-02-20 07:22:29,933 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.DepositService
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=0, reference=work, amount=100.0)]
+2022-02-20 07:22:29,976 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-20 07:27:37,590 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.DepositService
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=0, reference=work, amount=100.0)]
+2022-02-20 07:27:37,611 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-20 07:28:16,369 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.DepositService
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=work, amount=100.0)]
+2022-02-20 07:28:16,390 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-20 07:47:03,320 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.DepositService
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=work, amount=100.0)]
+2022-02-20 07:47:03,341 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-20 07:51:57,184 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
 Method: createAccount
 Arguments: [CreateAccountRequest(userId=1, accountType=lol)]
-2022-02-11 14:49:46,160 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,182 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: transferToAnotherAccount
-Arguments: [TransferRequest(ownerAccountId=1, receiverAccountId=-1, amount=10)]
-2022-02-11 14:49:46,182 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,192 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
-Method: createAccount
-Arguments: [CreateAccountRequest(userId=-1, accountType=Checking)]
-2022-02-11 14:49:46,192 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,198 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+2022-02-20 07:51:57,201 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidAccountTypeException
+2022-02-20 07:51:57,228 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: deleteAccount
+Arguments: [1]
+2022-02-20 07:51:57,229 INFO dLog [main] RETURNING: DeleteResponse(deletedObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100, pendingBalance=120)])
+2022-02-20 07:51:57,240 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: updateAccount
+Arguments: [UpdateAccountRequest(accountId=1, accountType=Checking, availableBalance=100, pendingBalance=100)]
+2022-02-20 07:51:57,241 INFO dLog [main] Returning: NULL VALUE
+2022-02-20 07:51:57,284 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccount
+Arguments: [1]
+2022-02-20 07:51:57,285 INFO dLog [main] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100, pendingBalance=120)])
+2022-02-20 07:51:57,293 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-20 07:51:57,294 INFO dLog [main] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100, pendingBalance=120)])
+2022-02-20 07:51:57,310 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: updateAccount
+Arguments: [UpdateAccountRequest(accountId=-1, accountType=, availableBalance=0, pendingBalance=0)]
+2022-02-20 07:51:57,310 INFO dLog [main] Returning: NULL VALUE
+2022-02-20 07:51:57,324 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [-1]
+2022-02-20 07:51:57,325 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidUserIdException
+2022-02-20 07:51:57,334 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: deleteAccount
+Arguments: [-1]
+2022-02-20 07:51:57,335 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+2022-02-20 07:51:57,345 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
 Method: createAccount
 Arguments: [CreateAccountRequest(userId=1, accountType=Checking)]
-2022-02-11 14:49:46,198 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 14:49:46,205 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+2022-02-20 07:51:57,346 INFO dLog [main] RETURNING: PostResponse(createdObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100, pendingBalance=120)])
+2022-02-20 07:51:57,356 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccount
+Arguments: [-1]
+2022-02-20 07:51:57,357 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+2022-02-20 07:55:40,091 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.DepositService
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=work, amount=100.0)]
+2022-02-20 07:55:40,109 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-20 07:57:29,104 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.DepositService
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=work, amount=100.0)]
+2022-02-20 07:57:29,121 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-20 07:59:55,703 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.DepositService
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=work, amount=100.0)]
+2022-02-20 07:59:55,717 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-20 08:05:20,031 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.DepositService
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=work, amount=100.0)]
+2022-02-20 08:05:20,050 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-20 08:05:40,405 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.DepositService
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=work, amount=100.0)]
+2022-02-20 08:05:40,421 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-20 08:06:18,318 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.DepositService
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=work, amount=100.0)]
+2022-02-20 08:06:18,384 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-20 08:10:03,130 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.DepositService
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=work, amount=100.0)]
+2022-02-20 08:10:03,145 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-20 08:11:32,523 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.DepositService
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=work, amount=100.0)]
+2022-02-20 08:11:32,556 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-20 08:15:24,195 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.DepositService
+Method: getAllUserDeposits
+Arguments: [1]
+2022-02-20 08:15:24,221 INFO dLog [main] RETURNING: GetResponse(gotObject=[])
+2022-02-20 08:18:12,092 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: createAccount
+Arguments: [CreateAccountRequest(userId=1, accountType=lol)]
+2022-02-20 08:18:12,106 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidAccountTypeException
+2022-02-20 08:18:12,132 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: updateAccount
+Arguments: [UpdateAccountRequest(accountId=1, accountType=Checking, availableBalance=100, pendingBalance=100)]
+2022-02-20 08:18:12,133 INFO dLog [main] Returning: NULL VALUE
+2022-02-20 08:18:12,153 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccount
+Arguments: [1]
+2022-02-20 08:18:12,156 INFO dLog [main] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100, pendingBalance=120)])
+2022-02-20 08:18:12,162 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: updateAccount
+Arguments: [UpdateAccountRequest(accountId=-1, accountType=, availableBalance=0, pendingBalance=0)]
+2022-02-20 08:18:12,163 INFO dLog [main] Returning: NULL VALUE
+2022-02-20 08:18:12,172 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: createAccount
+Arguments: [CreateAccountRequest(userId=1, accountType=Checking)]
+2022-02-20 08:18:12,172 INFO dLog [main] RETURNING: PostResponse(createdObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100, pendingBalance=120)])
+2022-02-20 08:19:54,025 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.DepositService
+Method: getAllUserDeposits
+Arguments: [1]
+2022-02-20 08:19:54,050 INFO dLog [main] RETURNING: GetResponse(gotObject=[])
+2022-02-20 08:22:01,063 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.DepositService
+Method: getAllUserDeposits
+Arguments: [1]
+2022-02-20 08:22:01,086 INFO dLog [main] RETURNING: GetResponse(gotObject=[])
+2022-02-20 08:33:31,530 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.DepositService
+Method: getAllUserDeposits
+Arguments: [1]
+2022-02-20 08:33:31,556 INFO dLog [main] RETURNING: GetResponse(gotObject=[])
+2022-02-20 08:35:01,349 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.DepositService
+Method: getAllUserDeposits
+Arguments: [1]
+2022-02-20 08:35:01,373 INFO dLog [main] RETURNING: GetResponse(gotObject=[])
+2022-02-20 08:38:35,457 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.DepositService
+Method: getAllUserDeposits
+Arguments: [1]
+2022-02-20 08:38:35,483 INFO dLog [main] RETURNING: GetResponse(gotObject=[])
+2022-02-20 08:39:50,196 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.DepositService
+Method: getAllUserDeposits
+Arguments: [1]
+2022-02-20 08:39:50,223 INFO dLog [main] RETURNING: GetResponse(gotObject=[])
+2022-02-20 08:50:02,111 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.DepositService
+Method: getAllUserDeposits
+Arguments: [1]
+2022-02-20 08:50:02,181 INFO dLog [main] RETURNING: GetResponse(gotObject=[])
+2022-02-20 08:51:29,137 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.DepositService
+Method: getAllUserDeposits
+Arguments: [1]
+2022-02-20 08:51:29,158 INFO dLog [main] RETURNING: GetResponse(gotObject=[])
+2022-02-20 08:54:11,165 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.DepositService
+Method: getAllUserDeposits
+Arguments: [1]
+2022-02-20 08:54:11,185 INFO dLog [main] RETURNING: GetResponse(gotObject=[])
+2022-02-20 09:16:35,462 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.DepositService
+Method: getAllUserDeposits
+Arguments: [1]
+2022-02-20 09:16:35,474 INFO dLog [main] RETURNING: GetResponse(gotObject=[])
+2022-02-20 09:17:00,115 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.DepositService
+Method: getAllUserDeposits
+Arguments: [1]
+2022-02-20 09:17:00,168 INFO dLog [main] RETURNING: GetResponse(gotObject=[])
+2022-02-20 15:48:04,115 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: getProfile
+Arguments: [AccountProfileRequest(userId=1)]
+2022-02-20 15:48:04,135 INFO dLog [main] RETURNING: AccountProfileResponse(success=true, accountProfileEntity=null)
+2022-02-20 15:58:06,795 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: createAccount
+Arguments: [CreateAccountRequest(userId=1, accountType=lol)]
+2022-02-20 15:58:06,828 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidAccountTypeException
+2022-02-20 15:58:06,850 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: updateAccount
+Arguments: [UpdateAccountRequest(accountId=1, accountType=Checking, availableBalance=100, pendingBalance=100)]
+2022-02-20 15:58:06,851 INFO dLog [main] Returning: NULL VALUE
+2022-02-20 15:58:06,866 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccount
+Arguments: [1]
+2022-02-20 15:58:06,867 INFO dLog [main] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100, pendingBalance=120)])
+2022-02-20 15:58:06,874 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: updateAccount
+Arguments: [UpdateAccountRequest(accountId=-1, accountType=, availableBalance=0, pendingBalance=0)]
+2022-02-20 15:58:06,874 INFO dLog [main] Returning: NULL VALUE
+2022-02-20 15:58:06,883 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: createAccount
+Arguments: [CreateAccountRequest(userId=1, accountType=Checking)]
+2022-02-20 15:58:06,884 INFO dLog [main] RETURNING: PostResponse(createdObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100, pendingBalance=120)])
+2022-02-20 16:02:25,703 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: createAccount
+Arguments: [CreateAccountRequest(userId=1, accountType=lol)]
+2022-02-20 16:02:25,731 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidAccountTypeException
+2022-02-20 16:02:25,812 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: updateAccount
+Arguments: [UpdateAccountRequest(accountId=1, accountType=Checking, availableBalance=100, pendingBalance=100)]
+2022-02-20 16:02:25,812 INFO dLog [main] Returning: NULL VALUE
+2022-02-20 16:02:25,876 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccount
+Arguments: [1]
+2022-02-20 16:02:25,878 INFO dLog [main] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100, pendingBalance=120)])
+2022-02-20 16:02:25,935 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: updateAccount
+Arguments: [UpdateAccountRequest(accountId=-1, accountType=, availableBalance=0, pendingBalance=0)]
+2022-02-20 16:02:25,935 INFO dLog [main] Returning: NULL VALUE
+2022-02-20 16:02:25,955 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: createAccount
+Arguments: [CreateAccountRequest(userId=1, accountType=Checking)]
+2022-02-20 16:02:25,956 INFO dLog [main] RETURNING: PostResponse(createdObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100, pendingBalance=120)])
+2022-02-20 16:08:49,699 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: getProfile
+Arguments: [AccountProfileRequest(userId=1)]
+2022-02-20 16:08:49,723 INFO dLog [main] RETURNING: AccountProfileResponse(success=true, accountProfileEntity=null)
+2022-02-20 16:08:52,119 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.LoginService
+Method: checkLogin
+Arguments: [LoginRequest(username=user, password=pass)]
+2022-02-20 16:08:52,128 INFO dLog [main] RETURNING: LoginResponse(success=true)
+2022-02-20 16:08:54,263 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: createAccount
+Arguments: [CreateAccountRequest(userId=1, accountType=lol)]
+2022-02-20 16:08:54,271 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidAccountTypeException
+2022-02-20 16:08:54,281 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: updateAccount
+Arguments: [UpdateAccountRequest(accountId=1, accountType=Checking, availableBalance=100, pendingBalance=100)]
+2022-02-20 16:08:54,281 INFO dLog [main] Returning: NULL VALUE
+2022-02-20 16:08:54,290 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccount
+Arguments: [1]
+2022-02-20 16:08:54,291 INFO dLog [main] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100, pendingBalance=120)])
+2022-02-20 16:08:54,299 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: updateAccount
+Arguments: [UpdateAccountRequest(accountId=-1, accountType=, availableBalance=0, pendingBalance=0)]
+2022-02-20 16:08:54,300 INFO dLog [main] Returning: NULL VALUE
+2022-02-20 16:08:54,309 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: createAccount
+Arguments: [CreateAccountRequest(userId=1, accountType=Checking)]
+2022-02-20 16:08:54,309 INFO dLog [main] RETURNING: PostResponse(createdObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100, pendingBalance=120)])
+2022-02-20 16:08:56,195 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.DepositService
+Method: getAllUserDeposits
+Arguments: [1]
+2022-02-20 16:08:56,205 INFO dLog [main] RETURNING: GetResponse(gotObject=[])
+2022-02-20 16:15:32,367 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: getProfile
+Arguments: [AccountProfileRequest(userId=1)]
+2022-02-20 16:15:32,393 INFO dLog [main] RETURNING: AccountProfileResponse(success=true, accountProfileEntity=null)
+2022-02-20 16:15:35,128 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.LoginService
+Method: checkLogin
+Arguments: [LoginRequest(username=user, password=pass)]
+2022-02-20 16:15:35,137 INFO dLog [main] RETURNING: LoginResponse(success=true)
+2022-02-20 16:15:37,850 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: createAccount
+Arguments: [CreateAccountRequest(userId=1, accountType=lol)]
+2022-02-20 16:15:37,859 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidAccountTypeException
+2022-02-20 16:15:37,870 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: updateAccount
+Arguments: [UpdateAccountRequest(accountId=1, accountType=Checking, availableBalance=100, pendingBalance=100)]
+2022-02-20 16:15:37,871 INFO dLog [main] Returning: NULL VALUE
+2022-02-20 16:15:37,883 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccount
+Arguments: [1]
+2022-02-20 16:15:37,884 INFO dLog [main] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100, pendingBalance=120)])
+2022-02-20 16:15:37,901 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: updateAccount
+Arguments: [UpdateAccountRequest(accountId=-1, accountType=, availableBalance=0, pendingBalance=0)]
+2022-02-20 16:15:37,901 INFO dLog [main] Returning: NULL VALUE
+2022-02-20 16:15:37,916 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: createAccount
+Arguments: [CreateAccountRequest(userId=1, accountType=Checking)]
+2022-02-20 16:15:37,916 INFO dLog [main] RETURNING: PostResponse(createdObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100, pendingBalance=120)])
+2022-02-20 16:15:39,806 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.DepositService
+Method: getAllUserDeposits
+Arguments: [1]
+2022-02-20 16:15:39,814 INFO dLog [main] RETURNING: GetResponse(gotObject=[])
+2022-02-20 16:17:26,273 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: getProfile
+Arguments: [AccountProfileRequest(userId=1)]
+2022-02-20 16:17:26,295 INFO dLog [main] RETURNING: AccountProfileResponse(success=true, accountProfileEntity=null)
+2022-02-20 16:17:28,543 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.LoginService
+Method: checkLogin
+Arguments: [LoginRequest(username=user, password=pass)]
+2022-02-20 16:17:28,560 INFO dLog [main] RETURNING: LoginResponse(success=true)
+2022-02-20 16:17:30,590 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: createAccount
+Arguments: [CreateAccountRequest(userId=1, accountType=lol)]
+2022-02-20 16:17:30,604 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidAccountTypeException
+2022-02-20 16:17:30,617 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: updateAccount
+Arguments: [UpdateAccountRequest(accountId=1, accountType=Checking, availableBalance=100, pendingBalance=100)]
+2022-02-20 16:17:30,617 INFO dLog [main] Returning: NULL VALUE
+2022-02-20 16:17:30,627 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccount
+Arguments: [1]
+2022-02-20 16:17:30,628 INFO dLog [main] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100, pendingBalance=120)])
+2022-02-20 16:17:30,636 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: updateAccount
+Arguments: [UpdateAccountRequest(accountId=-1, accountType=, availableBalance=0, pendingBalance=0)]
+2022-02-20 16:17:30,636 INFO dLog [main] Returning: NULL VALUE
+2022-02-20 16:17:30,646 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: createAccount
+Arguments: [CreateAccountRequest(userId=1, accountType=Checking)]
+2022-02-20 16:17:30,646 INFO dLog [main] RETURNING: PostResponse(createdObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100, pendingBalance=120)])
+2022-02-20 16:17:32,374 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.DepositService
+Method: getAllUserDeposits
+Arguments: [1]
+2022-02-20 16:17:32,381 INFO dLog [main] RETURNING: GetResponse(gotObject=[])
+2022-02-20 18:14:30,665 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=5, firstName=joe, lastName=something, email=asdf@fjfo.com, phoneNumber=555-555-5555, address=1 street)]
+2022-02-20 18:14:30,683 INFO dLog [main] RETURNING: PostResponse(createdObject=[AccountProfileResponse(profileId=1, userId=5, firstName=joe, lastName=something, email=asdf@fjfo.com, phoneNumber=555-555-5555, address=1 street)])
+2022-02-20 18:14:33,434 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.LoginService
+Method: checkLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-20 18:14:33,440 INFO dLog [main] RETURNING: LoginResponse(success=true)
+2022-02-20 18:14:33,450 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.LoginService
+Method: getLoginCredentialFromLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-20 18:14:33,451 INFO dLog [main] RETURNING: PostResponse(createdObject=[LoginResponseObject(userId=1, username=username1, password=password1)])
+2022-02-20 18:14:36,025 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: createAccount
+Arguments: [CreateAccountRequest(userId=1, accountType=lol)]
+2022-02-20 18:14:36,041 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidAccountTypeException
+2022-02-20 18:14:36,070 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: transferToAnotherAccount
+Arguments: [TransferRequest(ownerAccountId=1, receiverAccountId=2, amount=100000)]
+2022-02-20 18:14:36,071 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidAmountException
+2022-02-20 18:14:36,081 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: deleteAccount
+Arguments: [1]
+2022-02-20 18:14:36,082 INFO dLog [main] RETURNING: DeleteResponse(deletedObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=120.0)])
+2022-02-20 18:14:36,093 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: transferToAnotherAccount
+Arguments: [TransferRequest(ownerAccountId=1, receiverAccountId=2, amount=10)]
+2022-02-20 18:14:36,095 INFO dLog [main] RETURNING: PutResponse(updatedObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=90.0, pendingBalance=110.0), AccountResponseObject(accountId=2, userId=2, accountType=Checking, availableBalance=100.0, pendingBalance=130.0)])
+2022-02-20 18:14:36,103 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: updateAccount
+Arguments: [UpdateAccountRequest(accountId=1, accountType=Checking, availableBalance=100, pendingBalance=100)]
+2022-02-20 18:14:36,104 INFO dLog [main] RETURNING: PutResponse(updatedObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=100.0)])
+2022-02-20 18:14:36,113 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccount
+Arguments: [1]
+2022-02-20 18:14:36,114 INFO dLog [main] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=120.0)])
+2022-02-20 18:14:36,137 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [1]
+2022-02-20 18:14:36,138 INFO dLog [main] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=120.0)])
+2022-02-20 18:14:36,148 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: updateAccount
+Arguments: [UpdateAccountRequest(accountId=-1, accountType=, availableBalance=0, pendingBalance=0)]
+2022-02-20 18:14:36,149 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+2022-02-20 18:14:36,157 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: getAccounts
+Arguments: [-1]
+2022-02-20 18:14:36,158 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidUserIdException
+2022-02-20 18:14:36,166 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: transferToAnotherAccount
+Arguments: [TransferRequest(ownerAccountId=1, receiverAccountId=-1, amount=10)]
+2022-02-20 18:14:36,167 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+2022-02-20 18:14:36,174 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: deleteAccount
+Arguments: [-1]
+2022-02-20 18:14:36,174 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+2022-02-20 18:14:36,181 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: createAccount
+Arguments: [CreateAccountRequest(userId=1, accountType=Checking)]
+2022-02-20 18:14:36,182 INFO dLog [main] RETURNING: PostResponse(createdObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=120.0)])
+2022-02-20 18:14:36,189 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
 Method: transferToAnotherAccount
 Arguments: [TransferRequest(ownerAccountId=-1, receiverAccountId=2, amount=10)]
-2022-02-11 14:49:46,205 INFO dLog [main] Returning: NULL VALUE
-2022-02-11 15:02:17,159 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+2022-02-20 18:14:36,190 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+2022-02-20 18:14:36,196 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
 Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 15:02:17,175 INFO dLog [main] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username, password=password), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=120))
-2022-02-11 18:52:52,960 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Arguments: [-1]
+2022-02-20 18:14:36,197 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+2022-02-20 18:14:38,238 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.DepositService
+Method: getAllUserDeposits
+Arguments: [1]
+2022-02-20 18:14:38,251 INFO dLog [main] RETURNING: GetResponse(gotObject=[])
+2022-02-20 18:18:24,509 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountProfileService
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=5, firstName=joe, lastName=something, email=asdf@fjfo.com, phoneNumber=555-555-5555, address=1 street)]
+2022-02-20 18:18:24,533 INFO dLog [main] RETURNING: PostResponse(createdObject=[AccountProfileResponse(profileId=1, userId=5, firstName=joe, lastName=something, email=asdf@fjfo.com, phoneNumber=555-555-5555, address=1 street)])
+2022-02-20 18:18:26,902 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.LoginService
+Method: checkLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-20 18:18:26,925 INFO dLog [main] RETURNING: LoginResponse(success=true)
+2022-02-20 18:18:26,936 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.LoginService
+Method: getLoginCredentialFromLogin
+Arguments: [LoginRequest(username=username1, password=password1)]
+2022-02-20 18:18:26,937 INFO dLog [main] RETURNING: PostResponse(createdObject=[LoginResponseObject(userId=1, username=username1, password=password1)])
+2022-02-20 18:18:29,067 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: createAccount
+Arguments: [CreateAccountRequest(userId=1, accountType=lol)]
+2022-02-20 18:18:29,073 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidAccountTypeException
+2022-02-20 18:18:29,082 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: transferToAnotherAccount
+Arguments: [TransferRequest(ownerAccountId=1, receiverAccountId=2, amount=100000)]
+2022-02-20 18:18:29,083 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidAmountException
+2022-02-20 18:18:29,097 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: deleteAccount
+Arguments: [1]
+2022-02-20 18:18:29,098 INFO dLog [main] RETURNING: DeleteResponse(deletedObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=120.0)])
+2022-02-20 18:18:29,108 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: transferToAnotherAccount
+Arguments: [TransferRequest(ownerAccountId=1, receiverAccountId=2, amount=10)]
+2022-02-20 18:18:29,109 INFO dLog [main] RETURNING: PutResponse(updatedObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=90.0, pendingBalance=110.0), AccountResponseObject(accountId=2, userId=2, accountType=Checking, availableBalance=100.0, pendingBalance=130.0)])
+2022-02-20 18:18:29,116 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: updateAccount
+Arguments: [UpdateAccountRequest(accountId=1, accountType=Checking, availableBalance=100, pendingBalance=100)]
+2022-02-20 18:18:29,117 INFO dLog [main] RETURNING: PutResponse(updatedObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=100.0)])
+2022-02-20 18:18:29,125 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
 Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 18:52:52,981 INFO dLog [main] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username, password=password), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=120))
-2022-02-11 18:53:24,487 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 18:53:24,498 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 18:53:24,580 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 18:53:24,580 INFO dLog [http-nio-8080-exec-2] RETURNING: GetResponse(gotObject=AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130))
-2022-02-11 18:53:35,242 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccountList
-Arguments: [GetAccountRequestAll(userId=1)]
-2022-02-11 18:53:35,243 DEBUG dLog [http-nio-8080-exec-3] Class: class com.revature.thevault.service.classes.AccountService
+Arguments: [1]
+2022-02-20 18:18:29,125 INFO dLog [main] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=120.0)])
+2022-02-20 18:18:29,132 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
 Method: getAccounts
-Arguments: [GetAccountRequestAll(userId=1)]
-2022-02-11 18:53:35,273 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130)])
-2022-02-11 18:53:35,273 INFO dLog [http-nio-8080-exec-3] RETURNING: GetResponse(gotObject=[AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130)])
-2022-02-11 19:52:56,442 DEBUG dLog [http-nio-8000-exec-1] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccountList
-Arguments: [GetAccountRequestAll(userId=1)]
-2022-02-11 19:52:56,456 DEBUG dLog [http-nio-8000-exec-1] Class: class com.revature.thevault.service.classes.AccountService
+Arguments: [1]
+2022-02-20 18:18:29,132 INFO dLog [main] RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=120.0)])
+2022-02-20 18:18:29,140 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: updateAccount
+Arguments: [UpdateAccountRequest(accountId=-1, accountType=, availableBalance=0, pendingBalance=0)]
+2022-02-20 18:18:29,141 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+2022-02-20 18:18:29,149 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
 Method: getAccounts
-Arguments: [GetAccountRequestAll(userId=1)]
-2022-02-11 19:52:56,583 INFO dLog [http-nio-8000-exec-1] RETURNING: GetResponse(gotObject=[AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130)])
-2022-02-11 19:52:56,584 INFO dLog [http-nio-8000-exec-1] RETURNING: GetResponse(gotObject=[AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130)])
-2022-02-11 19:53:10,045 DEBUG dLog [http-nio-8000-exec-3] Class: class com.revature.thevault.presentation.controller.AccountController
+Arguments: [-1]
+2022-02-20 18:18:29,149 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidUserIdException
+2022-02-20 18:18:29,162 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: transferToAnotherAccount
+Arguments: [TransferRequest(ownerAccountId=1, receiverAccountId=-1, amount=10)]
+2022-02-20 18:18:29,164 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+2022-02-20 18:18:29,174 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: deleteAccount
+Arguments: [-1]
+2022-02-20 18:18:29,175 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+2022-02-20 18:18:29,181 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: createAccount
+Arguments: [CreateAccountRequest(userId=1, accountType=Checking)]
+2022-02-20 18:18:29,182 INFO dLog [main] RETURNING: PostResponse(createdObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=120.0)])
+2022-02-20 18:18:29,189 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
+Method: transferToAnotherAccount
+Arguments: [TransferRequest(ownerAccountId=-1, receiverAccountId=2, amount=10)]
+2022-02-20 18:18:29,190 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+2022-02-20 18:18:29,195 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.AccountService
 Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 19:53:10,046 DEBUG dLog [http-nio-8000-exec-3] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccount
-Arguments: [GetAccountRequestSingle(accountId=1)]
-2022-02-11 19:53:10,071 INFO dLog [http-nio-8000-exec-3] RETURNING: GetResponse(gotObject=[AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130)])
-2022-02-11 19:53:10,072 INFO dLog [http-nio-8000-exec-3] RETURNING: GetResponse(gotObject=[AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130)])
-2022-02-11 20:00:22,876 DEBUG dLog [http-nio-8000-exec-2] Class: class com.revature.thevault.presentation.controller.AccountController
-Method: getAccountList
-Arguments: [GetAccountRequestAll(userId=1)]
-2022-02-11 20:00:22,903 DEBUG dLog [http-nio-8000-exec-2] Class: class com.revature.thevault.service.classes.AccountService
-Method: getAccounts
-Arguments: [GetAccountRequestAll(userId=1)]
-2022-02-11 20:00:23,022 INFO dLog [http-nio-8000-exec-2] RETURNING: GetResponse(gotObject=[AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130)])
-2022-02-11 20:00:23,022 INFO dLog [http-nio-8000-exec-2] RETURNING: GetResponse(gotObject=[AccountEntity(pk_account_id=1, logincredentials=LoginCredentialEntity(pk_user_id=1, username=username1, password=password1), accountTypeEntity=AccountTypeEntity(pk_account_type_id=1, name=Checking), available_balance=100, pending_balance=130)])
+Arguments: [-1]
+2022-02-20 18:18:29,196 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+2022-02-20 18:18:31,321 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.DepositService
+Method: createDeposit
+Arguments: [DepositRequest(depositType=Cash, accountId=1, reference=work, amount=100.0)]
+2022-02-20 18:18:31,328 INFO dLog [main] RETURNING: PostResponse(createdObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=work, dateDeposit=2022-02-20, amount=100.0)])
+2022-02-20 18:18:31,336 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.DepositService
+Method: getAllUserDeposits
+Arguments: [1]
+2022-02-20 18:18:31,336 INFO dLog [main] RETURNING: GetResponse(gotObject=[])
+2022-02-20 18:18:31,346 DEBUG dLog [main] Class: class com.revature.thevault.service.classes.DepositService
+Method: getAllUserDeposits
+Arguments: [1]
+2022-02-20 18:18:31,346 INFO dLog [main] RETURNING: GetResponse(gotObject=[])

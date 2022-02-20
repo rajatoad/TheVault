@@ -12,6 +12,11 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class AccountProfileResponse {
-    boolean success;
-    AccountProfileEntity accountProfileEntity;
+    int profileId;
+    int userId;
+    String firstName;
+    String lastName;
+    String email;
+    String phoneNumber;
+    String address;
 }
