@@ -1,26 +1,23 @@
 package com.revature.thevault.service.interfaces;
 
-import com.revature.thevault.presentation.model.response.DepositRequest;
-import com.revature.thevault.presentation.model.response.DepositResponse;
-import com.revature.thevault.repository.entity.DepositEntity;
+import com.revature.thevault.presentation.model.request.DepositRequest;
 
-import java.util.List;
+import com.revature.thevault.presentation.model.response.builder.DeleteResponse;
+import com.revature.thevault.presentation.model.response.builder.GetResponse;
+import com.revature.thevault.presentation.model.response.builder.PostResponse;
 
 public interface DepositServiceInterface {
 
     // Receive a deposit request from user, return a successful response.
-    DepositResponse createDeposit(DepositRequest depositRequest);
+    PostResponse createDeposit(DepositRequest depositRequest);
 
     // Get all of the users deposits from their accountId;
-    List<DepositEntity> getAllUserDeposits(int accountId);
+    GetResponse getAllUserDeposits(int accountId);
 
     // Get all of their deposits by specific type of deposit
-    List<DepositEntity> getAlLUserDepositsOfType(int accountId, int depositTypeId);
+    GetResponse getAlLUserDepositsOfType(int accountId, String depositTypeId);
 
-    // get all deposits in the database
-    List<DepositEntity> getAllDeposits();
+    GetResponse findByDepositId(int depositId);
 
-    // get all deposits by type
-    List<DepositEntity> getAllDepositsOfType(int depositTypeId);
-
+    DeleteResponse deleteAllDeposits(Integer accountId);
 }

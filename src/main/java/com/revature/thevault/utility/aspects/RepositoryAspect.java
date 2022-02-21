@@ -21,15 +21,15 @@ public class RepositoryAspect {
     @AfterReturning(value = "com.revature.thevault.utility.aspects.SystemArchitect.dataAccessOperation()", returning = "returnedValue")
     public void afterServiceCheck(JoinPoint jp, Object returnedValue) {
         if (returnedValue != null) {
-            dLog.info("Class: " + jp.getSignature().getDeclaringType() + "\nReturning: " + returnedValue.toString());
+            dLog.info("Class: " + jp.getSignature().getDeclaringType() + "\nMethod: " + jp.getSignature().getName() + "\nReturning: " + returnedValue.toString());
         }else{
-            dLog.info("Class: " + jp.getSignature().getDeclaringType() + "\nReturning: " + "null");
+            dLog.info("Class: " + jp.getSignature().getDeclaringType() + "\nMethod: " + jp.getSignature().getName() + "\nReturning: " + "null");
         }
     }
 
     @AfterThrowing(value = "com.revature.thevault.utility.aspects.SystemArchitect.dataAccessOperation()", throwing = "thrownException")
     public void afterThrowingCheck(JoinPoint jp, Object thrownException){
-        dLog.error("Class: " + jp.getSignature().getDeclaringType() + "\nThrowing: " + thrownException);
+        dLog.error("Class: " + jp.getSignature().getDeclaringType() + "\nMethod: " + jp.getSignature().getName() + "\nThrowing: " + thrownException);
     }
 }
 

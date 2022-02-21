@@ -1,0 +1,48 @@
+<div id="editP-form">
+  <img class="vault-title" src="https://trello.com/1/cards/61fd61bd05c37f3f03c6a799/attachments/61fd61be05c37f3f03c6a99e/previews/61fd61be05c37f3f03c6a9a2/download/rev-logo_281_29.png" alt="templogo">
+<br>
+<form class="row g-3 needs-validation">
+    <div class="col-md-4">
+      <label for="validationCustom01" class="form-label">First name</label>
+      <input type="text" class="form-control" id="validationCustom01" name="validationCustom01" [(ngModel)]="firstName" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustom02" class="form-label">Last name</label>
+      <input type="text" class="form-control" id="validationCustom02" name="validationCustom02" [(ngModel)]="lastName" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustom03" class="form-label">Email</label>
+      <input type="text" class="form-control" id="validationCustom03" name="validationCustom03" [(ngModel)]="email" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustom04" class="form-label">Phone Number</label>
+      <input type="number" class="form-control" id="validationCustom04" name="validationCustom4" [(ngModel)]="phoneNumber" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="validationCustom05" class="form-label">Address</label>
+      <input type="text" class="form-control" id="validationCustom05" name="validationCustom05" [(ngModel)]="address" required>
+      <div class="invalid-feedback">
+          Write a valid address
+      </div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary" type="button" (click)="submit()">Submit</button>
+      <button class="btn btn-secondary" type="button" (click)="goBack()">Back</button>
+    </div>
+    <!-- <div>
+        <button class="btn btn-secondary" type="button" (click)="goBack()">Back</button>
+    </div> -->
+  </form>
+</div>

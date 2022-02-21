@@ -1,0 +1,9 @@
+body{
+    width: 100%;
+    height: 100vh;
+    color: #ffff;
+    background-image: linear-gradient(.45deg,#f26925,#474C55);
+    background-size: 400%,400%;
+    position: relative;
+   
+}

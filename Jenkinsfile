@@ -1,24 +1,29 @@
-pipeline {
-  agent any
-
-  stages {
-    stage('Install') {
-      steps { sh 'npm install' }
-    }
-
-    stage('Test') {
-      parallel {
-        stage('Static code analysis') {
-            steps { sh 'npm run-script lint' }
-        }
-        stage('Unit tests') {
-            steps { sh 'npm run-script test' }
-        }
-      }
-    }
-
-    stage('Build') {
-      steps { sh 'npm run-script build' }
-    }
-  }
+pipeline{
+agent any
+    stages{
+    stage("build"){
+      steps {
+            echo 'building the application with Maven...'
+            withMaven(maven: 'Maven') {
+            sh ('mvn clean install')
 }
+          }
+        }
+      
+                stage("deploy"){
+                      steps {
+                    echo 'No issues found with the project. Running JAR:'
+                          sh('cd /var/jenkins_home/workspace/P3-TheVault/target/')
+                          sh('export BUILD_ID=dontKillMe')
+                          sh('cd target/')
+                          sh('ls')
+                          sh('java -jar target/demo-0.0.1-SNAPSHOT.jar &')
+
+                          }
+                        }
+      }
+
+  }
+
+
+

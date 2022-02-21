@@ -1,0 +1,71 @@
+package com.revature.thevault.repository.entity;
+
+import java.util.Objects;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.experimental.FieldDefaults;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE)
+@Entity
+@Table(name = "deposit_type_table")
+public class DepositTypeEntity {
+	@Id
+	@Column(name = "pk_deposit_type_id")
+	@GeneratedValue(generator = "deposit_type_table_pk_deposit_type_id_seq", strategy = GenerationType.SEQUENCE)
+	@SequenceGenerator(allocationSize = 1, name = "deposit_type_table_pk_deposit_type_id_seq", sequenceName = "deposit_type_table_pk_deposit_type_id_seq")
+	int pk_deposit_type_id;
+	@Column(name = "name")
+	String name;
+	
+	public DepositTypeEntity(int pk_deposit_type_id, String name) {
+		super();
+		this.pk_deposit_type_id = pk_deposit_type_id;
+		this.name = name;
+	}
+	public int getPk_deposit_type_id() {
+		return pk_deposit_type_id;
+	}
+	public void setPk_deposit_type_id(int pk_deposit_type_id) {
+		this.pk_deposit_type_id = pk_deposit_type_id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	@Override
+	public int hashCode() {
+		return Objects.hash(name, pk_deposit_type_id);
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		DepositTypeEntity other = (DepositTypeEntity) obj;
+		return Objects.equals(name, other.name) && pk_deposit_type_id == other.pk_deposit_type_id;
+	}
+	@Override
+	public String toString() {
+		return "DepositTypeEntity [pk_deposit_type_id=" + pk_deposit_type_id + ", name=" + name + "]";
+	}
+	
+}

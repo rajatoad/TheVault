@@ -15,5 +15,5 @@ public class WithdrawRequest {
     String requestType;
     //request status is default pending
     String reference;
-    int amount;
+    float amount;
 }
