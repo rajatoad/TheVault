@@ -1,0 +1,60 @@
+<h1>Make a Transfer</h1>
+<div class="d-flex flex-row">
+
+<form #transferForm class="was-validated" (ngSubmit)="onClickSubmit(Wbox.value)"> 
+<div class="p-2"> 
+   <div class="col-md-1">
+      <label for="transferTypeBox" class="form-label">Available Accounts: </label>
+         <div *ngFor="let account of userAccounts">
+            <div *ngIf="account.accountId != activeAccountId">
+               <div class=>
+                  <div class="shadow">
+                     <div class="card">
+                           <div class="card-body">
+                              <div class="d-flex flex-column">
+                                 <div class="d-flex justify-content-center">
+                                       <div class="p-2">
+                                          <span class="badge badge-primary">{{account.accountType}} Account</span>        
+                                       </div>
+                                 </div>
+                                 <div class="d-flex justify-content-center">
+                                       <div class="p-2">
+                                          <span class="badge badge-primary">Id: {{account.accountId}}</span>        
+                                       </div>
+                                 </div>
+                              </div>
+                              <br>
+                              <div class="d-flex flex-column">   
+                                 <div class="p-2">
+                                       Available Balance: {{account.availableBalance | currency}}
+                                 </div>
+                                 <div class="p-2">
+                                       Pending Balance: {{account.pendingBalance | currency}}
+                                 </div>
+                              </div>
+                              <br>
+                              <div class="d-flex justify-content-center">
+                                 <button type="button" class="btn btn-outline-primary" (click)="selectReceiver(account)">Select</button>
+                              </div>
+                           </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+   </div>
+<div class="p-2">
+   <div class="col-md-2">
+      <label for="Wbox" class="form-label">Transfer:</label>
+      <input type="number" class="form-control" min="1" id="Wbox" #Wbox placeholder="Desired Amount" name="withdrawbox" required ngModel>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Enter number greater than 1</div>
+      </div>
+   </div>
+</div>
+   <div class="p-2" *ngIf="receiverAccount">
+      <button type="submit" class="btn btn-primary">Submit</button>
+   </div>
+</form>
+
+</div>

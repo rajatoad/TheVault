@@ -5,6 +5,7 @@ import { DeleteAccount } from 'src/app/models/account/responses/delete-account';
 import { GetAccount } from 'src/app/models/account/responses/get-account';
 import { PostAccount } from 'src/app/models/account/responses/post-account';
 import { PutAccount } from 'src/app/models/account/responses/put-account';
+import { TransferRequest } from 'src/app/models/transaction/request/transfer-request.model';
 
 const AUTH_API = 'http://localhost:8080/';
 
@@ -13,7 +14,8 @@ const ENDPOINTS = {
   CREATE_ACCOUNT: `${AUTH_API}account/create`,
   UPDATE_ACCOUNT: `${AUTH_API}account/update`,
   GET_ACCOUNT: `${AUTH_API}account/users-accounts?userId=`,
-  DELETE_ACCOUNT: `${AUTH_API}account/delete?accountId=`
+  DELETE_ACCOUNT: `${AUTH_API}account/delete?accountId=`,
+  TRANSFER: `${AUTH_API}account/transfer`
 }
 
 const httpOptions = {
@@ -62,6 +64,14 @@ export class AccountHandlerService {
   deleteAccount(account:Account){
     return this.http.delete<DeleteAccount>(
       `${ENDPOINTS.DELETE_ACCOUNT + account.accountId}`, httpOptions);
+  }
+  
+  createTransfer(transfer: TransferRequest){
+    return this.http.put<PutAccount>(ENDPOINTS.TRANSFER, JSON.stringify({
+      ownerAccountId: transfer.ownerAccountId,
+      receiverAccountId: transfer.receiverAccountId,
+      amount: transfer.amount
+    }), httpOptions);
   }
 
 }

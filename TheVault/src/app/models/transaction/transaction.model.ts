@@ -1,6 +1,12 @@
 import { DatePipe } from "@angular/common";
 
 export class Transaction {
+    public get transactionDetail(): string {
+        return this._transactionDetail;
+    }
+    public set transactionDetail(value: string) {
+        this._transactionDetail = value;
+    }
     public get transactionReference(): string {
         return this._transactionReference;
     }
@@ -35,12 +41,14 @@ export class Transaction {
     constructor(
         private _transactionId: number,
         private _transactionType: string,
+        private _transactionDetail: string,
         private _transactionReference: string,
         private _date: string,
         private _amount: number
     ){
         this._transactionId = _transactionId;
         this._transactionType = _transactionType;
+        this._transactionDetail = _transactionDetail;
         this._date = _date;
         this._amount = _amount;
     }

@@ -1,6 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { PutAccount } from 'src/app/models/account/responses/put-account';
 import { DepositRequest } from 'src/app/models/transaction/request/deposit-request.model';
+import { TransferRequest } from 'src/app/models/transaction/request/transfer-request.model';
 import { WithdrawRequest } from 'src/app/models/transaction/request/withdraw-request.model';
 import { DeleteDeposit } from 'src/app/models/transaction/responses/delete-deposit';
 import { DeleteWithdraw } from 'src/app/models/transaction/responses/delete-withdraw';
@@ -8,6 +10,7 @@ import { GetTransaction } from 'src/app/models/transaction/responses/get-transac
 import { PostDeposit } from 'src/app/models/transaction/responses/post-deposit';
 import { PostWithdraw } from 'src/app/models/transaction/responses/post-withdraw';
 import { Withdraw } from 'src/app/models/transaction/withdraw.model';
+
 
 const AUTH_API = 'http://localhost:8080/';
 
@@ -78,4 +81,5 @@ export class TransactionHandlerService {
   getTransactionHistory(accountId:number){
     return this.http.get<GetTransaction>(`${ENDPOINTS.TRANSACTION_HISTORY + accountId}`)
   }
+
 }

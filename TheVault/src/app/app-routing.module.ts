@@ -12,6 +12,7 @@ import { EditProfileComponent } from './components/edit-profile/edit-profile.com
 import { LoginComponent } from './components/login-register/login/login.component';
 import { RegisterComponent } from './components/login-register/register/register.component';
 import { DepositGenerateComponent } from './components/transaction/deposit-generate/deposit-generate.component';
+import { TransferGenerateComponent } from './components/transaction/transfer-generate/transfer-generate.component';
 import { WithdrawGenerateComponent } from './components/transaction/withdraw-generate/withdraw-generate.component';
 
 const routes: Routes = [
@@ -31,7 +32,8 @@ const routes: Routes = [
     component: AccountDetailComponent,
     path: 'account-detail'
   },
-  {component: AppBootstrapComponent,
+  {
+    component: AppBootstrapComponent,
     path: 'account-test'
   },
   {
@@ -61,6 +63,10 @@ const routes: Routes = [
   {
     component: TransactionHistoryComponent,
     path:'rickRoll'
+  },
+  {
+    component: TransferGenerateComponent,
+    path: 'account-transfer'
   }
 ];
 

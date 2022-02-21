@@ -15,6 +15,7 @@ import java.time.LocalDate;
 public class TransactionObject {
     int transactionId;
     String transactionType;
+    String transactionDetail;
     String transactionReference;
     LocalDate date;
     float amount;
