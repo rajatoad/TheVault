@@ -16,9 +16,7 @@ public interface LoginRepository extends JpaRepository<LoginCredentialEntity, In
 
     LoginCredentialEntity findByUsername(String username);
 
-    LoginCredentialEntity updatePassword(ResetPasswordRequest resetPasswordRequest);
-
-    <S extends LoginCredentialEntity> S save(S entity);
+   <S extends LoginCredentialEntity> S save(S entity);
 
     @Override
     Optional<LoginCredentialEntity> findById(Integer integer);

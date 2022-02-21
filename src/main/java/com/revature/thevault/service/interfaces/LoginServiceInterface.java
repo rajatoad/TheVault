@@ -16,7 +16,7 @@ public interface LoginServiceInterface {
 
     PostResponse createNewLogin(NewLoginCredentialsRequest newLoginRequest) throws InvalidInputException;
 
-    PutResponse updatePassword(ResetPasswordRequest resetPasswordRequest);
+    PutResponse resetPassword(ResetPasswordRequest resetPasswordRequest);
 
     LoginCredentialEntity findUserByUserId(int userId);
 }

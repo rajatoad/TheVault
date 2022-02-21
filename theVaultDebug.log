@@ -7241,3 +7241,50 @@ RETURNING: GetResponse(gotObject=[TransactionObject(transactionId=1, transaction
 2022-02-21 13:46:28,852 INFO dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.presentation.controller.TransactionController
 Method: getTransactionHistory
 RETURNING: GetResponse(gotObject=[TransactionObject(transactionId=1, transactionType=Deposit, transactionDetail=Cheque, transactionReference=asdfsadf, date=2022-02-21, amount=14234.0)])
+2022-02-21 16:25:30,271 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: resetPassword
+Arguments: [ResetPasswordRequest(username=Clemens9, email=Edward.Klein@gmail.com)]
+2022-02-21 16:25:30,283 DEBUG dLog [http-nio-8080-exec-2] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: resetPassword
+ARGUMENTS: [ResetPasswordRequest(username=Clemens9, email=Edward.Klein@gmail.com)]
+2022-02-21 16:25:30,346 ERROR dLog [http-nio-8080-exec-2] CONTROLLER CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: resetPassword
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@239c2566
+2022-02-21 16:25:30,346 ERROR dLog [http-nio-8080-exec-2] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.LoginController
+METHOD: resetPassword
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-21 16:26:46,279 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: resetPassword
+Arguments: [ResetPasswordRequest(username=username1, email=email@email.com)]
+2022-02-21 16:26:46,280 DEBUG dLog [http-nio-8080-exec-4] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: resetPassword
+ARGUMENTS: [ResetPasswordRequest(username=username1, email=email@email.com)]
+2022-02-21 16:26:46,298 DEBUG dLog [http-nio-8080-exec-4] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: getProfile
+ARGUMENTS: [AccountProfileRequest(profileId=1)]
+2022-02-21 16:26:46,338 INFO dLog [http-nio-8080-exec-4] METHOD: getProfile
+RETURNING: GetResponse(gotObject=[AccountProfileResponse(profileId=1, userId=1, firstName=Tom, lastName=Cat, email=email@email.com, phoneNumber=5559991234, address=1 lane)])
+2022-02-21 16:26:46,339 ERROR dLog [http-nio-8080-exec-4] CONTROLLER CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: resetPassword
+THROWING EXCEPTION CLASS: class java.lang.ClassCastException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@375c7fc2
+2022-02-21 16:26:46,339 ERROR dLog [http-nio-8080-exec-4] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.LoginController
+METHOD: resetPassword
+THROWING EXCEPTION: class java.lang.ClassCastException
+2022-02-21 16:28:45,689 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: resetPassword
+Arguments: [ResetPasswordRequest(username=username1, email=email@email.com)]
+2022-02-21 16:28:45,702 DEBUG dLog [http-nio-8080-exec-2] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: resetPassword
+ARGUMENTS: [ResetPasswordRequest(username=username1, email=email@email.com)]
+2022-02-21 16:28:45,778 DEBUG dLog [http-nio-8080-exec-2] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: getProfile
+ARGUMENTS: [AccountProfileRequest(profileId=1)]
+2022-02-21 16:28:45,820 INFO dLog [http-nio-8080-exec-2] METHOD: getProfile
+RETURNING: GetResponse(gotObject=[AccountProfileResponse(profileId=1, userId=1, firstName=Tom, lastName=Cat, email=email@email.com, phoneNumber=5559991234, address=1 lane)])
+2022-02-21 16:28:45,872 INFO dLog [http-nio-8080-exec-2] METHOD: resetPassword
+RETURNING: PutResponse(updatedObject=[LoginCredentialEntity(pk_user_id=1, username=username1, password=vzDotFECo)])
+2022-02-21 16:28:45,873 INFO dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: resetPassword
+RETURNING: PutResponse(updatedObject=[LoginCredentialEntity(pk_user_id=1, username=username1, password=vzDotFECo)])

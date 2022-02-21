@@ -42,8 +42,8 @@ public class LoginController {
         return loginService.getLoginCredentialFromLogin(loginRequest);
     }
 
-    @PostMapping("/reset-password")
-    public PutResponse updatePassword(@RequestBody ResetPasswordRequest resetPasswordRequest){
-        return loginService.updatePassword(resetPasswordRequest);
+    @PutMapping ("/reset-password")
+    public PutResponse resetPassword(@RequestBody ResetPasswordRequest resetPasswordRequest){
+        return loginService.resetPassword(resetPasswordRequest);
     }
 }
