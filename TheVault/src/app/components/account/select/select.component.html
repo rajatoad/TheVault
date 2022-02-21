@@ -1,6 +1,6 @@
 <div class="d-flex justify-content-center">
         <div *ngFor="let account of accounts; let i = index ">
             <app-account-mini [account]="account"></app-account-mini>
-            <button type="button" class="btn btn-danger" (click)="deleteAccount(account, i)">DELETE</button>
+            <button type="button" class="btn btn-primary" (click)="deleteAccount(account, i)">DELETE</button>
         </div>
 </div>
