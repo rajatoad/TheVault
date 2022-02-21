@@ -6,6 +6,7 @@ import com.revature.thevault.presentation.model.request.ResetPasswordRequest;
 import com.revature.thevault.presentation.model.response.LoginResponse;
 import com.revature.thevault.presentation.model.response.builder.PostResponse;
 
+import com.revature.thevault.presentation.model.response.builder.PutResponse;
 import com.revature.thevault.service.classes.AccountProfileService;
 import com.revature.thevault.service.classes.LoginService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,7 +43,7 @@ public class LoginController {
     }
 
     @PostMapping("/reset-password")
-    public PostResponse updatePassword(@RequestBody ResetPasswordRequest resetPasswordRequest){
+    public PutResponse updatePassword(@RequestBody ResetPasswordRequest resetPasswordRequest){
         return loginService.updatePassword(resetPasswordRequest);
     }
 }

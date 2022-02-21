@@ -5,6 +5,7 @@ import com.revature.thevault.presentation.model.request.NewLoginCredentialsReque
 import com.revature.thevault.presentation.model.request.ResetPasswordRequest;
 import com.revature.thevault.presentation.model.response.LoginResponse;
 import com.revature.thevault.presentation.model.response.builder.PostResponse;
+import com.revature.thevault.presentation.model.response.builder.PutResponse;
 import com.revature.thevault.repository.dao.LoginRepository;
 import com.revature.thevault.repository.entity.LoginCredentialEntity;
 import com.revature.thevault.service.dto.LoginResponseObject;
@@ -67,11 +68,11 @@ public class LoginService implements LoginServiceInterface {
     }
 
     @Override
-    public PostResponse updatePassword(ResetPasswordRequest resetPasswordRequest) {
+    public PutResponse updatePassword(ResetPasswordRequest resetPasswordRequest) {
         try{
-            return PostResponse.builder()
+            return PutResponse.builder()
                     .success(true)
-                    .createdObject(Collections.singletonList(loginRepository.updatePassword(resetPasswordRequest)))
+                    .updatedObject(Collections.singletonList(loginRepository.updatePassword(resetPasswordRequest)))
                     .build();
         }catch (Exception e){
             throw new InvalidRequestException(HttpStatus.BAD_REQUEST, "invalid request");
