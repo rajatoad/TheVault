@@ -4,7 +4,7 @@ agent any
     stage("build"){
       steps {
             echo 'building the application with Maven...'
-            withMaven(globalMavenSettingsConfig: 'null', jdk: 'null', maven: 'Maven', mavenSettingsConfig: 'null') {
+            withMaven(maven: 'Maven') {
             sh ('mvn clean install')
 }
           }
