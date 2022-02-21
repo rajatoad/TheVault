@@ -12,14 +12,14 @@ const httpOptions = {
 export class TransferGenerateService {
 
   constructor(
-    private http: HttpClient,
+    private http: HttpClient
   ) { }
 
   createTransfer(transfer: TransferRequest) {
     let putTransferUrl = `http://localhost:8080/account/transfer`;
     console.log(transfer);
-    return this.http.put<TransferMoney>(putTransferUrl, JSON.stringify({
-      ownerAccountId: transfer.accountId,
+    return this.http.put<TransferRequest>(putTransferUrl, JSON.stringify({
+      ownerAccountId: transfer.ownerAccountId,
       receiverAccountId: transfer.receiverAccountId,
       amount: transfer.amount
     }), httpOptions);
