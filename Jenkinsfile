@@ -15,6 +15,7 @@ agent any
                     echo 'No issues found with the project. Running JAR:'
                           sh('cd /var/jenkins_home/workspace/P3-TheVault/target/')
                           sh('export BUILD_ID=dontKillMe')
+                          sh('cd target')
                           sh('ls')
                           sh('nohup java -jar demo-0.0.1-SNAPSHOT.jar &')
 
