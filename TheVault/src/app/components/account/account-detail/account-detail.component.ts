@@ -39,7 +39,12 @@ export class AccountDetailComponent implements OnInit {
 
   // Populate the transaction history of the account
   getTransactions(){
-    this.transactionHandler.getTransactionHistory(this.account.accountId).subscribe(this.getTransactionObserver)
+    try{
+      this.transactionHandler.getTransactionHistory(this.account.accountId)
+      .subscribe(this.getTransactionObserver)
+    }catch(e){
+      console.error(e);
+    }
   }
 
   //Deposit and Withdraw generator function used to display the components related to create them

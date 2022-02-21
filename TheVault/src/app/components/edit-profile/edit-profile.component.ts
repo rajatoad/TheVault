@@ -10,7 +10,7 @@ import { GlobalStorageService } from 'src/app/_services/global-storage.service';
 })
 export class EditProfileComponent implements OnInit {
 
-  profile!:Profile;
+  profile:Profile | undefined;
 
   firstName:string = '';
   lastName:string = '';
@@ -29,11 +29,15 @@ export class EditProfileComponent implements OnInit {
 
   setupProfile():void{
     this.profile = this.globalStorage.getProfile();
-    this.firstName = this.profile.firstName;
-    this.lastName = this.profile.lastName;
-    this.email = this.profile.email;
-    this.phoneNumber = this.profile.phoneNumber;
-    this.address = this.profile.address;
+    try{
+      this.firstName = this.profile.firstName;
+      this.lastName = this.profile.lastName;
+      this.email = this.profile.email;
+      this.phoneNumber = this.profile.phoneNumber;
+      this.address = this.profile.address;
+    }catch(err){
+      console.error(err);
+    }
   }
 
   goBack():void{
@@ -41,11 +45,13 @@ export class EditProfileComponent implements OnInit {
   }
 
   submit():void{
-    this.profile.firstName = this.firstName;
-    this.profile.lastName = this.lastName;
-    this.profile.email = this.email;
-    this.profile.phoneNumber = this.phoneNumber;
-    this.profile.address = this.address;
-    this.globalStorage.setProfile(this.profile);
+    if(this.profile != undefined){
+      this.profile.firstName = this.firstName;
+      this.profile.lastName = this.lastName;
+      this.profile.email = this.email;
+      this.profile.phoneNumber = this.phoneNumber;
+      this.profile.address = this.address;
+      this.globalStorage.setProfile(this.profile);
+    }else return;
   }
 }

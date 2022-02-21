@@ -5,7 +5,6 @@
 <div class="p-2"> 
    <div class="col-md-1">
       <label for="transferTypeBox" class="form-label">Available Accounts: </label>
-   <div *ngIf="userAccounts.length > 1">
          <div *ngFor="let account of userAccounts">
             <div *ngIf="account.accountId != activeAccountId">
                <div class=>
@@ -43,7 +42,6 @@
                </div>
             </div>
          </div>
-   </div>
    </div>
 <div class="p-2">
    <div class="col-md-2">

@@ -24,7 +24,7 @@ export class TransferGenerateComponent implements OnInit {
   @Input()
   userId!: number;
 
-  userAccounts!: Account[];
+  userAccounts: Account[] = [];
 
   activeAccountId!: number;
 
@@ -43,8 +43,12 @@ export class TransferGenerateComponent implements OnInit {
   }
 
   getAccounts(): void {
-    this.userAccounts = this.globalStorage.getAccounts();
-    this.activeAccountId = this.globalStorage.getActiveAccount().accountId;
+    try{
+      this.userAccounts = this.globalStorage.getAccounts();
+      this.activeAccountId = this.globalStorage.getActiveAccount().accountId;
+    }catch(err){
+      console.error(err);
+    }
   };
 
   selectReceiver(receiverAccount: Account){
