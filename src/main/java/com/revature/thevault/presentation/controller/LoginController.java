@@ -42,7 +42,7 @@ public class LoginController {
     }
 
     @PostMapping("/reset-password")
-    public PostResponse resetPassword(@RequestBody ResetPasswordRequest resetPasswordRequest){
-        return loginService.resetPassword(resetPasswordRequest);
+    public PostResponse updatePassword(@RequestBody ResetPasswordRequest resetPasswordRequest){
+        return loginService.updatePassword(resetPasswordRequest);
     }
 }

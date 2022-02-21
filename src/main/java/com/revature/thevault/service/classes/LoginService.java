@@ -67,14 +67,11 @@ public class LoginService implements LoginServiceInterface {
     }
 
     @Override
-    public PostResponse resetPassword(ResetPasswordRequest resetPasswordRequest) {
+    public PostResponse updatePassword(ResetPasswordRequest resetPasswordRequest) {
         try{
             return PostResponse.builder()
                     .success(true)
-                    .createdObject(Collections.singletonList(loginRepository.resetPassword(
-                            resetPasswordRequest.getUsername(),
-                            resetPasswordRequest.getEmail()
-                    )))
+                    .createdObject(Collections.singletonList(loginRepository.updatePassword(resetPasswordRequest)))
                     .build();
         }catch (Exception e){
             throw new InvalidRequestException(HttpStatus.BAD_REQUEST, "invalid request");

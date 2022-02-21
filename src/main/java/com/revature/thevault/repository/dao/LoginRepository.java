@@ -1,6 +1,8 @@
 package com.revature.thevault.repository.dao;
 
+import com.revature.thevault.presentation.model.request.LoginRequest;
 import com.revature.thevault.presentation.model.request.ResetPasswordRequest;
+import com.revature.thevault.presentation.model.response.builder.PostResponse;
 import com.revature.thevault.repository.entity.LoginCredentialEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -12,7 +14,7 @@ import java.util.Optional;
 public interface LoginRepository extends JpaRepository<LoginCredentialEntity, Integer> {
     LoginCredentialEntity findByUsername(String username);
 
-    ResetPasswordRequest resetPassword(String username, String email);
+    LoginRequest updatePassword(ResetPasswordRequest resetPasswordRequest);
 
     <S extends LoginCredentialEntity> S save(S entity);
 
