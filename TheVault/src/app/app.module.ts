@@ -29,6 +29,7 @@ import { EditProfileComponent } from './components/edit-profile/edit-profile.com
 import { TransactionSearchComponent } from './components/transaction/select-transaction/transaction-search/transaction-search.component';
 import { Ng2SearchPipeModule} from 'ng2-search-filter';
 import { CreateAccountComponent } from './components/account/create-account/create-account.component';
+import { TransferGenerateComponent } from './components/transaction/transfer-generate/transfer-generate.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +51,9 @@ import { CreateAccountComponent } from './components/account/create-account/crea
     WithdrawDetailComponent,
     EditProfileComponent,
     TransactionSearchComponent,
-    CreateAccountComponent
+    CreateAccountComponent,
+    WithdrawDetailComponent,
+    TransferGenerateComponent
   ],
   imports: [
     BrowserModule,
@@ -58,8 +61,8 @@ import { CreateAccountComponent } from './components/account/create-account/crea
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    AppBootstrapModule
-    // Ng2SearchPipeModule
+    AppBootstrapModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
