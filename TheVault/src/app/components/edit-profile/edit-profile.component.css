@@ -1,0 +1,23 @@
+button {
+
+    margin-left :5px }
+
+    #editP-form{
+        width: 680px;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        color: black;
+      
+    
+    }
+    .vault-title{
+        width: 280px;
+        position: absolute;
+        top: -30%;
+        left: 55%;
+        transform: translate(-50%,-50%);
+        color: black;
+      
+    }

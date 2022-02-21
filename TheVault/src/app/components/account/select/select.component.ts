@@ -32,7 +32,7 @@ export class SelectComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.setupAccounts();
+    // this.setupAccounts();
   }
 
   setupAccounts(){
@@ -69,6 +69,7 @@ export class SelectComponent implements OnInit {
     next: (data: DeleteAccount) => {
       window.alert(`${this.deletingAccount} GOODBYE`);
       this.accounts.slice(this.deleteAccountIndex, 1);
+      this.setupAccounts();
     },
     error: (err: Error) => console.log("Delete Account Observer error: " + err),
     complete: () => console.log("Delete Account successful")

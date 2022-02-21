@@ -19,7 +19,8 @@
           
           <tr class="table-secondary" *ngFor="let tran of transactions |filter:term; index as i"> 
             <!-- <th scope="row"><button (click)="showDetails(tran)" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" id="transactionInfo">{{i + 1}} </button></th> -->
-            <td class="table-danger">{{tran.transactionReference}}</td>
+            <th scope="row">{{i + 1}}</th>
+            <td>{{tran.transactionReference}}</td>
             <td>{{tran.transactionType}}</td>
             <td>{{tran.transactionDetail}}</td>
             <td>{{tran.date | date}}</td>
