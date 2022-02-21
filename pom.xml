@@ -151,7 +151,18 @@
 			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.7.7.201606060606</version>
+				<version>0.8.7</version>
+				<configuration>
+					<excludes>
+						<exclude>com/revature/thevault/presentation/**/*</exclude>
+						<exclude>com/revature/thevault/service/dto/**/*</exclude>
+						<exclude>com/revature/thevault/service/exceptions/**/*</exclude>
+						<exclude>**/config/*</exclude>
+						<exclude>com/revature/thevault/utility/**/*</exclude>
+						<exclude>com/revature/thevault/ThevaultApplication.class</exclude>
+						<exclude>com/revature/thevault/repository/**/*</exclude>
+					</excludes>
+				</configuration>
 				<executions>
 					<execution>
 						<goals>

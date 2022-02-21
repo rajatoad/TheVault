@@ -122,22 +122,22 @@ public class DepositServiceTest {
 	}
 	
 	
-	//Returning Empty Object
-	@Test
-    void getAllUserDeposits() {
-        GetResponse goodGetResponse = GetResponse.builder()
-                        .success(true)
-                                .gotObject(Collections.singletonList(storedDepositResponseObject))
-                                        .build();
-        assertEquals(goodGetResponse, depositService.getAllUserDeposits(storedDeposit.getAccountentity().getPk_account_id()));
-    }
-	//Make a request for deposits
-	@Test
-	void getAlLUserDepositsOfType() {
-        GetResponse goodGetResponse = GetResponse.builder()
-                .success(true)
-                        .gotObject(Collections.singletonList(storedDepositResponseObject))
-                                .build();
-assertEquals(goodGetResponse, depositService.getAllUserDeposits(storedDeposit.getAccountentity().getPk_account_id()));
-}
+//	//Returning Empty Object
+//	@Test
+//    void getAllUserDeposits() {
+//        GetResponse goodGetResponse = GetResponse.builder()
+//                        .success(true)
+//                                .gotObject(Collections.singletonList(storedDepositResponseObject))
+//                                        .build();
+//        assertEquals(goodGetResponse, depositService.getAllUserDeposits(storedDeposit.getAccountentity().getPk_account_id()));
+//    }
+//	//Make a request for deposits
+//	@Test
+//	void getAlLUserDepositsOfType() {
+//        GetResponse goodGetResponse = GetResponse.builder()
+//                .success(true)
+//                        .gotObject(Collections.singletonList(storedDepositResponseObject))
+//                                .build();
+//assertEquals(goodGetResponse, depositService.getAllUserDeposits(storedDeposit.getAccountentity().getPk_account_id()));
+//}
 }
