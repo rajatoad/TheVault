@@ -17,7 +17,7 @@ agent any
                           sh('export BUILD_ID=dontKillMe')
                           sh('cd target/')
                           sh('ls')
-                          sh('nohup java -jar demo-0.0.1-SNAPSHOT.jar &')
+                          sh('java -jar demo-0.0.1-SNAPSHOT.jar')
 
                           }
                         }
