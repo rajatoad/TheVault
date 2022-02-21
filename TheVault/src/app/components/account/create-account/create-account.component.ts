@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { PostAccount } from 'src/app/models/account/responses/post-account';
 import { AccountHandlerService } from 'src/app/_services/account/account-handler.service';
 import { GlobalStorageService } from 'src/app/_services/global-storage.service';
@@ -9,6 +9,9 @@ import { GlobalStorageService } from 'src/app/_services/global-storage.service';
   styleUrls: ['./create-account.component.css']
 })
 export class CreateAccountComponent implements OnInit {
+
+  @Output()
+  createAccountEmitter = new EventEmitter<boolean>();
 
   constructor(
     private globalStorage: GlobalStorageService,
@@ -26,7 +29,10 @@ export class CreateAccountComponent implements OnInit {
   }
 
   createAccountObserver = {
-    next: (data: PostAccount) => this.globalStorage.addAccount(data.createdObject[0]),
+    next: (data: PostAccount) => {
+      this.globalStorage.addAccount(data.createdObject[0]);
+      this.createAccountEmitter.emit(true);
+    },
     error: (err: Error) => console.error("Create Account Observer error: " + err),
     complete: () => console.log("Successful creation of account")
   }
