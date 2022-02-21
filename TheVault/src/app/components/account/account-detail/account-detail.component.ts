@@ -19,6 +19,8 @@ export class AccountDetailComponent implements OnInit {
   createDeposit: boolean = false;
   createWithdraw: boolean = false;
 
+  createTransfer: boolean = false;
+
   constructor(
     private globalStorage: GlobalStorageService,
     private transactionHandler: TransactionHandlerService,
@@ -37,29 +39,47 @@ export class AccountDetailComponent implements OnInit {
 
   // Populate the transaction history of the account
   getTransactions(){
-    this.transactionHandler.getTransactionHistory(this.account.accountId).subscribe(this.getTransactionObserver)
+    try{
+      this.transactionHandler.getTransactionHistory(this.account.accountId)
+      .subscribe(this.getTransactionObserver)
+    }catch(e){
+      console.error(e);
+    }
   }
 
   //Deposit and Withdraw generator function used to display the components related to create them
   depositGenerator(){
     this.createWithdraw = false;
+    this.createTransfer = false;
     this.createDeposit = !this.createDeposit;
   }
 
   withdrawGenerator(){
     this.createDeposit = false;
+    this.createTransfer = false;
     this.createWithdraw = !this.createWithdraw;
   }
 
+  transferGenerator() {
+    this.createDeposit = false;
+    this.createWithdraw = false;
+    this.createTransfer = !this.createTransfer;
+  }
+
   // Submit events are used to close the component and to refresh the transaction history
-  depositSubmitEvent(submit:boolean){
+  depositSubmitEvent(submit: boolean) {
     this.createDeposit = submit;
     this.getTransactions();
   }
 
-  withdrawSubmitEvent(submit:boolean){
+  withdrawSubmitEvent(submit: boolean) {
     this.createWithdraw = submit;
     this.getTransactions();
+  }
+
+  transferSubmitEvent(submit: boolean) {
+    this.createTransfer = submit;
+    this.ngOnInit();
   }
 
   logout(){

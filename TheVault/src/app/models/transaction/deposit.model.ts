@@ -43,7 +43,7 @@ export class Deposit {
         private _reference: string,
         private _dateDeposit: string,
         private _amount: number
-    ){
+    ) {
         this._depositId = _depositId;
         this._accountId = _accountId;
         this._depositType = _depositType;

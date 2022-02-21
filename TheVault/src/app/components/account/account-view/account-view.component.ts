@@ -14,7 +14,9 @@ export class AccountViewComponent implements OnInit {
   profile!: Profile;
   accounts!: Account[];
 
-  constructor(private globalStorage: GlobalStorageService) { }
+  constructor(
+    private globalStorage: GlobalStorageService
+    ) { }
 
   ngOnInit(): void {
     this.initializeView();
@@ -23,9 +25,14 @@ export class AccountViewComponent implements OnInit {
   //Using global storage we populate the account view. This acts as a way to traverse through
   //the other views
   initializeView(){
-    this.userId = this.globalStorage.getUserId();
-    this.profile = this.globalStorage.getProfile();
-    this.accounts = this.globalStorage.getAccounts();
+    try{
+      this.userId = this.globalStorage.getUserId();
+      this.profile = this.globalStorage.getProfile();
+      this.accounts = this.globalStorage.getAccounts();
+      console.log(this.profile.firstName);
+    }catch(err){
+      console.error(err);
+    }
   }
 
 }

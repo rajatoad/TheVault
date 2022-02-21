@@ -13,7 +13,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
-import static org.testng.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 @SpringBootTest
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
@@ -56,11 +57,5 @@ public class LoginServiceTest {
     void checkValidLoginTest(){
         assertEquals(validLoginResponse, loginService.checkLogin(validLoginRequest));
     }
-
-    @Test
-    void getLoginCredentialSuccessTest() { assertEquals(loginCredentialEntity, loginService.getLoginCredentialFromLogin(validLoginRequest)); }
-
-//    @Test
-//    void newLoginCredentialTest(){ assertEquals(newLoginCredential, loginService.newAccount(newLoginCredentialsRequest));}
 
 }

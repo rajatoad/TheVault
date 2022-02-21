@@ -14,7 +14,7 @@ public class TransactionController {
     private TransactionService transactionService;
 
     @GetMapping("/history/{accountId}")
-    public GetResponse getTransactionHistory(@PathVariable Integer accountId){
+    public GetResponse getTransactionHistory(@PathVariable Integer accountId) {
         return transactionService.getTransactionHistory(accountId);
     }
 

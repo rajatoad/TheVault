@@ -30,7 +30,6 @@ public class WithdrawService implements WithdrawServiceInterface {
     @Autowired
     private RequestTypeService requestTypeService;
 
-
     @Autowired
     private RequestStatusService requestStatusService;
 
@@ -61,7 +60,6 @@ public class WithdrawService implements WithdrawServiceInterface {
             throw new InvalidRequestException(HttpStatus.BAD_REQUEST, e.getMessage());
         }
     }
-
 
     @Override
     public GetResponse getAllUserWithdrawals(int accountId) {

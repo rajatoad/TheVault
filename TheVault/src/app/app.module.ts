@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login-register/login/login.component';
@@ -15,9 +14,6 @@ import { AccountViewComponent } from './components/account/account-view/account-
 import { AccountInfoComponent } from './components/account/account-detail/account-info/account-info.component';
 import { AppBootstrapModule } from './app-bootstrap/app-bootstrap.module';
 import { AppBootstrapComponent } from './app-bootstrap/app-bootstrap.component';
-import { AccountTransactionsComponent } from './components/account/account-transactions/account-transactions.component';
-// import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-// import { InMemoryDataService } from './_services/transactions/in-memory-data.service';
 import { TransactionHistoryComponent } from './components/account/account-transactions/history/transaction-history/transaction-history.component';
 import { SelectTransactionComponent } from './components/transaction/select-transaction/select-transaction.component';
 import { AccountProfileComponent } from './components/account-profile/account-profile.component';
@@ -27,8 +23,10 @@ import { DepositDetailComponent } from './components/transaction/deposit-detail/
 import { WithdrawDetailComponent } from './components/transaction/withdraw-detail/withdraw-detail.component';
 import { EditProfileComponent } from './components/edit-profile/edit-profile.component';
 import { TransactionSearchComponent } from './components/transaction/select-transaction/transaction-search/transaction-search.component';
-// import { Ng2SearchPipeModule} from 'ng2-search-filter';
+import { Ng2SearchPipeModule} from 'ng2-search-filter';
 import { CreateAccountComponent } from './components/account/create-account/create-account.component';
+import { TransferGenerateComponent } from './components/transaction/transfer-generate/transfer-generate.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +38,6 @@ import { CreateAccountComponent } from './components/account/create-account/crea
     AccountViewComponent,
     AccountInfoComponent,
     AppBootstrapComponent,
-    AccountTransactionsComponent,
     TransactionHistoryComponent,
     SelectTransactionComponent,
     AccountProfileComponent,
@@ -50,7 +47,9 @@ import { CreateAccountComponent } from './components/account/create-account/crea
     WithdrawDetailComponent,
     EditProfileComponent,
     TransactionSearchComponent,
-    CreateAccountComponent
+    CreateAccountComponent,
+    WithdrawDetailComponent,
+    TransferGenerateComponent
   ],
   imports: [
     BrowserModule,
@@ -58,8 +57,8 @@ import { CreateAccountComponent } from './components/account/create-account/crea
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    AppBootstrapModule
-    // Ng2SearchPipeModule
+    AppBootstrapModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

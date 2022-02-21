@@ -19,7 +19,6 @@ export class AccountMiniComponent implements OnInit {
   account!: Account;
 
   ngOnInit(): void {
-    console.log("hello");
   }
 
   goToDetail(account:Account){
