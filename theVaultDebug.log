@@ -2041,3 +2041,1267 @@ METHOD: findByWithdrawId
 ARGUMENTS: [1]
 2022-02-20 17:21:18,168 INFO dLog [main] METHOD: findByWithdrawId
 RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-20, amount=12.22)])
+2022-02-20 17:47:36,896 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=0.0)]
+2022-02-20 17:47:36,899 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@728535c6
+2022-02-20 17:47:36,920 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=-1.0)]
+2022-02-20 17:47:36,921 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@78b44fcb
+2022-02-20 17:47:36,928 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=-2123.0)]
+2022-02-20 17:47:36,929 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@2f3a0f37
+2022-02-20 17:47:36,938 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=null, reference=reference, amount=1.0)]
+2022-02-20 17:47:36,939 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@5dd2ea0a
+2022-02-20 17:47:36,947 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=, reference=reference, amount=1.0)]
+2022-02-20 17:47:36,947 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@571e2f15
+2022-02-20 17:47:36,955 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, reference=reference, amount=1.0)]
+2022-02-20 17:47:36,955 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@2552181d
+2022-02-20 17:47:36,964 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=a, reference=reference, amount=1.0)]
+2022-02-20 17:47:36,965 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@51d9fd30
+2022-02-20 17:47:36,971 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=null, amount=1.0)]
+2022-02-20 17:47:36,972 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@8beb0dd
+2022-02-20 17:47:36,980 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=, amount=1.0)]
+2022-02-20 17:47:36,981 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@3d99d327
+2022-02-20 17:47:36,987 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, amount=1.0)]
+2022-02-20 17:47:36,987 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@233789d9
+2022-02-20 17:47:36,996 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=a, amount=1.0)]
+2022-02-20 17:47:36,997 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@7f31937b
+2022-02-20 17:47:37,009 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=12.22)]
+2022-02-20 17:47:37,034 INFO dLog [main] METHOD: createWithdrawal
+RETURNING: PostResponse(createdObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-20, amount=12.22)])
+2022-02-20 17:47:37,044 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: getAlLUserWithdrawalsOfType
+ARGUMENTS: [1, Retail]
+2022-02-20 17:47:37,046 INFO dLog [main] METHOD: getAlLUserWithdrawalsOfType
+RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-20, amount=12.22)])
+2022-02-20 17:47:37,053 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: deleteAllWithdraws
+ARGUMENTS: [1]
+2022-02-20 17:47:37,054 INFO dLog [main] METHOD: deleteAllWithdraws
+RETURNING: DeleteResponse(deletedObject=[])
+2022-02-20 17:47:37,059 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: getAllUserWithdrawals
+ARGUMENTS: [1]
+2022-02-20 17:47:37,061 INFO dLog [main] METHOD: getAllUserWithdrawals
+RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-20, amount=12.22)])
+2022-02-20 17:47:37,070 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: findByWithdrawId
+ARGUMENTS: [1]
+2022-02-20 17:47:37,070 INFO dLog [main] METHOD: findByWithdrawId
+RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-20, amount=12.22)])
+2022-02-20 17:48:40,135 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=0.0)]
+2022-02-20 17:48:40,140 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@7e2e0b8a
+2022-02-20 17:48:40,165 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=-1.0)]
+2022-02-20 17:48:40,166 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@6003eb60
+2022-02-20 17:48:40,174 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=-2123.0)]
+2022-02-20 17:48:40,175 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@8beb0dd
+2022-02-20 17:48:40,187 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=null, reference=reference, amount=1.0)]
+2022-02-20 17:48:40,188 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@2f4fc18
+2022-02-20 17:48:40,199 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=, reference=reference, amount=1.0)]
+2022-02-20 17:48:40,199 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@717b0d81
+2022-02-20 17:48:40,208 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, reference=reference, amount=1.0)]
+2022-02-20 17:48:40,208 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@16745abd
+2022-02-20 17:48:40,217 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=a, reference=reference, amount=1.0)]
+2022-02-20 17:48:40,218 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@4d793390
+2022-02-20 17:48:40,228 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=null, amount=1.0)]
+2022-02-20 17:48:40,229 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@138b9abe
+2022-02-20 17:48:40,236 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=, amount=1.0)]
+2022-02-20 17:48:40,236 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@279e8bc0
+2022-02-20 17:48:40,243 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, amount=1.0)]
+2022-02-20 17:48:40,244 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@23ffc910
+2022-02-20 17:48:40,251 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=a, amount=1.0)]
+2022-02-20 17:48:40,252 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@35277c6c
+2022-02-20 17:48:40,266 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=12.22)]
+2022-02-20 17:48:40,288 INFO dLog [main] METHOD: createWithdrawal
+RETURNING: PostResponse(createdObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-20, amount=12.22)])
+2022-02-20 17:48:40,301 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: getAlLUserWithdrawalsOfType
+ARGUMENTS: [1, Retail]
+2022-02-20 17:48:40,302 INFO dLog [main] METHOD: getAlLUserWithdrawalsOfType
+RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-20, amount=12.22)])
+2022-02-20 17:48:40,311 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: deleteAllWithdraws
+ARGUMENTS: [1]
+2022-02-20 17:48:40,312 INFO dLog [main] METHOD: deleteAllWithdraws
+RETURNING: DeleteResponse(deletedObject=[])
+2022-02-20 17:48:40,317 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: getAllUserWithdrawals
+ARGUMENTS: [1]
+2022-02-20 17:48:40,319 INFO dLog [main] METHOD: getAllUserWithdrawals
+RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-20, amount=12.22)])
+2022-02-20 17:48:40,329 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: findByWithdrawId
+ARGUMENTS: [1]
+2022-02-20 17:48:40,329 INFO dLog [main] METHOD: findByWithdrawId
+RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-20, amount=12.22)])
+2022-02-20 18:06:44,317 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: createProfile
+ARGUMENTS: [ProfileCreateRequest(userId=5, firstName=joe, lastName=something, email=asdf@fjfo.com, phoneNumber=555-555-5555, address=1 street)]
+2022-02-20 18:06:44,332 INFO dLog [main] METHOD: createProfile
+RETURNING: PostResponse(createdObject=[AccountProfileResponse(profileId=1, userId=5, firstName=joe, lastName=something, email=asdf@fjfo.com, phoneNumber=555-555-5555, address=1 street)])
+2022-02-20 18:06:46,416 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: createAccount
+ARGUMENTS: [CreateAccountRequest(userId=1, accountType=lol)]
+2022-02-20 18:06:46,424 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: createAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountTypeException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@2b89785c
+2022-02-20 18:06:46,436 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+ARGUMENTS: [TransferRequest(ownerAccountId=1, receiverAccountId=2, amount=100000)]
+2022-02-20 18:06:46,439 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@167552d6
+2022-02-20 18:06:46,450 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: deleteAccount
+ARGUMENTS: [1]
+2022-02-20 18:06:46,451 INFO dLog [main] METHOD: deleteAccount
+RETURNING: DeleteResponse(deletedObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=120.0)])
+2022-02-20 18:06:46,462 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+ARGUMENTS: [TransferRequest(ownerAccountId=1, receiverAccountId=2, amount=10)]
+2022-02-20 18:06:46,464 INFO dLog [main] METHOD: transferToAnotherAccount
+RETURNING: PutResponse(updatedObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=90.0, pendingBalance=110.0), AccountResponseObject(accountId=2, userId=2, accountType=Checking, availableBalance=100.0, pendingBalance=130.0)])
+2022-02-20 18:06:46,473 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: updateAccount
+ARGUMENTS: [UpdateAccountRequest(accountId=1, accountType=Checking, availableBalance=100, pendingBalance=100)]
+2022-02-20 18:06:46,474 INFO dLog [main] METHOD: updateAccount
+RETURNING: PutResponse(updatedObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=100.0)])
+2022-02-20 18:06:46,481 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccount
+ARGUMENTS: [1]
+2022-02-20 18:06:46,482 INFO dLog [main] METHOD: getAccount
+RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=120.0)])
+2022-02-20 18:06:46,489 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccounts
+ARGUMENTS: [1]
+2022-02-20 18:06:46,490 INFO dLog [main] METHOD: getAccounts
+RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=120.0)])
+2022-02-20 18:06:46,496 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: updateAccount
+ARGUMENTS: [UpdateAccountRequest(accountId=-1, accountType=, availableBalance=0, pendingBalance=0)]
+2022-02-20 18:06:46,497 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: updateAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@63a584b4
+2022-02-20 18:06:46,504 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccounts
+ARGUMENTS: [-1]
+2022-02-20 18:06:46,505 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccounts
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidUserIdException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@5fdb17d8
+2022-02-20 18:06:46,513 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+ARGUMENTS: [TransferRequest(ownerAccountId=1, receiverAccountId=-1, amount=10)]
+2022-02-20 18:06:46,514 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@4e3c6780
+2022-02-20 18:06:46,522 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: deleteAccount
+ARGUMENTS: [-1]
+2022-02-20 18:06:46,523 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: deleteAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@229f6254
+2022-02-20 18:06:46,529 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: createAccount
+ARGUMENTS: [CreateAccountRequest(userId=1, accountType=Checking)]
+2022-02-20 18:06:46,530 INFO dLog [main] METHOD: createAccount
+RETURNING: PostResponse(createdObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=120.0)])
+2022-02-20 18:06:46,537 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+ARGUMENTS: [TransferRequest(ownerAccountId=-1, receiverAccountId=2, amount=10)]
+2022-02-20 18:06:46,537 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@3a56629c
+2022-02-20 18:06:46,543 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccount
+ARGUMENTS: [-1]
+2022-02-20 18:06:46,543 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@28131a78
+2022-02-20 18:06:48,255 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=work, amount=100.0)]
+2022-02-20 18:06:48,260 INFO dLog [main] METHOD: createDeposit
+RETURNING: PostResponse(createdObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=work, dateDeposit=2022-02-20, amount=100.0)])
+2022-02-20 18:06:48,265 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: getAllUserDeposits
+ARGUMENTS: [1]
+2022-02-20 18:06:48,266 INFO dLog [main] METHOD: getAllUserDeposits
+RETURNING: GetResponse(gotObject=[])
+2022-02-20 18:06:48,280 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: getAllUserDeposits
+ARGUMENTS: [1]
+2022-02-20 18:06:48,280 INFO dLog [main] METHOD: getAllUserDeposits
+RETURNING: GetResponse(gotObject=[])
+2022-02-20 18:06:49,835 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: checkLogin
+ARGUMENTS: [LoginRequest(username=username1, password=password1)]
+2022-02-20 18:06:49,841 INFO dLog [main] METHOD: checkLogin
+RETURNING: LoginResponse(success=true)
+2022-02-20 18:06:49,846 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: getLoginCredentialFromLogin
+ARGUMENTS: [LoginRequest(username=username1, password=password1)]
+2022-02-20 18:06:49,847 INFO dLog [main] METHOD: getLoginCredentialFromLogin
+RETURNING: PostResponse(createdObject=[LoginResponseObject(userId=1, username=username1, password=password1)])
+2022-02-20 18:06:51,449 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=0.0)]
+2022-02-20 18:06:51,452 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@51973757
+2022-02-20 18:06:51,459 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=-1.0)]
+2022-02-20 18:06:51,459 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@417dadf2
+2022-02-20 18:06:51,463 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=-2123.0)]
+2022-02-20 18:06:51,464 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@72caa26f
+2022-02-20 18:06:51,470 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=null, reference=reference, amount=1.0)]
+2022-02-20 18:06:51,471 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@486b991f
+2022-02-20 18:06:51,475 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=, reference=reference, amount=1.0)]
+2022-02-20 18:06:51,476 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@36fb71a2
+2022-02-20 18:06:51,480 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, reference=reference, amount=1.0)]
+2022-02-20 18:06:51,481 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@75170f72
+2022-02-20 18:06:51,485 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=a, reference=reference, amount=1.0)]
+2022-02-20 18:06:51,486 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@61a0d3ae
+2022-02-20 18:06:51,491 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=null, amount=1.0)]
+2022-02-20 18:06:51,492 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@267308ce
+2022-02-20 18:06:51,496 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=, amount=1.0)]
+2022-02-20 18:06:51,496 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@41a9920d
+2022-02-20 18:06:51,501 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, amount=1.0)]
+2022-02-20 18:06:51,501 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@823a002
+2022-02-20 18:06:51,506 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=a, amount=1.0)]
+2022-02-20 18:06:51,506 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@743ffff1
+2022-02-20 18:06:51,510 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=12.22)]
+2022-02-20 18:06:51,516 INFO dLog [main] METHOD: createWithdrawal
+RETURNING: PostResponse(createdObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-20, amount=12.22)])
+2022-02-20 18:06:51,521 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: getAlLUserWithdrawalsOfType
+ARGUMENTS: [1, Retail]
+2022-02-20 18:06:51,522 INFO dLog [main] METHOD: getAlLUserWithdrawalsOfType
+RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-20, amount=12.22)])
+2022-02-20 18:06:51,526 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: deleteAllWithdraws
+ARGUMENTS: [1]
+2022-02-20 18:06:51,526 INFO dLog [main] METHOD: deleteAllWithdraws
+RETURNING: DeleteResponse(deletedObject=[])
+2022-02-20 18:06:51,531 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: getAllUserWithdrawals
+ARGUMENTS: [1]
+2022-02-20 18:06:51,531 INFO dLog [main] METHOD: getAllUserWithdrawals
+RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-20, amount=12.22)])
+2022-02-20 18:06:51,536 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: findByWithdrawId
+ARGUMENTS: [1]
+2022-02-20 18:06:51,536 INFO dLog [main] METHOD: findByWithdrawId
+RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-20, amount=12.22)])
+2022-02-20 18:08:27,868 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: createProfile
+ARGUMENTS: [ProfileCreateRequest(userId=5, firstName=joe, lastName=something, email=asdf@fjfo.com, phoneNumber=555-555-5555, address=1 street)]
+2022-02-20 18:08:27,884 INFO dLog [main] METHOD: createProfile
+RETURNING: PostResponse(createdObject=[AccountProfileResponse(profileId=1, userId=5, firstName=joe, lastName=something, email=asdf@fjfo.com, phoneNumber=555-555-5555, address=1 street)])
+2022-02-20 18:08:29,956 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: createAccount
+ARGUMENTS: [CreateAccountRequest(userId=1, accountType=lol)]
+2022-02-20 18:08:29,965 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: createAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountTypeException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@685ae9f8
+2022-02-20 18:08:29,975 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+ARGUMENTS: [TransferRequest(ownerAccountId=1, receiverAccountId=2, amount=100000)]
+2022-02-20 18:08:29,977 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@4b2b3da0
+2022-02-20 18:08:29,987 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: deleteAccount
+ARGUMENTS: [1]
+2022-02-20 18:08:29,988 INFO dLog [main] METHOD: deleteAccount
+RETURNING: DeleteResponse(deletedObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=120.0)])
+2022-02-20 18:08:29,998 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+ARGUMENTS: [TransferRequest(ownerAccountId=1, receiverAccountId=2, amount=10)]
+2022-02-20 18:08:29,999 INFO dLog [main] METHOD: transferToAnotherAccount
+RETURNING: PutResponse(updatedObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=90.0, pendingBalance=110.0), AccountResponseObject(accountId=2, userId=2, accountType=Checking, availableBalance=100.0, pendingBalance=130.0)])
+2022-02-20 18:08:30,009 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: updateAccount
+ARGUMENTS: [UpdateAccountRequest(accountId=1, accountType=Checking, availableBalance=100, pendingBalance=100)]
+2022-02-20 18:08:30,010 INFO dLog [main] METHOD: updateAccount
+RETURNING: PutResponse(updatedObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=100.0)])
+2022-02-20 18:08:30,017 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccount
+ARGUMENTS: [1]
+2022-02-20 18:08:30,017 INFO dLog [main] METHOD: getAccount
+RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=120.0)])
+2022-02-20 18:08:30,025 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccounts
+ARGUMENTS: [1]
+2022-02-20 18:08:30,026 INFO dLog [main] METHOD: getAccounts
+RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=120.0)])
+2022-02-20 18:08:30,036 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: updateAccount
+ARGUMENTS: [UpdateAccountRequest(accountId=-1, accountType=, availableBalance=0, pendingBalance=0)]
+2022-02-20 18:08:30,037 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: updateAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@26989a37
+2022-02-20 18:08:30,046 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccounts
+ARGUMENTS: [-1]
+2022-02-20 18:08:30,047 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccounts
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidUserIdException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@590faf6e
+2022-02-20 18:08:30,055 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+ARGUMENTS: [TransferRequest(ownerAccountId=1, receiverAccountId=-1, amount=10)]
+2022-02-20 18:08:30,056 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@6d378a51
+2022-02-20 18:08:30,064 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: deleteAccount
+ARGUMENTS: [-1]
+2022-02-20 18:08:30,064 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: deleteAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@6769e62b
+2022-02-20 18:08:30,071 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: createAccount
+ARGUMENTS: [CreateAccountRequest(userId=1, accountType=Checking)]
+2022-02-20 18:08:30,071 INFO dLog [main] METHOD: createAccount
+RETURNING: PostResponse(createdObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=120.0)])
+2022-02-20 18:08:30,078 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+ARGUMENTS: [TransferRequest(ownerAccountId=-1, receiverAccountId=2, amount=10)]
+2022-02-20 18:08:30,079 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@2b1ed385
+2022-02-20 18:08:30,086 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccount
+ARGUMENTS: [-1]
+2022-02-20 18:08:30,087 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@af19ff3
+2022-02-20 18:08:31,714 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=work, amount=100.0)]
+2022-02-20 18:08:31,720 INFO dLog [main] METHOD: createDeposit
+RETURNING: PostResponse(createdObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=work, dateDeposit=2022-02-20, amount=100.0)])
+2022-02-20 18:08:31,725 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: getAllUserDeposits
+ARGUMENTS: [1]
+2022-02-20 18:08:31,726 INFO dLog [main] METHOD: getAllUserDeposits
+RETURNING: GetResponse(gotObject=[])
+2022-02-20 18:08:31,740 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: getAllUserDeposits
+ARGUMENTS: [1]
+2022-02-20 18:08:31,740 INFO dLog [main] METHOD: getAllUserDeposits
+RETURNING: GetResponse(gotObject=[])
+2022-02-20 18:08:33,257 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: checkLogin
+ARGUMENTS: [LoginRequest(username=username1, password=password1)]
+2022-02-20 18:08:33,265 INFO dLog [main] METHOD: checkLogin
+RETURNING: LoginResponse(success=true)
+2022-02-20 18:08:33,270 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: getLoginCredentialFromLogin
+ARGUMENTS: [LoginRequest(username=username1, password=password1)]
+2022-02-20 18:08:33,271 INFO dLog [main] METHOD: getLoginCredentialFromLogin
+RETURNING: PostResponse(createdObject=[LoginResponseObject(userId=1, username=username1, password=password1)])
+2022-02-20 18:08:34,826 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=0.0)]
+2022-02-20 18:08:34,831 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@46728cd2
+2022-02-20 18:08:34,840 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=-1.0)]
+2022-02-20 18:08:34,841 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@3e7785cf
+2022-02-20 18:08:34,848 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=-2123.0)]
+2022-02-20 18:08:34,849 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@62d85d39
+2022-02-20 18:08:34,856 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=null, reference=reference, amount=1.0)]
+2022-02-20 18:08:34,857 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@f95e1a4
+2022-02-20 18:08:34,864 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=, reference=reference, amount=1.0)]
+2022-02-20 18:08:34,865 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@1b8185d8
+2022-02-20 18:08:34,872 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, reference=reference, amount=1.0)]
+2022-02-20 18:08:34,873 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@168f0550
+2022-02-20 18:08:34,880 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=a, reference=reference, amount=1.0)]
+2022-02-20 18:08:34,881 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@36b75ee4
+2022-02-20 18:08:34,889 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=null, amount=1.0)]
+2022-02-20 18:08:34,891 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@3f38bddc
+2022-02-20 18:08:34,898 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=, amount=1.0)]
+2022-02-20 18:08:34,899 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@337484a1
+2022-02-20 18:08:34,905 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, amount=1.0)]
+2022-02-20 18:08:34,906 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@2e099f41
+2022-02-20 18:08:34,912 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=a, amount=1.0)]
+2022-02-20 18:08:34,913 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@638eef98
+2022-02-20 18:08:34,919 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=12.22)]
+2022-02-20 18:08:34,926 INFO dLog [main] METHOD: createWithdrawal
+RETURNING: PostResponse(createdObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-20, amount=12.22)])
+2022-02-20 18:08:34,932 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: getAlLUserWithdrawalsOfType
+ARGUMENTS: [1, Retail]
+2022-02-20 18:08:34,934 INFO dLog [main] METHOD: getAlLUserWithdrawalsOfType
+RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-20, amount=12.22)])
+2022-02-20 18:08:34,939 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: deleteAllWithdraws
+ARGUMENTS: [1]
+2022-02-20 18:08:34,940 INFO dLog [main] METHOD: deleteAllWithdraws
+RETURNING: DeleteResponse(deletedObject=[])
+2022-02-20 18:08:34,953 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: getAllUserWithdrawals
+ARGUMENTS: [1]
+2022-02-20 18:08:34,956 INFO dLog [main] METHOD: getAllUserWithdrawals
+RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-20, amount=12.22)])
+2022-02-20 18:08:34,972 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: findByWithdrawId
+ARGUMENTS: [1]
+2022-02-20 18:08:34,974 INFO dLog [main] METHOD: findByWithdrawId
+RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-20, amount=12.22)])
+2022-02-20 18:08:56,380 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: createProfile
+ARGUMENTS: [ProfileCreateRequest(userId=5, firstName=joe, lastName=something, email=asdf@fjfo.com, phoneNumber=555-555-5555, address=1 street)]
+2022-02-20 18:08:56,401 INFO dLog [main] METHOD: createProfile
+RETURNING: PostResponse(createdObject=[AccountProfileResponse(profileId=1, userId=5, firstName=joe, lastName=something, email=asdf@fjfo.com, phoneNumber=555-555-5555, address=1 street)])
+2022-02-20 18:09:12,489 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: createAccount
+ARGUMENTS: [CreateAccountRequest(userId=1, accountType=lol)]
+2022-02-20 18:09:12,511 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: createAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountTypeException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@5703c1fb
+2022-02-20 18:09:12,531 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+ARGUMENTS: [TransferRequest(ownerAccountId=1, receiverAccountId=2, amount=100000)]
+2022-02-20 18:09:12,533 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@4769537a
+2022-02-20 18:09:12,544 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: deleteAccount
+ARGUMENTS: [1]
+2022-02-20 18:09:12,545 INFO dLog [main] METHOD: deleteAccount
+RETURNING: DeleteResponse(deletedObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=120.0)])
+2022-02-20 18:09:12,557 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+ARGUMENTS: [TransferRequest(ownerAccountId=1, receiverAccountId=2, amount=10)]
+2022-02-20 18:09:12,558 INFO dLog [main] METHOD: transferToAnotherAccount
+RETURNING: PutResponse(updatedObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=90.0, pendingBalance=110.0), AccountResponseObject(accountId=2, userId=2, accountType=Checking, availableBalance=100.0, pendingBalance=130.0)])
+2022-02-20 18:09:12,565 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: updateAccount
+ARGUMENTS: [UpdateAccountRequest(accountId=1, accountType=Checking, availableBalance=100, pendingBalance=100)]
+2022-02-20 18:09:12,566 INFO dLog [main] METHOD: updateAccount
+RETURNING: PutResponse(updatedObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=100.0)])
+2022-02-20 18:09:12,574 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccount
+ARGUMENTS: [1]
+2022-02-20 18:09:12,575 INFO dLog [main] METHOD: getAccount
+RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=120.0)])
+2022-02-20 18:09:12,585 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccounts
+ARGUMENTS: [1]
+2022-02-20 18:09:12,586 INFO dLog [main] METHOD: getAccounts
+RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=120.0)])
+2022-02-20 18:09:12,597 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: updateAccount
+ARGUMENTS: [UpdateAccountRequest(accountId=-1, accountType=, availableBalance=0, pendingBalance=0)]
+2022-02-20 18:09:12,598 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: updateAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@6f87a7c7
+2022-02-20 18:09:12,608 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccounts
+ARGUMENTS: [-1]
+2022-02-20 18:09:12,609 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccounts
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidUserIdException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@418bdde9
+2022-02-20 18:09:12,619 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+ARGUMENTS: [TransferRequest(ownerAccountId=1, receiverAccountId=-1, amount=10)]
+2022-02-20 18:09:12,620 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@240df292
+2022-02-20 18:09:12,628 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: deleteAccount
+ARGUMENTS: [-1]
+2022-02-20 18:09:12,629 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: deleteAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@2c451c4a
+2022-02-20 18:09:12,638 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: createAccount
+ARGUMENTS: [CreateAccountRequest(userId=1, accountType=Checking)]
+2022-02-20 18:09:12,639 INFO dLog [main] METHOD: createAccount
+RETURNING: PostResponse(createdObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=120.0)])
+2022-02-20 18:09:12,646 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+ARGUMENTS: [TransferRequest(ownerAccountId=-1, receiverAccountId=2, amount=10)]
+2022-02-20 18:09:12,647 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@73ff7a54
+2022-02-20 18:09:12,654 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccount
+ARGUMENTS: [-1]
+2022-02-20 18:09:12,655 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@337c0ee4
+2022-02-20 18:09:36,550 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=work, amount=100.0)]
+2022-02-20 18:09:36,578 INFO dLog [main] METHOD: createDeposit
+RETURNING: PostResponse(createdObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=work, dateDeposit=2022-02-20, amount=100.0)])
+2022-02-20 18:09:36,605 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: getAllUserDeposits
+ARGUMENTS: [1]
+2022-02-20 18:09:36,606 INFO dLog [main] METHOD: getAllUserDeposits
+RETURNING: GetResponse(gotObject=[])
+2022-02-20 18:09:36,624 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: getAllUserDeposits
+ARGUMENTS: [1]
+2022-02-20 18:09:36,625 INFO dLog [main] METHOD: getAllUserDeposits
+RETURNING: GetResponse(gotObject=[])
+2022-02-20 18:09:58,595 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: checkLogin
+ARGUMENTS: [LoginRequest(username=username1, password=password1)]
+2022-02-20 18:09:58,620 INFO dLog [main] METHOD: checkLogin
+RETURNING: LoginResponse(success=true)
+2022-02-20 18:09:58,655 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: getLoginCredentialFromLogin
+ARGUMENTS: [LoginRequest(username=username1, password=password1)]
+2022-02-20 18:09:58,658 INFO dLog [main] METHOD: getLoginCredentialFromLogin
+RETURNING: PostResponse(createdObject=[LoginResponseObject(userId=1, username=username1, password=password1)])
+2022-02-20 18:10:30,221 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=0.0)]
+2022-02-20 18:10:30,225 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@665f88e1
+2022-02-20 18:10:30,257 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=-1.0)]
+2022-02-20 18:10:30,258 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@58945295
+2022-02-20 18:10:30,268 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=-2123.0)]
+2022-02-20 18:10:30,269 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@627d5f99
+2022-02-20 18:10:30,280 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=null, reference=reference, amount=1.0)]
+2022-02-20 18:10:30,280 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@61648dd2
+2022-02-20 18:10:30,287 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=, reference=reference, amount=1.0)]
+2022-02-20 18:10:30,287 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@3d1b43d8
+2022-02-20 18:10:30,295 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, reference=reference, amount=1.0)]
+2022-02-20 18:10:30,295 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@9f52eb7
+2022-02-20 18:10:30,301 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=a, reference=reference, amount=1.0)]
+2022-02-20 18:10:30,301 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@46c2189e
+2022-02-20 18:10:30,309 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=null, amount=1.0)]
+2022-02-20 18:10:30,310 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@5300694d
+2022-02-20 18:10:30,316 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=, amount=1.0)]
+2022-02-20 18:10:30,316 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@7320750c
+2022-02-20 18:10:30,321 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, amount=1.0)]
+2022-02-20 18:10:30,322 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@2570851e
+2022-02-20 18:10:30,331 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=a, amount=1.0)]
+2022-02-20 18:10:30,331 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@67d8613
+2022-02-20 18:10:30,344 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=12.22)]
+2022-02-20 18:10:30,361 INFO dLog [main] METHOD: createWithdrawal
+RETURNING: PostResponse(createdObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-20, amount=12.22)])
+2022-02-20 18:10:30,370 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: getAlLUserWithdrawalsOfType
+ARGUMENTS: [1, Retail]
+2022-02-20 18:10:30,372 INFO dLog [main] METHOD: getAlLUserWithdrawalsOfType
+RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-20, amount=12.22)])
+2022-02-20 18:10:30,384 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: deleteAllWithdraws
+ARGUMENTS: [1]
+2022-02-20 18:10:30,384 INFO dLog [main] METHOD: deleteAllWithdraws
+RETURNING: DeleteResponse(deletedObject=[])
+2022-02-20 18:10:30,390 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: getAllUserWithdrawals
+ARGUMENTS: [1]
+2022-02-20 18:10:30,391 INFO dLog [main] METHOD: getAllUserWithdrawals
+RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-20, amount=12.22)])
+2022-02-20 18:10:30,398 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: findByWithdrawId
+ARGUMENTS: [1]
+2022-02-20 18:10:30,398 INFO dLog [main] METHOD: findByWithdrawId
+RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-20, amount=12.22)])
+2022-02-20 18:10:55,375 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: createProfile
+ARGUMENTS: [ProfileCreateRequest(userId=5, firstName=joe, lastName=something, email=asdf@fjfo.com, phoneNumber=555-555-5555, address=1 street)]
+2022-02-20 18:10:55,388 INFO dLog [main] METHOD: createProfile
+RETURNING: PostResponse(createdObject=[AccountProfileResponse(profileId=1, userId=5, firstName=joe, lastName=something, email=asdf@fjfo.com, phoneNumber=555-555-5555, address=1 street)])
+2022-02-20 18:10:57,576 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: createAccount
+ARGUMENTS: [CreateAccountRequest(userId=1, accountType=lol)]
+2022-02-20 18:10:57,586 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: createAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountTypeException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@647e98a2
+2022-02-20 18:10:57,599 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+ARGUMENTS: [TransferRequest(ownerAccountId=1, receiverAccountId=2, amount=100000)]
+2022-02-20 18:10:57,600 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@50c0c6cd
+2022-02-20 18:10:57,613 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: deleteAccount
+ARGUMENTS: [1]
+2022-02-20 18:10:57,614 INFO dLog [main] METHOD: deleteAccount
+RETURNING: DeleteResponse(deletedObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=120.0)])
+2022-02-20 18:10:57,624 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+ARGUMENTS: [TransferRequest(ownerAccountId=1, receiverAccountId=2, amount=10)]
+2022-02-20 18:10:57,626 INFO dLog [main] METHOD: transferToAnotherAccount
+RETURNING: PutResponse(updatedObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=90.0, pendingBalance=110.0), AccountResponseObject(accountId=2, userId=2, accountType=Checking, availableBalance=100.0, pendingBalance=130.0)])
+2022-02-20 18:10:57,635 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: updateAccount
+ARGUMENTS: [UpdateAccountRequest(accountId=1, accountType=Checking, availableBalance=100, pendingBalance=100)]
+2022-02-20 18:10:57,636 INFO dLog [main] METHOD: updateAccount
+RETURNING: PutResponse(updatedObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=100.0)])
+2022-02-20 18:10:57,645 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccount
+ARGUMENTS: [1]
+2022-02-20 18:10:57,646 INFO dLog [main] METHOD: getAccount
+RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=120.0)])
+2022-02-20 18:10:57,653 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccounts
+ARGUMENTS: [1]
+2022-02-20 18:10:57,653 INFO dLog [main] METHOD: getAccounts
+RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=120.0)])
+2022-02-20 18:10:57,661 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: updateAccount
+ARGUMENTS: [UpdateAccountRequest(accountId=-1, accountType=, availableBalance=0, pendingBalance=0)]
+2022-02-20 18:10:57,662 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: updateAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@6575524a
+2022-02-20 18:10:57,672 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccounts
+ARGUMENTS: [-1]
+2022-02-20 18:10:57,673 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccounts
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidUserIdException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@6e3397e2
+2022-02-20 18:10:57,681 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+ARGUMENTS: [TransferRequest(ownerAccountId=1, receiverAccountId=-1, amount=10)]
+2022-02-20 18:10:57,682 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@4b80194b
+2022-02-20 18:10:57,689 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: deleteAccount
+ARGUMENTS: [-1]
+2022-02-20 18:10:57,690 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: deleteAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@88bca7d
+2022-02-20 18:10:57,697 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: createAccount
+ARGUMENTS: [CreateAccountRequest(userId=1, accountType=Checking)]
+2022-02-20 18:10:57,698 INFO dLog [main] METHOD: createAccount
+RETURNING: PostResponse(createdObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=120.0)])
+2022-02-20 18:10:57,706 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+ARGUMENTS: [TransferRequest(ownerAccountId=-1, receiverAccountId=2, amount=10)]
+2022-02-20 18:10:57,706 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@39903157
+2022-02-20 18:10:57,712 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccount
+ARGUMENTS: [-1]
+2022-02-20 18:10:57,713 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@3b4d282a
+2022-02-20 18:10:59,423 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=work, amount=100.0)]
+2022-02-20 18:10:59,429 INFO dLog [main] METHOD: createDeposit
+RETURNING: PostResponse(createdObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=work, dateDeposit=2022-02-20, amount=100.0)])
+2022-02-20 18:11:01,068 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: checkLogin
+ARGUMENTS: [LoginRequest(username=username1, password=password1)]
+2022-02-20 18:11:01,075 INFO dLog [main] METHOD: checkLogin
+RETURNING: LoginResponse(success=true)
+2022-02-20 18:11:02,551 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=0.0)]
+2022-02-20 18:11:02,555 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@67b80859
+2022-02-20 18:11:02,561 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=-1.0)]
+2022-02-20 18:11:02,562 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@6393ebde
+2022-02-20 18:11:02,566 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=-2123.0)]
+2022-02-20 18:11:02,566 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@265fa13
+2022-02-20 18:11:02,572 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=null, reference=reference, amount=1.0)]
+2022-02-20 18:11:02,573 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@45af681f
+2022-02-20 18:11:02,578 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=, reference=reference, amount=1.0)]
+2022-02-20 18:11:02,578 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@e34c2d4
+2022-02-20 18:11:02,582 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, reference=reference, amount=1.0)]
+2022-02-20 18:11:02,583 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@5bc58518
+2022-02-20 18:11:02,588 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=a, reference=reference, amount=1.0)]
+2022-02-20 18:11:02,588 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@6594f1ef
+2022-02-20 18:11:02,593 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=null, amount=1.0)]
+2022-02-20 18:11:02,593 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@34d8a412
+2022-02-20 18:11:02,598 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=, amount=1.0)]
+2022-02-20 18:11:02,598 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@768120ef
+2022-02-20 18:11:02,603 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, amount=1.0)]
+2022-02-20 18:11:02,603 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@5f2fb04e
+2022-02-20 18:11:02,608 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=a, amount=1.0)]
+2022-02-20 18:11:02,608 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@c1f74a0
+2022-02-20 18:11:02,612 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=12.22)]
+2022-02-20 18:11:02,618 INFO dLog [main] METHOD: createWithdrawal
+RETURNING: PostResponse(createdObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-20, amount=12.22)])
+2022-02-20 18:11:02,622 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: getAlLUserWithdrawalsOfType
+ARGUMENTS: [1, Retail]
+2022-02-20 18:11:02,623 INFO dLog [main] METHOD: getAlLUserWithdrawalsOfType
+RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-20, amount=12.22)])
+2022-02-20 18:11:02,627 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: deleteAllWithdraws
+ARGUMENTS: [1]
+2022-02-20 18:11:02,628 INFO dLog [main] METHOD: deleteAllWithdraws
+RETURNING: DeleteResponse(deletedObject=[])
+2022-02-20 18:11:02,632 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: getAllUserWithdrawals
+ARGUMENTS: [1]
+2022-02-20 18:11:02,632 INFO dLog [main] METHOD: getAllUserWithdrawals
+RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-20, amount=12.22)])
+2022-02-20 18:11:02,636 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: findByWithdrawId
+ARGUMENTS: [1]
+2022-02-20 18:11:02,636 INFO dLog [main] METHOD: findByWithdrawId
+RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-20, amount=12.22)])
+2022-02-20 18:13:56,291 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: createProfile
+ARGUMENTS: [ProfileCreateRequest(userId=5, firstName=joe, lastName=something, email=asdf@fjfo.com, phoneNumber=555-555-5555, address=1 street)]
+2022-02-20 18:13:56,308 INFO dLog [main] METHOD: createProfile
+RETURNING: PostResponse(createdObject=[AccountProfileResponse(profileId=1, userId=5, firstName=joe, lastName=something, email=asdf@fjfo.com, phoneNumber=555-555-5555, address=1 street)])
+2022-02-20 18:13:58,448 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: createAccount
+ARGUMENTS: [CreateAccountRequest(userId=1, accountType=lol)]
+2022-02-20 18:13:58,457 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: createAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountTypeException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@680ec419
+2022-02-20 18:13:58,469 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+ARGUMENTS: [TransferRequest(ownerAccountId=1, receiverAccountId=2, amount=100000)]
+2022-02-20 18:13:58,470 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@49dacbea
+2022-02-20 18:13:58,480 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: deleteAccount
+ARGUMENTS: [1]
+2022-02-20 18:13:58,481 INFO dLog [main] METHOD: deleteAccount
+RETURNING: DeleteResponse(deletedObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=120.0)])
+2022-02-20 18:13:58,490 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+ARGUMENTS: [TransferRequest(ownerAccountId=1, receiverAccountId=2, amount=10)]
+2022-02-20 18:13:58,492 INFO dLog [main] METHOD: transferToAnotherAccount
+RETURNING: PutResponse(updatedObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=90.0, pendingBalance=110.0), AccountResponseObject(accountId=2, userId=2, accountType=Checking, availableBalance=100.0, pendingBalance=130.0)])
+2022-02-20 18:13:58,499 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: updateAccount
+ARGUMENTS: [UpdateAccountRequest(accountId=1, accountType=Checking, availableBalance=100, pendingBalance=100)]
+2022-02-20 18:13:58,500 INFO dLog [main] METHOD: updateAccount
+RETURNING: PutResponse(updatedObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=100.0)])
+2022-02-20 18:13:58,507 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccount
+ARGUMENTS: [1]
+2022-02-20 18:13:58,508 INFO dLog [main] METHOD: getAccount
+RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=120.0)])
+2022-02-20 18:13:58,514 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccounts
+ARGUMENTS: [1]
+2022-02-20 18:13:58,514 INFO dLog [main] METHOD: getAccounts
+RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=120.0)])
+2022-02-20 18:13:58,521 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: updateAccount
+ARGUMENTS: [UpdateAccountRequest(accountId=-1, accountType=, availableBalance=0, pendingBalance=0)]
+2022-02-20 18:13:58,522 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: updateAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@292b0291
+2022-02-20 18:13:58,529 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccounts
+ARGUMENTS: [-1]
+2022-02-20 18:13:58,530 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccounts
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidUserIdException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@72b955e5
+2022-02-20 18:13:58,539 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+ARGUMENTS: [TransferRequest(ownerAccountId=1, receiverAccountId=-1, amount=10)]
+2022-02-20 18:13:58,540 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@f9e5e81
+2022-02-20 18:13:58,547 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: deleteAccount
+ARGUMENTS: [-1]
+2022-02-20 18:13:58,548 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: deleteAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@156608cb
+2022-02-20 18:13:58,554 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: createAccount
+ARGUMENTS: [CreateAccountRequest(userId=1, accountType=Checking)]
+2022-02-20 18:13:58,554 INFO dLog [main] METHOD: createAccount
+RETURNING: PostResponse(createdObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=120.0)])
+2022-02-20 18:13:58,560 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+ARGUMENTS: [TransferRequest(ownerAccountId=-1, receiverAccountId=2, amount=10)]
+2022-02-20 18:13:58,561 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@544f1784
+2022-02-20 18:13:58,567 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccount
+ARGUMENTS: [-1]
+2022-02-20 18:13:58,567 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@1f5ba391
+2022-02-20 18:14:00,303 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=work, amount=100.0)]
+2022-02-20 18:14:00,309 INFO dLog [main] METHOD: createDeposit
+RETURNING: PostResponse(createdObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=work, dateDeposit=2022-02-20, amount=100.0)])
+2022-02-20 18:14:01,876 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: checkLogin
+ARGUMENTS: [LoginRequest(username=username1, password=password1)]
+2022-02-20 18:14:01,882 INFO dLog [main] METHOD: checkLogin
+RETURNING: LoginResponse(success=true)
+2022-02-20 18:14:03,397 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=0.0)]
+2022-02-20 18:14:03,402 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@67edbe3f
+2022-02-20 18:14:03,409 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=-1.0)]
+2022-02-20 18:14:03,409 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@a556611
+2022-02-20 18:14:03,414 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=-2123.0)]
+2022-02-20 18:14:03,414 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@73a39dd
+2022-02-20 18:14:03,421 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=null, reference=reference, amount=1.0)]
+2022-02-20 18:14:03,421 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@6e187d25
+2022-02-20 18:14:03,427 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=, reference=reference, amount=1.0)]
+2022-02-20 18:14:03,427 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@3fe01c91
+2022-02-20 18:14:03,432 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, reference=reference, amount=1.0)]
+2022-02-20 18:14:03,432 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@554967ec
+2022-02-20 18:14:03,436 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=a, reference=reference, amount=1.0)]
+2022-02-20 18:14:03,437 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@7895c935
+2022-02-20 18:14:03,442 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=null, amount=1.0)]
+2022-02-20 18:14:03,443 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@7ea91017
+2022-02-20 18:14:03,447 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=, amount=1.0)]
+2022-02-20 18:14:03,448 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@28a3b296
+2022-02-20 18:14:03,452 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, amount=1.0)]
+2022-02-20 18:14:03,452 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@20e1fb9a
+2022-02-20 18:14:03,457 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=a, amount=1.0)]
+2022-02-20 18:14:03,458 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@4b248c3f
+2022-02-20 18:14:03,462 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=12.22)]
+2022-02-20 18:14:03,467 INFO dLog [main] METHOD: createWithdrawal
+RETURNING: PostResponse(createdObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-20, amount=12.22)])
+2022-02-20 18:14:03,472 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: getAlLUserWithdrawalsOfType
+ARGUMENTS: [1, Retail]
+2022-02-20 18:14:03,472 INFO dLog [main] METHOD: getAlLUserWithdrawalsOfType
+RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-20, amount=12.22)])
+2022-02-20 18:14:03,477 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: deleteAllWithdraws
+ARGUMENTS: [1]
+2022-02-20 18:14:03,478 INFO dLog [main] METHOD: deleteAllWithdraws
+RETURNING: DeleteResponse(deletedObject=[])
+2022-02-20 18:14:03,482 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: getAllUserWithdrawals
+ARGUMENTS: [1]
+2022-02-20 18:14:03,482 INFO dLog [main] METHOD: getAllUserWithdrawals
+RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-20, amount=12.22)])
+2022-02-20 18:14:03,487 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: findByWithdrawId
+ARGUMENTS: [1]
+2022-02-20 18:14:03,487 INFO dLog [main] METHOD: findByWithdrawId
+RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-20, amount=12.22)])

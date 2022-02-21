@@ -9,7 +9,6 @@ import com.revature.thevault.presentation.model.response.builder.PostResponse;
 import com.revature.thevault.repository.dao.AccountProfileRepository;
 import com.revature.thevault.repository.entity.AccountProfileEntity;
 import com.revature.thevault.repository.entity.LoginCredentialEntity;
-import com.revature.thevault.utility.enums.ResponseType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -22,7 +21,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import java.util.Collections;
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
