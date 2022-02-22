@@ -60,13 +60,6 @@ describe('RegisterComponent', () => {
     expect(component.onSubmit).toHaveBeenCalledTimes(1);
   }));
 
-  it('navigate to "" redirects you to login', fakeAsync(() => {
-    component.goToLogin();
-    router.navigate(['']);
-      expect(location.path()).toBe('');
-    })
-  );
-  
   it('set submit to true', async(() => {
     component.onSubmit();
     expect(component.submitted).toBeTruthy();

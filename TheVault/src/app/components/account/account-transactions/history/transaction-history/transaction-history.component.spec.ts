@@ -1,4 +1,4 @@
-import { ComponentFixture, inject, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, inject, TestBed } from '@angular/core/testing';
 import { Account } from 'src/app/models/account/account.model';
 import { Transaction } from 'src/app/models/transaction/transaction.model';
 
@@ -39,9 +39,13 @@ describe('TransactionHistoryComponent', () => {
     ]
     fixture.detectChanges();
   });
-
-  it('should create', () => {
+  
+  it('set submit to true', async(() => {
+    component.ngOnInit();
     expect(component).toBeTruthy();
-    return 'touch';
-  });
-});
+}))});
+
+//   it('should not create', () => {
+//     expect(component).toBeFalsy();
+//   });
+// });
