@@ -7,11 +7,14 @@ import com.revature.thevault.repository.entity.LoginCredentialEntity;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
+import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -50,7 +53,9 @@ public class LoginServiceTest {
 
 
         Mockito.when(loginRepository.findByUsername(validUsername)).thenReturn(loginCredentialEntity);
-        Mockito.when(loginRepository.findByUsernameAndPassword(validLoginRequest.getUsername(), validLoginRequest.getPassword())).thenReturn(loginCredentialEntity);
+        Mockito.when(loginRepository.findByUsernameAndPassword(validLoginRequest.getUsername(),
+                validLoginRequest.getPassword())).thenReturn(loginCredentialEntity);
+        Mockito.when(loginRepository.findById(userId)).thenReturn(loginCredentialEntity.getPk_user_id()));
     }
 
     @Test
@@ -58,4 +63,10 @@ public class LoginServiceTest {
         assertEquals(validLoginResponse, loginService.checkLogin(validLoginRequest));
     }
 
+    @Test
+    void findUserByUserIdTest(){ assertEquals(loginCredentialEntity.getPk_user_id(), loginRepository.findById(1));
+
+    }
 }
+
+

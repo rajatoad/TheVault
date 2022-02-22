@@ -15300,3 +15300,8 @@ METHOD: findByWithdrawId
 ARGUMENTS: [1]
 2022-02-22 13:11:36,500 INFO dLog [main] METHOD: findByWithdrawId
 RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-22, amount=12.22)])
+2022-02-22 16:14:59,735 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: findUserByUserId
+ARGUMENTS: [1]
+2022-02-22 16:14:59,752 INFO dLog [main] METHOD: findUserByUserId
+RETURNING: LoginCredentialEntity(pk_user_id=1, username=username1, password=password1)
