@@ -16176,3 +16176,43 @@ METHOD: findByWithdrawId
 ARGUMENTS: [1]
 2022-02-22 16:52:08,926 INFO dLog [main] METHOD: findByWithdrawId
 RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-22, amount=12.22)])
+2022-02-22 15:35:01,140 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: checkLogin
+ARGUMENTS: [LoginRequest(username=username1, password=password1)]
+2022-02-22 15:35:01,150 INFO dLog [main] METHOD: checkLogin
+RETURNING: LoginResponse(success=true)
+2022-02-22 15:35:49,553 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: checkLogin
+ARGUMENTS: [LoginRequest(username=username1, password=password1)]
+2022-02-22 15:35:49,562 INFO dLog [main] METHOD: checkLogin
+RETURNING: LoginResponse(success=true)
+2022-02-22 15:36:01,236 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: checkLogin
+ARGUMENTS: [LoginRequest(username=username1, password=password1)]
+2022-02-22 15:36:01,263 INFO dLog [main] METHOD: checkLogin
+RETURNING: LoginResponse(success=true)
+2022-02-22 16:04:23,355 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: resetPassword
+ARGUMENTS: [ResetPasswordRequest(username=username1, email=password1)]
+2022-02-22 16:04:23,364 INFO dLog [main] METHOD: resetPassword
+RETURNING: PutResponse(updatedObject=[null])
+2022-02-22 16:10:45,804 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: resetPassword
+ARGUMENTS: [ResetPasswordRequest(username=username1, email=password1)]
+2022-02-22 16:10:45,817 INFO dLog [main] METHOD: resetPassword
+RETURNING: PutResponse(updatedObject=[null])
+2022-02-22 16:14:15,045 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: resetPassword
+ARGUMENTS: [ResetPasswordRequest(username=username1, email=password1)]
+2022-02-22 16:14:15,057 INFO dLog [main] METHOD: resetPassword
+RETURNING: PutResponse(updatedObject=[null])
+2022-02-22 16:20:30,733 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: resetPassword
+ARGUMENTS: [ResetPasswordRequest(username=username1, email=password1)]
+2022-02-22 16:20:30,746 INFO dLog [main] METHOD: resetPassword
+RETURNING: PutResponse(updatedObject=[LoginCredentialEntity(pk_user_id=1, username=username1, password=E3Q9BnF0W1aB5q9)])
+2022-02-22 16:21:54,334 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: resetPassword
+ARGUMENTS: [ResetPasswordRequest(username=username1, email=password1)]
+2022-02-22 16:21:54,347 INFO dLog [main] METHOD: resetPassword
+RETURNING: PutResponse(updatedObject=[LoginCredentialEntity(pk_user_id=1, username=username1, password=1UYFn8LF4rZ)])
