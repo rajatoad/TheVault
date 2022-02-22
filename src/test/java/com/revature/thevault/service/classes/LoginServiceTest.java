@@ -55,7 +55,7 @@ public class LoginServiceTest {
         Mockito.when(loginRepository.findByUsername(validUsername)).thenReturn(loginCredentialEntity);
         Mockito.when(loginRepository.findByUsernameAndPassword(validLoginRequest.getUsername(),
                 validLoginRequest.getPassword())).thenReturn(loginCredentialEntity);
-        Mockito.when(loginRepository.findById(userId)).thenReturn(loginCredentialEntity.getPk_user_id()));
+        Mockito.when(loginRepository.findById(userId)).thenReturn(Optional.ofNullable(loginCredentialEntity));
     }
 
     @Test
@@ -64,9 +64,11 @@ public class LoginServiceTest {
     }
 
     @Test
-    void findUserByUserIdTest(){ assertEquals(loginCredentialEntity.getPk_user_id(), loginRepository.findById(1));
+    void findUserByUserIdTest(){assertEquals(loginService.findUserByUserId(loginCredentialEntity.getPk_user_id()), loginCredentialEntity);}
 
-    }
+
+
+
 }
 
 
