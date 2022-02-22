@@ -17,6 +17,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
 import java.util.Collections;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -56,6 +57,7 @@ public class LoginServiceTest {
 
         Mockito.when(loginRepository.findByUsername(validUsername)).thenReturn(loginCredentialEntity);
         Mockito.when(loginRepository.findByUsernameAndPassword(validLoginRequest.getUsername(), validLoginRequest.getPassword())).thenReturn(loginCredentialEntity);
+        Mockito.when(loginRepository.findById(userId)).thenReturn(Optional.ofNullable(loginCredentialEntity));
     }
 
     private LoginResponseObject convertEntityToResponse(LoginCredentialEntity loginCredentialEntity){
@@ -102,5 +104,9 @@ public class LoginServiceTest {
         assertEquals(resetResponse, loginService.resetPassword(validResetRequest));
 
     }
+
+    @Test
+    void findUserByUserIdTest(){assertEquals(loginService.findUserByUserId(loginCredentialEntity.getPk_user_id()), loginCredentialEntity);}
+
 
 }
