@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 public class UpdateAccountRequest {
     int accountId;
     String accountType;
-    long availableBalance;
-    long pendingBalance;
+    float availableBalance;
+    float pendingBalance;
 }

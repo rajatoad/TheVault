@@ -60,8 +60,8 @@ CREATE TABLE account_type_table(
 
 CREATE TABLE login_credential_table (
     pk_user_id SERIAL PRIMARY KEY,
-    username VARCHAR(15) UNIQUE NOT NULL,
-    password VARCHAR(15) NOT NULL
+    username VARCHAR(20) UNIQUE NOT NULL,
+    password VARCHAR(20) NOT NULL
 );
 
 CREATE TABLE account_profile_table (
@@ -89,7 +89,7 @@ CREATE TABLE deposit_table(
     pk_deposit_id SERIAL PRIMARY KEY,
     fk_account_id INTEGER,
     fk_deposit_type_id INTEGER,
-    reference VARCHAR(25),
+    reference VARCHAR(40),
     date_deposit DATE,
     amount DECIMAL(10, 2),
     FOREIGN KEY (fk_account_id) REFERENCES account_table(pk_account_id),
@@ -113,15 +113,15 @@ CREATE TABLE withdraw_table(
 --                                  POPULATE TABLES
 --========================================================================================
 
-INSERT INTO login_credential_table
-VALUES
-    (default, 'username1', 'password1'),
-    (default, 'username2', 'password2');
---
-INSERT INTO account_profile_table
-VALUES
-    (default, 1, 'Tom', 'Cat', 'email@email.com', 5559991234, '1 lane'),
-    (default, 2, 'Joe', 'Shmo', 'yahoo@yahoo.com', 9995554323, '2 st');
+--INSERT INTO login_credential_table
+--VALUES
+--    (default, 'username1', 'password1'),
+--    (default, 'username2', 'password2');
+----
+--INSERT INTO account_profile_table
+--VALUES
+--    (default, 1, 'Tom', 'Cat', 'email@email.com', 5559991234, '1 lane'),
+--    (default, 2, 'Joe', 'Shmo', 'yahoo@yahoo.com', 9995554323, '2 st');
 
 INSERT INTO deposit_type_table
 VALUES
@@ -138,8 +138,8 @@ VALUES
 
 INSERT INTO request_type_table
 VALUES
-    (default, 'Retail'),
-    (default, 'Tech'),
+    (default, 'Payment'),
+    (default, 'Personal'),
     (default, 'Transfer');
 
 INSERT INTO account_type_table

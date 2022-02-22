@@ -6,6 +6,7 @@ import com.revature.thevault.presentation.model.response.builder.GetResponse;
 import com.revature.thevault.presentation.model.response.builder.PostResponse;
 import com.revature.thevault.service.classes.WithdrawService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin("*")
@@ -21,6 +22,7 @@ public class WithdrawController {
         return withdrawService.getAllUserWithdrawals(accountId);
     }
 
+    @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("/generate")
     public PostResponse createWithdrawal(@RequestBody WithdrawRequest withdrawRequest){
         return withdrawService.createWithdrawal(withdrawRequest);
@@ -31,7 +33,7 @@ public class WithdrawController {
         return withdrawService.findByWithdrawId(withdrawId);
     }
 
-    @PostMapping("/type/{requestType}")
+    @GetMapping("/type/{requestType}")
     public GetResponse getWithdrawalByType(@PathVariable String requestType, @RequestParam int accountId){
         return withdrawService.getAlLUserWithdrawalsOfType(accountId, requestType);
     }

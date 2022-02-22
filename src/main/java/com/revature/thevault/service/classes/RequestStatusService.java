@@ -14,10 +14,8 @@ public class RequestStatusService {
     private RequestStatusRepository requestStatusRepository;
 
     public RequestStatusEntity getRequestStatusByName(String name) {
-        try{
-            return requestStatusRepository.findByName(name);
-        }catch (Exception e){
-            throw new InvalidRequestException(HttpStatus.BAD_REQUEST, e.getMessage());
-        }
+        RequestStatusEntity requestStatusEntity = requestStatusRepository.findByName(name);
+        if(requestStatusEntity != null) return requestStatusEntity;
+        else throw new InvalidRequestException(HttpStatus.BAD_REQUEST, "Request Status type not found: " + name);
     }
 }
