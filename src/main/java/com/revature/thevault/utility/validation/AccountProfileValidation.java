@@ -29,6 +29,6 @@ public class AccountProfileValidation {
 
     @Before("accountProfileService() && accountProfileRequest(accountProfileRequest)")
     public void validateAccountProfileRequest(AccountProfileRequest accountProfileRequest){
-        if(accountProfileRequest.getProfileId() <= 0) throw new InvalidProfileIdException(HttpStatus.BAD_REQUEST, "Invalid Id (0 or less)");
+
     }
 }
