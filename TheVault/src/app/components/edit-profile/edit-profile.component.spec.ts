@@ -1,3 +1,4 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Profile } from 'src/app/models/users/profile.model';
 import { GlobalStorageService } from 'src/app/_services/global-storage.service';
@@ -29,6 +30,7 @@ describe('EditProfileComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ EditProfileComponent ],
+      imports: [HttpClientTestingModule],
       providers: [
         {
           providers: GlobalStorageService,

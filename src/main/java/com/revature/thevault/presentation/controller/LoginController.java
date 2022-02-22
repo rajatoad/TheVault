@@ -2,14 +2,13 @@ package com.revature.thevault.presentation.controller;
 
 import com.revature.thevault.presentation.model.request.LoginRequest;
 import com.revature.thevault.presentation.model.request.NewLoginCredentialsRequest;
+import com.revature.thevault.presentation.model.request.ResetPasswordRequest;
 import com.revature.thevault.presentation.model.response.LoginResponse;
-import com.revature.thevault.presentation.model.response.builder.GetResponse;
 import com.revature.thevault.presentation.model.response.builder.PostResponse;
-import com.revature.thevault.repository.entity.LoginCredentialEntity;
+
+import com.revature.thevault.presentation.model.response.builder.PutResponse;
 import com.revature.thevault.service.classes.AccountProfileService;
 import com.revature.thevault.service.classes.LoginService;
-import lombok.extern.java.Log;
-import lombok.NonNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -33,7 +32,7 @@ public class LoginController {
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping("/create")
-    public PostResponse newLogin(@NonNull @RequestBody NewLoginCredentialsRequest newLoginRequest){
+    public PostResponse newLogin(@RequestBody NewLoginCredentialsRequest newLoginRequest){
         return loginService.createNewLogin(newLoginRequest);
     }
 
@@ -41,5 +40,10 @@ public class LoginController {
     @PostMapping("/validate")
     public PostResponse findLoginCredential(@RequestBody LoginRequest loginRequest){
         return loginService.getLoginCredentialFromLogin(loginRequest);
+    }
+
+    @PutMapping ("/reset-password")
+    public PutResponse resetPassword(@RequestBody ResetPasswordRequest resetPasswordRequest){
+        return loginService.resetPassword(resetPasswordRequest);
     }
 }

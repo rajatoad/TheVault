@@ -1,5 +1,7 @@
 
 <div id='loginBox'>
+  <img class="vault-title" src="https://trello.com/1/cards/61fd61bd05c37f3f03c6a799/attachments/61fd61be05c37f3f03c6a99e/previews/61fd61be05c37f3f03c6a9a2/download/rev-logo_281_29.png" alt="templogo">
+<br>
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
       
         <div class="login-form-group">
@@ -41,9 +43,11 @@
           </div>
         </div>
       </div>
-  
+  <br>
       <div class="login-form-group">
         <button type="submit" class="btn btn-primary">Login</button>
+        <button type="submit" class="btn btn-primary"a id='newProfileLink' routerLink="/register">Register</button>
+
       </div>
 
       <div class="alert alert-warning" *ngIf="submitted && isLoginFailed">
@@ -51,5 +55,5 @@
       </div>
     </form>
     <br>
-    <a id='newProfileLink' routerLink="/register">New User?</a> 
+    <!-- <a id='newProfileLink' routerLink="/register">New User?</a>  -->
 </div>

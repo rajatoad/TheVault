@@ -1,9 +1,9 @@
 <h1>Make a Transfer</h1>
-<div class="d-flex flex-row">
+<div class="d-flex justify-content-center">
 
 <form #transferForm class="was-validated" (ngSubmit)="onClickSubmit(Wbox.value)"> 
 <div class="p-2"> 
-   <div class="col-md-1">
+   <div class="row">
       <label for="transferTypeBox" class="form-label">Available Accounts: </label>
          <div *ngFor="let account of userAccounts">
             <div *ngIf="account.accountId != activeAccountId">

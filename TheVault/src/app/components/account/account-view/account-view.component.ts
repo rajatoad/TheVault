@@ -29,10 +29,14 @@ export class AccountViewComponent implements OnInit {
       this.userId = this.globalStorage.getUserId();
       this.profile = this.globalStorage.getProfile();
       this.accounts = this.globalStorage.getAccounts();
-      console.log(this.profile.firstName);
     }catch(err){
       console.error(err);
     }
   }
+
+  createAccountEvent(submit:boolean){
+    if(submit)this.accounts = this.globalStorage.getAccounts();
+  }
+
 
 }

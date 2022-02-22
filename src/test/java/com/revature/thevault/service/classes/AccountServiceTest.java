@@ -10,10 +10,7 @@ import com.revature.thevault.repository.entity.AccountEntity;
 import com.revature.thevault.repository.entity.AccountTypeEntity;
 import com.revature.thevault.repository.entity.LoginCredentialEntity;
 import com.revature.thevault.service.dto.AccountResponseObject;
-import com.revature.thevault.service.exceptions.InvalidAccountIdException;
-import com.revature.thevault.service.exceptions.InvalidAccountTypeException;
-import com.revature.thevault.service.exceptions.InvalidAmountException;
-import com.revature.thevault.service.exceptions.InvalidUserIdException;
+import com.revature.thevault.service.exceptions.*;
 import com.revature.thevault.utility.enums.ResponseType;
 import org.checkerframework.checker.units.qual.A;
 import org.checkerframework.checker.units.qual.C;
@@ -64,8 +61,8 @@ class AccountServiceTest {
 
     private int otherAccountId;
 
-    @BeforeEach
-    void setup(){
+    @BeforeAll
+    void beforeAllSetup(){
         MockitoAnnotations.openMocks(this);
         userId = 1;
         otherUserId = 2;
@@ -81,10 +78,10 @@ class AccountServiceTest {
         LoginCredentialEntity secondaryLogin = new LoginCredentialEntity(otherUserId, "user2", "pass2");
 
 
-        storedAccount = new AccountEntity(accountId, primaryLogin, accountTypeEntity, 100L, 120L);
+        storedAccount = new AccountEntity(accountId, primaryLogin, accountTypeEntity, 100L, 100L);
         optionalAccount = Optional.of(storedAccount);
 
-        storedAccountTransferring = new AccountEntity(otherAccountId, secondaryLogin, accountTypeEntity, 100L, 120L);
+        storedAccountTransferring = new AccountEntity(otherAccountId, secondaryLogin, accountTypeEntity, 100L, 100L);
         optionalAccountTransferring = Optional.of(storedAccountTransferring);
 
         storedAccountResponseObject = new AccountResponseObject(
@@ -103,6 +100,10 @@ class AccountServiceTest {
                 storedAccountTransferring.getPending_balance()
         );
 
+    }
+
+    @BeforeEach
+    void setup(){
         Mockito.when(accountRepository.findById(accountId)).thenReturn(optionalAccount);
         Mockito.when(accountTypeService.findAccountTypeEntityByName(accountType.get(0))).thenReturn(new AccountTypeEntity(1, accountType.get(0)));
         Mockito.when(accountTypeService.findAccountTypeEntityByName(accountType.get(1))).thenReturn(new AccountTypeEntity(2, accountType.get(1)));
@@ -147,7 +148,12 @@ class AccountServiceTest {
 
     @Test
     void getAccountInvalidAccountId(){
-        assertThrows(InvalidAccountIdException.class, () -> accountService.getAccount(-1));
+        assertThrows(InvalidRequestException.class, () -> accountService.getAccount(-1));
+    }
+
+    @Test
+    void deleteAccountInvalidIdException(){
+        assertThrows(InvalidAccountIdException.class, () -> accountService.deleteAccount(11111));
     }
 
     @Test
@@ -163,7 +169,7 @@ class AccountServiceTest {
 
     @Test
     void deleteAccountInvalidAccountIdNotFound() {
-        assertThrows(InvalidAccountIdException.class, () -> accountService.deleteAccount(-1));
+        assertThrows(InvalidRequestException.class, () -> accountService.deleteAccount(-1));
     }
 
     @Test
@@ -178,7 +184,7 @@ class AccountServiceTest {
     @Test
     void getAccountsInvalidUserId() {
         Mockito.when(accountRepository.findByLogincredentials(new LoginCredentialEntity(-1, "", ""))).thenThrow(IllegalArgumentException.class);
-        assertThrows(InvalidUserIdException.class, () -> accountService.getAccounts(-1));
+        assertThrows(InvalidRequestException.class, () -> accountService.getAccounts(-1));
     }
 
     @Test
@@ -211,7 +217,7 @@ class AccountServiceTest {
 
     @Test
     void updateAccountInvalidAccountId() {
-        assertThrows(InvalidAccountIdException.class, () -> accountService.updateAccount(new UpdateAccountRequest(-1, "", 0, 0)));
+        assertThrows(InvalidRequestException.class, () -> accountService.updateAccount(new UpdateAccountRequest(-1, "", 0, 0)));
     }
 
     @Test
@@ -262,14 +268,14 @@ class AccountServiceTest {
     @Test
     void transferToAnotherAccountInvalidOwnerId(){
         TransferRequest transferRequest = new TransferRequest(-1, otherAccountId, 10);
-        assertThrows(InvalidAccountIdException.class, () -> accountService.transferToAnotherAccount(transferRequest));
+        assertThrows(InvalidRequestException.class, () -> accountService.transferToAnotherAccount(transferRequest));
     }
 
     @Test
     void transferToAnotherAccountInvalidReceiverId(){
         TransferRequest transferRequest = new TransferRequest(accountId, -1, 10);
         Mockito.when(accountRepository.findById(transferRequest.getReceiverAccountId())).thenReturn(Optional.empty());
-        assertThrows(InvalidAccountIdException.class, () -> accountService.transferToAnotherAccount(transferRequest));
+        assertThrows(InvalidRequestException.class, () -> accountService.transferToAnotherAccount(transferRequest));
     }
 
     @Test

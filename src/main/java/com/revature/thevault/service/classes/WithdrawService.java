@@ -35,45 +35,37 @@ public class WithdrawService implements WithdrawServiceInterface {
 
     @Override
     public PostResponse createWithdrawal(WithdrawRequest withdrawRequest) {
-        try{
-            return PostResponse.builder()
-                    .success(true)
-                    .createdObject(
-                            Collections.singletonList(
-                                    convertEntityToResponse(
-                                            withdrawRepository.save(
-                                                    new WithdrawEntity(
-                                                            0,
-                                                            new AccountEntity(withdrawRequest.getAccountId(), new LoginCredentialEntity(), new AccountTypeEntity(), 0, 0),
-                                                            requestTypeService.getRequestTypeByName(withdrawRequest.getRequestType()),
-                                                            requestStatusService.getRequestStatusByName("Pending"),
-                                                            withdrawRequest.getReference(),
-                                                            Date.valueOf(LocalDate.now()),
-                                                            withdrawRequest.getAmount()
-                                                    )
-                                            )
-                                    )
-                            )
-                    )
-                    .build();
-        }catch(Exception e){
-            throw new InvalidRequestException(HttpStatus.BAD_REQUEST, e.getMessage());
-        }
+        return PostResponse.builder()
+                .success(true)
+                .createdObject(
+                        Collections.singletonList(
+                                convertEntityToResponse(
+                                        withdrawRepository.save(
+                                                new WithdrawEntity(
+                                                        0,
+                                                        new AccountEntity(withdrawRequest.getAccountId(), new LoginCredentialEntity(), new AccountTypeEntity(), 0, 0),
+                                                        requestTypeService.getRequestTypeByName(withdrawRequest.getRequestType()),
+                                                        requestStatusService.getRequestStatusByName("Pending"),
+                                                        withdrawRequest.getReference(),
+                                                        Date.valueOf(LocalDate.now()),
+                                                        withdrawRequest.getAmount()
+                                                )
+                                        )
+                                )
+                        )
+                )
+                .build();
     }
 
     @Override
     public GetResponse getAllUserWithdrawals(int accountId) {
-        try{
-            List<WithdrawEntity> withdrawEntities = findByAccountId(accountId);
-            return GetResponse.builder()
-                    .success(true)
-                    .gotObject(
-                            convertEntityListToResponses(withdrawEntities)
-                    )
-                    .build();
-        }catch(Exception e){
-            throw new InvalidRequestException(HttpStatus.BAD_REQUEST, e.getMessage());
-        }
+        List<WithdrawEntity> withdrawEntities = findByAccountId(accountId);
+        return GetResponse.builder()
+                .success(true)
+                .gotObject(
+                        convertEntityListToResponses(withdrawEntities)
+                )
+                .build();
     }
 
     private List<WithdrawResponseObject> convertEntityListToResponses(List<WithdrawEntity> withdrawEntities) {
@@ -96,66 +88,50 @@ public class WithdrawService implements WithdrawServiceInterface {
 
     @Override
     public GetResponse getAlLUserWithdrawalsOfType(int accountId, String requestName) {
-        try{
-            return GetResponse.builder()
-                    .success(true)
-                    .gotObject(
-                            convertEntityListToResponses(
-                                    findByAccountIdAndRequestType(accountId, requestName)
-                            )
-                    )
-                    .build();
-        }catch(Exception e){
-            throw new InvalidRequestException(HttpStatus.BAD_REQUEST, e.getMessage());
-        }
+        return GetResponse.builder()
+                .success(true)
+                .gotObject(
+                        convertEntityListToResponses(
+                                findByAccountIdAndRequestType(accountId, requestName)
+                        )
+                )
+                .build();
     }
 
     @Override
     public GetResponse findByWithdrawId(int withdrawId) {
-        try{
-            Optional<WithdrawEntity> withdrawEntityOptional = withdrawRepository.findById(withdrawId);
-            if(withdrawEntityOptional.isPresent())
-                return GetResponse.builder()
-                        .success(true)
-                        .gotObject(Collections.singletonList(
-                                convertEntityToResponse(withdrawEntityOptional.get())
-                        ))
-                        .build();
-            else
-                throw new InvalidWithdrawIdRequest(HttpStatus.BAD_REQUEST, "Withdraw not found, withdraw Id: " + withdrawId);
-        }catch (Exception e){
-            throw new InvalidRequestException(HttpStatus.BAD_REQUEST, e.getMessage());
-        }
+        Optional<WithdrawEntity> withdrawEntityOptional = withdrawRepository.findById(withdrawId);
+        if(withdrawEntityOptional.isPresent())
+            return GetResponse.builder()
+                    .success(true)
+                    .gotObject(Collections.singletonList(
+                            convertEntityToResponse(withdrawEntityOptional.get())
+                    ))
+                    .build();
+        else
+            throw new InvalidWithdrawIdRequest(HttpStatus.BAD_REQUEST, "Withdraw not found, withdraw Id: " + withdrawId);
     }
 
     @Override
     public DeleteResponse deleteAllWithdraws(Integer accountId) {
-        try{
-            withdrawRepository.deleteByAccountentity(new AccountEntity(accountId, new LoginCredentialEntity(), new AccountTypeEntity(), 0, 0));
-            return DeleteResponse.builder()
-                    .success(true)
-                    .deletedObject(Collections.EMPTY_LIST)
-                    .build();
-        }catch(Exception e){
-            throw new InvalidRequestException(HttpStatus.BAD_REQUEST, e.getMessage());
-        }
+        withdrawRepository.deleteByAccountentity(new AccountEntity(accountId, new LoginCredentialEntity(), new AccountTypeEntity(), 0, 0));
+        return DeleteResponse.builder()
+                .success(true)
+                .deletedObject(Collections.EMPTY_LIST)
+                .build();
     }
 
     private List<WithdrawEntity> findByAccountIdAndRequestType(int accountId, String requestName) {
-        try{
-            return withdrawRepository.findByAccountentityAndRequesttypeentity(
-                    new AccountEntity(
-                            accountId,
-                            new LoginCredentialEntity(),
-                            new AccountTypeEntity(),
-                            0,
-                            0
-                    ),
-                    requestTypeService.getRequestTypeByName(requestName)
-            );
-        }catch(Exception e){
-            throw new InvalidRequestException(HttpStatus.BAD_REQUEST, e.getMessage());
-        }
+        return withdrawRepository.findByAccountentityAndRequesttypeentity(
+                new AccountEntity(
+                        accountId,
+                        new LoginCredentialEntity(),
+                        new AccountTypeEntity(),
+                        0,
+                        0
+                ),
+                requestTypeService.getRequestTypeByName(requestName)
+        );
     }
 
     private WithdrawResponseObject convertEntityToResponse(WithdrawEntity withdrawEntity) {
