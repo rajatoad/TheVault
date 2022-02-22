@@ -14872,3 +14872,2182 @@ ARGUMENTS: [1]
 2022-02-22 11:13:29,053 INFO dLog [main] METHOD: findByWithdrawId
 >>>>>>> login_feature
 RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-22, amount=12.22)])
+2022-02-22 14:27:01,648 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: updateProfile
+ARGUMENTS: [UpdateProfileRequest(profileId=1, userId=1, firstName=Bob, lastName=Tom, email=some@email.com, phoneNumber=123-876-5555, address=1 court)]
+2022-02-22 14:27:01,658 INFO dLog [main] METHOD: updateProfile
+RETURNING: PutResponse(updatedObject=[AccountProfileResponse(profileId=1, userId=1, firstName=Bob, lastName=Tom, email=some@email.com, phoneNumber=123-876-5555, address=1 court)])
+2022-02-22 14:27:01,687 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: deleteProfile
+ARGUMENTS: [AccountProfileRequest(profileId=-1)]
+2022-02-22 14:27:01,689 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: deleteProfile
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidProfileIdException
+MESSAGE: 400 BAD_REQUEST "account profile not found"
+2022-02-22 14:27:01,706 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: deleteProfile
+ARGUMENTS: [AccountProfileRequest(profileId=1)]
+2022-02-22 14:27:01,706 INFO dLog [main] METHOD: deleteProfile
+RETURNING: DeleteResponse(deletedObject=[AccountProfileResponse(profileId=1, userId=1, firstName=Bob, lastName=Tom, email=some@email.com, phoneNumber=123-876-5555, address=1 court)])
+2022-02-22 14:27:01,716 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: getProfile
+ARGUMENTS: [AccountProfileRequest(profileId=-1)]
+2022-02-22 14:27:01,717 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: getProfile
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "invalid request"
+2022-02-22 14:27:01,723 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: getProfile
+ARGUMENTS: [AccountProfileRequest(profileId=1)]
+2022-02-22 14:27:01,724 INFO dLog [main] METHOD: getProfile
+RETURNING: GetResponse(gotObject=[AccountProfileResponse(profileId=1, userId=1, firstName=Bob, lastName=Tom, email=some@email.com, phoneNumber=123-876-5555, address=1 court)])
+2022-02-22 14:27:01,732 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: createProfile
+ARGUMENTS: [ProfileCreateRequest(userId=5, firstName=joe, lastName=something, email=asdf@fjfo.com, phoneNumber=555-555-5555, address=1 street)]
+2022-02-22 14:27:01,733 INFO dLog [main] METHOD: createProfile
+RETURNING: PostResponse(createdObject=[AccountProfileResponse(profileId=1, userId=1, firstName=joe, lastName=something, email=asdf@fjfo.com, phoneNumber=555-555-5555, address=1 street)])
+2022-02-22 14:34:02,523 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=null, amount=12.22)]
+2022-02-22 14:34:02,547 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:34:02,582 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=, amount=12.22)]
+2022-02-22 14:34:02,583 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:34:02,597 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, amount=12.22)]
+2022-02-22 14:34:02,598 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:34:02,606 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=a, amount=12.22)]
+2022-02-22 14:34:02,608 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:34:02,617 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=null, accountId=1, reference=reference, amount=1.0)]
+2022-02-22 14:34:02,618 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:34:02,624 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=, accountId=1, reference=reference, amount=1.0)]
+2022-02-22 14:34:02,626 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:34:02,644 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, accountId=1, reference=reference, amount=1.0)]
+2022-02-22 14:34:02,645 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:34:02,652 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=a, accountId=1, reference=reference, amount=1.0)]
+2022-02-22 14:34:02,654 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:34:02,667 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=reference, amount=12.22)]
+2022-02-22 14:34:02,668 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:34:02,692 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: getAllUserDeposits
+ARGUMENTS: [1]
+2022-02-22 14:34:02,694 INFO dLog [main] METHOD: getAllUserDeposits
+RETURNING: GetResponse(gotObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=reference, dateDeposit=2022-02-22, amount=12.22)])
+2022-02-22 14:34:02,701 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: findByDepositId
+ARGUMENTS: [1]
+2022-02-22 14:34:02,701 INFO dLog [main] METHOD: findByDepositId
+RETURNING: GetResponse(gotObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=reference, dateDeposit=2022-02-22, amount=12.22)])
+2022-02-22 14:34:02,709 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: getAlLUserDepositsOfType
+ARGUMENTS: [1, Cash]
+2022-02-22 14:34:02,710 INFO dLog [main] METHOD: getAlLUserDepositsOfType
+RETURNING: GetResponse(gotObject=[])
+2022-02-22 14:34:02,719 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=reference, amount=0.0)]
+2022-02-22 14:34:02,720 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:34:02,730 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=reference, amount=-1.0)]
+2022-02-22 14:34:02,730 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:34:02,747 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=reference, amount=-2123.0)]
+2022-02-22 14:34:02,748 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:34:02,761 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: findByDepositId
+ARGUMENTS: [-1]
+2022-02-22 14:34:02,763 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: findByDepositId
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "400 BAD_REQUEST "Deposit not found: -1""
+2022-02-22 14:34:02,772 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: deleteAllDeposits
+ARGUMENTS: [1]
+2022-02-22 14:34:02,773 INFO dLog [main] METHOD: deleteAllDeposits
+RETURNING: DeleteResponse(deletedObject=[])
+2022-02-22 14:39:26,160 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=null, amount=12.22)]
+2022-02-22 14:39:26,185 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:39:26,212 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=, amount=12.22)]
+2022-02-22 14:39:26,213 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:39:26,226 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=invalid, amount=12.22)]
+2022-02-22 14:39:26,227 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:39:26,236 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=Arthur, amount=12.22)]
+2022-02-22 14:39:26,237 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:39:26,250 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=null, accountId=1, reference=reference, amount=1.0)]
+2022-02-22 14:39:26,252 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:39:26,263 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=, accountId=1, reference=reference, amount=1.0)]
+2022-02-22 14:39:26,264 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:39:26,273 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=invalid, accountId=1, reference=reference, amount=1.0)]
+2022-02-22 14:39:26,275 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:39:26,290 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Arthur, accountId=1, reference=reference, amount=1.0)]
+2022-02-22 14:39:26,291 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:39:26,300 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=reference, amount=12.22)]
+2022-02-22 14:39:26,300 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:39:26,313 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: getAllUserDeposits
+ARGUMENTS: [1]
+2022-02-22 14:39:26,317 INFO dLog [main] METHOD: getAllUserDeposits
+RETURNING: GetResponse(gotObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=reference, dateDeposit=2022-02-22, amount=12.22)])
+2022-02-22 14:39:26,341 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: findByDepositId
+ARGUMENTS: [1]
+2022-02-22 14:39:26,343 INFO dLog [main] METHOD: findByDepositId
+RETURNING: GetResponse(gotObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=reference, dateDeposit=2022-02-22, amount=12.22)])
+2022-02-22 14:39:26,355 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: getAlLUserDepositsOfType
+ARGUMENTS: [1, Cash]
+2022-02-22 14:39:26,355 INFO dLog [main] METHOD: getAlLUserDepositsOfType
+RETURNING: GetResponse(gotObject=[])
+2022-02-22 14:39:26,366 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=reference, amount=0.0)]
+2022-02-22 14:39:26,367 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:39:26,378 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=reference, amount=-1.0)]
+2022-02-22 14:39:26,379 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:39:26,407 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=reference, amount=-2123.0)]
+2022-02-22 14:39:26,410 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:39:26,429 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: findByDepositId
+ARGUMENTS: [-1]
+2022-02-22 14:39:26,430 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: findByDepositId
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "400 BAD_REQUEST "Deposit not found: -1""
+2022-02-22 14:39:26,441 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: deleteAllDeposits
+ARGUMENTS: [1]
+2022-02-22 14:39:26,441 INFO dLog [main] METHOD: deleteAllDeposits
+RETURNING: DeleteResponse(deletedObject=[])
+2022-02-22 14:40:19,404 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=null, amount=12.22)]
+2022-02-22 14:40:19,426 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:40:19,457 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=, amount=12.22)]
+2022-02-22 14:40:19,458 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:40:19,468 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, amount=12.22)]
+2022-02-22 14:40:19,469 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:40:19,480 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=a, amount=12.22)]
+2022-02-22 14:40:19,481 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:40:19,494 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=null, accountId=1, reference=reference, amount=1.0)]
+2022-02-22 14:40:19,495 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:40:19,503 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=, accountId=1, reference=reference, amount=1.0)]
+2022-02-22 14:40:19,504 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:40:19,520 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, accountId=1, reference=reference, amount=1.0)]
+2022-02-22 14:40:19,522 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:40:19,534 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=a, accountId=1, reference=reference, amount=1.0)]
+2022-02-22 14:40:19,538 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:40:19,570 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=reference, amount=12.22)]
+2022-02-22 14:40:19,571 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:40:19,583 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: getAllUserDeposits
+ARGUMENTS: [1]
+2022-02-22 14:40:19,585 INFO dLog [main] METHOD: getAllUserDeposits
+RETURNING: GetResponse(gotObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=reference, dateDeposit=2022-02-22, amount=12.22)])
+2022-02-22 14:40:19,593 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: findByDepositId
+ARGUMENTS: [1]
+2022-02-22 14:40:19,593 INFO dLog [main] METHOD: findByDepositId
+RETURNING: GetResponse(gotObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=reference, dateDeposit=2022-02-22, amount=12.22)])
+2022-02-22 14:40:19,600 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: getAlLUserDepositsOfType
+ARGUMENTS: [1, Cash]
+2022-02-22 14:40:19,601 INFO dLog [main] METHOD: getAlLUserDepositsOfType
+RETURNING: GetResponse(gotObject=[])
+2022-02-22 14:40:19,611 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=reference, amount=0.0)]
+2022-02-22 14:40:19,612 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:40:19,623 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=reference, amount=-1.0)]
+2022-02-22 14:40:19,631 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:40:19,642 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=reference, amount=-2123.0)]
+2022-02-22 14:40:19,642 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:40:19,653 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: findByDepositId
+ARGUMENTS: [-1]
+2022-02-22 14:40:19,654 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: findByDepositId
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "400 BAD_REQUEST "Deposit not found: -1""
+2022-02-22 14:40:19,664 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: deleteAllDeposits
+ARGUMENTS: [1]
+2022-02-22 14:40:19,664 INFO dLog [main] METHOD: deleteAllDeposits
+RETURNING: DeleteResponse(deletedObject=[])
+2022-02-22 14:43:02,013 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=null, amount=12.22)]
+2022-02-22 14:43:02,032 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:43:02,052 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=, amount=12.22)]
+2022-02-22 14:43:02,053 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:43:02,066 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, amount=12.22)]
+2022-02-22 14:43:02,067 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:43:02,076 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=a, amount=12.22)]
+2022-02-22 14:43:02,076 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:43:02,088 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=null, accountId=1, reference=reference, amount=1.0)]
+2022-02-22 14:43:02,089 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:43:02,099 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=, accountId=1, reference=reference, amount=1.0)]
+2022-02-22 14:43:02,100 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:43:02,109 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, accountId=1, reference=reference, amount=1.0)]
+2022-02-22 14:43:02,110 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:43:02,121 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=a, accountId=1, reference=reference, amount=1.0)]
+2022-02-22 14:43:02,155 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:43:02,167 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=reference, amount=12.22)]
+2022-02-22 14:43:02,167 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:43:02,179 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: getAllUserDeposits
+ARGUMENTS: [1]
+2022-02-22 14:43:02,181 INFO dLog [main] METHOD: getAllUserDeposits
+RETURNING: GetResponse(gotObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=reference, dateDeposit=2022-02-22, amount=12.22)])
+2022-02-22 14:43:02,188 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: findByDepositId
+ARGUMENTS: [1]
+2022-02-22 14:43:02,189 INFO dLog [main] METHOD: findByDepositId
+RETURNING: GetResponse(gotObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=reference, dateDeposit=2022-02-22, amount=12.22)])
+2022-02-22 14:43:02,197 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: getAlLUserDepositsOfType
+ARGUMENTS: [1, Cash]
+2022-02-22 14:43:02,198 INFO dLog [main] METHOD: getAlLUserDepositsOfType
+RETURNING: GetResponse(gotObject=[])
+2022-02-22 14:43:02,213 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=reference, amount=0.0)]
+2022-02-22 14:43:02,214 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:43:02,227 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=reference, amount=-1.0)]
+2022-02-22 14:43:02,228 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:43:02,242 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=reference, amount=-2123.0)]
+2022-02-22 14:43:02,243 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:43:02,254 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: findByDepositId
+ARGUMENTS: [-1]
+2022-02-22 14:43:02,254 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: findByDepositId
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "400 BAD_REQUEST "Deposit not found: -1""
+2022-02-22 14:43:02,266 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: deleteAllDeposits
+ARGUMENTS: [1]
+2022-02-22 14:43:02,267 INFO dLog [main] METHOD: deleteAllDeposits
+RETURNING: DeleteResponse(deletedObject=[])
+2022-02-22 14:44:07,235 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=null, amount=12.22)]
+2022-02-22 14:44:07,238 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "NULL VALUE PROVIDED"
+2022-02-22 14:44:07,261 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=, amount=12.22)]
+2022-02-22 14:44:07,261 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): "
+2022-02-22 14:44:07,277 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, amount=12.22)]
+2022-02-22 14:44:07,278 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid Text, too long (greater than 30): asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf"
+2022-02-22 14:44:07,285 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=a, amount=12.22)]
+2022-02-22 14:44:07,285 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): a"
+2022-02-22 14:44:07,298 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=null, accountId=1, reference=reference, amount=1.0)]
+2022-02-22 14:44:07,298 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "NULL VALUE PROVIDED"
+2022-02-22 14:44:07,306 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=, accountId=1, reference=reference, amount=1.0)]
+2022-02-22 14:44:07,307 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): "
+2022-02-22 14:44:07,316 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, accountId=1, reference=reference, amount=1.0)]
+2022-02-22 14:44:07,316 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid Text, too long (greater than 30): asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf"
+2022-02-22 14:44:07,324 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=a, accountId=1, reference=reference, amount=1.0)]
+2022-02-22 14:44:07,325 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): a"
+2022-02-22 14:44:07,336 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=reference, amount=12.22)]
+2022-02-22 14:44:07,371 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:44:07,391 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: getAllUserDeposits
+ARGUMENTS: [1]
+2022-02-22 14:44:07,394 INFO dLog [main] METHOD: getAllUserDeposits
+RETURNING: GetResponse(gotObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=reference, dateDeposit=2022-02-22, amount=12.22)])
+2022-02-22 14:44:07,403 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: findByDepositId
+ARGUMENTS: [1]
+2022-02-22 14:44:07,403 INFO dLog [main] METHOD: findByDepositId
+RETURNING: GetResponse(gotObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=reference, dateDeposit=2022-02-22, amount=12.22)])
+2022-02-22 14:44:07,412 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: getAlLUserDepositsOfType
+ARGUMENTS: [1, Cash]
+2022-02-22 14:44:07,412 INFO dLog [main] METHOD: getAlLUserDepositsOfType
+RETURNING: GetResponse(gotObject=[])
+2022-02-22 14:44:07,424 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=reference, amount=0.0)]
+2022-02-22 14:44:07,425 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+MESSAGE: 400 BAD_REQUEST "Invalid amount, less than or equal to 0: 0.0"
+2022-02-22 14:44:07,433 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=reference, amount=-1.0)]
+2022-02-22 14:44:07,434 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+MESSAGE: 400 BAD_REQUEST "Invalid amount, less than or equal to 0: -1.0"
+2022-02-22 14:44:07,442 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=reference, amount=-2123.0)]
+2022-02-22 14:44:07,442 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+MESSAGE: 400 BAD_REQUEST "Invalid amount, less than or equal to 0: -2123.0"
+2022-02-22 14:44:07,449 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: findByDepositId
+ARGUMENTS: [-1]
+2022-02-22 14:44:07,450 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: findByDepositId
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "400 BAD_REQUEST "Deposit not found: -1""
+2022-02-22 14:44:07,458 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: deleteAllDeposits
+ARGUMENTS: [1]
+2022-02-22 14:44:07,459 INFO dLog [main] METHOD: deleteAllDeposits
+RETURNING: DeleteResponse(deletedObject=[])
+2022-02-22 14:48:45,143 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: updateProfile
+ARGUMENTS: [UpdateProfileRequest(profileId=1, userId=1, firstName=Bob, lastName=Tom, email=some@email.com, phoneNumber=123-876-5555, address=1 court)]
+2022-02-22 14:48:45,183 INFO dLog [main] METHOD: updateProfile
+RETURNING: PutResponse(updatedObject=[AccountProfileResponse(profileId=1, userId=1, firstName=Bob, lastName=Tom, email=some@email.com, phoneNumber=123-876-5555, address=1 court)])
+2022-02-22 14:48:45,235 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: deleteProfile
+ARGUMENTS: [AccountProfileRequest(profileId=-1)]
+2022-02-22 14:48:45,240 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: deleteProfile
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidProfileIdException
+MESSAGE: 400 BAD_REQUEST "account profile not found"
+2022-02-22 14:48:45,260 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: deleteProfile
+ARGUMENTS: [AccountProfileRequest(profileId=1)]
+2022-02-22 14:48:45,262 INFO dLog [main] METHOD: deleteProfile
+RETURNING: DeleteResponse(deletedObject=[AccountProfileResponse(profileId=1, userId=1, firstName=Bob, lastName=Tom, email=some@email.com, phoneNumber=123-876-5555, address=1 court)])
+2022-02-22 14:48:45,277 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: getProfile
+ARGUMENTS: [AccountProfileRequest(profileId=-1)]
+2022-02-22 14:48:45,279 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: getProfile
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "invalid request"
+2022-02-22 14:48:45,292 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: getProfile
+ARGUMENTS: [AccountProfileRequest(profileId=1)]
+2022-02-22 14:48:45,294 INFO dLog [main] METHOD: getProfile
+RETURNING: GetResponse(gotObject=[AccountProfileResponse(profileId=1, userId=1, firstName=Bob, lastName=Tom, email=some@email.com, phoneNumber=123-876-5555, address=1 court)])
+2022-02-22 14:48:45,308 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: createProfile
+ARGUMENTS: [ProfileCreateRequest(userId=5, firstName=joe, lastName=something, email=asdf@fjfo.com, phoneNumber=555-555-5555, address=1 street)]
+2022-02-22 14:48:45,309 INFO dLog [main] METHOD: createProfile
+RETURNING: PostResponse(createdObject=[AccountProfileResponse(profileId=1, userId=1, firstName=joe, lastName=something, email=asdf@fjfo.com, phoneNumber=555-555-5555, address=1 street)])
+2022-02-22 14:48:50,269 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: createAccount
+ARGUMENTS: [CreateAccountRequest(userId=1, accountType=lol)]
+2022-02-22 14:48:50,285 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: createAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountTypeException
+MESSAGE: 0
+2022-02-22 14:48:50,302 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+ARGUMENTS: [TransferRequest(ownerAccountId=1, receiverAccountId=2, amount=100000.0)]
+2022-02-22 14:48:50,306 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+MESSAGE: 406 NOT_ACCEPTABLE "Owner Account: $100.0 Invalid Requested Amount: $100000.0"
+2022-02-22 14:48:50,340 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: deleteAccount
+ARGUMENTS: [11111]
+2022-02-22 14:48:50,341 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: deleteAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+MESSAGE: 400 BAD_REQUEST "Invalid Account Id for delete request: 11111"
+2022-02-22 14:48:50,357 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: deleteAccount
+ARGUMENTS: [1]
+2022-02-22 14:48:50,359 INFO dLog [main] METHOD: deleteAccount
+RETURNING: DeleteResponse(deletedObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=100.0)])
+2022-02-22 14:48:50,366 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+ARGUMENTS: [TransferRequest(ownerAccountId=1, receiverAccountId=2, amount=10.0)]
+2022-02-22 14:48:50,370 INFO dLog [main] METHOD: transferToAnotherAccount
+RETURNING: PutResponse(updatedObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=90.0, pendingBalance=90.0), AccountResponseObject(accountId=2, userId=2, accountType=Checking, availableBalance=100.0, pendingBalance=110.0)])
+2022-02-22 14:48:50,378 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: updateAccount
+ARGUMENTS: [UpdateAccountRequest(accountId=1, accountType=Checking, availableBalance=100.0, pendingBalance=100.0)]
+2022-02-22 14:48:50,378 INFO dLog [main] METHOD: updateAccount
+RETURNING: PutResponse(updatedObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=100.0)])
+2022-02-22 14:48:50,388 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccount
+ARGUMENTS: [1]
+2022-02-22 14:48:50,389 INFO dLog [main] METHOD: getAccount
+RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=100.0)])
+2022-02-22 14:48:50,398 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccounts
+ARGUMENTS: [1]
+2022-02-22 14:48:50,402 INFO dLog [main] METHOD: getAccounts
+RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=100.0)])
+2022-02-22 14:48:50,414 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: updateAccount
+ARGUMENTS: [UpdateAccountRequest(accountId=-1, accountType=, availableBalance=0.0, pendingBalance=0.0)]
+2022-02-22 14:48:50,415 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: updateAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid integer, too small (less than 0): -1"
+2022-02-22 14:48:50,431 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccounts
+ARGUMENTS: [-1]
+2022-02-22 14:48:50,432 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccounts
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid integer, too small (less than 0): -1"
+2022-02-22 14:48:50,442 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+ARGUMENTS: [TransferRequest(ownerAccountId=1, receiverAccountId=-1, amount=10.0)]
+2022-02-22 14:48:50,442 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid integer, too small (less than 0): -1"
+2022-02-22 14:48:50,451 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: deleteAccount
+ARGUMENTS: [-1]
+2022-02-22 14:48:50,452 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: deleteAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid integer, too small (less than 0): -1"
+2022-02-22 14:48:50,458 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: createAccount
+ARGUMENTS: [CreateAccountRequest(userId=1, accountType=Checking)]
+2022-02-22 14:48:50,459 INFO dLog [main] METHOD: createAccount
+RETURNING: PostResponse(createdObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=100.0)])
+2022-02-22 14:48:50,466 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+ARGUMENTS: [TransferRequest(ownerAccountId=-1, receiverAccountId=2, amount=10.0)]
+2022-02-22 14:48:50,466 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid integer, too small (less than 0): -1"
+2022-02-22 14:48:50,479 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccount
+ARGUMENTS: [-1]
+2022-02-22 14:48:50,480 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid integer, too small (less than 0): -1"
+2022-02-22 14:48:54,924 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountTypeService
+METHOD: findAccountTypeEntityByName
+ARGUMENTS: [Checking]
+2022-02-22 14:48:54,934 INFO dLog [main] METHOD: findAccountTypeEntityByName
+RETURNING: AccountTypeEntity(pk_account_type_id=1, name=Checking)
+2022-02-22 14:48:54,942 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountTypeService
+METHOD: findAccountTypeEntityByName
+ARGUMENTS: [Invalid]
+2022-02-22 14:48:54,942 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountTypeService
+METHOD: findAccountTypeEntityByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountTypeException
+MESSAGE: 400 BAD_REQUEST "Invalid Account Type Provided: Invalid"
+2022-02-22 14:48:54,995 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountTypeService
+METHOD: findAccountTypeEntityByName
+ARGUMENTS: [null]
+2022-02-22 14:48:54,996 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountTypeService
+METHOD: findAccountTypeEntityByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "NULL VALUE PROVIDED"
+2022-02-22 14:48:55,007 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountTypeService
+METHOD: findAccountTypeEntityByName
+ARGUMENTS: []
+2022-02-22 14:48:55,007 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountTypeService
+METHOD: findAccountTypeEntityByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): "
+2022-02-22 14:48:55,017 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountTypeService
+METHOD: findAccountTypeEntityByName
+ARGUMENTS: [a]
+2022-02-22 14:48:55,017 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountTypeService
+METHOD: findAccountTypeEntityByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): a"
+2022-02-22 14:48:55,022 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountTypeService
+METHOD: findAccountTypeEntityByName
+ARGUMENTS: [asdfasdfasdfasdfasdfasdfasdfasdf]
+2022-02-22 14:48:55,023 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountTypeService
+METHOD: findAccountTypeEntityByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid Text, too long (greater than 30): asdfasdfasdfasdfasdfasdfasdfasdf"
+2022-02-22 14:49:02,723 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=null, amount=12.22)]
+2022-02-22 14:49:02,724 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "NULL VALUE PROVIDED"
+2022-02-22 14:49:02,761 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=, amount=12.22)]
+2022-02-22 14:49:02,761 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): "
+2022-02-22 14:49:02,767 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, amount=12.22)]
+2022-02-22 14:49:02,767 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid Text, too long (greater than 30): asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf"
+2022-02-22 14:49:02,773 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=a, amount=12.22)]
+2022-02-22 14:49:02,773 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): a"
+2022-02-22 14:49:02,780 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=null, accountId=1, reference=reference, amount=1.0)]
+2022-02-22 14:49:02,780 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "NULL VALUE PROVIDED"
+2022-02-22 14:49:02,785 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=, accountId=1, reference=reference, amount=1.0)]
+2022-02-22 14:49:02,786 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): "
+2022-02-22 14:49:02,790 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, accountId=1, reference=reference, amount=1.0)]
+2022-02-22 14:49:02,791 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid Text, too long (greater than 30): asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf"
+2022-02-22 14:49:02,796 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=a, accountId=1, reference=reference, amount=1.0)]
+2022-02-22 14:49:02,796 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): a"
+2022-02-22 14:49:02,801 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=reference, amount=12.22)]
+2022-02-22 14:49:02,853 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:49:03,052 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: getAllUserDeposits
+ARGUMENTS: [1]
+2022-02-22 14:49:03,053 INFO dLog [main] METHOD: getAllUserDeposits
+RETURNING: GetResponse(gotObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=reference, dateDeposit=2022-02-22, amount=12.22)])
+2022-02-22 14:49:03,058 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: findByDepositId
+ARGUMENTS: [1]
+2022-02-22 14:49:03,058 INFO dLog [main] METHOD: findByDepositId
+RETURNING: GetResponse(gotObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=reference, dateDeposit=2022-02-22, amount=12.22)])
+2022-02-22 14:49:03,062 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: getAlLUserDepositsOfType
+ARGUMENTS: [1, Cash]
+2022-02-22 14:49:03,063 INFO dLog [main] METHOD: getAlLUserDepositsOfType
+RETURNING: GetResponse(gotObject=[])
+2022-02-22 14:49:03,071 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=reference, amount=0.0)]
+2022-02-22 14:49:03,071 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+MESSAGE: 400 BAD_REQUEST "Invalid amount, less than or equal to 0: 0.0"
+2022-02-22 14:49:03,077 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=reference, amount=-1.0)]
+2022-02-22 14:49:03,077 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+MESSAGE: 400 BAD_REQUEST "Invalid amount, less than or equal to 0: -1.0"
+2022-02-22 14:49:03,082 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=reference, amount=-2123.0)]
+2022-02-22 14:49:03,082 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+MESSAGE: 400 BAD_REQUEST "Invalid amount, less than or equal to 0: -2123.0"
+2022-02-22 14:49:03,086 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: findByDepositId
+ARGUMENTS: [-1]
+2022-02-22 14:49:03,087 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: findByDepositId
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "400 BAD_REQUEST "Deposit not found: -1""
+2022-02-22 14:49:03,093 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: deleteAllDeposits
+ARGUMENTS: [1]
+2022-02-22 14:49:03,094 INFO dLog [main] METHOD: deleteAllDeposits
+RETURNING: DeleteResponse(deletedObject=[])
+2022-02-22 14:49:07,302 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositTypeService
+METHOD: findDepositTypeEntityByName
+ARGUMENTS: [null]
+2022-02-22 14:49:07,314 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositTypeService
+METHOD: findDepositTypeEntityByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "NULL VALUE PROVIDED"
+2022-02-22 14:49:07,395 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositTypeService
+METHOD: findDepositTypeEntityByName
+ARGUMENTS: []
+2022-02-22 14:49:07,399 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositTypeService
+METHOD: findDepositTypeEntityByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): "
+2022-02-22 14:49:07,460 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositTypeService
+METHOD: findDepositTypeEntityByName
+ARGUMENTS: [a]
+2022-02-22 14:49:07,464 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositTypeService
+METHOD: findDepositTypeEntityByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): a"
+2022-02-22 14:49:07,598 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositTypeService
+METHOD: findDepositTypeEntityByName
+ARGUMENTS: [asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf]
+2022-02-22 14:49:07,615 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositTypeService
+METHOD: findDepositTypeEntityByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid Text, too long (greater than 30): asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf"
+2022-02-22 14:49:07,781 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositTypeService
+METHOD: findDepositTypeEntityByName
+ARGUMENTS: [Cash]
+2022-02-22 14:49:07,822 INFO dLog [main] METHOD: findDepositTypeEntityByName
+RETURNING: DepositTypeEntity(pk_deposit_type_id=1, name=Cash)
+2022-02-22 14:49:08,004 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositTypeService
+METHOD: findDepositTypeEntityByName
+ARGUMENTS: [Invalid]
+2022-02-22 14:49:08,006 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositTypeService
+METHOD: findDepositTypeEntityByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Deposit type not found: Invalid"
+2022-02-22 14:49:12,269 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: checkLogin
+ARGUMENTS: [LoginRequest(username=username1, password=password1)]
+2022-02-22 14:49:12,277 INFO dLog [main] METHOD: checkLogin
+RETURNING: LoginResponse(success=true)
+2022-02-22 14:49:14,973 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestStatusService
+METHOD: getRequestStatusByName
+ARGUMENTS: [Invalid]
+2022-02-22 14:49:14,979 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.RequestStatusService
+METHOD: getRequestStatusByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Request Status type not found: Invalid"
+2022-02-22 14:49:14,983 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestStatusService
+METHOD: getRequestStatusByName
+ARGUMENTS: [Pending]
+2022-02-22 14:49:14,984 INFO dLog [main] METHOD: getRequestStatusByName
+RETURNING: RequestStatusEntity(pk_request_status_id=1, name=Pending)
+2022-02-22 14:49:14,992 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestStatusService
+METHOD: getRequestStatusByName
+ARGUMENTS: [null]
+2022-02-22 14:49:14,992 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.RequestStatusService
+METHOD: getRequestStatusByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "NULL VALUE PROVIDED"
+2022-02-22 14:49:15,001 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestStatusService
+METHOD: getRequestStatusByName
+ARGUMENTS: []
+2022-02-22 14:49:15,002 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.RequestStatusService
+METHOD: getRequestStatusByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): "
+2022-02-22 14:49:15,011 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestStatusService
+METHOD: getRequestStatusByName
+ARGUMENTS: [a]
+2022-02-22 14:49:15,012 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.RequestStatusService
+METHOD: getRequestStatusByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): a"
+2022-02-22 14:49:15,018 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestStatusService
+METHOD: getRequestStatusByName
+ARGUMENTS: [asdfasdfasdfasdfasdfasdfasdfasdf]
+2022-02-22 14:49:15,018 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.RequestStatusService
+METHOD: getRequestStatusByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid Text, too long (greater than 30): asdfasdfasdfasdfasdfasdfasdfasdf"
+2022-02-22 14:49:18,412 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestTypeService
+METHOD: getRequestTypeByName
+ARGUMENTS: [null]
+2022-02-22 14:49:18,413 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.RequestTypeService
+METHOD: getRequestTypeByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "NULL VALUE PROVIDED"
+2022-02-22 14:49:18,417 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestTypeService
+METHOD: getRequestTypeByName
+ARGUMENTS: []
+2022-02-22 14:49:18,418 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.RequestTypeService
+METHOD: getRequestTypeByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): "
+2022-02-22 14:49:18,422 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestTypeService
+METHOD: getRequestTypeByName
+ARGUMENTS: [a]
+2022-02-22 14:49:18,423 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.RequestTypeService
+METHOD: getRequestTypeByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): a"
+2022-02-22 14:49:18,427 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestTypeService
+METHOD: getRequestTypeByName
+ARGUMENTS: [asdfasdfasdfasdfasdfasdfasdfasdf]
+2022-02-22 14:49:18,427 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.RequestTypeService
+METHOD: getRequestTypeByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid Text, too long (greater than 30): asdfasdfasdfasdfasdfasdfasdfasdf"
+2022-02-22 14:49:18,430 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestTypeService
+METHOD: getRequestTypeByName
+ARGUMENTS: [Retail]
+2022-02-22 14:49:18,436 INFO dLog [main] METHOD: getRequestTypeByName
+RETURNING: RequestTypeEntity(pk_request_type_id=1, name=Retail)
+2022-02-22 14:49:18,440 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestTypeService
+METHOD: getRequestTypeByName
+ARGUMENTS: [Invalid]
+2022-02-22 14:49:18,441 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.RequestTypeService
+METHOD: getRequestTypeByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Request Type not found: Invalid"
+2022-02-22 14:49:20,924 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.TransactionService
+METHOD: getTransactionHistory
+ARGUMENTS: [1]
+2022-02-22 14:49:20,936 INFO dLog [main] METHOD: getTransactionHistory
+RETURNING: GetResponse(gotObject=[TransactionObject(transactionId=1, transactionType=Deposit, transactionDetail=Cash, transactionReference=reference, date=2033-01-01, amount=100.0), TransactionObject(transactionId=2, transactionType=Withdraw, transactionDetail=Retail, transactionReference=reference, date=2003-01-01, amount=10.0), TransactionObject(transactionId=1, transactionType=Withdraw, transactionDetail=Retail, transactionReference=reference, date=2000-01-01, amount=10.0), TransactionObject(transactionId=2, transactionType=Deposit, transactionDetail=Cash, transactionReference=reference, date=1999-10-10, amount=100.0)])
+2022-02-22 14:49:20,936 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.TransactionService
+METHOD: getTransactionHistory
+ARGUMENTS: [1]
+2022-02-22 14:49:20,938 INFO dLog [main] METHOD: getTransactionHistory
+RETURNING: GetResponse(gotObject=[TransactionObject(transactionId=1, transactionType=Deposit, transactionDetail=Cash, transactionReference=reference, date=2033-01-01, amount=100.0), TransactionObject(transactionId=2, transactionType=Withdraw, transactionDetail=Retail, transactionReference=reference, date=2003-01-01, amount=10.0), TransactionObject(transactionId=1, transactionType=Withdraw, transactionDetail=Retail, transactionReference=reference, date=2000-01-01, amount=10.0), TransactionObject(transactionId=2, transactionType=Deposit, transactionDetail=Cash, transactionReference=reference, date=1999-10-10, amount=100.0)])
+2022-02-22 14:49:20,945 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.TransactionService
+METHOD: getTransactionHistory
+ARGUMENTS: [2]
+2022-02-22 14:49:20,945 INFO dLog [main] METHOD: getTransactionHistory
+RETURNING: GetResponse(gotObject=[])
+2022-02-22 14:49:20,950 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.TransactionService
+METHOD: getTransactionHistory
+ARGUMENTS: [-1]
+2022-02-22 14:49:20,950 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.TransactionService
+METHOD: getTransactionHistory
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+MESSAGE: 400 BAD_REQUEST "Invalid account Id Provided: -1"
+2022-02-22 14:49:23,404 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: findByWithdrawId
+ARGUMENTS: [-1]
+2022-02-22 14:49:23,410 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: findByWithdrawId
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidWithdrawIdRequest
+MESSAGE: 400 BAD_REQUEST "Withdraw not found, withdraw Id: -1"
+2022-02-22 14:49:23,416 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=0.0)]
+2022-02-22 14:49:23,416 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+MESSAGE: 400 BAD_REQUEST "Invalid amount, less than or equal to 0: 0.0"
+2022-02-22 14:49:23,421 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=-1.0)]
+2022-02-22 14:49:23,421 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+MESSAGE: 400 BAD_REQUEST "Invalid amount, less than or equal to 0: -1.0"
+2022-02-22 14:49:23,425 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=-2123.0)]
+2022-02-22 14:49:23,425 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+MESSAGE: 400 BAD_REQUEST "Invalid amount, less than or equal to 0: -2123.0"
+2022-02-22 14:49:23,430 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=null, reference=reference, amount=1.0)]
+2022-02-22 14:49:23,430 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "NULL VALUE PROVIDED"
+2022-02-22 14:49:23,435 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=, reference=reference, amount=1.0)]
+2022-02-22 14:49:23,435 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): "
+2022-02-22 14:49:23,439 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, reference=reference, amount=1.0)]
+2022-02-22 14:49:23,439 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid Text, too long (greater than 30): asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf"
+2022-02-22 14:49:23,445 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=a, reference=reference, amount=1.0)]
+2022-02-22 14:49:23,445 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): a"
+2022-02-22 14:49:23,456 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=null, amount=1.0)]
+2022-02-22 14:49:23,456 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "NULL VALUE PROVIDED"
+2022-02-22 14:49:23,461 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=, amount=1.0)]
+2022-02-22 14:49:23,462 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): "
+2022-02-22 14:49:23,466 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, amount=1.0)]
+2022-02-22 14:49:23,467 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid Text, too long (greater than 30): asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf"
+2022-02-22 14:49:23,471 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=a, amount=1.0)]
+2022-02-22 14:49:23,472 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): a"
+2022-02-22 14:49:23,477 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=12.22)]
+2022-02-22 14:49:23,477 INFO dLog [main] METHOD: createWithdrawal
+RETURNING: PostResponse(createdObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-22, amount=12.22)])
+2022-02-22 14:49:23,482 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: getAlLUserWithdrawalsOfType
+ARGUMENTS: [1, Retail]
+2022-02-22 14:49:23,483 INFO dLog [main] METHOD: getAlLUserWithdrawalsOfType
+RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-22, amount=12.22)])
+2022-02-22 14:49:23,487 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: deleteAllWithdraws
+ARGUMENTS: [1]
+2022-02-22 14:49:23,488 INFO dLog [main] METHOD: deleteAllWithdraws
+RETURNING: DeleteResponse(deletedObject=[])
+2022-02-22 14:49:23,492 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: getAllUserWithdrawals
+ARGUMENTS: [1]
+2022-02-22 14:49:23,493 INFO dLog [main] METHOD: getAllUserWithdrawals
+RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-22, amount=12.22)])
+2022-02-22 14:49:23,497 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: findByWithdrawId
+ARGUMENTS: [1]
+2022-02-22 14:49:23,497 INFO dLog [main] METHOD: findByWithdrawId
+RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-22, amount=12.22)])
+2022-02-22 14:51:36,172 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: updateProfile
+ARGUMENTS: [UpdateProfileRequest(profileId=1, userId=1, firstName=Bob, lastName=Tom, email=some@email.com, phoneNumber=123-876-5555, address=1 court)]
+2022-02-22 14:51:36,192 INFO dLog [main] METHOD: updateProfile
+RETURNING: PutResponse(updatedObject=[AccountProfileResponse(profileId=1, userId=1, firstName=Bob, lastName=Tom, email=some@email.com, phoneNumber=123-876-5555, address=1 court)])
+2022-02-22 14:51:36,238 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: deleteProfile
+ARGUMENTS: [AccountProfileRequest(profileId=-1)]
+2022-02-22 14:51:36,243 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: deleteProfile
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidProfileIdException
+MESSAGE: 400 BAD_REQUEST "account profile not found"
+2022-02-22 14:51:36,262 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: deleteProfile
+ARGUMENTS: [AccountProfileRequest(profileId=1)]
+2022-02-22 14:51:36,262 INFO dLog [main] METHOD: deleteProfile
+RETURNING: DeleteResponse(deletedObject=[AccountProfileResponse(profileId=1, userId=1, firstName=Bob, lastName=Tom, email=some@email.com, phoneNumber=123-876-5555, address=1 court)])
+2022-02-22 14:51:36,270 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: getProfile
+ARGUMENTS: [AccountProfileRequest(profileId=-1)]
+2022-02-22 14:51:36,271 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: getProfile
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "invalid request"
+2022-02-22 14:51:36,284 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: getProfile
+ARGUMENTS: [AccountProfileRequest(profileId=1)]
+2022-02-22 14:51:36,284 INFO dLog [main] METHOD: getProfile
+RETURNING: GetResponse(gotObject=[AccountProfileResponse(profileId=1, userId=1, firstName=Bob, lastName=Tom, email=some@email.com, phoneNumber=123-876-5555, address=1 court)])
+2022-02-22 14:51:36,300 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: createProfile
+ARGUMENTS: [ProfileCreateRequest(userId=5, firstName=joe, lastName=something, email=asdf@fjfo.com, phoneNumber=555-555-5555, address=1 street)]
+2022-02-22 14:51:36,301 INFO dLog [main] METHOD: createProfile
+RETURNING: PostResponse(createdObject=[AccountProfileResponse(profileId=1, userId=1, firstName=joe, lastName=something, email=asdf@fjfo.com, phoneNumber=555-555-5555, address=1 street)])
+2022-02-22 14:51:40,357 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: createAccount
+ARGUMENTS: [CreateAccountRequest(userId=1, accountType=lol)]
+2022-02-22 14:51:40,363 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: createAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountTypeException
+MESSAGE: 0
+2022-02-22 14:51:40,369 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+ARGUMENTS: [TransferRequest(ownerAccountId=1, receiverAccountId=2, amount=100000.0)]
+2022-02-22 14:51:40,370 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+MESSAGE: 406 NOT_ACCEPTABLE "Owner Account: $100.0 Invalid Requested Amount: $100000.0"
+2022-02-22 14:51:40,379 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: deleteAccount
+ARGUMENTS: [11111]
+2022-02-22 14:51:40,380 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: deleteAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+MESSAGE: 400 BAD_REQUEST "Invalid Account Id for delete request: 11111"
+2022-02-22 14:51:40,386 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: deleteAccount
+ARGUMENTS: [1]
+2022-02-22 14:51:40,387 INFO dLog [main] METHOD: deleteAccount
+RETURNING: DeleteResponse(deletedObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=100.0)])
+2022-02-22 14:51:40,394 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+ARGUMENTS: [TransferRequest(ownerAccountId=1, receiverAccountId=2, amount=10.0)]
+2022-02-22 14:51:40,399 INFO dLog [main] METHOD: transferToAnotherAccount
+RETURNING: PutResponse(updatedObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=90.0, pendingBalance=90.0), AccountResponseObject(accountId=2, userId=2, accountType=Checking, availableBalance=100.0, pendingBalance=110.0)])
+2022-02-22 14:51:40,407 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: updateAccount
+ARGUMENTS: [UpdateAccountRequest(accountId=1, accountType=Checking, availableBalance=100.0, pendingBalance=100.0)]
+2022-02-22 14:51:40,409 INFO dLog [main] METHOD: updateAccount
+RETURNING: PutResponse(updatedObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=100.0)])
+2022-02-22 14:51:40,418 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccount
+ARGUMENTS: [1]
+2022-02-22 14:51:40,419 INFO dLog [main] METHOD: getAccount
+RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=100.0)])
+2022-02-22 14:51:40,433 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccounts
+ARGUMENTS: [1]
+2022-02-22 14:51:40,434 INFO dLog [main] METHOD: getAccounts
+RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=100.0)])
+2022-02-22 14:51:40,445 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: updateAccount
+ARGUMENTS: [UpdateAccountRequest(accountId=-1, accountType=, availableBalance=0.0, pendingBalance=0.0)]
+2022-02-22 14:51:40,446 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: updateAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid integer, too small (less than 0): -1"
+2022-02-22 14:51:40,467 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccounts
+ARGUMENTS: [-1]
+2022-02-22 14:51:40,467 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccounts
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid integer, too small (less than 0): -1"
+2022-02-22 14:51:40,473 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+ARGUMENTS: [TransferRequest(ownerAccountId=1, receiverAccountId=-1, amount=10.0)]
+2022-02-22 14:51:40,473 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid integer, too small (less than 0): -1"
+2022-02-22 14:51:40,480 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: deleteAccount
+ARGUMENTS: [-1]
+2022-02-22 14:51:40,481 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: deleteAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid integer, too small (less than 0): -1"
+2022-02-22 14:51:40,487 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: createAccount
+ARGUMENTS: [CreateAccountRequest(userId=1, accountType=Checking)]
+2022-02-22 14:51:40,488 INFO dLog [main] METHOD: createAccount
+RETURNING: PostResponse(createdObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=100.0)])
+2022-02-22 14:51:40,499 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+ARGUMENTS: [TransferRequest(ownerAccountId=-1, receiverAccountId=2, amount=10.0)]
+2022-02-22 14:51:40,499 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid integer, too small (less than 0): -1"
+2022-02-22 14:51:40,510 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccount
+ARGUMENTS: [-1]
+2022-02-22 14:51:40,510 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid integer, too small (less than 0): -1"
+2022-02-22 14:51:43,464 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountTypeService
+METHOD: findAccountTypeEntityByName
+ARGUMENTS: [Checking]
+2022-02-22 14:51:43,471 INFO dLog [main] METHOD: findAccountTypeEntityByName
+RETURNING: AccountTypeEntity(pk_account_type_id=1, name=Checking)
+2022-02-22 14:51:43,476 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountTypeService
+METHOD: findAccountTypeEntityByName
+ARGUMENTS: [Invalid]
+2022-02-22 14:51:43,477 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountTypeService
+METHOD: findAccountTypeEntityByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountTypeException
+MESSAGE: 400 BAD_REQUEST "Invalid Account Type Provided: Invalid"
+2022-02-22 14:51:43,528 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountTypeService
+METHOD: findAccountTypeEntityByName
+ARGUMENTS: [null]
+2022-02-22 14:51:43,528 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountTypeService
+METHOD: findAccountTypeEntityByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "NULL VALUE PROVIDED"
+2022-02-22 14:51:43,539 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountTypeService
+METHOD: findAccountTypeEntityByName
+ARGUMENTS: []
+2022-02-22 14:51:43,540 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountTypeService
+METHOD: findAccountTypeEntityByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): "
+2022-02-22 14:51:43,547 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountTypeService
+METHOD: findAccountTypeEntityByName
+ARGUMENTS: [a]
+2022-02-22 14:51:43,548 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountTypeService
+METHOD: findAccountTypeEntityByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): a"
+2022-02-22 14:51:43,552 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountTypeService
+METHOD: findAccountTypeEntityByName
+ARGUMENTS: [asdfasdfasdfasdfasdfasdfasdfasdf]
+2022-02-22 14:51:43,553 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountTypeService
+METHOD: findAccountTypeEntityByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid Text, too long (greater than 30): asdfasdfasdfasdfasdfasdfasdfasdf"
+2022-02-22 14:51:47,102 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=null, amount=12.22)]
+2022-02-22 14:51:47,102 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "NULL VALUE PROVIDED"
+2022-02-22 14:51:47,108 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=, amount=12.22)]
+2022-02-22 14:51:47,109 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): "
+2022-02-22 14:51:47,114 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, amount=12.22)]
+2022-02-22 14:51:47,115 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid Text, too long (greater than 30): asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf"
+2022-02-22 14:51:47,120 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=a, amount=12.22)]
+2022-02-22 14:51:47,121 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): a"
+2022-02-22 14:51:47,127 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=null, accountId=1, reference=reference, amount=1.0)]
+2022-02-22 14:51:47,128 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "NULL VALUE PROVIDED"
+2022-02-22 14:51:47,136 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=, accountId=1, reference=reference, amount=1.0)]
+2022-02-22 14:51:47,136 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): "
+2022-02-22 14:51:47,142 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, accountId=1, reference=reference, amount=1.0)]
+2022-02-22 14:51:47,143 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid Text, too long (greater than 30): asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf"
+2022-02-22 14:51:47,148 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=a, accountId=1, reference=reference, amount=1.0)]
+2022-02-22 14:51:47,148 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): a"
+2022-02-22 14:51:47,153 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=reference, amount=12.22)]
+2022-02-22 14:51:47,162 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Bad request"
+2022-02-22 14:51:47,181 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: getAllUserDeposits
+ARGUMENTS: [1]
+2022-02-22 14:51:47,183 INFO dLog [main] METHOD: getAllUserDeposits
+RETURNING: GetResponse(gotObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=reference, dateDeposit=2022-02-22, amount=12.22)])
+2022-02-22 14:51:47,199 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: findByDepositId
+ARGUMENTS: [1]
+2022-02-22 14:51:47,200 INFO dLog [main] METHOD: findByDepositId
+RETURNING: GetResponse(gotObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=reference, dateDeposit=2022-02-22, amount=12.22)])
+2022-02-22 14:51:47,206 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: getAlLUserDepositsOfType
+ARGUMENTS: [1, Cash]
+2022-02-22 14:51:47,207 INFO dLog [main] METHOD: getAlLUserDepositsOfType
+RETURNING: GetResponse(gotObject=[])
+2022-02-22 14:51:47,214 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=reference, amount=0.0)]
+2022-02-22 14:51:47,215 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+MESSAGE: 400 BAD_REQUEST "Invalid amount, less than or equal to 0: 0.0"
+2022-02-22 14:51:47,220 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=reference, amount=-1.0)]
+2022-02-22 14:51:47,221 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+MESSAGE: 400 BAD_REQUEST "Invalid amount, less than or equal to 0: -1.0"
+2022-02-22 14:51:47,227 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=reference, amount=-2123.0)]
+2022-02-22 14:51:47,227 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+MESSAGE: 400 BAD_REQUEST "Invalid amount, less than or equal to 0: -2123.0"
+2022-02-22 14:51:47,232 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: findByDepositId
+ARGUMENTS: [-1]
+2022-02-22 14:51:47,232 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: findByDepositId
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "400 BAD_REQUEST "Deposit not found: -1""
+2022-02-22 14:51:47,239 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: deleteAllDeposits
+ARGUMENTS: [1]
+2022-02-22 14:51:47,240 INFO dLog [main] METHOD: deleteAllDeposits
+RETURNING: DeleteResponse(deletedObject=[])
+2022-02-22 14:51:50,820 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositTypeService
+METHOD: findDepositTypeEntityByName
+ARGUMENTS: [null]
+2022-02-22 14:51:50,821 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositTypeService
+METHOD: findDepositTypeEntityByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "NULL VALUE PROVIDED"
+2022-02-22 14:51:50,915 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositTypeService
+METHOD: findDepositTypeEntityByName
+ARGUMENTS: []
+2022-02-22 14:51:50,915 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositTypeService
+METHOD: findDepositTypeEntityByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): "
+2022-02-22 14:51:50,921 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositTypeService
+METHOD: findDepositTypeEntityByName
+ARGUMENTS: [a]
+2022-02-22 14:51:50,922 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositTypeService
+METHOD: findDepositTypeEntityByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): a"
+2022-02-22 14:51:50,927 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositTypeService
+METHOD: findDepositTypeEntityByName
+ARGUMENTS: [asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf]
+2022-02-22 14:51:50,927 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositTypeService
+METHOD: findDepositTypeEntityByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid Text, too long (greater than 30): asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf"
+2022-02-22 14:51:50,932 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositTypeService
+METHOD: findDepositTypeEntityByName
+ARGUMENTS: [Cash]
+2022-02-22 14:51:50,940 INFO dLog [main] METHOD: findDepositTypeEntityByName
+RETURNING: DepositTypeEntity(pk_deposit_type_id=1, name=Cash)
+2022-02-22 14:51:50,945 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositTypeService
+METHOD: findDepositTypeEntityByName
+ARGUMENTS: [Invalid]
+2022-02-22 14:51:50,946 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositTypeService
+METHOD: findDepositTypeEntityByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Deposit type not found: Invalid"
+2022-02-22 14:51:54,224 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: checkLogin
+ARGUMENTS: [LoginRequest(username=username1, password=password1)]
+2022-02-22 14:51:54,237 INFO dLog [main] METHOD: checkLogin
+RETURNING: LoginResponse(success=true)
+2022-02-22 14:51:58,006 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestStatusService
+METHOD: getRequestStatusByName
+ARGUMENTS: [Invalid]
+2022-02-22 14:51:58,013 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.RequestStatusService
+METHOD: getRequestStatusByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Request Status type not found: Invalid"
+2022-02-22 14:51:58,017 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestStatusService
+METHOD: getRequestStatusByName
+ARGUMENTS: [Pending]
+2022-02-22 14:51:58,018 INFO dLog [main] METHOD: getRequestStatusByName
+RETURNING: RequestStatusEntity(pk_request_status_id=1, name=Pending)
+2022-02-22 14:51:58,024 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestStatusService
+METHOD: getRequestStatusByName
+ARGUMENTS: [null]
+2022-02-22 14:51:58,025 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.RequestStatusService
+METHOD: getRequestStatusByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "NULL VALUE PROVIDED"
+2022-02-22 14:51:58,030 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestStatusService
+METHOD: getRequestStatusByName
+ARGUMENTS: []
+2022-02-22 14:51:58,030 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.RequestStatusService
+METHOD: getRequestStatusByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): "
+2022-02-22 14:51:58,035 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestStatusService
+METHOD: getRequestStatusByName
+ARGUMENTS: [a]
+2022-02-22 14:51:58,035 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.RequestStatusService
+METHOD: getRequestStatusByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): a"
+2022-02-22 14:51:58,040 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestStatusService
+METHOD: getRequestStatusByName
+ARGUMENTS: [asdfasdfasdfasdfasdfasdfasdfasdf]
+2022-02-22 14:51:58,040 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.RequestStatusService
+METHOD: getRequestStatusByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid Text, too long (greater than 30): asdfasdfasdfasdfasdfasdfasdfasdf"
+2022-02-22 14:52:00,402 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestTypeService
+METHOD: getRequestTypeByName
+ARGUMENTS: [null]
+2022-02-22 14:52:00,403 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.RequestTypeService
+METHOD: getRequestTypeByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "NULL VALUE PROVIDED"
+2022-02-22 14:52:00,407 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestTypeService
+METHOD: getRequestTypeByName
+ARGUMENTS: []
+2022-02-22 14:52:00,407 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.RequestTypeService
+METHOD: getRequestTypeByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): "
+2022-02-22 14:52:00,411 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestTypeService
+METHOD: getRequestTypeByName
+ARGUMENTS: [a]
+2022-02-22 14:52:00,412 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.RequestTypeService
+METHOD: getRequestTypeByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): a"
+2022-02-22 14:52:00,415 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestTypeService
+METHOD: getRequestTypeByName
+ARGUMENTS: [asdfasdfasdfasdfasdfasdfasdfasdf]
+2022-02-22 14:52:00,416 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.RequestTypeService
+METHOD: getRequestTypeByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid Text, too long (greater than 30): asdfasdfasdfasdfasdfasdfasdfasdf"
+2022-02-22 14:52:00,419 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestTypeService
+METHOD: getRequestTypeByName
+ARGUMENTS: [Retail]
+2022-02-22 14:52:00,423 INFO dLog [main] METHOD: getRequestTypeByName
+RETURNING: RequestTypeEntity(pk_request_type_id=1, name=Retail)
+2022-02-22 14:52:00,427 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestTypeService
+METHOD: getRequestTypeByName
+ARGUMENTS: [Invalid]
+2022-02-22 14:52:00,428 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.RequestTypeService
+METHOD: getRequestTypeByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Request Type not found: Invalid"
+2022-02-22 14:52:03,641 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.TransactionService
+METHOD: getTransactionHistory
+ARGUMENTS: [1]
+2022-02-22 14:52:03,647 INFO dLog [main] METHOD: getTransactionHistory
+RETURNING: GetResponse(gotObject=[TransactionObject(transactionId=1, transactionType=Deposit, transactionDetail=Cash, transactionReference=reference, date=2033-01-01, amount=100.0), TransactionObject(transactionId=2, transactionType=Withdraw, transactionDetail=Retail, transactionReference=reference, date=2003-01-01, amount=10.0), TransactionObject(transactionId=1, transactionType=Withdraw, transactionDetail=Retail, transactionReference=reference, date=2000-01-01, amount=10.0), TransactionObject(transactionId=2, transactionType=Deposit, transactionDetail=Cash, transactionReference=reference, date=1999-10-10, amount=100.0)])
+2022-02-22 14:52:03,648 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.TransactionService
+METHOD: getTransactionHistory
+ARGUMENTS: [1]
+2022-02-22 14:52:03,648 INFO dLog [main] METHOD: getTransactionHistory
+RETURNING: GetResponse(gotObject=[TransactionObject(transactionId=1, transactionType=Deposit, transactionDetail=Cash, transactionReference=reference, date=2033-01-01, amount=100.0), TransactionObject(transactionId=2, transactionType=Withdraw, transactionDetail=Retail, transactionReference=reference, date=2003-01-01, amount=10.0), TransactionObject(transactionId=1, transactionType=Withdraw, transactionDetail=Retail, transactionReference=reference, date=2000-01-01, amount=10.0), TransactionObject(transactionId=2, transactionType=Deposit, transactionDetail=Cash, transactionReference=reference, date=1999-10-10, amount=100.0)])
+2022-02-22 14:52:03,653 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.TransactionService
+METHOD: getTransactionHistory
+ARGUMENTS: [2]
+2022-02-22 14:52:03,654 INFO dLog [main] METHOD: getTransactionHistory
+RETURNING: GetResponse(gotObject=[])
+2022-02-22 14:52:03,658 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.TransactionService
+METHOD: getTransactionHistory
+ARGUMENTS: [-1]
+2022-02-22 14:52:03,658 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.TransactionService
+METHOD: getTransactionHistory
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+MESSAGE: 400 BAD_REQUEST "Invalid account Id Provided: -1"
+2022-02-22 14:52:06,871 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: findByWithdrawId
+ARGUMENTS: [-1]
+2022-02-22 14:52:06,877 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: findByWithdrawId
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidWithdrawIdRequest
+MESSAGE: 400 BAD_REQUEST "Withdraw not found, withdraw Id: -1"
+2022-02-22 14:52:06,883 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=0.0)]
+2022-02-22 14:52:06,883 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+MESSAGE: 400 BAD_REQUEST "Invalid amount, less than or equal to 0: 0.0"
+2022-02-22 14:52:06,888 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=-1.0)]
+2022-02-22 14:52:06,888 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+MESSAGE: 400 BAD_REQUEST "Invalid amount, less than or equal to 0: -1.0"
+2022-02-22 14:52:06,893 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=-2123.0)]
+2022-02-22 14:52:06,893 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+MESSAGE: 400 BAD_REQUEST "Invalid amount, less than or equal to 0: -2123.0"
+2022-02-22 14:52:06,898 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=null, reference=reference, amount=1.0)]
+2022-02-22 14:52:06,898 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "NULL VALUE PROVIDED"
+2022-02-22 14:52:06,903 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=, reference=reference, amount=1.0)]
+2022-02-22 14:52:06,903 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): "
+2022-02-22 14:52:06,908 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, reference=reference, amount=1.0)]
+2022-02-22 14:52:06,909 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid Text, too long (greater than 30): asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf"
+2022-02-22 14:52:06,914 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=a, reference=reference, amount=1.0)]
+2022-02-22 14:52:06,914 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): a"
+2022-02-22 14:52:06,924 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=null, amount=1.0)]
+2022-02-22 14:52:06,924 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "NULL VALUE PROVIDED"
+2022-02-22 14:52:06,929 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=, amount=1.0)]
+2022-02-22 14:52:06,929 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): "
+2022-02-22 14:52:06,935 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, amount=1.0)]
+2022-02-22 14:52:06,935 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid Text, too long (greater than 30): asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf"
+2022-02-22 14:52:06,940 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=a, amount=1.0)]
+2022-02-22 14:52:06,941 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): a"
+2022-02-22 14:52:06,946 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=12.22)]
+2022-02-22 14:52:06,948 INFO dLog [main] METHOD: createWithdrawal
+RETURNING: PostResponse(createdObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-22, amount=12.22)])
+2022-02-22 14:52:06,952 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: getAlLUserWithdrawalsOfType
+ARGUMENTS: [1, Retail]
+2022-02-22 14:52:06,954 INFO dLog [main] METHOD: getAlLUserWithdrawalsOfType
+RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-22, amount=12.22)])
+2022-02-22 14:52:06,958 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: deleteAllWithdraws
+ARGUMENTS: [1]
+2022-02-22 14:52:06,959 INFO dLog [main] METHOD: deleteAllWithdraws
+RETURNING: DeleteResponse(deletedObject=[])
+2022-02-22 14:52:06,963 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: getAllUserWithdrawals
+ARGUMENTS: [1]
+2022-02-22 14:52:06,964 INFO dLog [main] METHOD: getAllUserWithdrawals
+RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-22, amount=12.22)])
+2022-02-22 14:52:06,968 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: findByWithdrawId
+ARGUMENTS: [1]
+2022-02-22 14:52:06,968 INFO dLog [main] METHOD: findByWithdrawId
+RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-22, amount=12.22)])
+2022-02-22 14:53:18,084 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: updateProfile
+ARGUMENTS: [UpdateProfileRequest(profileId=1, userId=1, firstName=Bob, lastName=Tom, email=some@email.com, phoneNumber=123-876-5555, address=1 court)]
+2022-02-22 14:53:18,104 INFO dLog [main] METHOD: updateProfile
+RETURNING: PutResponse(updatedObject=[AccountProfileResponse(profileId=1, userId=1, firstName=Bob, lastName=Tom, email=some@email.com, phoneNumber=123-876-5555, address=1 court)])
+2022-02-22 14:53:18,151 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: deleteProfile
+ARGUMENTS: [AccountProfileRequest(profileId=-1)]
+2022-02-22 14:53:18,156 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: deleteProfile
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidProfileIdException
+MESSAGE: 400 BAD_REQUEST "account profile not found"
+2022-02-22 14:53:18,172 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: deleteProfile
+ARGUMENTS: [AccountProfileRequest(profileId=1)]
+2022-02-22 14:53:18,173 INFO dLog [main] METHOD: deleteProfile
+RETURNING: DeleteResponse(deletedObject=[AccountProfileResponse(profileId=1, userId=1, firstName=Bob, lastName=Tom, email=some@email.com, phoneNumber=123-876-5555, address=1 court)])
+2022-02-22 14:53:18,181 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: getProfile
+ARGUMENTS: [AccountProfileRequest(profileId=-1)]
+2022-02-22 14:53:18,182 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: getProfile
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "invalid request"
+2022-02-22 14:53:18,191 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: getProfile
+ARGUMENTS: [AccountProfileRequest(profileId=1)]
+2022-02-22 14:53:18,192 INFO dLog [main] METHOD: getProfile
+RETURNING: GetResponse(gotObject=[AccountProfileResponse(profileId=1, userId=1, firstName=Bob, lastName=Tom, email=some@email.com, phoneNumber=123-876-5555, address=1 court)])
+2022-02-22 14:53:18,201 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: createProfile
+ARGUMENTS: [ProfileCreateRequest(userId=5, firstName=joe, lastName=something, email=asdf@fjfo.com, phoneNumber=555-555-5555, address=1 street)]
+2022-02-22 14:53:18,202 INFO dLog [main] METHOD: createProfile
+RETURNING: PostResponse(createdObject=[AccountProfileResponse(profileId=1, userId=1, firstName=joe, lastName=something, email=asdf@fjfo.com, phoneNumber=555-555-5555, address=1 street)])
+2022-02-22 14:53:22,094 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: createAccount
+ARGUMENTS: [CreateAccountRequest(userId=1, accountType=lol)]
+2022-02-22 14:53:22,104 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: createAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountTypeException
+MESSAGE: 0
+2022-02-22 14:53:22,113 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+ARGUMENTS: [TransferRequest(ownerAccountId=1, receiverAccountId=2, amount=100000.0)]
+2022-02-22 14:53:22,115 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+MESSAGE: 406 NOT_ACCEPTABLE "Owner Account: $100.0 Invalid Requested Amount: $100000.0"
+2022-02-22 14:53:22,123 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: deleteAccount
+ARGUMENTS: [11111]
+2022-02-22 14:53:22,124 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: deleteAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+MESSAGE: 400 BAD_REQUEST "Invalid Account Id for delete request: 11111"
+2022-02-22 14:53:22,129 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: deleteAccount
+ARGUMENTS: [1]
+2022-02-22 14:53:22,130 INFO dLog [main] METHOD: deleteAccount
+RETURNING: DeleteResponse(deletedObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=100.0)])
+2022-02-22 14:53:22,137 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+ARGUMENTS: [TransferRequest(ownerAccountId=1, receiverAccountId=2, amount=10.0)]
+2022-02-22 14:53:22,139 INFO dLog [main] METHOD: transferToAnotherAccount
+RETURNING: PutResponse(updatedObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=90.0, pendingBalance=90.0), AccountResponseObject(accountId=2, userId=2, accountType=Checking, availableBalance=100.0, pendingBalance=110.0)])
+2022-02-22 14:53:22,149 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: updateAccount
+ARGUMENTS: [UpdateAccountRequest(accountId=1, accountType=Checking, availableBalance=100.0, pendingBalance=100.0)]
+2022-02-22 14:53:22,150 INFO dLog [main] METHOD: updateAccount
+RETURNING: PutResponse(updatedObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=100.0)])
+2022-02-22 14:53:22,157 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccount
+ARGUMENTS: [1]
+2022-02-22 14:53:22,158 INFO dLog [main] METHOD: getAccount
+RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=100.0)])
+2022-02-22 14:53:22,167 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccounts
+ARGUMENTS: [1]
+2022-02-22 14:53:22,168 INFO dLog [main] METHOD: getAccounts
+RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=100.0)])
+2022-02-22 14:53:22,174 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: updateAccount
+ARGUMENTS: [UpdateAccountRequest(accountId=-1, accountType=, availableBalance=0.0, pendingBalance=0.0)]
+2022-02-22 14:53:22,175 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: updateAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid integer, too small (less than 0): -1"
+2022-02-22 14:53:22,183 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccounts
+ARGUMENTS: [-1]
+2022-02-22 14:53:22,188 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccounts
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid integer, too small (less than 0): -1"
+2022-02-22 14:53:22,196 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+ARGUMENTS: [TransferRequest(ownerAccountId=1, receiverAccountId=-1, amount=10.0)]
+2022-02-22 14:53:22,196 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid integer, too small (less than 0): -1"
+2022-02-22 14:53:22,206 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: deleteAccount
+ARGUMENTS: [-1]
+2022-02-22 14:53:22,207 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: deleteAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid integer, too small (less than 0): -1"
+2022-02-22 14:53:22,213 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: createAccount
+ARGUMENTS: [CreateAccountRequest(userId=1, accountType=Checking)]
+2022-02-22 14:53:22,214 INFO dLog [main] METHOD: createAccount
+RETURNING: PostResponse(createdObject=[AccountResponseObject(accountId=1, userId=1, accountType=Checking, availableBalance=100.0, pendingBalance=100.0)])
+2022-02-22 14:53:22,221 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+ARGUMENTS: [TransferRequest(ownerAccountId=-1, receiverAccountId=2, amount=10.0)]
+2022-02-22 14:53:22,222 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: transferToAnotherAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid integer, too small (less than 0): -1"
+2022-02-22 14:53:22,235 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccount
+ARGUMENTS: [-1]
+2022-02-22 14:53:22,236 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccount
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid integer, too small (less than 0): -1"
+2022-02-22 14:53:25,432 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountTypeService
+METHOD: findAccountTypeEntityByName
+ARGUMENTS: [Checking]
+2022-02-22 14:53:25,437 INFO dLog [main] METHOD: findAccountTypeEntityByName
+RETURNING: AccountTypeEntity(pk_account_type_id=1, name=Checking)
+2022-02-22 14:53:25,443 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountTypeService
+METHOD: findAccountTypeEntityByName
+ARGUMENTS: [Invalid]
+2022-02-22 14:53:25,466 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountTypeService
+METHOD: findAccountTypeEntityByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountTypeException
+MESSAGE: 400 BAD_REQUEST "Invalid Account Type Provided: Invalid"
+2022-02-22 14:53:25,533 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountTypeService
+METHOD: findAccountTypeEntityByName
+ARGUMENTS: [null]
+2022-02-22 14:53:25,534 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountTypeService
+METHOD: findAccountTypeEntityByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "NULL VALUE PROVIDED"
+2022-02-22 14:53:25,544 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountTypeService
+METHOD: findAccountTypeEntityByName
+ARGUMENTS: []
+2022-02-22 14:53:25,545 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountTypeService
+METHOD: findAccountTypeEntityByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): "
+2022-02-22 14:53:25,554 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountTypeService
+METHOD: findAccountTypeEntityByName
+ARGUMENTS: [a]
+2022-02-22 14:53:25,555 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountTypeService
+METHOD: findAccountTypeEntityByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): a"
+2022-02-22 14:53:25,564 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.AccountTypeService
+METHOD: findAccountTypeEntityByName
+ARGUMENTS: [asdfasdfasdfasdfasdfasdfasdfasdf]
+2022-02-22 14:53:25,565 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountTypeService
+METHOD: findAccountTypeEntityByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid Text, too long (greater than 30): asdfasdfasdfasdfasdfasdfasdfasdf"
+2022-02-22 14:53:28,421 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=null, amount=12.22)]
+2022-02-22 14:53:28,422 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "NULL VALUE PROVIDED"
+2022-02-22 14:53:28,431 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=, amount=12.22)]
+2022-02-22 14:53:28,434 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): "
+2022-02-22 14:53:28,440 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, amount=12.22)]
+2022-02-22 14:53:28,441 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid Text, too long (greater than 30): asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf"
+2022-02-22 14:53:28,449 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=a, amount=12.22)]
+2022-02-22 14:53:28,449 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): a"
+2022-02-22 14:53:28,458 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=null, accountId=1, reference=reference, amount=1.0)]
+2022-02-22 14:53:28,459 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "NULL VALUE PROVIDED"
+2022-02-22 14:53:28,464 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=, accountId=1, reference=reference, amount=1.0)]
+2022-02-22 14:53:28,464 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): "
+2022-02-22 14:53:28,470 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, accountId=1, reference=reference, amount=1.0)]
+2022-02-22 14:53:28,470 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid Text, too long (greater than 30): asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf"
+2022-02-22 14:53:28,476 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=a, accountId=1, reference=reference, amount=1.0)]
+2022-02-22 14:53:28,476 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): a"
+2022-02-22 14:53:28,481 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: getAllUserDeposits
+ARGUMENTS: [1]
+2022-02-22 14:53:28,490 INFO dLog [main] METHOD: getAllUserDeposits
+RETURNING: GetResponse(gotObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=reference, dateDeposit=2022-02-22, amount=12.22)])
+2022-02-22 14:53:28,498 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: findByDepositId
+ARGUMENTS: [1]
+2022-02-22 14:53:28,499 INFO dLog [main] METHOD: findByDepositId
+RETURNING: GetResponse(gotObject=[DepositResponseObject(depositId=1, accountId=1, depositType=Cash, reference=reference, dateDeposit=2022-02-22, amount=12.22)])
+2022-02-22 14:53:28,511 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=reference, amount=0.0)]
+2022-02-22 14:53:28,512 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+MESSAGE: 400 BAD_REQUEST "Invalid amount, less than or equal to 0: 0.0"
+2022-02-22 14:53:28,531 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=reference, amount=-1.0)]
+2022-02-22 14:53:28,532 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+MESSAGE: 400 BAD_REQUEST "Invalid amount, less than or equal to 0: -1.0"
+2022-02-22 14:53:28,538 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+ARGUMENTS: [DepositRequest(depositType=Cash, accountId=1, reference=reference, amount=-2123.0)]
+2022-02-22 14:53:28,539 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: createDeposit
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+MESSAGE: 400 BAD_REQUEST "Invalid amount, less than or equal to 0: -2123.0"
+2022-02-22 14:53:28,544 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: findByDepositId
+ARGUMENTS: [-1]
+2022-02-22 14:53:28,544 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: findByDepositId
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "400 BAD_REQUEST "Deposit not found: -1""
+2022-02-22 14:53:28,549 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: deleteAllDeposits
+ARGUMENTS: [1]
+2022-02-22 14:53:28,549 INFO dLog [main] METHOD: deleteAllDeposits
+RETURNING: DeleteResponse(deletedObject=[])
+2022-02-22 14:53:31,321 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositTypeService
+METHOD: findDepositTypeEntityByName
+ARGUMENTS: [null]
+2022-02-22 14:53:31,322 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositTypeService
+METHOD: findDepositTypeEntityByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "NULL VALUE PROVIDED"
+2022-02-22 14:53:31,327 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositTypeService
+METHOD: findDepositTypeEntityByName
+ARGUMENTS: []
+2022-02-22 14:53:31,327 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositTypeService
+METHOD: findDepositTypeEntityByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): "
+2022-02-22 14:53:31,332 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositTypeService
+METHOD: findDepositTypeEntityByName
+ARGUMENTS: [a]
+2022-02-22 14:53:31,332 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositTypeService
+METHOD: findDepositTypeEntityByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): a"
+2022-02-22 14:53:31,337 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositTypeService
+METHOD: findDepositTypeEntityByName
+ARGUMENTS: [asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf]
+2022-02-22 14:53:31,337 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositTypeService
+METHOD: findDepositTypeEntityByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid Text, too long (greater than 30): asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf"
+2022-02-22 14:53:31,341 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositTypeService
+METHOD: findDepositTypeEntityByName
+ARGUMENTS: [Cash]
+2022-02-22 14:53:31,349 INFO dLog [main] METHOD: findDepositTypeEntityByName
+RETURNING: DepositTypeEntity(pk_deposit_type_id=1, name=Cash)
+2022-02-22 14:53:31,354 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.DepositTypeService
+METHOD: findDepositTypeEntityByName
+ARGUMENTS: [Invalid]
+2022-02-22 14:53:31,355 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.DepositTypeService
+METHOD: findDepositTypeEntityByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Deposit type not found: Invalid"
+2022-02-22 14:53:33,996 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: checkLogin
+ARGUMENTS: [LoginRequest(username=username1, password=password1)]
+2022-02-22 14:53:34,002 INFO dLog [main] METHOD: checkLogin
+RETURNING: LoginResponse(success=true)
+2022-02-22 14:53:36,747 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestStatusService
+METHOD: getRequestStatusByName
+ARGUMENTS: [Invalid]
+2022-02-22 14:53:36,752 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.RequestStatusService
+METHOD: getRequestStatusByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Request Status type not found: Invalid"
+2022-02-22 14:53:36,757 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestStatusService
+METHOD: getRequestStatusByName
+ARGUMENTS: [Pending]
+2022-02-22 14:53:36,757 INFO dLog [main] METHOD: getRequestStatusByName
+RETURNING: RequestStatusEntity(pk_request_status_id=1, name=Pending)
+2022-02-22 14:53:36,762 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestStatusService
+METHOD: getRequestStatusByName
+ARGUMENTS: [null]
+2022-02-22 14:53:36,762 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.RequestStatusService
+METHOD: getRequestStatusByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "NULL VALUE PROVIDED"
+2022-02-22 14:53:36,769 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestStatusService
+METHOD: getRequestStatusByName
+ARGUMENTS: []
+2022-02-22 14:53:36,770 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.RequestStatusService
+METHOD: getRequestStatusByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): "
+2022-02-22 14:53:36,776 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestStatusService
+METHOD: getRequestStatusByName
+ARGUMENTS: [a]
+2022-02-22 14:53:36,777 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.RequestStatusService
+METHOD: getRequestStatusByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): a"
+2022-02-22 14:53:36,785 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestStatusService
+METHOD: getRequestStatusByName
+ARGUMENTS: [asdfasdfasdfasdfasdfasdfasdfasdf]
+2022-02-22 14:53:36,786 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.RequestStatusService
+METHOD: getRequestStatusByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid Text, too long (greater than 30): asdfasdfasdfasdfasdfasdfasdfasdf"
+2022-02-22 14:53:39,418 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestTypeService
+METHOD: getRequestTypeByName
+ARGUMENTS: [null]
+2022-02-22 14:53:39,418 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.RequestTypeService
+METHOD: getRequestTypeByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "NULL VALUE PROVIDED"
+2022-02-22 14:53:39,423 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestTypeService
+METHOD: getRequestTypeByName
+ARGUMENTS: []
+2022-02-22 14:53:39,424 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.RequestTypeService
+METHOD: getRequestTypeByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): "
+2022-02-22 14:53:39,429 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestTypeService
+METHOD: getRequestTypeByName
+ARGUMENTS: [a]
+2022-02-22 14:53:39,429 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.RequestTypeService
+METHOD: getRequestTypeByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): a"
+2022-02-22 14:53:39,434 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestTypeService
+METHOD: getRequestTypeByName
+ARGUMENTS: [asdfasdfasdfasdfasdfasdfasdfasdf]
+2022-02-22 14:53:39,434 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.RequestTypeService
+METHOD: getRequestTypeByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid Text, too long (greater than 30): asdfasdfasdfasdfasdfasdfasdfasdf"
+2022-02-22 14:53:39,438 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestTypeService
+METHOD: getRequestTypeByName
+ARGUMENTS: [Retail]
+2022-02-22 14:53:39,443 INFO dLog [main] METHOD: getRequestTypeByName
+RETURNING: RequestTypeEntity(pk_request_type_id=1, name=Retail)
+2022-02-22 14:53:39,447 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.RequestTypeService
+METHOD: getRequestTypeByName
+ARGUMENTS: [Invalid]
+2022-02-22 14:53:39,448 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.RequestTypeService
+METHOD: getRequestTypeByName
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Request Type not found: Invalid"
+2022-02-22 14:53:42,085 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.TransactionService
+METHOD: getTransactionHistory
+ARGUMENTS: [1]
+2022-02-22 14:53:42,096 INFO dLog [main] METHOD: getTransactionHistory
+RETURNING: GetResponse(gotObject=[TransactionObject(transactionId=1, transactionType=Deposit, transactionDetail=Cash, transactionReference=reference, date=2033-01-01, amount=100.0), TransactionObject(transactionId=2, transactionType=Withdraw, transactionDetail=Retail, transactionReference=reference, date=2003-01-01, amount=10.0), TransactionObject(transactionId=1, transactionType=Withdraw, transactionDetail=Retail, transactionReference=reference, date=2000-01-01, amount=10.0), TransactionObject(transactionId=2, transactionType=Deposit, transactionDetail=Cash, transactionReference=reference, date=1999-10-10, amount=100.0)])
+2022-02-22 14:53:42,096 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.TransactionService
+METHOD: getTransactionHistory
+ARGUMENTS: [1]
+2022-02-22 14:53:42,097 INFO dLog [main] METHOD: getTransactionHistory
+RETURNING: GetResponse(gotObject=[TransactionObject(transactionId=1, transactionType=Deposit, transactionDetail=Cash, transactionReference=reference, date=2033-01-01, amount=100.0), TransactionObject(transactionId=2, transactionType=Withdraw, transactionDetail=Retail, transactionReference=reference, date=2003-01-01, amount=10.0), TransactionObject(transactionId=1, transactionType=Withdraw, transactionDetail=Retail, transactionReference=reference, date=2000-01-01, amount=10.0), TransactionObject(transactionId=2, transactionType=Deposit, transactionDetail=Cash, transactionReference=reference, date=1999-10-10, amount=100.0)])
+2022-02-22 14:53:42,103 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.TransactionService
+METHOD: getTransactionHistory
+ARGUMENTS: [2]
+2022-02-22 14:53:42,103 INFO dLog [main] METHOD: getTransactionHistory
+RETURNING: GetResponse(gotObject=[])
+2022-02-22 14:53:42,108 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.TransactionService
+METHOD: getTransactionHistory
+ARGUMENTS: [-1]
+2022-02-22 14:53:42,109 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.TransactionService
+METHOD: getTransactionHistory
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAccountIdException
+MESSAGE: 400 BAD_REQUEST "Invalid account Id Provided: -1"
+2022-02-22 14:53:44,585 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: findByWithdrawId
+ARGUMENTS: [-1]
+2022-02-22 14:53:44,590 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: findByWithdrawId
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidWithdrawIdRequest
+MESSAGE: 400 BAD_REQUEST "Withdraw not found, withdraw Id: -1"
+2022-02-22 14:53:44,596 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=0.0)]
+2022-02-22 14:53:44,597 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+MESSAGE: 400 BAD_REQUEST "Invalid amount, less than or equal to 0: 0.0"
+2022-02-22 14:53:44,601 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=-1.0)]
+2022-02-22 14:53:44,601 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+MESSAGE: 400 BAD_REQUEST "Invalid amount, less than or equal to 0: -1.0"
+2022-02-22 14:53:44,605 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=-2123.0)]
+2022-02-22 14:53:44,605 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidAmountException
+MESSAGE: 400 BAD_REQUEST "Invalid amount, less than or equal to 0: -2123.0"
+2022-02-22 14:53:44,610 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=null, reference=reference, amount=1.0)]
+2022-02-22 14:53:44,611 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "NULL VALUE PROVIDED"
+2022-02-22 14:53:44,615 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=, reference=reference, amount=1.0)]
+2022-02-22 14:53:44,616 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): "
+2022-02-22 14:53:44,620 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, reference=reference, amount=1.0)]
+2022-02-22 14:53:44,620 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid Text, too long (greater than 30): asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf"
+2022-02-22 14:53:44,624 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=a, reference=reference, amount=1.0)]
+2022-02-22 14:53:44,624 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): a"
+2022-02-22 14:53:44,629 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=null, amount=1.0)]
+2022-02-22 14:53:44,629 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "NULL VALUE PROVIDED"
+2022-02-22 14:53:44,635 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=, amount=1.0)]
+2022-02-22 14:53:44,635 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): "
+2022-02-22 14:53:44,640 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf, amount=1.0)]
+2022-02-22 14:53:44,640 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid Text, too long (greater than 30): asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasf"
+2022-02-22 14:53:44,645 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=a, amount=1.0)]
+2022-02-22 14:53:44,645 ERROR dLog [main] CONTROLLER CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+MESSAGE: 400 BAD_REQUEST "Invalid text, too short (less than 1): a"
+2022-02-22 14:53:44,649 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: createWithdrawal
+ARGUMENTS: [WithdrawRequest(accountId=1, requestType=Retail, reference=reference, amount=12.22)]
+2022-02-22 14:53:44,650 INFO dLog [main] METHOD: createWithdrawal
+RETURNING: PostResponse(createdObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-22, amount=12.22)])
+2022-02-22 14:53:44,654 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: getAlLUserWithdrawalsOfType
+ARGUMENTS: [1, Retail]
+2022-02-22 14:53:44,655 INFO dLog [main] METHOD: getAlLUserWithdrawalsOfType
+RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-22, amount=12.22)])
+2022-02-22 14:53:44,659 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: deleteAllWithdraws
+ARGUMENTS: [1]
+2022-02-22 14:53:44,659 INFO dLog [main] METHOD: deleteAllWithdraws
+RETURNING: DeleteResponse(deletedObject=[])
+2022-02-22 14:53:44,664 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: getAllUserWithdrawals
+ARGUMENTS: [1]
+2022-02-22 14:53:44,665 INFO dLog [main] METHOD: getAllUserWithdrawals
+RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-22, amount=12.22)])
+2022-02-22 14:53:44,670 DEBUG dLog [main] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: findByWithdrawId
+ARGUMENTS: [1]
+2022-02-22 14:53:44,671 INFO dLog [main] METHOD: findByWithdrawId
+RETURNING: GetResponse(gotObject=[WithdrawResponseObject(withdrawId=1, accountId=1, requestType=Retail, requestStatus=Pending, reference=reference, dateWithdraw=2022-02-22, amount=12.22)])
