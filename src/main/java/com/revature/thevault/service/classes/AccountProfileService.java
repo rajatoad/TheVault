@@ -114,10 +114,8 @@ public class AccountProfileService implements AccountProfileInterface {
             else{
                 throw new InvalidProfileIdException(HttpStatus.BAD_REQUEST, "account profile not found");
             }
-        }catch(InvalidProfileIdException e){
+        }catch(InvalidProfileIdException e) {
             throw e;
-        }catch(Exception e){
-            throw new InvalidRequestException(HttpStatus.BAD_REQUEST, "invalid request");
         }
     }
 

@@ -2,9 +2,11 @@ package com.revature.thevault.utility.validation;
 
 import com.revature.thevault.presentation.model.request.AccountProfileRequest;
 import com.revature.thevault.presentation.model.request.ProfileCreateRequest;
+import com.revature.thevault.service.exceptions.InvalidProfileIdException;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 
 @Component("accountProfileValidation")
@@ -27,6 +29,6 @@ public class AccountProfileValidation {
 
     @Before("accountProfileService() && accountProfileRequest(accountProfileRequest)")
     public void validateAccountProfileRequest(AccountProfileRequest accountProfileRequest){
-
+        if(accountProfileRequest.getProfileId() <= 0) throw new InvalidProfileIdException(HttpStatus.BAD_REQUEST, "Invalid Id (0 or less)");
     }
 }

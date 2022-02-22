@@ -2,10 +2,12 @@ package com.revature.thevault.service.classes;
 
 import com.revature.thevault.presentation.model.request.AccountProfileRequest;
 import com.revature.thevault.presentation.model.request.ProfileCreateRequest;
+import com.revature.thevault.presentation.model.request.UpdateProfileRequest;
 import com.revature.thevault.presentation.model.response.AccountProfileResponse;
 import com.revature.thevault.presentation.model.response.builder.DeleteResponse;
 import com.revature.thevault.presentation.model.response.builder.GetResponse;
 import com.revature.thevault.presentation.model.response.builder.PostResponse;
+import com.revature.thevault.presentation.model.response.builder.PutResponse;
 import com.revature.thevault.repository.dao.AccountProfileRepository;
 import com.revature.thevault.repository.entity.AccountProfileEntity;
 import com.revature.thevault.repository.entity.LoginCredentialEntity;
@@ -35,6 +37,9 @@ class AccountProfileServiceTest {
 
     @MockBean
     private AccountProfileRepository accountProfileRepository;
+
+    @MockBean
+    private LoginService loginService;
 
     private AccountProfileEntity normalAccountProfileEntity;
 
@@ -133,9 +138,13 @@ class AccountProfileServiceTest {
                 "555-555-5555",
                 "1 street"
         );
+
+        Mockito.when(loginService.findUserByUserId(normalCreateRequest.getUserId()))
+                .thenReturn(normalLoginCredentialEntity);
+
         AccountProfileEntity storedProfileEntity = new AccountProfileEntity(
             1,
-                new LoginCredentialEntity(normalCreateRequest.getUserId(), "username", "password"),
+                loginService.findUserByUserId(normalCreateRequest.getUserId()),
                 normalCreateRequest.getFirstName(),
                 normalCreateRequest.getLastName(),
                 normalCreateRequest.getEmail(),
@@ -145,7 +154,7 @@ class AccountProfileServiceTest {
         );
         Mockito.when(accountProfileRepository.save(new AccountProfileEntity(
                 0,
-                new LoginCredentialEntity(normalCreateRequest.getUserId(), "", ""),
+                loginService.findUserByUserId(normalCreateRequest.getUserId()),
                 normalCreateRequest.getFirstName(),
                 normalCreateRequest.getLastName(),
                 normalCreateRequest.getEmail(),
@@ -170,31 +179,36 @@ class AccountProfileServiceTest {
         assertEquals(postResponse, accountProfileService.createProfile(normalCreateRequest));
     }
 
-//    @Test
-//    void updateProfile(){
-//       ProfileCreateRequest pcr = new ProfileCreateRequest(
-//               normalAccountProfileEntity.getPk_profile_id(),
-//               normalAccountProfileEntity.getFirst_name(),
-//               normalAccountProfileEntity.getLast_name(),
-//               normalAccountProfileEntity.getEmail(),
-//               normalAccountProfileEntity.getPhone_number(),
-//               normalAccountProfileEntity.getAddress()
-//       );
-//
-//       Mockito.when(accountProfileRepository.save(normalAccountProfileEntity))
-//               .thenReturn(normalAccountProfileEntity);
-//
-//       AccountProfileEntity ape = accountProfileRepository.save(normalAccountProfileEntity);
-//
-//       AccountProfileResponse apr = convertToProfileResponseEntity(ape);
-//
-//       PostResponse postResponse = PostResponse.builder()
-//               .success(true)
-//               .createdObject(Collections.singletonList(apr))
-//               .build();
-//
-//       assertEquals(postResponse, accountProfileService.updateProfile(pcr));
-//    }
+    @Test
+    void updateProfile(){
+        Mockito.when(loginService.findUserByUserId(normalAccountProfileEntity.getLogincredential().getPk_user_id()))
+                .thenReturn(normalLoginCredentialEntity);
+
+       UpdateProfileRequest pcr = new UpdateProfileRequest(
+               normalAccountProfileEntity.getPk_profile_id(),
+               loginService.findUserByUserId(normalAccountProfileEntity.getLogincredential().getPk_user_id()).getPk_user_id(),
+               normalAccountProfileEntity.getFirst_name(),
+               normalAccountProfileEntity.getLast_name(),
+               normalAccountProfileEntity.getEmail(),
+               normalAccountProfileEntity.getPhone_number(),
+               normalAccountProfileEntity.getAddress()
+       );
+
+       Mockito.when(accountProfileRepository.save(normalAccountProfileEntity))
+               .thenReturn(normalAccountProfileEntity);
+
+
+       AccountProfileEntity ape = accountProfileRepository.save(normalAccountProfileEntity);
+
+       AccountProfileResponse apr = convertToProfileResponseEntity(ape);
+
+       PutResponse putResponse = PutResponse.builder()
+               .success(true)
+               .updatedObject(Collections.singletonList(apr))
+               .build();
+
+       assertEquals(putResponse, accountProfileService.updateProfile(pcr));
+    }
 
     @Test
     void deleteProfile(){
