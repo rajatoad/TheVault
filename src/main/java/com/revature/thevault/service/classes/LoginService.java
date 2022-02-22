@@ -27,8 +27,8 @@ public class LoginService implements LoginServiceInterface {
     @Autowired
     private LoginRepository loginRepository;
 
-    @Autowired
-    private AccountProfileService accountProfileService;
+//    @Autowired
+//    private AccountProfileService accountProfileService;
 
     @Override
     public LoginResponse checkLogin(LoginRequest loginRequest) {
@@ -85,14 +85,14 @@ public class LoginService implements LoginServiceInterface {
         }
         try{
             LoginCredentialEntity loginCredentialEntity = loginRepository.findByUsername(resetPasswordRequest.getUsername());
-            AccountProfileResponse accountProfileResponse = (AccountProfileResponse) accountProfileService.getProfile(new AccountProfileRequest(loginCredentialEntity.getPk_user_id())).getGotObject().get(0);
+//            AccountProfileResponse accountProfileResponse = (AccountProfileResponse) accountProfileService.getProfile(new AccountProfileRequest(loginCredentialEntity.getPk_user_id())).getGotObject().get(0);
             loginCredentialEntity.setPassword(passwordResetter.toString());
-            if(accountProfileResponse.getEmail().contentEquals(resetPasswordRequest.getEmail()))
+//            if(accountProfileResponse.getEmail().contentEquals(resetPasswordRequest.getEmail()))
             return PutResponse.builder()
                     .success(true)
                     .updatedObject(Collections.singletonList(loginRepository.save(loginCredentialEntity)))
                     .build();
-            else throw new InvalidRequestException(HttpStatus.BAD_REQUEST, "invalid Email");
+//            else throw new InvalidRequestException(HttpStatus.BAD_REQUEST, "invalid Email");
         }catch (NullPointerException e){
             throw new InvalidRequestException(HttpStatus.BAD_REQUEST, "invalid request");
         }
