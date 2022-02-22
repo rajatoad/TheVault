@@ -14,10 +14,8 @@ public class RequestTypeService {
     private RequestTypeRepository requestTypeRepository;
 
     public RequestTypeEntity getRequestTypeByName(String requestType) {
-        try{
-            return requestTypeRepository.findByName(requestType);
-        }catch(Exception e){
-            throw new InvalidRequestException(HttpStatus.BAD_REQUEST, e.getMessage());
-        }
+        RequestTypeEntity requestTypeEntity = requestTypeRepository.findByName(requestType);
+        if(requestTypeEntity != null) return requestTypeEntity;
+        else throw new InvalidRequestException(HttpStatus.BAD_REQUEST, "Request Type not found: " + requestType);
     }
 }
