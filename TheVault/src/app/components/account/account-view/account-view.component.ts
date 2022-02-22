@@ -35,7 +35,6 @@ export class AccountViewComponent implements OnInit {
   }
 
   createAccountEvent(submit:boolean){
-    console.log(submit)
     if(submit)this.accounts = this.globalStorage.getAccounts();
   }
 

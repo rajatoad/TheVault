@@ -1,10 +1,8 @@
 package com.revature.thevault.service.classes;
 
 import com.revature.thevault.presentation.model.request.LoginRequest;
-import com.revature.thevault.presentation.model.request.NewLoginCredentialsRequest;
 import com.revature.thevault.presentation.model.request.ResetPasswordRequest;
 import com.revature.thevault.presentation.model.response.LoginResponse;
-import com.revature.thevault.presentation.model.response.builder.PostResponse;
 import com.revature.thevault.presentation.model.response.builder.PutResponse;
 import com.revature.thevault.repository.dao.LoginRepository;
 import com.revature.thevault.repository.entity.LoginCredentialEntity;
@@ -19,6 +17,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 
 import java.util.Collections;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -58,6 +57,7 @@ public class LoginServiceTest {
 
         Mockito.when(loginRepository.findByUsername(validUsername)).thenReturn(loginCredentialEntity);
         Mockito.when(loginRepository.findByUsernameAndPassword(validLoginRequest.getUsername(), validLoginRequest.getPassword())).thenReturn(loginCredentialEntity);
+        Mockito.when(loginRepository.findById(userId)).thenReturn(Optional.ofNullable(loginCredentialEntity));
     }
 
     private LoginResponseObject convertEntityToResponse(LoginCredentialEntity loginCredentialEntity){
@@ -106,67 +106,7 @@ public class LoginServiceTest {
     }
 
     @Test
-    void getLoginCredentialFromLogin(){
-        LoginRequest loginRequest = new LoginRequest(
-          "username1",
-          "password1"
-        );
+    void findUserByUserIdTest(){assertEquals(loginService.findUserByUserId(loginCredentialEntity.getPk_user_id()), loginCredentialEntity);}
 
-        Mockito.when(loginRepository.findByUsernameAndPassword(loginRequest.getUsername(), loginRequest.getPassword()))
-                .thenReturn(loginCredentialEntity);
-
-        PostResponse postResponse = PostResponse.builder()
-                .success(true)
-                .createdObject(Collections.singletonList(convertEntityToResponse(
-                        loginRepository.findByUsernameAndPassword(loginRequest.getUsername(), loginRequest.getPassword())
-                )))
-                .build();
-
-        assertEquals(postResponse, loginService.getLoginCredentialFromLogin(loginRequest));
-    }
-
-    @Test
-    void createNewLogin(){
-        NewLoginCredentialsRequest credentialsRequest = new NewLoginCredentialsRequest(
-                "username1",
-                "password1"
-        );
-
-        LoginCredentialEntity loginCredentialEntity = new LoginCredentialEntity(
-                0,
-                credentialsRequest.getUsername(),
-                credentialsRequest.getPassword()
-        );
-
-        Mockito.when(loginRepository.save(loginCredentialEntity))
-                .thenReturn(loginCredentialEntity);
-
-        PostResponse postResponse = PostResponse.builder()
-                .success(true)
-                .createdObject(Collections.singletonList(convertEntityToResponse(loginCredentialEntity)))
-                .build();
-
-        assertEquals(postResponse, loginService.createNewLogin(credentialsRequest));
-    }
-
-    @Test
-    void validateLogin(){
-        LoginRequest loginRequest = new LoginRequest(
-                "username1",
-                "password1"
-        );
-
-        Mockito.when(loginRepository.findByUsernameAndPassword(loginRequest.getUsername(), loginRequest.getPassword()))
-                .thenReturn(loginCredentialEntity);
-
-        LoginCredentialEntity savedEntity = loginRepository.findByUsernameAndPassword(loginRequest.getUsername(), loginRequest.getPassword());
-
-        PostResponse postResponse = PostResponse.builder()
-                .success(true)
-                .createdObject(Collections.singletonList(convertEntityToResponse(savedEntity)))
-                .build();
-
-        assertEquals(postResponse, loginService.validateLogin(loginRequest));
-    }
 
 }

@@ -1,8 +1,11 @@
+import { Location } from '@angular/common';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, async, fakeAsync, tick } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
+import { By } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
-import { Observable, of } from 'rxjs';
+import { findIndex, Observable, of } from 'rxjs';
 import { NewUser } from 'src/app/models/users/new-user.model';
 import { Profile } from 'src/app/models/users/profile.model';
 import { PostProfile } from 'src/app/models/users/responses/post-profile';
@@ -23,6 +26,9 @@ class MockUserHandler extends UserHandlerService{
 describe('RegisterComponent', () => {
   let component: RegisterComponent;
   let fixture: ComponentFixture<RegisterComponent>;
+  let router: Router;
+  let location: Location;
+  let el: HTMLElement;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -30,10 +36,14 @@ describe('RegisterComponent', () => {
       imports: [HttpClientTestingModule, RouterTestingModule, ReactiveFormsModule]
     })
     .compileComponents();
+
+    router = TestBed.get(Router);
+    location = TestBed.get(Location);
   });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(RegisterComponent);
+    router.initialNavigation();
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -41,4 +51,29 @@ describe('RegisterComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-});
+
+  it('should call the onSubmit method', async (() => {
+    fixture.detectChanges();
+    spyOn(component, 'onSubmit');
+    el = fixture.debugElement.query(By.css('button')).nativeElement;
+    el.click();
+    expect(component.onSubmit).toHaveBeenCalledTimes(1);
+  }));
+
+  it('set submit to true', async(() => {
+    component.onSubmit();
+    expect(component.submitted).toBeTruthy();
+  }));
+
+  it('should navigate to "" redirects to /login', fakeAsync(() => {
+    component.goToLogin();
+    router.navigate(['']);
+    tick();
+    expect(location.path()).toBe('/')
+  }))
+  })
+
+
+
+
+
