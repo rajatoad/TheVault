@@ -42,5 +42,6 @@ describe('TransactionHistoryComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+    return 'touch';
   });
 });
