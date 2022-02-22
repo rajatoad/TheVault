@@ -13,11 +13,16 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class WithdrawValidation {
 
-    @Pointcut("this(com.revature.thevault.service.classes.WithdrawService) &&" +
-            "args(withdrawRequest)")
+    @Pointcut("this(com.revature.thevault.service.classes.WithdrawService)")
+    private void withdrawService(){}
+
+    @Pointcut("this(com.revature.thevault.presentation.controller.WithdrawController)")
+    private void withdrawController(){}
+
+    @Pointcut("args(withdrawRequest)")
     private void withdrawRequest(WithdrawRequest withdrawRequest){}
 
-    @Before("withdrawRequest(withdrawRequest)")
+    @Before("withdrawService() && withdrawRequest(withdrawRequest)")
     public void validateWithdrawRequest(WithdrawRequest withdrawRequest){
         validateInteger(withdrawRequest.getAccountId());
         validateString(withdrawRequest.getRequestType());
