@@ -6,6 +6,7 @@ import com.revature.thevault.presentation.model.response.AccountProfileResponse;
 import com.revature.thevault.presentation.model.response.builder.DeleteResponse;
 import com.revature.thevault.presentation.model.response.builder.GetResponse;
 import com.revature.thevault.presentation.model.response.builder.PostResponse;
+import com.revature.thevault.presentation.model.response.builder.PutResponse;
 import com.revature.thevault.repository.dao.AccountProfileRepository;
 import com.revature.thevault.repository.entity.AccountProfileEntity;
 import com.revature.thevault.repository.entity.LoginCredentialEntity;
@@ -29,11 +30,19 @@ public class AccountProfileService implements AccountProfileInterface {
 
     @Override
     public GetResponse getProfile(AccountProfileRequest accountProfileRequest) {
+        LoginCredentialEntity loginCredential = new LoginCredentialEntity(
+                accountProfileRequest.getProfileId(),
+                "",
+                ""
+        );
+
+        AccountProfileEntity profile = accountProfileRepository.findByLogincredential(loginCredential);
+
         try {
             return GetResponse.builder()
                     .success(true)
 //                    .gotObject(Collections.singletonList(convertEntityToResponse(accountProfileRepository.getById(accountProfileRequest.getProfileId()))))
-                    .gotObject(Collections.singletonList(convertEntityToResponse(accountProfileRepository.findByLogincredential(new LoginCredentialEntity(accountProfileRequest.getProfileId(), "", "")))))
+                    .gotObject(Collections.singletonList(convertEntityToResponse(profile)))
                     .build();
         } catch (Exception e) {
             throw new InvalidRequestException(HttpStatus.BAD_REQUEST, "invalid request");
@@ -88,16 +97,21 @@ public class AccountProfileService implements AccountProfileInterface {
     @Override
     @Transactional
     public DeleteResponse deleteProfile(AccountProfileRequest accountProfileRequest) {
+
         try {
             Optional<AccountProfileEntity> optionalProfile = accountProfileRepository.findById(accountProfileRequest.getProfileId());
-            accountProfileRepository.delete(optionalProfile.get());
-            return DeleteResponse.builder()
-                .success(true)
-                .deletedObject(Collections.singletonList(convertEntityToResponse(optionalProfile.get())))
-                .build();
-
-        }catch(IllegalArgumentException | NullPointerException e){
-            throw new InvalidProfileIdException(HttpStatus.BAD_REQUEST, "account profile not found");
+            if(optionalProfile.isPresent()) {
+                accountProfileRepository.delete(optionalProfile.get());
+                return DeleteResponse.builder()
+                        .success(true)
+                        .deletedObject(Collections.singletonList(convertEntityToResponse(optionalProfile.get())))
+                        .build();
+            }
+            else{
+                throw new InvalidProfileIdException(HttpStatus.BAD_REQUEST, "account profile not found");
+            }
+        }catch(InvalidProfileIdException e){
+            throw e;
         }catch(Exception e){
             throw new InvalidRequestException(HttpStatus.BAD_REQUEST, "invalid request");
         }

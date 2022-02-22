@@ -9,6 +9,8 @@ import com.revature.thevault.presentation.model.response.builder.PostResponse;
 import com.revature.thevault.repository.dao.AccountProfileRepository;
 import com.revature.thevault.repository.entity.AccountProfileEntity;
 import com.revature.thevault.repository.entity.LoginCredentialEntity;
+import com.revature.thevault.service.exceptions.InvalidProfileIdException;
+import com.revature.thevault.service.exceptions.InvalidRequestException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
@@ -22,6 +24,7 @@ import java.util.Collections;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @SpringBootTest
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
@@ -72,21 +75,52 @@ class AccountProfileServiceTest {
                 .thenReturn(normalAccountProfileEntity);
     }
 
+    private AccountProfileResponse convertToProfileResponseEntity(AccountProfileEntity entity){
+        return new AccountProfileResponse(
+                entity.getPk_profile_id(),
+                entity.getLogincredential().getPk_user_id(),
+                entity.getFirst_name(),
+                entity.getLast_name(),
+                entity.getEmail(),
+                entity.getPhone_number(),
+                entity.getAddress()
+        );
+    }
+
     @Test
     void getProfile() {
-        AccountProfileRequest goodRequest = new AccountProfileRequest(
-                normalAccountProfileEntity.getLogincredential().getPk_user_id()
+        AccountProfileRequest apr = new AccountProfileRequest(
+                1
         );
 
-        Mockito.when(accountProfileRepository.getById(goodRequest.getProfileId()))
+        LoginCredentialEntity lce = new LoginCredentialEntity(
+                apr.getProfileId(),
+                "",
+                ""
+        );
+
+        Mockito.when(accountProfileRepository.findByLogincredential(lce))
                 .thenReturn(normalAccountProfileEntity);
 
-        GetResponse successfulResponse = GetResponse.builder()
+        AccountProfileEntity ape = accountProfileRepository.findByLogincredential(lce);
+
+        GetResponse goodResponse = GetResponse.builder()
                 .success(true)
-                .gotObject(Collections.singletonList(accountProfileRepository.getById(goodRequest.getProfileId())))
+                .gotObject(Collections.singletonList(convertToProfileResponseEntity(ape)))
                 .build();
 
-        assertEquals(successfulResponse.getGotObject(), Collections.singletonList(accountProfileRepository.getById(goodRequest.getProfileId())));
+        assertEquals(goodResponse, accountProfileService.getProfile(apr));
+    }
+
+    @Test
+    void getProfileInvalidRequestException(){
+        AccountProfileRequest apr = new AccountProfileRequest(-1);
+        LoginCredentialEntity invalidCredential = new LoginCredentialEntity(-1, "", "");
+
+        Mockito.when(accountProfileRepository.findByLogincredential(invalidCredential))
+                .thenReturn(null);
+        assertThrows(InvalidRequestException.class, () -> accountProfileService.getProfile(apr));
+
     }
 
     @Test
@@ -136,6 +170,32 @@ class AccountProfileServiceTest {
         assertEquals(postResponse, accountProfileService.createProfile(normalCreateRequest));
     }
 
+//    @Test
+//    void updateProfile(){
+//       ProfileCreateRequest pcr = new ProfileCreateRequest(
+//               normalAccountProfileEntity.getPk_profile_id(),
+//               normalAccountProfileEntity.getFirst_name(),
+//               normalAccountProfileEntity.getLast_name(),
+//               normalAccountProfileEntity.getEmail(),
+//               normalAccountProfileEntity.getPhone_number(),
+//               normalAccountProfileEntity.getAddress()
+//       );
+//
+//       Mockito.when(accountProfileRepository.save(normalAccountProfileEntity))
+//               .thenReturn(normalAccountProfileEntity);
+//
+//       AccountProfileEntity ape = accountProfileRepository.save(normalAccountProfileEntity);
+//
+//       AccountProfileResponse apr = convertToProfileResponseEntity(ape);
+//
+//       PostResponse postResponse = PostResponse.builder()
+//               .success(true)
+//               .createdObject(Collections.singletonList(apr))
+//               .build();
+//
+//       assertEquals(postResponse, accountProfileService.updateProfile(pcr));
+//    }
+
     @Test
     void deleteProfile(){
         AccountProfileRequest goodRequest = new AccountProfileRequest(
@@ -144,14 +204,35 @@ class AccountProfileServiceTest {
 
         Optional<AccountProfileEntity> optionalProfile = Optional.ofNullable(normalAccountProfileEntity);
 
+        Mockito.when(accountProfileRepository.findById(goodRequest.getProfileId()))
+                .thenReturn(optionalProfile);
+
+        AccountProfileResponse goodAccountResponse = new AccountProfileResponse(
+                normalAccountProfileEntity.getPk_profile_id(),
+                normalAccountProfileEntity.getLogincredential().getPk_user_id(),
+                normalAccountProfileEntity.getFirst_name(),
+                normalAccountProfileEntity.getLast_name(),
+                normalAccountProfileEntity.getEmail(),
+                normalAccountProfileEntity.getPhone_number(),
+                normalAccountProfileEntity.getAddress()
+        );
+
         DeleteResponse goodResponse = DeleteResponse.builder()
                 .deletedObject(Collections.singletonList(goodAccountResponse))
                 .build();
 
+        Mockito.doNothing().when(accountProfileRepository).delete(optionalProfile.get());
         assertEquals(
-                goodResponse.getDeletedObject(),
-                Collections.singletonList(goodAccountResponse)
+                goodResponse,
+                accountProfileService.deleteProfile(goodRequest)
         );
 
+    }
+
+    @Test
+    void deleteProfileInvalidArgumentException(){
+        Mockito.when(accountProfileRepository.findById(-1))
+                        .thenReturn(Optional.empty());
+        assertThrows(InvalidProfileIdException.class, () -> accountProfileService.deleteProfile(new AccountProfileRequest(-1)));
     }
 }
