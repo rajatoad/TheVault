@@ -40,10 +40,13 @@ describe('TransactionHistoryComponent', () => {
     fixture.detectChanges();
   });
   
-  it('set submit to true', async(() => {
-    component.ngOnInit();
-    expect(component).toBeTruthy();
-}))});
+//   it('set submit to true', async(() => {
+//     component.ngOnInit();
+//     expect(component).toBeTruthy();
+// }))
+
+
+});
 
 //   it('should not create', () => {
 //     expect(component).toBeFalsy();
