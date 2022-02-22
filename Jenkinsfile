@@ -13,7 +13,7 @@ agent any
                 stage("deploy"){
                       steps {
                     echo 'No issues found with the project. Running JAR:'             
-                          sh('export BUILD_ID=dontKillMe')        
+                          sh('export JENKINS_NODE_COOKIE=dontKillMe')        
                           sh('fuser -k 9000/tcp || true')
                           sh('nohup java -jar target/demo-0.0.1-SNAPSHOT.jar &')
 
