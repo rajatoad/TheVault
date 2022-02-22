@@ -1,6 +1,6 @@
 import { Location } from '@angular/common';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { ComponentFixture, TestBed, async, fakeAsync } from '@angular/core/testing';
+import { ComponentFixture, TestBed, async, fakeAsync, tick } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 import { Router } from '@angular/router';
@@ -63,7 +63,16 @@ describe('RegisterComponent', () => {
   it('set submit to true', async(() => {
     component.onSubmit();
     expect(component.submitted).toBeTruthy();
-}))});
+  }));
+
+  it('should navigate to "" redirects to /login', fakeAsync(() => {
+    component.goToLogin();
+    router.navigate(['']);
+    tick();
+    expect(location.path()).toBe('/')
+  }))
+  })
+
 
 
 
