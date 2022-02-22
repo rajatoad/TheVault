@@ -1,7 +1,9 @@
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Profile } from 'src/app/models/users/profile.model';
+import { PutProfile } from 'src/app/models/users/responses/put-profile';
 import { GlobalStorageService } from 'src/app/_services/global-storage.service';
+import { UserHandlerService } from 'src/app/_services/user/user-handler.service';
 
 @Component({
   selector: 'app-edit-profile',
@@ -20,7 +22,8 @@ export class EditProfileComponent implements OnInit {
 
   constructor(
     private globalStorage: GlobalStorageService,
-    private location: Location
+    private location: Location,
+    private userHandler: UserHandlerService
   ) { }
 
   ngOnInit(): void {
@@ -51,7 +54,14 @@ export class EditProfileComponent implements OnInit {
       this.profile.email = this.email;
       this.profile.phoneNumber = this.phoneNumber;
       this.profile.address = this.address;
-      this.globalStorage.setProfile(this.profile);
+      this.userHandler.updateProfile(this.profile, this.profile.profileId, this.globalStorage.getUserId()).subscribe(this.updateProfileObserver);
     }else return;
+  }
+
+  updateProfileObserver = {
+    next: (data: PutProfile) => {
+      this.globalStorage.setProfile(data.updatedObject[0]);
+      this.goBack();
+    }
   }
 }

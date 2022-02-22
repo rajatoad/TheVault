@@ -31,7 +31,7 @@ public class LoginController {
     }
 
     @ResponseStatus(HttpStatus.CREATED)
-    @PostMapping("/new")
+    @PostMapping("/create")
     public PostResponse newLogin(@RequestBody NewLoginCredentialsRequest newLoginRequest){
         return loginService.createNewLogin(newLoginRequest);
     }

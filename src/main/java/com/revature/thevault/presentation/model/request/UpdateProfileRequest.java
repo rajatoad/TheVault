@@ -10,7 +10,12 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class NewLoginCredentialsRequest {
-    String username;
-    String password;
+public class UpdateProfileRequest {
+    int profileId;
+    int userId;
+    String firstName;
+    String lastName;
+    String email;
+    String phoneNumber;
+    String address;
 }

@@ -30,6 +30,6 @@ public class ServiceAspect {
 
     @AfterThrowing(value = "com.revature.thevault.utility.aspects.SystemArchitect.businessService()", throwing = "thrownException")
     public void afterThrowingCheck(JoinPoint jp, Exception thrownException){
-        dLog.error("CONTROLLER CLASS: " + jp.getSignature().getDeclaringType() + "\nMETHOD: " + jp.getSignature().getName() + "\nTHROWING EXCEPTION CLASS: " + thrownException.getClass() + "\nEXCEPTION STACKTRACE: " + thrownException.getStackTrace());
+        dLog.error("CONTROLLER CLASS: " + jp.getSignature().getDeclaringType() + "\nMETHOD: " + jp.getSignature().getName() + "\nTHROWING EXCEPTION CLASS: " + thrownException.getClass() + "\nMESSAGE: " + thrownException.getMessage());
     }
 }

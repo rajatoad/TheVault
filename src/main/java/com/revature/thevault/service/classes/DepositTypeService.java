@@ -1,5 +1,6 @@
 package com.revature.thevault.service.classes;
 
+import com.revature.thevault.service.exceptions.InvalidRequestException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -18,13 +19,8 @@ public class DepositTypeService implements DepositTypeInterface {
 	 
 		@Override
 		public DepositTypeEntity findDepositTypeEntityByName(String name) {
-
-				try{
 					DepositTypeEntity depositTypeEntity = depositTypeRepository.findByName(name);
-					return depositTypeEntity;
-				}catch(Exception e){
-					throw new InvalidDepositTypeException(HttpStatus.BAD_REQUEST, "Invalid Deposit Type Provided: " + name);
-				}
-
+					if(depositTypeEntity != null) return depositTypeEntity;
+					else throw new InvalidRequestException(HttpStatus.BAD_REQUEST, "Deposit type not found: " + name);
 		}
 }
