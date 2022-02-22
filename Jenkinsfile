@@ -5,7 +5,7 @@ agent any
       steps {
             echo 'building the application with Maven...'
             withMaven(maven: 'Maven') {
-            sh ('mvn clean package')
+            sh ('mvn clean install')
 }
           }
         }
