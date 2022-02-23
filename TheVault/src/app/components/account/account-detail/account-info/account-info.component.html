@@ -1,0 +1,25 @@
+<div class=>
+    <div class="shadow">
+        <div class="card">
+            <div class="card-body">
+                <div class="d-flex flex-column">
+                    <div class="d-flex justify-content-center">
+                        <div class="p-2">
+                            <span class="display-4">{{account.accountType}} Account</span>        
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="d-flex justify-content-around">   
+                    <div class="p-2">
+                        Available Balance: {{account.availableBalance | currency}}
+                    </div>
+                    <div class="p-2">
+                        Pending Balance: {{account.pendingBalance | currency}}
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>

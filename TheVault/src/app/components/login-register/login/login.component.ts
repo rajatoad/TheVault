@@ -1,9 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { GetAccount } from 'src/app/models/account/responses/get-account';
+import { PostLogin } from 'src/app/models/login/responses/post-login';
 import { LoginUser } from 'src/app/models/users/login-user.model';
-import BuildUser from 'src/app/utils/build-user';
-import { AuthService } from 'src/app/_services/auth/auth.service';
-import { UserSessionService } from 'src/app/_services/user/user-session.service';
+import { GetUser } from 'src/app/models/users/responses/get-user';
+import { AccountHandlerService } from 'src/app/_services/account/account-handler.service';
+import { RoutingAllocatorService } from 'src/app/_services/app_control/routing-allocator.service';
+import { GlobalStorageService } from 'src/app/_services/global-storage.service';
+import { UserHandlerService } from 'src/app/_services/user/user-handler.service';
 
 @Component({
   selector: 'app-login',
@@ -12,19 +16,25 @@ import { UserSessionService } from 'src/app/_services/user/user-session.service'
 })
 export class LoginComponent implements OnInit {
 
+  error: boolean = false;
+  success: boolean = false;
+  errorMessage: string = "Failed to login, please try again.";
+  successMessage: string = "Successful login!";
+
   form: FormGroup = new FormGroup({
     username: new FormControl(''),   
     password: new FormControl(''),
   });
   submitted = false;
-  errorMessage = '';
   isLoginFailed = false;
   posts : any;
 
   constructor(
     private formBuilder: FormBuilder,
-    private authService: AuthService,
-    private userStorage: UserSessionService 
+    private userHandler: UserHandlerService,
+    private globalStorage: GlobalStorageService,
+    private accountHandler: AccountHandlerService,
+    private router: RoutingAllocatorService
     ) { }
 
   ngOnInit(): void {
@@ -51,6 +61,7 @@ export class LoginComponent implements OnInit {
   }
 
 
+  /* istanbul ignore next */
 get f(): { [key: string]: AbstractControl } {
   return this.form.controls;
 }
@@ -62,27 +73,69 @@ onSubmit(): void {
     return;
   }
 
+  /* istanbul ignore next */
   let userN = this.form.get('username')?.value
+  /* istanbul ignore next */
   let passW = this.form.get('password')?.value
+  /* istanbul ignore next */
   if(userN != null && passW != null) {
-    let loginUser = new LoginUser(userN, passW)
-    this.authService.login(loginUser).subscribe({
-      next: data => {         
-        console.log(data);
-        this.isLoginFailed = false;
-        let builtUser = BuildUser.userBuilder(data);
-        this.userStorage.saveUser(builtUser)
-   
-      },
-      error: err => {
-        this.errorMessage = err.error.message;
-        console.log("Login failed")
-        this.isLoginFailed = true;
-      }
-    });        
+    let loginUser = new LoginUser(userN, passW);
+    this.getUserInfo(loginUser);
   }
 }
 
+//Validate a users input, returning a response on a successful login
+getUserInfo(loginUser: LoginUser){
+  this.userHandler.validateLogin(loginUser).subscribe(this.loginObserver);
+}
+
+// On a successful login, the profile is requested, and on that success the user accounts are retrieved.
+// After getting all accounts, we move to the next view for account view.
+loginObserver = {
+  next: (data: PostLogin) => {
+    console.log(data);
+    this.globalStorage.setToken(data.createdObject[0].jwt);
+    console.log(this.globalStorage.getToken());
+    this.globalStorage.setUserId(data.createdObject[0].userId);
+    this.globalStorage.setUsername(data.createdObject[0].username);
+    this.userHandler.getUserProfile(this.globalStorage.getUserId()).subscribe(this.profileObserver)
+  },
+  error: (err: Error) => {
+    console.error("Login Observer error: " + err);
+    this.error = true;
+    this.onReset();},
+  complete: () => console.log("Completed getting login")
+}
+
+profileObserver = {
+  next: (data: GetUser) => {
+    this.globalStorage.setProfile(data.gotObject[0]);
+    this.accountHandler.getAccounts(this.globalStorage.getUserId()).subscribe(this.accountObserver);
+  },
+  error: (err: Error) => {
+  /* istanbul ignore next */
+    console.error("profile observer error: " + err);
+    this.error = true;
+  /* istanbul ignore next */
+    this.onReset();},
+  complete: () => console.log("Completed getting profile")
+}
+
+accountObserver = {
+  next: (data: GetAccount) => {
+    this.globalStorage.setAccounts(data.gotObject);
+    this.router.accountView();
+  },
+  /* istanbul ignore next */
+  error: (err: Error) => {
+    console.log("account observer error: " + err);
+    this.error = true;
+    this.onReset();
+  },
+  complete: () => console.log("Completed getting user accounts")
+}
+
+  /* istanbul ignore next */
 onReset(): void {
   this.submitted = false;
   this.form.reset();

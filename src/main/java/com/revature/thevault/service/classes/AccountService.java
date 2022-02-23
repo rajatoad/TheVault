@@ -1,25 +1,24 @@
 package com.revature.thevault.service.classes;
 
-import com.revature.thevault.presentation.model.request.*;
-import com.revature.thevault.presentation.model.response.AccountResponse;
-import com.revature.thevault.presentation.model.response.builder.*;
+import com.revature.thevault.presentation.model.request.CreateAccountRequest;
+import com.revature.thevault.presentation.model.request.TransferRequest;
+import com.revature.thevault.presentation.model.request.UpdateAccountRequest;
+import com.revature.thevault.presentation.model.response.builder.DeleteResponse;
+import com.revature.thevault.presentation.model.response.builder.GetResponse;
+import com.revature.thevault.presentation.model.response.builder.PostResponse;
+import com.revature.thevault.presentation.model.response.builder.PutResponse;
 import com.revature.thevault.repository.dao.AccountRepository;
 import com.revature.thevault.repository.entity.AccountEntity;
 import com.revature.thevault.repository.entity.LoginCredentialEntity;
-import com.revature.thevault.service.exceptions.InvalidAccountIdException;
-import com.revature.thevault.service.exceptions.InvalidRequestException;
-import com.revature.thevault.service.exceptions.InvalidUserIdException;
+import com.revature.thevault.service.dto.AccountResponseObject;
+import com.revature.thevault.service.exceptions.*;
 import com.revature.thevault.service.interfaces.AccountServiceInterface;
-import com.revature.thevault.utility.enums.ResponseType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @Service("accountService")
 public class AccountService implements AccountServiceInterface{
@@ -27,89 +26,139 @@ public class AccountService implements AccountServiceInterface{
     @Autowired
     private AccountRepository accountRepository;
 
-    @Override
-    public GenericResponse createAccount(CreateAccountRequest createAccountRequest) {
+    @Autowired
+    private AccountTypeService accountTypeService;
 
-        return null;
+    @Override
+    public PostResponse createAccount(CreateAccountRequest createAccountRequest) {
+        return PostResponse.builder()
+                .success(true)
+                .createdObject(Collections.singletonList(
+                        convertAccountEntityToResponse(
+                                accountRepository.save(
+                                        new AccountEntity(
+                                                0,
+                                                new LoginCredentialEntity(createAccountRequest.getUserId(), "", ""),
+                                                accountTypeService.findAccountTypeEntityByName(createAccountRequest.getAccountType()),
+                                                0,
+                                                0)
+                                )
+                        )
+                )
+                ).build();
     }
 
     @Override
-    public GetResponse getAccount(GetAccountRequestSingle getAccountRequestSingle) {
-        try{
-            Optional<AccountEntity> accountEntityOptional = accountRepository.findById(getAccountRequestSingle.getAccountId());
-            if(accountEntityOptional.isPresent())
-                return GetResponse.builder()
-                        .success(true)
-                        .responseType(ResponseType.GET)
-                        .message("Account retrieved by Account Id: " + getAccountRequestSingle.getAccountId())
-                        .gotObject(Collections.singletonList(accountEntityOptional.get()))
-                        .build();
-            else
-                throw new InvalidAccountIdException(HttpStatus.BAD_REQUEST, "Invalid Account Id for get request: " + getAccountRequestSingle.getAccountId());
-        }catch(Exception e){
-            throw new InvalidRequestException(HttpStatus.BAD_REQUEST, "Invalid Request");
-        }
+    public GetResponse getAccount(int accountId) {
+            return GetResponse.builder()
+                    .success(true)
+                    .gotObject(Collections.singletonList(
+                            convertAccountEntityToResponse(
+                                    getAccountById(accountId))))
+                    .build();
     }
 
     @Override
-    public DeleteResponse deleteAccount(DeleteAccountRequest deleteAccountRequest) {
-        try{
-            AccountEntity accountEntity = accountRepository.getById(deleteAccountRequest.getAccountId());
+    public DeleteResponse deleteAccount(int accountId) {
+        try {
+            AccountEntity accountEntity = getAccountById(accountId);
             accountRepository.delete(accountEntity);
             return DeleteResponse.builder()
                     .success(true)
-                    .responseType(ResponseType.DELETE)
-                    .message("Successful Account Deletion: " + deleteAccountRequest.getAccountId())
-                    .deletedObject(Collections.singletonList(accountEntity))
+                    .deletedObject(Collections.singletonList(
+                            convertAccountEntityToResponse(accountEntity)))
                     .build();
-        }catch(EntityNotFoundException e){
-            throw new InvalidAccountIdException(HttpStatus.BAD_REQUEST, "Invalid Account Id for delete request: " + deleteAccountRequest.getAccountId());
-        }catch(Exception e){
-            throw new InvalidRequestException(HttpStatus.BAD_REQUEST, "Invalid Request");
-        }
-    }
-
-
-    @Override
-    public GetResponse getAccounts(GetAccountRequestAll getAccountRequestAll) {
-        try{
-            List<AccountEntity> accountEntities = accountRepository.findByLogincredentials(new LoginCredentialEntity(getAccountRequestAll.getUserId(), "", ""));
-            return GetResponse.builder()
-                    .success(true)
-                    .responseType(ResponseType.GET)
-                    .message("Successful retrieval of user accounts by user Id: " + getAccountRequestAll.getUserId())
-                    .gotObject(accountEntities)
-                    .build();
-        }catch(Exception e){
-            throw new InvalidRequestException(HttpStatus.BAD_REQUEST, "Invalid Request");
+        } catch (EntityNotFoundException e) {
+            throw new InvalidAccountIdException(HttpStatus.BAD_REQUEST, "Invalid Account Id for delete request: " + accountId);
         }
     }
 
     @Override
-    public GenericResponse updateAccountAvailableBalance(UpdateBalanceRequest updateBalanceRequest) {
-        return null;
+    public GetResponse getAccounts(int userId) {
+        List<AccountEntity> accountEntities = getUserAccountsByUserId(userId);
+        return GetResponse.builder()
+                .success(true)
+                .gotObject(
+                        convertAccountEntitiesToResponseList(accountEntities))
+                .build();
     }
 
     @Override
-    public GenericResponse updateAccountPendingBalance(UpdateBalanceRequest updateBalanceRequest) {
-        return null;
+    public PutResponse updateAccount(UpdateAccountRequest updateAccountRequest) {
+        AccountEntity accountEntityReal = getAccountById(updateAccountRequest.getAccountId());
+        accountEntityReal.setAccountTypeEntity(accountTypeService.findAccountTypeEntityByName(updateAccountRequest.getAccountType()));
+        accountEntityReal.setAvailable_balance(updateAccountRequest.getAvailableBalance());
+        accountEntityReal.setPending_balance(updateAccountRequest.getPendingBalance());
+        AccountEntity updatedAccountEntity = updateAccountEntity(accountEntityReal);
+        return PutResponse.builder()
+                .success(true)
+                .updatedObject(Collections.singletonList(
+                        convertAccountEntityToResponse(updatedAccountEntity)))
+                .build();
     }
+
 
     @Override
-    public GenericResponse transferToAnotherAccount(TransferRequest transferRequest) {
-        return null;
+    public PutResponse transferToAnotherAccount(TransferRequest transferRequest) {
+        AccountEntity ownerAccountEntity = getAccountById(transferRequest.getOwnerAccountId());
+        AccountEntity receiverAccountEntity = getAccountById(transferRequest.getReceiverAccountId());
+        if (ownerAccountEntity.getAvailable_balance() <= transferRequest.getAmount())
+            throw new InvalidAmountException(HttpStatus.NOT_ACCEPTABLE, "Owner Account: $" + ownerAccountEntity.getAvailable_balance() + " Invalid Requested Amount: $" + transferRequest.getAmount());
+
+        AccountEntity updatedOwner = updateAccountEntity(
+                updateAmount(ownerAccountEntity, -transferRequest.getAmount(), true));
+        AccountEntity updatedReceiver = updateAccountEntity(
+                updateAmount(receiverAccountEntity, transferRequest.getAmount(), false));
+
+        return PutResponse.builder()
+                .success(true)
+                .updatedObject(convertAccountEntitiesToResponseList(Arrays.asList(updatedOwner, updatedReceiver)))
+                .build();
     }
 
+    /**
+     * Update the balance of an account entity, it is always assumed that the pending balance is updated but a boolean must be true to update both
+     * If money is to be removed then a negative amount must be passed in
+     * @param accountEntity The account entity passed in to be updated
+     * @param amount The amount needed to be updating by, pass in a negative if money is to be removed
+     * @param both The boolean check to update both pending and available balance.
+     * @return The account entity with its balances updated as requested
+     */
+     private AccountEntity updateAmount(AccountEntity accountEntity, float amount, boolean both){
+        accountEntity.setPending_balance(accountEntity.getPending_balance() + amount);
+        if(both) accountEntity.setAvailable_balance(accountEntity.getAvailable_balance() + amount);
+        return accountRepository.save(accountEntity);
+    }
 
-    //Generic Fail Response used by the service methods for exceptions that occurred but were not caught explicitly
-    //This will provide more information than a generic exception for the front end
+    private AccountEntity getAccountById(int accountId){
+        Optional<AccountEntity> accountEntityOptional = accountRepository.findById(accountId);
+        if (accountEntityOptional.isPresent()) return accountEntityOptional.get();
+        else throw new EntityNotFoundException();
+    }
 
-    private GenericResponse failResponse(Exception e, String message) {
-        return FailResponse.builder()
-                .success(false)
-                .responseType(ResponseType.FAIL)
-                .message(message)
-                .exception(e).
-                build();
+    private List<AccountEntity> getUserAccountsByUserId(int userId){
+        List<AccountEntity> accountEntities = accountRepository.findByLogincredentials(new LoginCredentialEntity(userId, "", ""));
+        if(accountEntities != null) return accountEntities;
+        else throw new InvalidUserIdException(HttpStatus.BAD_REQUEST, "Invalid User Id Provided: " + userId);
+    }
+
+    private AccountEntity updateAccountEntity(AccountEntity accountEntity){
+        return accountRepository.save(accountEntity);
+    }
+
+    private List<AccountResponseObject> convertAccountEntitiesToResponseList(List<AccountEntity> accountEntities) {
+        List<AccountResponseObject> responseObjects = new ArrayList<>(accountEntities.size());
+        accountEntities.forEach(acc -> responseObjects.add(convertAccountEntityToResponse(acc)));
+        return responseObjects;
+    }
+
+    private AccountResponseObject convertAccountEntityToResponse(AccountEntity accountEntity) {
+        return new AccountResponseObject(
+                accountEntity.getPk_account_id(),
+                accountEntity.getLogincredentials().getPk_user_id(),
+                accountEntity.getAccountTypeEntity().getName(),
+                accountEntity.getAvailable_balance(),
+                accountEntity.getPending_balance()
+        );
     }
 }

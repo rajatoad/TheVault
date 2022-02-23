@@ -11,8 +11,9 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class DepositRequest {
-    String depositType;
+    
+	String depositType;
     int accountId;
     String reference;
-    int amount;
+    float amount;
 }
