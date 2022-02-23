@@ -9,6 +9,7 @@ import com.revature.thevault.repository.entity.*;
 import com.revature.thevault.service.dto.WithdrawResponseObject;
 import com.revature.thevault.service.exceptions.InvalidAmountException;
 import com.revature.thevault.service.exceptions.InvalidRequestException;
+import com.revature.thevault.service.exceptions.InvalidWithdrawIdRequest;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -169,6 +170,12 @@ class WithdrawServiceTest {
                 1F
         );
         assertThrows(InvalidRequestException.class, () -> withdrawService.createWithdrawal(invalidRequest));
+    }
+
+    @Test
+    void FindByWithdrawIdInvalidWithdrawIdException(){
+        Mockito.when(withdrawRepository.findById(-1)).thenReturn(Optional.empty());
+        assertThrows(InvalidWithdrawIdRequest.class, () -> withdrawService.findByWithdrawId(-1));
     }
 
     @Test

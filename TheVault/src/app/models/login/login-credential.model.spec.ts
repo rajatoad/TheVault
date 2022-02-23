@@ -5,7 +5,8 @@ describe('LoginCredential', () => {
     let loginCredential: LoginCredential = new LoginCredential(
       1,
       "username",
-      "password"
+      "password",
+      "jwt_token"
     );
     expect(loginCredential).toBeTruthy();
   });

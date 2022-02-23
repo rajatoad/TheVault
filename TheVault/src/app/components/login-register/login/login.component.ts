@@ -16,12 +16,16 @@ import { UserHandlerService } from 'src/app/_services/user/user-handler.service'
 })
 export class LoginComponent implements OnInit {
 
+  error: boolean = false;
+  success: boolean = false;
+  errorMessage: string = "Failed to login, please try again.";
+  successMessage: string = "Successful login!";
+
   form: FormGroup = new FormGroup({
     username: new FormControl(''),   
     password: new FormControl(''),
   });
   submitted = false;
-  errorMessage = '';
   isLoginFailed = false;
   posts : any;
 
@@ -57,6 +61,7 @@ export class LoginComponent implements OnInit {
   }
 
 
+  /* istanbul ignore next */
 get f(): { [key: string]: AbstractControl } {
   return this.form.controls;
 }
@@ -68,8 +73,11 @@ onSubmit(): void {
     return;
   }
 
+  /* istanbul ignore next */
   let userN = this.form.get('username')?.value
+  /* istanbul ignore next */
   let passW = this.form.get('password')?.value
+  /* istanbul ignore next */
   if(userN != null && passW != null) {
     let loginUser = new LoginUser(userN, passW);
     this.getUserInfo(loginUser);
@@ -85,12 +93,16 @@ getUserInfo(loginUser: LoginUser){
 // After getting all accounts, we move to the next view for account view.
 loginObserver = {
   next: (data: PostLogin) => {
+    console.log(data);
+    this.globalStorage.setToken(data.createdObject[0].jwt);
+    console.log(this.globalStorage.getToken());
     this.globalStorage.setUserId(data.createdObject[0].userId);
     this.globalStorage.setUsername(data.createdObject[0].username);
     this.userHandler.getUserProfile(this.globalStorage.getUserId()).subscribe(this.profileObserver)
   },
   error: (err: Error) => {
     console.error("Login Observer error: " + err);
+    this.error = true;
     this.onReset();},
   complete: () => console.log("Completed getting login")
 }
@@ -101,7 +113,10 @@ profileObserver = {
     this.accountHandler.getAccounts(this.globalStorage.getUserId()).subscribe(this.accountObserver);
   },
   error: (err: Error) => {
+  /* istanbul ignore next */
     console.error("profile observer error: " + err);
+    this.error = true;
+  /* istanbul ignore next */
     this.onReset();},
   complete: () => console.log("Completed getting profile")
 }
@@ -111,10 +126,16 @@ accountObserver = {
     this.globalStorage.setAccounts(data.gotObject);
     this.router.accountView();
   },
-  error: (err: Error) => console.log("account observer error: " + err),
+  /* istanbul ignore next */
+  error: (err: Error) => {
+    console.log("account observer error: " + err);
+    this.error = true;
+    this.onReset();
+  },
   complete: () => console.log("Completed getting user accounts")
 }
 
+  /* istanbul ignore next */
 onReset(): void {
   this.submitted = false;
   this.form.reset();

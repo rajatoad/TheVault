@@ -9,17 +9,23 @@ import { Transaction } from 'src/app/models/transaction/transaction.model';
 })
 export class TransactionHistoryComponent implements OnInit {
   
+  /* istanbul ignore next */
   term!:string;
+  /* istanbul ignore next */
   index?:number
   
+  /* istanbul ignore next */
   @Input()
   account!: Account;
   
+  /* istanbul ignore next */
   @Input()
   transactions: Transaction[] = [];
 
+  /* istanbul ignore next */
   constructor() { }
 
+  /* istanbul ignore next */
   ngOnInit(): void {
   }
 }
