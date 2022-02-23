@@ -15,9 +15,10 @@ button {
     .vault-title{
         width: 280px;
         position: absolute;
-        top: -30%;
-        left: 55%;
+        top: -60%;
+        left: 50%;
         transform: translate(-50%,-50%);
         color: black;
       
     }
+    
