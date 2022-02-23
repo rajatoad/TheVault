@@ -2,6 +2,7 @@ import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Observable, of } from 'rxjs';
 import { Account } from 'src/app/models/account/account.model';
+import { DeleteAccount } from 'src/app/models/account/responses/delete-account';
 import { GetAccount } from 'src/app/models/account/responses/get-account';
 import { DeleteDeposit } from 'src/app/models/transaction/responses/delete-deposit';
 import { DeleteWithdraw } from 'src/app/models/transaction/responses/delete-withdraw';
@@ -74,4 +75,79 @@ describe('SelectComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should on calling setupAccount, update the accounts', () => {
+    const fixture = TestBed.createComponent(SelectComponent);
+    const app = fixture.componentInstance;
+
+    let getAccounts: GetAccount = {
+      success: true,
+      gotObject: [
+        new Account(1, 1, "Checking", 100, 100)
+      ]
+    }
+
+    let accountHandler = fixture.debugElement.injector.get(AccountHandlerService);
+    let globalStorage = fixture.debugElement.injector.get(GlobalStorageService);
+
+    let getAccountSpy = spyOn(accountHandler, "getAccounts").and.returnValue(of(getAccounts));
+    let userIdSpy = spyOn(globalStorage, "getUserId").and.returnValue(1);
+
+    app.setupAccounts();
+    expect(getAccountSpy).toHaveBeenCalled();
+    expect(userIdSpy).toHaveBeenCalled();
+    expect(app.accounts[0]).toBe(getAccounts.gotObject[0]);
+  });
+
+  it('should delete the account and update the components current accounts', () => {
+    const fixture = TestBed.createComponent(SelectComponent);
+    const app = fixture.componentInstance;
+
+    let account: Account = new Account(1, 1, "Checking", 100, 100);
+    let index: number = 0;
+
+    let deleteDeposits: DeleteDeposit = {
+      success: true,
+      deletedObject: []
+    };
+
+    let deleteWithdraws: DeleteWithdraw = {
+      success: true,
+      deletedObject: []
+    };
+
+    let deleteAccount: DeleteAccount = {
+      success: true,
+      deletedObject: [new Account(1, 1, "Checking", 100, 100)]
+    };
+
+    let getAccounts: GetAccount = {
+      success: true,
+      gotObject: []
+    };
+
+    let transactionHandler = fixture.debugElement.injector.get(TransactionHandlerService);
+    let deleteAllDepositsSpy = spyOn(transactionHandler, "deleteAllDeposits").and.returnValue(of(deleteDeposits));
+    let deleteAllWithdrawsSpy = spyOn(transactionHandler, "deleteAllWithdraws").and.returnValue(of(deleteWithdraws));
+
+    let accountHandler = fixture.debugElement.injector.get(AccountHandlerService);
+    let deleteAccountSpy = spyOn(accountHandler, "deleteAccount").and.returnValue(of(deleteAccount));
+    let globalStorage = fixture.debugElement.injector.get(GlobalStorageService);
+
+    let getAccountSpy = spyOn(accountHandler, "getAccounts").and.returnValue(of(getAccounts));
+    let userIdSpy = spyOn(globalStorage, "getUserId").and.returnValue(1);
+
+    app.accounts = [account];
+    app.deleteAccount(account, index);
+    expect(deleteAllDepositsSpy).toHaveBeenCalled();
+    expect(deleteAllWithdrawsSpy).toHaveBeenCalled();
+    expect(deleteAccountSpy).toHaveBeenCalled();
+    expect(getAccountSpy).toHaveBeenCalled();
+    expect(userIdSpy).toHaveBeenCalled();
+    expect(app.accounts.length).toBe(0);
+    
+  });
+  
+
+
 });

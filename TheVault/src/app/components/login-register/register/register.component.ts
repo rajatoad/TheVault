@@ -117,13 +117,16 @@ export class RegisterComponent implements OnInit {
     this.routingAllocator.login();
   }
 
+  /* istanbul ignore next */
   get f(): { [key: string]: AbstractControl } {
     return this.form.controls;
   }
 
+  /* istanbul ignore next */
   onSubmit(): void {
     this.submitted = true;
 
+  /* istanbul ignore next */
     if (this.form.invalid) {
       return;
     }
@@ -144,7 +147,6 @@ export class RegisterComponent implements OnInit {
 
       // Creates a new user login and a new profile using two separate endpoints
   registerUser(){
-    console.log(this.newUser)
     this.userHandler.createNewLogin(this.newUser.username, this.newUser.password).subscribe(this.loginObserver)
   }
 

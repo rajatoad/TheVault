@@ -57,6 +57,7 @@ export class LoginComponent implements OnInit {
   }
 
 
+  /* istanbul ignore next */
 get f(): { [key: string]: AbstractControl } {
   return this.form.controls;
 }
@@ -68,8 +69,11 @@ onSubmit(): void {
     return;
   }
 
+  /* istanbul ignore next */
   let userN = this.form.get('username')?.value
+  /* istanbul ignore next */
   let passW = this.form.get('password')?.value
+  /* istanbul ignore next */
   if(userN != null && passW != null) {
     let loginUser = new LoginUser(userN, passW);
     this.getUserInfo(loginUser);
@@ -101,7 +105,9 @@ profileObserver = {
     this.accountHandler.getAccounts(this.globalStorage.getUserId()).subscribe(this.accountObserver);
   },
   error: (err: Error) => {
+  /* istanbul ignore next */
     console.error("profile observer error: " + err);
+  /* istanbul ignore next */
     this.onReset();},
   complete: () => console.log("Completed getting profile")
 }
@@ -111,10 +117,12 @@ accountObserver = {
     this.globalStorage.setAccounts(data.gotObject);
     this.router.accountView();
   },
+  /* istanbul ignore next */
   error: (err: Error) => console.log("account observer error: " + err),
   complete: () => console.log("Completed getting user accounts")
 }
 
+  /* istanbul ignore next */
 onReset(): void {
   this.submitted = false;
   this.form.reset();

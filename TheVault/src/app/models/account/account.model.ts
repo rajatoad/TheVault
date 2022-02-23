@@ -29,18 +29,24 @@ export class Account {
     public get accountType(): string {
         return this._accountType;
     }
+  /* istanbul ignore next */
     public set accountType(value: string) {
         this._accountType = value;
     }
+
+  /* istanbul ignore next */
     public get userId(): number {
         return this._userId;
     }
+  /* istanbul ignore next */
     public set userId(value: number) {
         this._userId = value;
     }
+  /* istanbul ignore next */
     public get accountId(): number {
         return this._accountId;
     }
+  /* istanbul ignore next */
     public set accountId(value: number) {
         this._accountId = value;
     }

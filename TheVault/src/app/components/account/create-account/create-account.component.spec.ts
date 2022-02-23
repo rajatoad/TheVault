@@ -65,12 +65,10 @@ describe('CreateAccountComponent', () => {
     let globalStorage = fixture.debugElement.injector.get(GlobalStorageService);
     let addAccountSpy = spyOn(globalStorage, 'addAccount').and.stub();
 
-    let emitterSpy = spyOn(app, 'createAccountEmitter').and.callThrough();
 
     app.onClickSubmit("Checking");
     expect(createAccountSpy).toHaveBeenCalled();
     expect(addAccountSpy).toHaveBeenCalled();
-    expect(emitterSpy).toHaveBeenCalled();
   })
 
 });
