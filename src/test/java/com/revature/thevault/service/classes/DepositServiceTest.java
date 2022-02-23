@@ -29,9 +29,12 @@ import com.revature.thevault.repository.entity.DepositEntity;
 import com.revature.thevault.repository.entity.DepositTypeEntity;
 import com.revature.thevault.repository.entity.LoginCredentialEntity;
 import com.revature.thevault.service.dto.DepositResponseObject;
+import org.springframework.test.annotation.DirtiesContext;
 
 @SpringBootTest
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
+@DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_CLASS)
+
 public class DepositServiceTest {
 	@Autowired
 	private DepositService depositService;
