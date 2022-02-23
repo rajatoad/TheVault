@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 import { Account } from 'src/app/models/account/account.model';
 import { Profile } from 'src/app/models/users/profile.model';
 import { GlobalStorageService } from 'src/app/_services/global-storage.service';
@@ -41,7 +42,7 @@ describe('AccountViewComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ AccountViewComponent ],
-      imports: [],
+      imports: [RouterTestingModule],
       providers: [
         {
           provider: GlobalStorageService,

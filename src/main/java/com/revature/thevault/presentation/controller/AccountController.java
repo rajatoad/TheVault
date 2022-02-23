@@ -6,6 +6,9 @@ import com.revature.thevault.presentation.model.response.builder.GetResponse;
 import com.revature.thevault.presentation.model.response.builder.PostResponse;
 import com.revature.thevault.presentation.model.response.builder.PutResponse;
 import com.revature.thevault.service.classes.AccountService;
+import com.revature.thevault.service.exceptions.InvalidAuthorizationError;
+import com.revature.thevault.utility.JWTInfo;
+import com.revature.thevault.utility.JWTUtility;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -21,38 +24,50 @@ public class AccountController {
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping(path = "/find", produces = MediaType.APPLICATION_JSON_VALUE)
-    public GetResponse getAccount(@RequestParam int accountId){
-        return accountService.getAccount(accountId);
+    public GetResponse getAccount(@RequestHeader("Authorization") String token, @RequestParam int accountId){
+        JWTInfo parsedJWT = JWTUtility.verifyUser(token);
+        if(parsedJWT != null) return accountService.getAccount(accountId);
+        else throw new InvalidAuthorizationError(HttpStatus.UNAUTHORIZED, "No valid JWT");
     }
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping(path = "/users-accounts", produces = MediaType.APPLICATION_JSON_VALUE)
-    public GetResponse getUserAccountList(@RequestParam int userId){
-        return accountService.getAccounts(userId);
+    public GetResponse getUserAccountList(@RequestHeader("Authorization") String token, @RequestParam int userId){
+        JWTInfo parsedJWT = JWTUtility.verifyUser(token);
+        if(parsedJWT != null) return accountService.getAccounts(userId);
+        else throw new InvalidAuthorizationError(HttpStatus.UNAUTHORIZED, "No valid JWT");
     }
 
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping(path = "/create", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public PostResponse createAccount(@RequestBody CreateAccountRequest createAccountRequest){
-        return accountService.createAccount(createAccountRequest);
+    public PostResponse createAccount(@RequestHeader("Authorization") String token, @RequestBody CreateAccountRequest createAccountRequest){
+        JWTInfo parsedJWT = JWTUtility.verifyUser(token);
+        if(parsedJWT != null) return accountService.createAccount(createAccountRequest);
+        else throw new InvalidAuthorizationError(HttpStatus.UNAUTHORIZED, "No valid JWT");
     }
 
     @ResponseStatus(HttpStatus.OK)
     @DeleteMapping(path = "/delete", produces = MediaType.APPLICATION_JSON_VALUE)
-    public DeleteResponse deleteAccount(@RequestParam int accountId){
-        return accountService.deleteAccount(accountId);
+    public DeleteResponse deleteAccount(@RequestHeader("Authorization") String token, @RequestParam int accountId){
+        JWTInfo parsedJWT = JWTUtility.verifyUser(token);
+        if(parsedJWT != null) return accountService.deleteAccount(accountId);
+        else throw new InvalidAuthorizationError(HttpStatus.UNAUTHORIZED, "No valid JWT");
     }
 
     @ResponseStatus(HttpStatus.OK)
     @PutMapping(path = "/update", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public PutResponse updateAccount(@RequestBody UpdateAccountRequest updateAccountRequest){
-        return accountService.updateAccount(updateAccountRequest);
+    public PutResponse updateAccount(@RequestHeader("Authorization") String token, @RequestBody UpdateAccountRequest updateAccountRequest){
+        JWTInfo parsedJWT = JWTUtility.verifyUser(token);
+        if(parsedJWT != null) return accountService.updateAccount(updateAccountRequest);
+        else throw new InvalidAuthorizationError(HttpStatus.UNAUTHORIZED, "No valid JWT");
     }
 
     @ResponseStatus(HttpStatus.OK)
     @PutMapping(path = "/transfer", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public PutResponse transferToAccount(@RequestBody TransferRequest transferRequest){
-        return accountService.transferToAnotherAccount(transferRequest);
+    public PutResponse transferToAccount(@RequestHeader("Authorization") String token, @RequestBody TransferRequest transferRequest){
+        JWTInfo parsedJWT = JWTUtility.verifyUser(token);
+        if(parsedJWT != null) return accountService.transferToAnotherAccount(transferRequest);
+        else throw new InvalidAuthorizationError(HttpStatus.UNAUTHORIZED, "No valid JWT");
     }
 
 }

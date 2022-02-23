@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Account } from 'src/app/models/account/account.model';
 import { Profile } from 'src/app/models/users/profile.model';
+import { RoutingAllocatorService } from 'src/app/_services/app_control/routing-allocator.service';
 import { GlobalStorageService } from 'src/app/_services/global-storage.service';
 
 @Component({
@@ -15,7 +16,8 @@ export class AccountViewComponent implements OnInit {
   accounts!: Account[];
 
   constructor(
-    private globalStorage: GlobalStorageService
+    private globalStorage: GlobalStorageService,
+    private router: RoutingAllocatorService
     ) { }
 
   ngOnInit(): void {
@@ -38,5 +40,11 @@ export class AccountViewComponent implements OnInit {
     if(submit)this.accounts = this.globalStorage.getAccounts();
   }
 
-
+  logout(){
+    this.globalStorage.setAccounts([]);
+    this.globalStorage.setUserId(0);
+    this.globalStorage.setToken("");
+    this.globalStorage.setUsername("");
+    this.router.login();
+  }
 }

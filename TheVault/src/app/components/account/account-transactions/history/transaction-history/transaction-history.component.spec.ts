@@ -45,7 +45,6 @@ describe('TransactionHistoryComponent', () => {
 //     expect(component).toBeTruthy();
 // }))
 
-
 });
 
 //   it('should not create', () => {

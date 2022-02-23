@@ -1,20 +1,18 @@
 package com.revature.thevault.service.classes;
 
-import com.revature.thevault.presentation.model.request.AccountProfileRequest;
 import com.revature.thevault.presentation.model.request.LoginRequest;
 import com.revature.thevault.presentation.model.request.NewLoginCredentialsRequest;
 import com.revature.thevault.presentation.model.request.ResetPasswordRequest;
-import com.revature.thevault.presentation.model.response.AccountProfileResponse;
 import com.revature.thevault.presentation.model.response.LoginResponse;
 import com.revature.thevault.presentation.model.response.builder.PostResponse;
 import com.revature.thevault.presentation.model.response.builder.PutResponse;
 import com.revature.thevault.repository.dao.LoginRepository;
-import com.revature.thevault.repository.entity.AccountProfileEntity;
 import com.revature.thevault.repository.entity.LoginCredentialEntity;
 import com.revature.thevault.service.dto.LoginResponseObject;
 import com.revature.thevault.service.exceptions.InvalidInputException;
 import com.revature.thevault.service.exceptions.InvalidRequestException;
 import com.revature.thevault.service.interfaces.LoginServiceInterface;
+import com.revature.thevault.utility.JWTUtility;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -122,7 +120,8 @@ public class LoginService implements LoginServiceInterface {
         return new LoginResponseObject(
                 loginCredentialEntity.getPk_user_id(),
                 loginCredentialEntity.getUsername(),
-                loginCredentialEntity.getPassword()
+                loginCredentialEntity.getPassword(),
+                JWTUtility.generateJWT(loginCredentialEntity.getPk_user_id(), loginCredentialEntity.getUsername())
         );
     }
 }

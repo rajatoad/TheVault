@@ -39,4 +39,15 @@ describe('AccountProfileComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  it('should route to editProfile component on calling the method editProfile', () => {
+    const fixture = TestBed.createComponent(AccountProfileComponent);
+    const app = fixture.componentInstance;
+
+    let router = fixture.debugElement.injector.get(RoutingAllocatorService);
+    let routingSpy = spyOn(router, "editProfile").and.stub();
+
+    app.editProfile();
+    expect(routingSpy).toHaveBeenCalled();
+  })
+
 });

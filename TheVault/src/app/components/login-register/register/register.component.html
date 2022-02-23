@@ -1,3 +1,15 @@
+<div *ngIf="error">
+  <div class="alert alert-danger" role="alert">
+    {{errorMessage}}
+  </div>
+</div>
+
+<div *ngIf="success">
+  <div class="alert alert-success" role="alert">
+    {{successMessage}}
+  </div>
+</div>
+
 <div id="register-form">
   <img class="vault-title" src="https://trello.com/1/cards/61fd61bd05c37f3f03c6a799/attachments/61fd61be05c37f3f03c6a99e/previews/61fd61be05c37f3f03c6a9a2/download/rev-logo_281_29.png" alt="templogo">
     <form [formGroup]="form" (ngSubmit)="onSubmit()">

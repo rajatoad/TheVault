@@ -27,7 +27,7 @@ export class WithdrawGenerateComponent implements OnInit {
 
   onClickSubmit(amount:string, type:string, reference:string){
     let withdraw: WithdrawRequest = new WithdrawRequest(
-      this.globalStorage.activeAccount.accountId,
+      this.globalStorage.getActiveAccount().accountId,
       type,
       reference,
       Number.parseFloat(amount)
@@ -36,7 +36,7 @@ export class WithdrawGenerateComponent implements OnInit {
     //Checks to make sure the withdraw request is not over the available balance
     //If it is then it closes with the submit emitter and returns
     if(Number.parseFloat(amount) > this.globalStorage.getActiveAccount().availableBalance) {
-      window.alert("TOO MUCH MONEY BUDDY");
+      window.alert("You do not have enough");
       this.submitEmitter.emit(false);
       return;
     }

@@ -7,7 +7,7 @@ import { PostAccount } from 'src/app/models/account/responses/post-account';
 import { PutAccount } from 'src/app/models/account/responses/put-account';
 import { TransferRequest } from 'src/app/models/transaction/request/transfer-request.model';
 
-const AUTH_API = 'http://ec2-18-234-126-118.compute-1.amazonaws.com:9000/';
+const AUTH_API = 'ec2-18-234-126-118.compute-1.amazonaws.com:9000';
 
 
 const ENDPOINTS = {
@@ -19,7 +19,7 @@ const ENDPOINTS = {
 }
 
 const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
 };
 
 @Injectable({

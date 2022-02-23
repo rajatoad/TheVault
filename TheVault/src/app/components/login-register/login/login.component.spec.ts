@@ -10,7 +10,9 @@ import { PostLogin } from 'src/app/models/login/responses/post-login';
 import { LoginUser } from 'src/app/models/users/login-user.model';
 import { Profile } from 'src/app/models/users/profile.model';
 import { GetProfile } from 'src/app/models/users/responses/get-profile';
+import { GetUser } from 'src/app/models/users/responses/get-user';
 import { AccountHandlerService } from 'src/app/_services/account/account-handler.service';
+import { RoutingAllocatorService } from 'src/app/_services/app_control/routing-allocator.service';
 import { GlobalStorageService } from 'src/app/_services/global-storage.service';
 import { UserHandlerService } from 'src/app/_services/user/user-handler.service';
 
@@ -42,7 +44,7 @@ class MockUserHandler extends UserHandlerService{
   public override validateLogin(login: LoginUser): Observable<PostLogin> {
       let postLogin: PostLogin = {
         success: true,
-        createdObject: [new LoginCredential(1, login.username, login.password)]
+        createdObject: [new LoginCredential(1, login.username, login.password, "jwt_token")]
       };
       return of(postLogin);
   };
@@ -105,4 +107,66 @@ describe('LoginComponent', () => {
   it('set submit to true', async(() => {
     component.onSubmit();
     expect(component.submitted).toBeTruthy();
-}))});
+
+  }))
+
+  it('should on submit validate the user login and setup userId, username, and profile from s', () => {
+    const fixture = TestBed.createComponent(LoginComponent);
+    const app = fixture.componentInstance;
+
+    let loginUser: LoginUser = new LoginUser("username", "password");
+    let postLogin: PostLogin = {
+      success: true,
+      createdObject: [
+        new LoginCredential(1, "username", "password", "jwt_token")
+      ]
+    };
+
+    let getUser: GetUser = {
+      success: true,
+      gotObject: [
+        new Profile(1, 1, "firstName", "lastName", "email@email.com", "1231231234", "123 address")
+      ]
+    };
+
+    let getAccounts: GetAccount = {
+      success: true,
+      gotObject: [
+        new Account(1, 1, "Checking", 123, 123)
+      ]
+    };
+
+    let userHandler = fixture.debugElement.injector.get(UserHandlerService);
+    let validateLoginSpy = spyOn(userHandler, "validateLogin").and.returnValue(of(postLogin));
+    let getUserProfileSpy = spyOn(userHandler, "getUserProfile").and.returnValue(of(getUser));
+
+    let globalStorage = fixture.debugElement.injector.get(GlobalStorageService);
+    let setUserIdSpy = spyOn(globalStorage, "setUserId").and.stub();
+    let setUsernameSpy = spyOn(globalStorage, "setUsername").and.stub();
+    let setProfileSpy = spyOn(globalStorage, 'setProfile').and.stub();
+    let getUserIdSpy = spyOn(globalStorage, 'getUserId').and.returnValue(1);
+    let setAcountsSpy = spyOn(globalStorage, 'setAccounts').and.stub();
+
+    let accountHandler = fixture.debugElement.injector.get(AccountHandlerService);
+    let getAccountsSpy = spyOn(accountHandler, 'getAccounts').and.returnValue(of(getAccounts));
+
+    let router = fixture.debugElement.injector.get(RoutingAllocatorService);
+    let accountViewSpy = spyOn(router, "accountView").and.stub();
+
+    app.getUserInfo(loginUser);
+
+    expect(validateLoginSpy).toHaveBeenCalled();
+    expect(getUserProfileSpy).toHaveBeenCalled();
+    expect(setUserIdSpy).toHaveBeenCalled();
+    expect(setUsernameSpy).toHaveBeenCalled();
+  
+    expect(getUserProfileSpy).toHaveBeenCalled();
+    expect(getUserIdSpy).toHaveBeenCalled();
+    expect(setProfileSpy).toHaveBeenCalled();
+    expect(getAccountsSpy).toHaveBeenCalled();
+
+    expect(setAcountsSpy).toHaveBeenCalled();
+    expect(accountViewSpy).toHaveBeenCalled();
+  })
+
+});

@@ -2,36 +2,47 @@ export class Deposit {
     public get amount(): number {
         return this._amount;
     }
+  /* istanbul ignore next */
     public set amount(value: number) {
         this._amount = value;
     }
+  /* istanbul ignore next */
     public get dateDeposit(): string {
         return this._dateDeposit;
     }
+  /* istanbul ignore next */
     public set dateDeposit(value: string) {
         this._dateDeposit = value;
     }
+  /* istanbul ignore next */
     public get reference(): string {
         return this._reference;
     }
+  /* istanbul ignore next */
     public set reference(value: string) {
         this._reference = value;
     }
+  /* istanbul ignore next */
     public get depositType(): string {
         return this._depositType;
     }
+  /* istanbul ignore next */
     public set depositType(value: string) {
         this._depositType = value;
     }
+  /* istanbul ignore next */
     public get accountId(): number {
         return this._accountId;
     }
+  /* istanbul ignore next */
     public set accountId(value: number) {
         this._accountId = value;
     }
+  /* istanbul ignore next */
     public get depositId(): number {
         return this._depositId;
     }
+  /* istanbul ignore next */
     public set depositId(value: number) {
         this._depositId = value;
     }

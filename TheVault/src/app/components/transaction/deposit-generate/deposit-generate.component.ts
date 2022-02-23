@@ -27,7 +27,7 @@ export class DepositGenerateComponent implements OnInit {
 
   // creates a deposit request and then updates both the account and creates and an entity in the database
   onClickSubmit(amount:string, type:string, reference:string){
-    let deposit: DepositRequest = new DepositRequest(type, this.globalStorage.activeAccount.accountId, reference, Number.parseFloat(amount));
+    let deposit: DepositRequest = new DepositRequest(type, this.globalStorage.getActiveAccount().accountId, reference, Number.parseFloat(amount));
     this.transactionHandler.createDeposit(deposit).subscribe(this.createDepositObserver);
   }
 
