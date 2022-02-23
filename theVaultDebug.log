@@ -16810,3 +16810,78 @@ RETURNING: GetResponse(gotObject=[])
 2022-02-23 14:22:19,842 INFO dLog [http-nio-9000-exec-6] Class: class com.revature.thevault.presentation.controller.TransactionController
 Method: getTransactionHistory
 RETURNING: GetResponse(gotObject=[])
+2022-02-23 14:23:38,014 DEBUG dLog [http-nio-9000-exec-8] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: findLoginCredential
+Arguments: [LoginRequest(username=user, password=1234)]
+2022-02-23 14:23:38,015 DEBUG dLog [http-nio-9000-exec-8] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: getLoginCredentialFromLogin
+ARGUMENTS: [LoginRequest(username=user, password=1234)]
+2022-02-23 14:23:38,017 INFO dLog [http-nio-9000-exec-8] METHOD: getLoginCredentialFromLogin
+RETURNING: PostResponse(createdObject=[LoginResponseObject(userId=1, username=user, password=1234, JWT=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlciIsImFjY291bnQiOnRydWV9.05GHwDPS2FXlJ7baADe0KDn5PSm8D0obItY0GxlQ-RM)])
+2022-02-23 14:23:38,017 INFO dLog [http-nio-9000-exec-8] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: findLoginCredential
+RETURNING: PostResponse(createdObject=[LoginResponseObject(userId=1, username=user, password=1234, JWT=eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlciIsImFjY291bnQiOnRydWV9.05GHwDPS2FXlJ7baADe0KDn5PSm8D0obItY0GxlQ-RM)])
+2022-02-23 14:23:38,023 DEBUG dLog [http-nio-9000-exec-9] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: getProfile
+Arguments: [Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlciIsImFjY291bnQiOnRydWV9.05GHwDPS2FXlJ7baADe0KDn5PSm8D0obItY0GxlQ-RM, 1]
+2022-02-23 14:23:38,026 DEBUG dLog [http-nio-9000-exec-9] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: getProfile
+ARGUMENTS: [AccountProfileRequest(profileId=1)]
+2022-02-23 14:23:38,027 INFO dLog [http-nio-9000-exec-9] METHOD: getProfile
+RETURNING: GetResponse(gotObject=[AccountProfileResponse(profileId=1, userId=1, firstName=asdf, lastName=asdfq, email=asdf@asdf.com, phoneNumber=1231231234, address=123 asdf)])
+2022-02-23 14:23:38,027 INFO dLog [http-nio-9000-exec-9] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: getProfile
+RETURNING: GetResponse(gotObject=[AccountProfileResponse(profileId=1, userId=1, firstName=asdf, lastName=asdfq, email=asdf@asdf.com, phoneNumber=1231231234, address=123 asdf)])
+2022-02-23 14:23:38,034 DEBUG dLog [http-nio-9000-exec-10] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+Arguments: [Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlciIsImFjY291bnQiOnRydWV9.05GHwDPS2FXlJ7baADe0KDn5PSm8D0obItY0GxlQ-RM, 1]
+2022-02-23 14:23:38,037 DEBUG dLog [http-nio-9000-exec-10] CLASS: class com.revature.thevault.service.classes.AccountService
+METHOD: getAccounts
+ARGUMENTS: [1]
+2022-02-23 14:23:38,040 INFO dLog [http-nio-9000-exec-10] METHOD: getAccounts
+RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Savings, availableBalance=0.0, pendingBalance=0.0), AccountResponseObject(accountId=2, userId=1, accountType=Savings, availableBalance=0.0, pendingBalance=0.0)])
+2022-02-23 14:23:38,040 INFO dLog [http-nio-9000-exec-10] Class: class com.revature.thevault.presentation.controller.AccountController
+Method: getUserAccountList
+RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=1, userId=1, accountType=Savings, availableBalance=0.0, pendingBalance=0.0), AccountResponseObject(accountId=2, userId=1, accountType=Savings, availableBalance=0.0, pendingBalance=0.0)])
+2022-02-23 14:23:39,586 DEBUG dLog [http-nio-9000-exec-1] Class: class com.revature.thevault.presentation.controller.TransactionController
+Method: getTransactionHistory
+Arguments: [Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlciIsImFjY291bnQiOnRydWV9.05GHwDPS2FXlJ7baADe0KDn5PSm8D0obItY0GxlQ-RM, 1]
+2022-02-23 14:23:39,588 DEBUG dLog [http-nio-9000-exec-1] CLASS: class com.revature.thevault.service.classes.TransactionService
+METHOD: getTransactionHistory
+ARGUMENTS: [1]
+2022-02-23 14:23:39,589 DEBUG dLog [http-nio-9000-exec-1] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: getAllUserDeposits
+ARGUMENTS: [1]
+2022-02-23 14:23:39,589 INFO dLog [http-nio-9000-exec-1] METHOD: getAllUserDeposits
+RETURNING: GetResponse(gotObject=[])
+2022-02-23 14:23:39,589 DEBUG dLog [http-nio-9000-exec-1] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: getAllUserWithdrawals
+ARGUMENTS: [1]
+2022-02-23 14:23:39,590 INFO dLog [http-nio-9000-exec-1] METHOD: getAllUserWithdrawals
+RETURNING: GetResponse(gotObject=[])
+2022-02-23 14:23:39,590 INFO dLog [http-nio-9000-exec-1] METHOD: getTransactionHistory
+RETURNING: GetResponse(gotObject=[])
+2022-02-23 14:23:39,590 INFO dLog [http-nio-9000-exec-1] Class: class com.revature.thevault.presentation.controller.TransactionController
+Method: getTransactionHistory
+RETURNING: GetResponse(gotObject=[])
+2022-02-23 14:23:45,481 DEBUG dLog [http-nio-9000-exec-3] Class: class com.revature.thevault.presentation.controller.TransactionController
+Method: getTransactionHistory
+Arguments: [Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoidXNlciIsImFjY291bnQiOnRydWV9.05GHwDPS2FXlJ7baADe0KDn5PSm8D0obItY0GxlQ-RM, 2]
+2022-02-23 14:23:45,483 DEBUG dLog [http-nio-9000-exec-3] CLASS: class com.revature.thevault.service.classes.TransactionService
+METHOD: getTransactionHistory
+ARGUMENTS: [2]
+2022-02-23 14:23:45,484 DEBUG dLog [http-nio-9000-exec-3] CLASS: class com.revature.thevault.service.classes.DepositService
+METHOD: getAllUserDeposits
+ARGUMENTS: [2]
+2022-02-23 14:23:45,484 INFO dLog [http-nio-9000-exec-3] METHOD: getAllUserDeposits
+RETURNING: GetResponse(gotObject=[])
+2022-02-23 14:23:45,484 DEBUG dLog [http-nio-9000-exec-3] CLASS: class com.revature.thevault.service.classes.WithdrawService
+METHOD: getAllUserWithdrawals
+ARGUMENTS: [2]
+2022-02-23 14:23:45,485 INFO dLog [http-nio-9000-exec-3] METHOD: getAllUserWithdrawals
+RETURNING: GetResponse(gotObject=[])
+2022-02-23 14:23:45,485 INFO dLog [http-nio-9000-exec-3] METHOD: getTransactionHistory
+RETURNING: GetResponse(gotObject=[])
+2022-02-23 14:23:45,485 INFO dLog [http-nio-9000-exec-3] Class: class com.revature.thevault.presentation.controller.TransactionController
+Method: getTransactionHistory
+RETURNING: GetResponse(gotObject=[])

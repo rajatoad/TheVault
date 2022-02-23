@@ -8,7 +8,7 @@ import { GetProfile } from 'src/app/models/users/responses/get-profile';
 import { PostProfile } from 'src/app/models/users/responses/post-profile';
 import { PutProfile } from 'src/app/models/users/responses/put-profile';
 
-const AUTH_API = 'http://localhost:9000/';
+const AUTH_API = 'ec2-18-234-126-118.compute-1.amazonaws.com:9000/';
 
 const ENDPOINTS = {
   LOGIN: `${AUTH_API}login`,

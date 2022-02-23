@@ -12,7 +12,7 @@ import { PostWithdraw } from 'src/app/models/transaction/responses/post-withdraw
 import { Withdraw } from 'src/app/models/transaction/withdraw.model';
 
 
-const AUTH_API = 'http://localhost:9000/';
+const AUTH_API = 'ec2-18-234-126-118.compute-1.amazonaws.com:9000/';
 
 const ENDPOINTS = {
   CREATE_DEPOSIT: `${AUTH_API}deposit/create`,
