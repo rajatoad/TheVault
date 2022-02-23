@@ -3,6 +3,7 @@
     <form class="d-flex">
       <input class="form-control me-2" type="search" placeholder="Search" [(ngModel)]="term" [ngModelOptions]="{standalone: true}" aria-label="Search">
     </form>
+    <br>
     <table class="table">
       <thead>
         <tr class ="table-info">
@@ -15,8 +16,8 @@
         </tr>
       </thead>
         <tbody>
-          
-          <tr class="table-secondary" *ngFor="let tran of transactions |filter:term; index as i"> 
+
+          <tr class="table-secondary" *ngFor="let tran of transactions |filter:term; index as i">
             <!-- <th scope="row"><button (click)="showDetails(tran)" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal" id="transactionInfo">{{i + 1}} </button></th> -->
             <th scope="row">{{i + 1}}</th>
             <td>{{tran.transactionReference}}</td>
@@ -25,7 +26,7 @@
             <td>{{tran.date | date}}</td>
             <td>{{tran.amount | currency}}</td>
           </tr>
-          
+
         </tbody>
     </table>
   </div>
