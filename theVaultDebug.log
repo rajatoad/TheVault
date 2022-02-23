@@ -7187,3 +7187,155 @@ RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=2, userId=1, a
 2022-02-21 13:55:58,063 INFO dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.presentation.controller.AccountController
 Method: getUserAccountList
 RETURNING: GetResponse(gotObject=[AccountResponseObject(accountId=2, userId=1, accountType=Savings, availableBalance=6399.0, pendingBalance=6399.0), AccountResponseObject(accountId=4, userId=1, accountType=Checking, availableBalance=0.0, pendingBalance=0.0), AccountResponseObject(accountId=5, userId=1, accountType=Savings, availableBalance=0.0, pendingBalance=0.0)])
+2022-02-22 22:21:49,750 DEBUG dLog [http-nio-8080-exec-2] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: newLogin
+Arguments: [NewLoginCredentialsRequest()]
+2022-02-22 22:21:49,760 DEBUG dLog [http-nio-8080-exec-2] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: createNewLogin
+ARGUMENTS: [NewLoginCredentialsRequest()]
+2022-02-22 22:21:49,839 ERROR dLog [http-nio-8080-exec-2] CONTROLLER CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: createNewLogin
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidInputException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@68b1ac3a
+2022-02-22 22:21:49,839 ERROR dLog [http-nio-8080-exec-2] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.LoginController
+METHOD: newLogin
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidInputException
+2022-02-22 22:22:07,543 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: findLoginCredential
+Arguments: [LoginRequest(username=username1, password=password)]
+2022-02-22 22:22:07,543 DEBUG dLog [http-nio-8080-exec-4] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: getLoginCredentialFromLogin
+ARGUMENTS: [LoginRequest(username=username1, password=password)]
+2022-02-22 22:22:07,571 ERROR dLog [http-nio-8080-exec-4] CONTROLLER CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: getLoginCredentialFromLogin
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidInputException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@66b71d5c
+2022-02-22 22:22:07,572 ERROR dLog [http-nio-8080-exec-4] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.LoginController
+METHOD: findLoginCredential
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidInputException
+2022-02-22 22:22:31,994 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: newLogin
+Arguments: [NewLoginCredentialsRequest()]
+2022-02-22 22:22:31,994 DEBUG dLog [http-nio-8080-exec-5] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: createNewLogin
+ARGUMENTS: [NewLoginCredentialsRequest()]
+2022-02-22 22:22:31,998 ERROR dLog [http-nio-8080-exec-5] CONTROLLER CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: createNewLogin
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidInputException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@4c3bc4e8
+2022-02-22 22:22:31,998 ERROR dLog [http-nio-8080-exec-5] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.LoginController
+METHOD: newLogin
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidInputException
+2022-02-22 22:22:43,604 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: findLoginCredential
+Arguments: [LoginRequest(username=username1, password=password)]
+2022-02-22 22:22:43,605 DEBUG dLog [http-nio-8080-exec-6] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: getLoginCredentialFromLogin
+ARGUMENTS: [LoginRequest(username=username1, password=password)]
+2022-02-22 22:22:43,606 ERROR dLog [http-nio-8080-exec-6] CONTROLLER CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: getLoginCredentialFromLogin
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidInputException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@1d5ba5d0
+2022-02-22 22:22:43,606 ERROR dLog [http-nio-8080-exec-6] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.LoginController
+METHOD: findLoginCredential
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidInputException
+2022-02-22 22:24:22,605 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: newLogin
+Arguments: [NewLoginCredentialsRequest()]
+2022-02-22 22:24:22,606 DEBUG dLog [http-nio-8080-exec-7] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: createNewLogin
+ARGUMENTS: [NewLoginCredentialsRequest()]
+2022-02-22 22:24:22,608 ERROR dLog [http-nio-8080-exec-7] CONTROLLER CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: createNewLogin
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidInputException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@6bbc604
+2022-02-22 22:24:22,608 ERROR dLog [http-nio-8080-exec-7] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.LoginController
+METHOD: newLogin
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidInputException
+2022-02-22 22:24:34,225 DEBUG dLog [http-nio-8080-exec-8] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: findLoginCredential
+Arguments: [LoginRequest(username=username1, password=pass)]
+2022-02-22 22:24:34,225 DEBUG dLog [http-nio-8080-exec-8] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: getLoginCredentialFromLogin
+ARGUMENTS: [LoginRequest(username=username1, password=pass)]
+2022-02-22 22:24:34,226 ERROR dLog [http-nio-8080-exec-8] CONTROLLER CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: getLoginCredentialFromLogin
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidInputException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@6ffd4744
+2022-02-22 22:24:34,227 ERROR dLog [http-nio-8080-exec-8] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.LoginController
+METHOD: findLoginCredential
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidInputException
+2022-02-22 22:25:41,373 DEBUG dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: newLogin
+Arguments: [NewLoginCredentialsRequest()]
+2022-02-22 22:25:41,373 DEBUG dLog [http-nio-8080-exec-1] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: createNewLogin
+ARGUMENTS: [NewLoginCredentialsRequest()]
+2022-02-22 22:25:41,378 INFO dLog [http-nio-8080-exec-1] METHOD: createNewLogin
+RETURNING: PostResponse(createdObject=[LoginResponseObject(userId=4, username=user1, password=pass1)])
+2022-02-22 22:25:41,378 INFO dLog [http-nio-8080-exec-1] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: newLogin
+RETURNING: PostResponse(createdObject=[LoginResponseObject(userId=4, username=user1, password=pass1)])
+2022-02-22 22:25:41,409 DEBUG dLog [http-nio-8080-exec-6] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: createProfile
+Arguments: [ProfileCreateRequest(userId=4, firstName=Adrian, lastName=Diaz, email=adiaz01@manhattan.edu, phoneNumber=13474595506, address=25 Davis Ave)]
+2022-02-22 22:25:41,414 DEBUG dLog [http-nio-8080-exec-6] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: createProfile
+ARGUMENTS: [ProfileCreateRequest(userId=4, firstName=Adrian, lastName=Diaz, email=adiaz01@manhattan.edu, phoneNumber=13474595506, address=25 Davis Ave)]
+2022-02-22 22:25:41,426 ERROR dLog [http-nio-8080-exec-6] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: createProfile
+THROWING EXCEPTION CLASS: class org.springframework.dao.DataIntegrityViolationException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@5863bba9
+2022-02-22 22:25:41,426 ERROR dLog [http-nio-8080-exec-6] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.AccountProfileController
+METHOD: createProfile
+THROWING EXCEPTION: class org.springframework.dao.DataIntegrityViolationException
+2022-02-22 22:25:53,308 DEBUG dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: findLoginCredential
+Arguments: [LoginRequest(username=user1, password=pass1)]
+2022-02-22 22:25:53,309 DEBUG dLog [http-nio-8080-exec-7] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: getLoginCredentialFromLogin
+ARGUMENTS: [LoginRequest(username=user1, password=pass1)]
+2022-02-22 22:25:53,315 INFO dLog [http-nio-8080-exec-7] METHOD: getLoginCredentialFromLogin
+RETURNING: PostResponse(createdObject=[LoginResponseObject(userId=4, username=user1, password=pass1)])
+2022-02-22 22:25:53,315 INFO dLog [http-nio-8080-exec-7] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: findLoginCredential
+RETURNING: PostResponse(createdObject=[LoginResponseObject(userId=4, username=user1, password=pass1)])
+2022-02-22 22:25:53,331 DEBUG dLog [http-nio-8080-exec-9] Class: class com.revature.thevault.presentation.controller.AccountProfileController
+Method: getProfile
+Arguments: [4]
+2022-02-22 22:25:53,332 DEBUG dLog [http-nio-8080-exec-9] CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: getProfile
+ARGUMENTS: [AccountProfileRequest(profileId=4)]
+2022-02-22 22:25:53,349 ERROR dLog [http-nio-8080-exec-9] CONTROLLER CLASS: class com.revature.thevault.service.classes.AccountProfileService
+METHOD: getProfile
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidRequestException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@46e9621a
+2022-02-22 22:25:53,349 ERROR dLog [http-nio-8080-exec-9] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.AccountProfileController
+METHOD: getProfile
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidRequestException
+2022-02-22 22:32:24,060 DEBUG dLog [http-nio-8080-exec-4] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: newLogin
+Arguments: [NewLoginCredentialsRequest()]
+2022-02-22 22:32:24,060 DEBUG dLog [http-nio-8080-exec-4] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: createNewLogin
+ARGUMENTS: [NewLoginCredentialsRequest()]
+2022-02-22 22:32:24,062 ERROR dLog [http-nio-8080-exec-4] CONTROLLER CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: createNewLogin
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidInputException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@4f997d1d
+2022-02-22 22:32:24,062 ERROR dLog [http-nio-8080-exec-4] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.LoginController
+METHOD: newLogin
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidInputException
+2022-02-22 22:32:39,342 DEBUG dLog [http-nio-8080-exec-5] Class: class com.revature.thevault.presentation.controller.LoginController
+Method: findLoginCredential
+Arguments: [LoginRequest(username=username1, password=pass)]
+2022-02-22 22:32:39,342 DEBUG dLog [http-nio-8080-exec-5] CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: getLoginCredentialFromLogin
+ARGUMENTS: [LoginRequest(username=username1, password=pass)]
+2022-02-22 22:32:39,344 ERROR dLog [http-nio-8080-exec-5] CONTROLLER CLASS: class com.revature.thevault.service.classes.LoginService
+METHOD: getLoginCredentialFromLogin
+THROWING EXCEPTION CLASS: class com.revature.thevault.service.exceptions.InvalidInputException
+EXCEPTION STACKTRACE: [Ljava.lang.StackTraceElement;@2f38b3d0
+2022-02-22 22:32:39,344 ERROR dLog [http-nio-8080-exec-5] CONTROLLER CLASS: class com.revature.thevault.presentation.controller.LoginController
+METHOD: findLoginCredential
+THROWING EXCEPTION: class com.revature.thevault.service.exceptions.InvalidInputException
