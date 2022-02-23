@@ -37,15 +37,14 @@ public class AccountProfileService implements AccountProfileInterface {
         LoginCredentialEntity loginCredential = new LoginCredentialEntity(
                 accountProfileRequest.getProfileId(),
                 "",
-                ""
-        );
+                "");
 
         AccountProfileEntity profile = accountProfileRepository.findByLogincredential(loginCredential);
 
         try {
             return GetResponse.builder()
                     .success(true)
-//                    .gotObject(Collections.singletonList(convertEntityToResponse(accountProfileRepository.getById(accountProfileRequest.getProfileId()))))
+                    // .gotObject(Collections.singletonList(convertEntityToResponse(accountProfileRepository.getById(accountProfileRequest.getProfileId()))))
                     .gotObject(Collections.singletonList(convertEntityToResponse(profile)))
                     .build();
         } catch (Exception e) {
@@ -62,10 +61,10 @@ public class AccountProfileService implements AccountProfileInterface {
                 profileCreateRequest.getLastName(),
                 profileCreateRequest.getEmail(),
                 profileCreateRequest.getPhoneNumber(),
-                profileCreateRequest.getAddress()
-        );
+                profileCreateRequest.getAddress());
 
-        AccountProfileResponse convertedCreatedEntity = convertEntityToResponse(accountProfileRepository.save(createdProfileEntity));
+        AccountProfileResponse convertedCreatedEntity = convertEntityToResponse(
+                accountProfileRepository.save(createdProfileEntity));
 
         try {
             return PostResponse.builder()
@@ -82,39 +81,38 @@ public class AccountProfileService implements AccountProfileInterface {
         try {
             return PutResponse.builder()
                     .success(true)
-                    .updatedObject(Collections.singletonList(convertEntityToResponse(accountProfileRepository.save(new AccountProfileEntity(
-                            updateProfileRequest.getUserId(),
-                            loginService.findUserByUserId(updateProfileRequest.getUserId()),
-                            updateProfileRequest.getFirstName(),
-                            updateProfileRequest.getLastName(),
-                            updateProfileRequest.getEmail(),
-                            updateProfileRequest.getPhoneNumber(),
-                            updateProfileRequest.getAddress()
-                    )))))
+                    .updatedObject(Collections.singletonList(
+                            convertEntityToResponse(accountProfileRepository.save(new AccountProfileEntity(
+                                    updateProfileRequest.getUserId(),
+                                    loginService.findUserByUserId(updateProfileRequest.getUserId()),
+                                    updateProfileRequest.getFirstName(),
+                                    updateProfileRequest.getLastName(),
+                                    updateProfileRequest.getEmail(),
+                                    updateProfileRequest.getPhoneNumber(),
+                                    updateProfileRequest.getAddress())))))
                     .build();
         } catch (Exception e) {
             throw new InvalidRequestException(HttpStatus.BAD_REQUEST, "invalid request");
         }
     }
 
-
     @Override
     @Transactional
     public DeleteResponse deleteProfile(AccountProfileRequest accountProfileRequest) {
 
         try {
-            Optional<AccountProfileEntity> optionalProfile = accountProfileRepository.findById(accountProfileRequest.getProfileId());
-            if(optionalProfile.isPresent()) {
+            Optional<AccountProfileEntity> optionalProfile = accountProfileRepository
+                    .findById(accountProfileRequest.getProfileId());
+            if (optionalProfile.isPresent()) {
                 accountProfileRepository.delete(optionalProfile.get());
                 return DeleteResponse.builder()
                         .success(true)
                         .deletedObject(Collections.singletonList(convertEntityToResponse(optionalProfile.get())))
                         .build();
-            }
-            else{
+            } else {
                 throw new InvalidProfileIdException(HttpStatus.BAD_REQUEST, "account profile not found");
             }
-        }catch(InvalidProfileIdException e) {
+        } catch (InvalidProfileIdException e) {
             throw e;
         }
     }
@@ -127,7 +125,6 @@ public class AccountProfileService implements AccountProfileInterface {
                 accountProfileEntity.getLast_name(),
                 accountProfileEntity.getEmail(),
                 accountProfileEntity.getPhone_number(),
-                accountProfileEntity.getAddress()
-        );
+                accountProfileEntity.getAddress());
     }
 }

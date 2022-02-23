@@ -1,5 +1,9 @@
+import { Location } from '@angular/common';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { LocalizedString } from '@angular/compiler';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { Account } from 'src/app/models/account/account.model';
 import { GetAccount } from 'src/app/models/account/responses/get-account';
@@ -42,6 +46,9 @@ class MockTransactionHandler extends TransactionHandlerService{
 describe('SelectComponent', () => {
   let component: SelectComponent;
   let fixture: ComponentFixture<SelectComponent>;
+  let router: Router;
+  let location: Location;
+  let el: HTMLElement;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -70,6 +77,11 @@ describe('SelectComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
+
+  it('set setupAccount to true', async(() => {
+    component.setupAccounts();
+    expect(component).toBeTruthy();
+  }));
 
   it('should create', () => {
     expect(component).toBeTruthy();
