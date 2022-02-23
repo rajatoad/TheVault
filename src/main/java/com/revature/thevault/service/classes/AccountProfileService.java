@@ -83,7 +83,7 @@ public class AccountProfileService implements AccountProfileInterface {
             return PutResponse.builder()
                     .success(true)
                     .updatedObject(Collections.singletonList(convertEntityToResponse(accountProfileRepository.save(new AccountProfileEntity(
-                            updateProfileRequest.getUserId(),
+                            updateProfileRequest.getProfileId(),
                             loginService.findUserByUserId(updateProfileRequest.getUserId()),
                             updateProfileRequest.getFirstName(),
                             updateProfileRequest.getLastName(),

@@ -11,6 +11,9 @@ import com.revature.thevault.presentation.model.response.builder.PutResponse;
 import com.revature.thevault.repository.entity.AccountProfileEntity;
 import com.revature.thevault.repository.entity.LoginCredentialEntity;
 import com.revature.thevault.service.classes.AccountProfileService;
+import com.revature.thevault.service.exceptions.InvalidAuthorizationError;
+import com.revature.thevault.utility.JWTInfo;
+import com.revature.thevault.utility.JWTUtility;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -31,18 +34,24 @@ public class AccountProfileController {
     }
 
     @GetMapping("/get/{id}")
-    public GetResponse getProfile(@PathVariable int id){
-        return accountProfileService.getProfile(new AccountProfileRequest(id));
+    public GetResponse getProfile(@RequestHeader("Authorization") String token, @PathVariable int id){
+        JWTInfo parsedJWT = JWTUtility.verifyUser(token);
+        if(parsedJWT != null) return accountProfileService.getProfile(new AccountProfileRequest(id));
+        else throw new InvalidAuthorizationError(HttpStatus.UNAUTHORIZED, "No valid JWT");
     }
 
     //remove, this is not necessary to the application
     @DeleteMapping("/delete")
-    public DeleteResponse deleteProfile(@RequestBody AccountProfileRequest accountProfileRequest){
-        return accountProfileService.deleteProfile(accountProfileRequest);
+    public DeleteResponse deleteProfile(@RequestHeader("Authorization") String token, @RequestBody AccountProfileRequest accountProfileRequest){
+        JWTInfo parsedJWT = JWTUtility.verifyUser(token);
+        if(parsedJWT != null) return accountProfileService.deleteProfile(accountProfileRequest);
+        else throw new InvalidAuthorizationError(HttpStatus.UNAUTHORIZED, "No valid JWT");
     }
 
     @PutMapping("/update")
-    public PutResponse updateProfile(@RequestBody UpdateProfileRequest updateProfileRequest){
-        return accountProfileService.updateProfile(updateProfileRequest);
+    public PutResponse updateProfile(@RequestHeader("Authorization") String token, @RequestBody UpdateProfileRequest updateProfileRequest){
+        JWTInfo parsedJWT = JWTUtility.verifyUser(token);
+        if(parsedJWT != null) return accountProfileService.updateProfile(updateProfileRequest);
+        else throw new InvalidAuthorizationError(HttpStatus.UNAUTHORIZED, "No valid JWT");
     }
 }

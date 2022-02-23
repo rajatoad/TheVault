@@ -1,12 +1,22 @@
 export class LoginCredential {
+  /* istanbul ignore next */
+    public get jwt(): string {
+        return this._jwt;
+    }
+  /* istanbul ignore next */
+    public set jwt(value: string) {
+        this._jwt = value;
+    }
     constructor(
         private _userId: number,
         private _username: string,
-        private _password: string
+        private _password: string,
+        private _jwt: string
     ){
         this._userId = _userId;
         this._username = _username;
         this._password = _password;
+        this._jwt = _jwt;
     }
 
   /* istanbul ignore next */

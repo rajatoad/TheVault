@@ -44,7 +44,7 @@ class MockUserHandler extends UserHandlerService{
   public override validateLogin(login: LoginUser): Observable<PostLogin> {
       let postLogin: PostLogin = {
         success: true,
-        createdObject: [new LoginCredential(1, login.username, login.password)]
+        createdObject: [new LoginCredential(1, login.username, login.password, "jwt_token")]
       };
       return of(postLogin);
   };
@@ -118,7 +118,7 @@ describe('LoginComponent', () => {
     let postLogin: PostLogin = {
       success: true,
       createdObject: [
-        new LoginCredential(1, "username", "password")
+        new LoginCredential(1, "username", "password", "jwt_token")
       ]
     };
 

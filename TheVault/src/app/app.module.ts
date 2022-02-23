@@ -1,4 +1,4 @@
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -26,6 +26,8 @@ import { TransactionSearchComponent } from './components/transaction/select-tran
 import { Ng2SearchPipeModule} from 'ng2-search-filter';
 import { CreateAccountComponent } from './components/account/create-account/create-account.component';
 import { TransferGenerateComponent } from './components/transaction/transfer-generate/transfer-generate.component';
+
+import { AuthInterceptorService } from './utils/auth-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -60,7 +62,12 @@ import { TransferGenerateComponent } from './components/transaction/transfer-gen
     AppBootstrapModule,
     Ng2SearchPipeModule
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptorService,
+    multi: true
+
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

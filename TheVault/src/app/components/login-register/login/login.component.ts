@@ -16,12 +16,16 @@ import { UserHandlerService } from 'src/app/_services/user/user-handler.service'
 })
 export class LoginComponent implements OnInit {
 
+  error: boolean = false;
+  success: boolean = false;
+  errorMessage: string = "Failed to login, please try again.";
+  successMessage: string = "Successful login!";
+
   form: FormGroup = new FormGroup({
     username: new FormControl(''),   
     password: new FormControl(''),
   });
   submitted = false;
-  errorMessage = '';
   isLoginFailed = false;
   posts : any;
 
@@ -89,12 +93,16 @@ getUserInfo(loginUser: LoginUser){
 // After getting all accounts, we move to the next view for account view.
 loginObserver = {
   next: (data: PostLogin) => {
+    console.log(data);
+    this.globalStorage.setToken(data.createdObject[0].jwt);
+    console.log(this.globalStorage.getToken());
     this.globalStorage.setUserId(data.createdObject[0].userId);
     this.globalStorage.setUsername(data.createdObject[0].username);
     this.userHandler.getUserProfile(this.globalStorage.getUserId()).subscribe(this.profileObserver)
   },
   error: (err: Error) => {
     console.error("Login Observer error: " + err);
+    this.error = true;
     this.onReset();},
   complete: () => console.log("Completed getting login")
 }
@@ -107,6 +115,7 @@ profileObserver = {
   error: (err: Error) => {
   /* istanbul ignore next */
     console.error("profile observer error: " + err);
+    this.error = true;
   /* istanbul ignore next */
     this.onReset();},
   complete: () => console.log("Completed getting profile")
@@ -118,7 +127,11 @@ accountObserver = {
     this.router.accountView();
   },
   /* istanbul ignore next */
-  error: (err: Error) => console.log("account observer error: " + err),
+  error: (err: Error) => {
+    console.log("account observer error: " + err);
+    this.error = true;
+    this.onReset();
+  },
   complete: () => console.log("Completed getting user accounts")
 }
 

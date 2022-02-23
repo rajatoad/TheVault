@@ -81,7 +81,7 @@ describe('RegisterComponent', () => {
     let postLogin: PostLogin = {
       success: true,
       createdObject: [
-        new LoginCredential(1, "username", "password")
+        new LoginCredential(1, "username", "password", "jwt_token")
       ]
     };
 

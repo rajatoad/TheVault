@@ -14,6 +14,12 @@ import { UserHandlerService } from 'src/app/_services/user/user-handler.service'
 })
 export class RegisterComponent implements OnInit {
 
+  error:boolean = false;
+  errorMessage: string = "Error";
+
+  success:boolean = false;
+  successMessage: string = "Success!";
+
   form: FormGroup = new FormGroup({
     username: new FormControl(''),
     firstname: new FormControl(''),
@@ -124,6 +130,8 @@ export class RegisterComponent implements OnInit {
 
   /* istanbul ignore next */
   onSubmit(): void {
+    this.error = false;
+    this.errorMessage = "Error";
     this.submitted = true;
 
   /* istanbul ignore next */
@@ -157,6 +165,8 @@ export class RegisterComponent implements OnInit {
     },
     error: (err: Error) => {
       console.error("Login Observer error: " + err.message);
+      this.errorMessage = "ERROR: Could not create the Login, please try again.";
+      this.error = true;
       this.onReset();},
     complete: () => console.log("Completed creating login credentials")
   }
@@ -165,8 +175,12 @@ export class RegisterComponent implements OnInit {
     next: (data: PostProfile) => this.goToLogin(),
     error: (err: Error) => {
       console.error("Profile Observer error: " + err);
+      this.errorMessage = "ERROR: Could not create the profile, please try again.";
+      this.error = true;
       this.onReset();},
-    complete: () => console.log("Completed creating user profile")
+    complete: () => {
+      this.success = true;
+    }
   }
 
   onReset(): void {
