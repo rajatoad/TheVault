@@ -15,6 +15,7 @@ agent any
                       steps {
                     echo 'No issues found with the project. Running JAR:'                                         
                           sh('fuser -k 9000/tcp || true')
+                          DB_URL = ${DB_URL}
                           sh('JENKINS_NODE_COOKIE=dontKillMe nohup java -jar target/demo-0.0.1-SNAPSHOT.jar &')
 
                           }
