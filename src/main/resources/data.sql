@@ -113,15 +113,15 @@ CREATE TABLE withdraw_table(
 --                                  POPULATE TABLES
 --========================================================================================
 
---INSERT INTO login_credential_table
---VALUES
---    (default, 'username1', 'password1'),
---    (default, 'username2', 'password2');
-----
---INSERT INTO account_profile_table
---VALUES
---    (default, 1, 'Tom', 'Cat', 'email@email.com', 5559991234, '1 lane'),
---    (default, 2, 'Joe', 'Shmo', 'yahoo@yahoo.com', 9995554323, '2 st');
+INSERT INTO login_credential_table
+VALUES
+    (default, 'username1', 'password1'),
+    (default, 'username2', 'password2');
+--
+INSERT INTO account_profile_table
+VALUES
+    (default, 1, 'Tom', 'Cat', 'email@email.com', 5559991234, '1 lane'),
+    (default, 2, 'Joe', 'Shmo', 'yahoo@yahoo.com', 9995554323, '2 st');
 
 INSERT INTO deposit_type_table
 VALUES
