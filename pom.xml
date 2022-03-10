@@ -15,6 +15,8 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/x
 <description>Project 3 banking app</description>
 <properties>
 <java.version>1.8</java.version>
+  <sonar.organization>dementedtiger</sonar.organization>
+  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
 </properties>
 <dependencies>
 <dependency>
